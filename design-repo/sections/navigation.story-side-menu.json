@@ -1,0 +1,37 @@
+{
+  "id": "navigation.story-side-menu",
+  "category": "navigation",
+  "version": "1.0.0",
+  "purpose": "Sticky story side menu: company facts and chapter scroll-spy links (desktop only).",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Sticky card."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "lg",
+      "change": "show",
+      "detail": "Shown at 1200px and up only."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.sidemenu"
+  ],
+  "notes": "Derived from the story's facts and chapter navLabels; no own content."
+}

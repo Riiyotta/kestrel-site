@@ -1,0 +1,63 @@
+{
+  "id": "content.numbered-contents",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Report 'what is inside': H2, lede and CTA beside a numbered contents list.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Two columns."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 14
+      },
+      "lede": {
+        "type": "string",
+        "maxWords": 60
+      },
+      "cta": {
+        "type": "string",
+        "maxWords": 5
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 11
+        },
+        "minItems": 3,
+        "maxItems": 9
+      }
+    },
+    "required": [
+      "title",
+      "lede",
+      "cta",
+      "items"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "List stacks under the copy."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.contents"
+  ]
+}

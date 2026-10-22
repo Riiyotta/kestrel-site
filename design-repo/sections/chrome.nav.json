@@ -1,0 +1,59 @@
+{
+  "id": "chrome.nav",
+  "category": "chrome",
+  "version": "1.0.0",
+  "purpose": "Global wayfinding: brand mark, Product / Industries / Resources mega-dropdowns, Log in and Start free trial; collapses to a phone pill menu below 1200px.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Fixed glass pill navigation, identical on every site-layout route."
+  },
+  "composes": [
+    "primitive.brand-mark",
+    "primitive.button",
+    "primitive.icon-glyph"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "nav-chrome",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "nav-collapse",
+      "detail": "Phone pill + full-height sheet below 1200px (tablet uses the phone nav)."
+    },
+    {
+      "breakpoint": "lg",
+      "change": "show",
+      "detail": "Desktop pill with mega-dropdowns from 1200px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "measuredFrom": [
+    "src.nav",
+    "src.layout"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "icon.legacy-original",
+      "files": "public/assets/icons/*.svg (dropdown tile icons)"
+    },
+    {
+      "assetRole": "photo.stock-abstract",
+      "files": "nav feature-card images"
+    }
+  ],
+  "notes": "Content is global and identical on every route; a PageSpec carries no nav content."
+}

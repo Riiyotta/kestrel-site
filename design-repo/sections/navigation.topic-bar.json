@@ -1,0 +1,51 @@
+{
+  "id": "navigation.topic-bar",
+  "category": "navigation",
+  "version": "1.0.0",
+  "purpose": "Sticky topic chips with counts synced to the URL, plus a sort select.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Sticky bar."
+  },
+  "composes": [
+    "component.filter-chips"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "topics": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 3
+        },
+        "minItems": 2,
+        "maxItems": 8
+      }
+    },
+    "required": [
+      "topics"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "filter-chips",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "scroll-horizontal",
+      "detail": "Chips scroll horizontally."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.topicbar"
+  ]
+}

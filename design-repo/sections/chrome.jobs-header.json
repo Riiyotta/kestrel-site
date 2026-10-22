@@ -1,0 +1,37 @@
+{
+  "id": "chrome.jobs-header",
+  "category": "chrome",
+  "version": "1.0.0",
+  "purpose": "Jobs microsite's own header bar replacing the global nav.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Square-corner bar, Inter."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Compact padding on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "measuredFrom": [
+    "src.jobsheader"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "repositoryId": "kestrel-marketing-design-repo",
+  "repositoryVersion": "1.0.0",
+  "pageSpecVersion": "1.0.0",
+  "allowlistVersion": "1.0.0",
+  "versionFieldNote": "allowlistVersion is machine-checked: extraction/verify_all.py fails if it differs from tokens/llm/component-allowlist.json. repositoryVersion and pageSpecVersion are documentation-only, hand-maintained markers that nothing checks automatically.",
+  "status": "design-review-pending",
+  "productionApproved": false,
+  "defaultTheme": "light",
+  "schemaValidatedThemes": [
+    "light"
+  ],
+  "sourceStack": "Documentation only: React 18.3 + Vite 5.4, Tailwind CSS 3.4 (CommonJS config), custom CSS, framer-motion 14.5, Lenis 1.3 smooth scroll, react-router-dom 6.28 (versions from the installed packages at extraction). Never used for token names, section ids, schema fields or validator logic.",
+  "subject": "Design system of a real, live company's marketing site, reproduced with entirely original placeholder content for the fictional product Kestrel (fictional customers, people, pricing and quotes).",
+  "counts": {
+    "foundationTokens": 505,
+    "motionAtoms": 49,
+    "motionProfiles": 21,
+    "semanticTokens": 94,
+    "componentTokens": 70,
+    "primitives": 17,
+    "components": 30,
+    "sections": 107,
+    "templates": 29,
+    "pageRoutes": 69,
+    "nonPageRoutes": 2,
+    "assetRoles": 11,
+    "graphRules": 24,
+    "routesTotal": 71
+  },
+  "entryPoints": {
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "schema": "schema/pagespec.schema.json",
+    "schemaBuilder": "schema/build_schema.py",
+    "example": "schema/example.pagespec.json",
+    "validator": "schema/semantic_validate.py",
+    "adversarialTests": "schema/tests/adversarial_test.py",
+    "templates": "templates/templates.json",
+    "compatibilityGraph": "compatibility/graph.json",
+    "assetRoles": "assets/asset-roles.json",
+    "componentAllowlist": "tokens/llm/component-allowlist.json",
+    "tokenCatalog": "tokens/llm/token-catalog.json",
+    "tokenPolicy": "tokens/llm/token-policy.json",
+    "theme": "tokens/themes/light.json",
+    "motionProfiles": "tokens/10-semantic/motion.json",
+    "motionFoundation": "tokens/00-foundation/motion.json",
+    "measuredValues": "extraction/measured-values.json",
+    "styleHistogram": "extraction/style-histogram.json",
+    "verifyAll": "extraction/verify_all.py",
+    "proveDrift": "extraction/prove_drift.py"
+  },
+  "constraints": [
+    "No outbound requests from content: no third-party embeds, scripts, trackers or external links (the only external fetch in the clone is the Google Fonts stylesheet/files).",
+    "Forms never submit anywhere; every form resolves to a local success state.",
+    "Fonts: Fraunces, Inter, Rethink Sans 600 only (SIL OFL). The original's commercial faces are not licensed for use.",
+    "Copy, names, prices, stats and quotes: Kestrel placeholder content only; nothing from the original site."
+  ],
+  "structurallyUnusual": [
+    "The original's WebGL scenes and Rive/video tiles are approximated by CSS/SVG stand-ins and static illustration panels; these are documented as stand-ins (evidenceLevel css-standin), not measured motion.",
+    "27 files (10 in public/assets/decor, 17 in public/assets/icons) originate from the original site: asset roles decor.legacy-original / icon.legacy-original, replace before sharing.",
+    "/__primitives is a dev-only showcase and is excluded from templates.",
+    "/glossary/<slug> term links intentionally render the 404 page; there is no term template.",
+    "The original's hidden 'AI Agent Instructions' text layer was deliberately not reproduced and is not a section.",
+    "ia.json marks 6 templates as planned; all six are built and routed. Disagreements are listed in extraction/measured-values.json corrections and in each template's iaJsonDiff."
+  ]
+}

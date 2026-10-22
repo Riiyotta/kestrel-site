@@ -1,0 +1,90 @@
+{
+  "id": "content.legal-document",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Legal document: centred H1 and a 920px column of H4 sections and paragraphs (sample text only).",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Single column."
+  },
+  "composes": [
+    "component.rich-text"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 4
+      },
+      "blocks": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "p"
+                },
+                "html": {
+                  "type": "string",
+                  "maxWords": 483
+                }
+              },
+              "required": [
+                "type",
+                "html"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "h4"
+                },
+                "text": {
+                  "type": "string",
+                  "maxWords": 8
+                }
+              },
+              "required": [
+                "type",
+                "text"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 31
+      }
+    },
+    "required": [
+      "title",
+      "blocks"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Section gap shrinks on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.legal"
+  ],
+  "notes": "Legal copy is placeholder sample text for the fictional Kestrel, not legal advice."
+}

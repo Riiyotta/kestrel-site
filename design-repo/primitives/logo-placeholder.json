@@ -1,0 +1,28 @@
+{
+  "registryId": "primitive.logo-placeholder",
+  "version": "1.0.0",
+  "description": "Generic monochrome shape + invented wordmark standing in for a customer logo, in the slot's exact box.",
+  "props": {
+    "name": {
+      "type": "string"
+    },
+    "shape": {
+      "enum": [
+        "arc",
+        "bars",
+        "circle",
+        "diamond",
+        "plus",
+        "ring",
+        "square",
+        "triangle"
+      ]
+    }
+  },
+  "tokens": [
+    "{color.text.primary}"
+  ],
+  "measuredFrom": [
+    "part.logo-placeholder"
+  ]
+}

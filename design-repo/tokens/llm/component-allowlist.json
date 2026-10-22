@@ -1,0 +1,995 @@
+{
+  "version": "1.0.0",
+  "$description": "Closed list of what a generator may instantiate: section types with their allowed variants and motion profiles, the settable node properties, settable asset roles, and the primitive/component registry (referenced by contracts, not instantiated directly).",
+  "nodeProperties": [
+    "id",
+    "type",
+    "variant",
+    "content",
+    "motion"
+  ],
+  "motionProperties": [
+    "profile",
+    "reducedMotionFallback"
+  ],
+  "pageProperties": [
+    "id",
+    "route",
+    "template",
+    "theme",
+    "head",
+    "nodes"
+  ],
+  "sections": {
+    "chrome.assistant-note": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "chrome.footer": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "glow-standin",
+        "none"
+      ]
+    },
+    "chrome.jobs-footer": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "chrome.jobs-header": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "chrome.nav": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "nav-chrome",
+        "none"
+      ]
+    },
+    "chrome.video-teaser": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "teaser-entrance",
+        "none"
+      ]
+    },
+    "commerce.compare-features": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "accordion",
+        "none"
+      ]
+    },
+    "commerce.plans": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "compare.grid-tables": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "compare.matrix": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "compare.vs-feature-cards": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "compare.vs-intro-cards": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.blog-browse": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "filter-chips",
+        "none"
+      ]
+    },
+    "content.blog-featured": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.blog-grid": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.blog-rail": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "carousel-arrows",
+        "none"
+      ]
+    },
+    "content.faq-accordion": {
+      "variants": [
+        "cards",
+        "hairline",
+        "panel",
+        "rows"
+      ],
+      "motionProfiles": [
+        "accordion",
+        "none"
+      ]
+    },
+    "content.faq-document": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.finding-cards": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.guide-featured": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.guide-grid": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.integration-body": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.integration-catalog": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "filter-chips",
+        "none"
+      ]
+    },
+    "content.integration-setup": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.jobs-open-roles": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.keep-reading": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.legal-document": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.not-found": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.numbered-contents": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.open-roles": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.other-apps": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.post-wall": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.press-color": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.press-intro": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.press-logo": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.press-typography": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.prose-faq": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.prose-tools": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.related-posts": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.related-reading": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.related-stories": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.rich-text": {
+      "variants": [
+        "article",
+        "blog"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.split-text": {
+      "variants": [
+        "mission",
+        "team"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.story-card-list": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "filter-chips",
+        "slideshow-autoplay",
+        "none"
+      ]
+    },
+    "content.story-sections": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "content.term-index": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "cta.article-chip": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "toc-interaction",
+        "none"
+      ]
+    },
+    "cta.callout-row": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "cta.jobs-report": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "cta.post-ctas": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "feature.card-carousel": {
+      "variants": [
+        "rectangle",
+        "square"
+      ],
+      "motionProfiles": [
+        "carousel-arrows",
+        "none"
+      ]
+    },
+    "feature.coach-bento": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "feature.compare-cards": {
+      "variants": [
+        "home"
+      ],
+      "motionProfiles": [
+        "compare-cycle",
+        "none"
+      ]
+    },
+    "feature.confidence": {
+      "variants": [
+        "home"
+      ],
+      "motionProfiles": [
+        "confidence-stage",
+        "none"
+      ]
+    },
+    "feature.difference-cards": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "feature.heading-band": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "feature.jobs-mcp": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "feature.playbook": {
+      "variants": [
+        "home"
+      ],
+      "motionProfiles": [
+        "playbook-fan",
+        "none"
+      ]
+    },
+    "feature.rows": {
+      "variants": [
+        "media-472",
+        "media-600"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "feature.split-explainer": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "feature.system-find": {
+      "variants": [
+        "home"
+      ],
+      "motionProfiles": [
+        "tile-time-loops",
+        "none"
+      ]
+    },
+    "feature.tools-arc": {
+      "variants": [
+        "home"
+      ],
+      "motionProfiles": [
+        "scroll-scrub-reveal",
+        "none"
+      ]
+    },
+    "feature.values-bento": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "form.demo-signup": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "form.event-demo": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "form.nominate": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "form.partner": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.article-header": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.avatar": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "reveal-fade-up",
+        "none"
+      ]
+    },
+    "hero.doc-header": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.glossary": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.headline": {
+      "variants": [
+        "glow",
+        "plain",
+        "single-action",
+        "two-actions"
+      ],
+      "motionProfiles": [
+        "glow-standin",
+        "none"
+      ]
+    },
+    "hero.home": {
+      "variants": [
+        "home"
+      ],
+      "motionProfiles": [
+        "hero-home-stage",
+        "none"
+      ]
+    },
+    "hero.index-title": {
+      "variants": [
+        "articles",
+        "blog"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.integration-detail": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.jobs": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.post-header": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.pricing-title": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.product-video": {
+      "variants": [
+        "coach",
+        "voice"
+      ],
+      "motionProfiles": [
+        "marquee",
+        "glow-standin",
+        "none"
+      ]
+    },
+    "hero.report": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.split": {
+      "variants": [
+        "industry",
+        "product"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.story": {
+      "variants": [
+        "quote",
+        "split"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "hero.vs": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "media.demo-art": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "media.integration-orbit": {
+      "variants": [
+        "library",
+        "product"
+      ],
+      "motionProfiles": [
+        "orbit-loop",
+        "none"
+      ]
+    },
+    "media.photo-collage": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "media.photo-gallery": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "reveal-fade-up",
+        "none"
+      ]
+    },
+    "media.press-hero": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "navigation.doc-sidebar": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "navigation.press-contents": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "navigation.share-rail": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "toc-interaction",
+        "none"
+      ]
+    },
+    "navigation.story-side-menu": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "navigation.toc": {
+      "variants": [
+        "hover",
+        "inline",
+        "tick"
+      ],
+      "motionProfiles": [
+        "toc-interaction",
+        "none"
+      ]
+    },
+    "navigation.topic-bar": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "filter-chips",
+        "none"
+      ]
+    },
+    "proof.about-logos": {
+      "variants": [
+        "logos"
+      ],
+      "motionProfiles": [
+        "marquee",
+        "none"
+      ]
+    },
+    "proof.case-study-card": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "proof.employee-quotes": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "proof.employee-testimonials": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "slideshow-autoplay",
+        "none"
+      ]
+    },
+    "proof.home-bento": {
+      "variants": [
+        "home"
+      ],
+      "motionProfiles": [
+        "proof-bento",
+        "none"
+      ]
+    },
+    "proof.jobs-featured-ticker": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "jobs-ticker",
+        "none"
+      ]
+    },
+    "proof.jobs-stats": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "proof.logo-strip": {
+      "variants": [
+        "bare",
+        "labelled",
+        "trust",
+        "wall"
+      ],
+      "motionProfiles": [
+        "marquee",
+        "none"
+      ]
+    },
+    "proof.logo-wall": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "logo-wall-reveal",
+        "none"
+      ]
+    },
+    "proof.quote-panel": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "proof.stories-home": {
+      "variants": [
+        "home"
+      ],
+      "motionProfiles": [
+        "slideshow-autoplay",
+        "none"
+      ]
+    },
+    "proof.story-rail": {
+      "variants": [
+        "standard"
+      ],
+      "motionProfiles": [
+        "none"
+      ]
+    },
+    "proof.story-slideshow": {
+      "variants": [
+        "split",
+        "testimonial",
+        "wide"
+      ],
+      "motionProfiles": [
+        "slideshow-autoplay",
+        "none"
+      ]
+    }
+  },
+  "primitives": [
+    "primitive.announcement-pill",
+    "primitive.avatar",
+    "primitive.brand-mark",
+    "primitive.button",
+    "primitive.field",
+    "primitive.file-drop-zone",
+    "primitive.icon-glyph",
+    "primitive.illustration",
+    "primitive.jobs-button",
+    "primitive.letter-reveal",
+    "primitive.load-more-button",
+    "primitive.logo-placeholder",
+    "primitive.photo",
+    "primitive.pill-link",
+    "primitive.search-input",
+    "primitive.submit-button",
+    "primitive.tag-chip"
+  ],
+  "components": [
+    "component.blog-card",
+    "component.card-carousel",
+    "component.color-swatch",
+    "component.compare-table",
+    "component.cta-chip",
+    "component.demo-form",
+    "component.download-tile",
+    "component.employee-card",
+    "component.faq-accordion",
+    "component.feature-row",
+    "component.filter-chips",
+    "component.guide-card",
+    "component.integration-card",
+    "component.integration-orbit",
+    "component.job-card",
+    "component.logo-marquee",
+    "component.meta-card",
+    "component.pricing-card",
+    "component.prose-block",
+    "component.rich-text",
+    "component.ruled-frame",
+    "component.section-heading",
+    "component.share-rail",
+    "component.silk-job-card",
+    "component.social-post-card",
+    "component.story-card",
+    "component.story-slideshow",
+    "component.toc",
+    "component.type-specimen",
+    "component.video-frame"
+  ],
+  "assetRoles": [
+    "icon.glyph",
+    "illustration.product-art",
+    "logo.placeholder",
+    "photo.stock-person"
+  ]
+}

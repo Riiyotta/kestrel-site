@@ -1,0 +1,141 @@
+{
+  "id": "hero.home",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Open the homepage with the core promise, a demo/trial CTA pair and a scroll-staged photo collage with resolved-case tags.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "home": "Announcement pill, two-line H1, sub, dark + light buttons, centre photo with four satellites and five case tags."
+  },
+  "composes": [
+    "primitive.announcement-pill",
+    "primitive.button",
+    "primitive.photo"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "announcement": {
+        "type": "string",
+        "maxWords": 6
+      },
+      "headline": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 6
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 42
+      },
+      "primaryCta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      },
+      "secondaryCta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      },
+      "reassurance": {
+        "type": "string",
+        "maxWords": 18
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 4
+        },
+        "minItems": 5,
+        "maxItems": 5
+      }
+    },
+    "required": [
+      "announcement",
+      "headline",
+      "sub",
+      "primaryCta",
+      "secondaryCta",
+      "reassurance",
+      "tags"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "hero-home-stage",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "swap-variant",
+      "detail": "Phone/tablet stage: one centre photo + revealed tag, no zoom."
+    },
+    {
+      "breakpoint": "lg",
+      "change": "resize",
+      "detail": "1200-1439 uses a shorter sub and 1.8x zoom."
+    },
+    {
+      "breakpoint": "xl",
+      "change": "show",
+      "detail": "Full stage, 2x -> 1x photo zoom over scroll."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true
+  },
+  "measuredFrom": [
+    "src.hero",
+    "mo.reveal",
+    "mo.smooth-follow"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "photo.stock-person",
+      "files": "hero-center, hero-tl, hero-tr, hero-bl, hero-br"
+    },
+    {
+      "assetRole": "backdrop.webgl-standin",
+      "files": "CSS hero glow (.hero-glow-drift)"
+    }
+  ]
+}

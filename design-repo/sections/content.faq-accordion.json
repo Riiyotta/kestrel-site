@@ -1,0 +1,96 @@
+{
+  "id": "content.faq-accordion",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Collapsible questions and answers that handle objections near the end of a page.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "panel": "Pricing: sticky letter-reveal title column, white rows turning grey when open.",
+    "hairline": "In-guide: hairline rows, rotating plus, first item open.",
+    "rows": "Competitor index: centred title, white rows with caret.",
+    "cards": "Competitor detail: bordered shadowed cards, all closed."
+  },
+  "composes": [
+    "component.faq-accordion"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 15
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "maxWords": 22
+            },
+            "a": {
+              "type": "string",
+              "maxWords": 45
+            }
+          },
+          "required": [
+            "q",
+            "a"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 2,
+        "maxItems": 10
+      }
+    },
+    "required": [
+      "items"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "accordion",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Panel title column stacks above rows below 1200px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.faq",
+    "mo.faq-panel",
+    "rm.faq"
+  ],
+  "variantRules": {
+    "panel": {
+      "requires": [
+        "title"
+      ]
+    },
+    "rows": {
+      "requires": [
+        "title"
+      ]
+    },
+    "cards": {
+      "requires": [
+        "title"
+      ]
+    },
+    "hairline": {
+      "forbids": [
+        "title"
+      ]
+    }
+  }
+}

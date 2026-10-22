@@ -1,0 +1,18 @@
+{
+  "registryId": "component.logo-marquee",
+  "version": "1.0.0",
+  "description": "Bordered logo ticker card (or bare paired tickers).",
+  "composes": [
+    "primitive.logo-placeholder"
+  ],
+  "tokens": [
+    "{component.logo-marquee.fill}",
+    "{component.logo-marquee.border}"
+  ],
+  "measuredFrom": [
+    "part.logo-marquee"
+  ],
+  "motionProfiles": [
+    "marquee"
+  ]
+}

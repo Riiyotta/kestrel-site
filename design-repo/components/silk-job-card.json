@@ -1,0 +1,13 @@
+{
+  "registryId": "component.silk-job-card",
+  "version": "1.0.0",
+  "description": "Featured role card on a CSS silk stand-in.",
+  "composes": [],
+  "tokens": [],
+  "measuredFrom": [
+    "part.silk-job-card"
+  ],
+  "motionProfiles": [
+    "jobs-ticker"
+  ]
+}

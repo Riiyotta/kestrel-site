@@ -1,0 +1,106 @@
+{
+  "id": "cta.post-ctas",
+  "category": "cta",
+  "version": "1.0.0",
+  "purpose": "Two CTA cards after a post: free-trial card and book-a-call card with an email field (local only).",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Two cards."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "trial": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxWords": 8
+          },
+          "body": {
+            "type": "string",
+            "maxWords": 20
+          },
+          "cta": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "maxWords": 5
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+                "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+              }
+            },
+            "required": [
+              "label",
+              "href"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "title",
+          "body",
+          "cta"
+        ],
+        "additionalProperties": false
+      },
+      "call": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxWords": 8
+          },
+          "body": {
+            "type": "string",
+            "maxWords": 20
+          },
+          "submitLabel": {
+            "type": "string",
+            "maxWords": 3
+          }
+        },
+        "required": [
+          "title",
+          "body",
+          "submitLabel"
+        ],
+        "additionalProperties": false
+      },
+      "submission": {
+        "const": "local-success-state",
+        "description": "Forms never send data anywhere; submit swaps in a local success message."
+      }
+    },
+    "required": [
+      "trial",
+      "call",
+      "submission"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Cards stack."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.postctas"
+  ]
+}

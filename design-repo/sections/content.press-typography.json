@@ -1,0 +1,55 @@
+{
+  "id": "content.press-typography",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Typography section: paragraphs, serif and sans specimen rows and a licence footnote (open-source faces only).",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Specimens."
+  },
+  "composes": [
+    "component.type-specimen"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "paragraphs": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 57
+        },
+        "minItems": 1,
+        "maxItems": 3
+      }
+    },
+    "required": [
+      "title",
+      "paragraphs"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Specimens scale down."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.presskit"
+  ]
+}

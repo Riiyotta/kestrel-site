@@ -1,0 +1,70 @@
+{
+  "id": "chrome.footer",
+  "category": "chrome",
+  "version": "1.0.0",
+  "purpose": "Close every site-layout page with a pilot CTA card, link columns, wordmark and legal bar over the striped glow stand-in.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "CTA glass card + link card + wordmark + bottom bar."
+  },
+  "composes": [
+    "primitive.announcement-pill",
+    "primitive.button",
+    "primitive.brand-mark"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "ctaHeading": {
+        "type": "string",
+        "maxWords": 9
+      },
+      "ctaSub": {
+        "type": "string",
+        "maxWords": 9
+      }
+    },
+    "required": [
+      "ctaHeading",
+      "ctaSub"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "glow-standin",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "CTA card stacks; link columns single column."
+    },
+    {
+      "breakpoint": "md",
+      "change": "grid-collapse",
+      "detail": "Three link columns at tablet."
+    },
+    {
+      "breakpoint": "lg",
+      "change": "show",
+      "detail": "Single row of link columns."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.footer"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "backdrop.webgl-standin",
+      "files": "CSS striped glow behind the CTA"
+    }
+  ],
+  "notes": "The clone renders the same CTA copy on every route."
+}

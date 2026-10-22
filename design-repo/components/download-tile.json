@@ -1,0 +1,10 @@
+{
+  "registryId": "component.download-tile",
+  "version": "1.0.0",
+  "description": "Press-kit download tile (JPG/PNG/SVG/EPS).",
+  "composes": [],
+  "tokens": [],
+  "measuredFrom": [
+    "part.download-tile"
+  ]
+}

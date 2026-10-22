@@ -1,0 +1,120 @@
+{
+  "id": "feature.difference-cards",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "3x2 grid of grey cards, each with a glyph, title and short body, under a section heading.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Six cards."
+  },
+  "composes": [
+    "primitive.icon-glyph"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 15
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 36
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "icon": {
+              "type": "object",
+              "properties": {
+                "assetRole": {
+                  "const": "icon.glyph"
+                },
+                "name": {
+                  "enum": [
+                    "bolt",
+                    "bubble",
+                    "channels",
+                    "check",
+                    "code",
+                    "coin",
+                    "cross",
+                    "dot",
+                    "ear",
+                    "globe",
+                    "headset",
+                    "heart",
+                    "inbox",
+                    "key",
+                    "keypad",
+                    "layers",
+                    "pen",
+                    "people",
+                    "shield",
+                    "stack",
+                    "target",
+                    "tree",
+                    "wrench"
+                  ]
+                }
+              },
+              "required": [
+                "assetRole",
+                "name"
+              ],
+              "additionalProperties": false
+            },
+            "title": {
+              "type": "string",
+              "maxWords": 6
+            },
+            "body": {
+              "type": "string",
+              "maxWords": 45
+            }
+          },
+          "required": [
+            "icon",
+            "title",
+            "body"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 6
+      }
+    },
+    "required": [
+      "title",
+      "sub",
+      "items"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "md",
+      "change": "grid-collapse",
+      "detail": "Two columns at tablet."
+    },
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Single column."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.fcgrid"
+  ]
+}

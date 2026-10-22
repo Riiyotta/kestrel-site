@@ -1,0 +1,124 @@
+{
+  "id": "feature.values-bento",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Careers principles bento: heading + 2 + 3 glass value cards.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Five cards."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 9
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 36
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "icon": {
+              "type": "object",
+              "properties": {
+                "assetRole": {
+                  "const": "icon.glyph"
+                },
+                "name": {
+                  "enum": [
+                    "bolt",
+                    "bubble",
+                    "channels",
+                    "check",
+                    "code",
+                    "coin",
+                    "cross",
+                    "dot",
+                    "ear",
+                    "globe",
+                    "headset",
+                    "heart",
+                    "inbox",
+                    "key",
+                    "keypad",
+                    "layers",
+                    "pen",
+                    "people",
+                    "shield",
+                    "stack",
+                    "target",
+                    "tree",
+                    "wrench"
+                  ]
+                }
+              },
+              "required": [
+                "assetRole",
+                "name"
+              ],
+              "additionalProperties": false
+            },
+            "tint": {
+              "enum": [
+                "green",
+                "lavender",
+                "peach",
+                "pink",
+                "red",
+                "yellow"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxWords": 15
+            },
+            "body": {
+              "type": "string",
+              "maxWords": 38
+            }
+          },
+          "required": [
+            "icon",
+            "tint",
+            "title",
+            "body"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 2,
+        "maxItems": 5
+      }
+    },
+    "required": [
+      "title",
+      "sub",
+      "items"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Cards stack."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.values"
+  ]
+}

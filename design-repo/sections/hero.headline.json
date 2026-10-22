@@ -1,0 +1,101 @@
+{
+  "id": "hero.headline",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Simple centred page opener: H1 on the display scale, optional sub and optional action row.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "plain": "H1 + sub, no actions (story index, thoughts, nominate).",
+    "single-action": "One dark button (integration library).",
+    "two-actions": "Dark demo + light trial buttons (product overview).",
+    "glow": "H1 + sub over the glow stand-in (competitor index)."
+  },
+  "composes": [
+    "primitive.button"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 9
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 132
+      },
+      "actions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "maxWords": 5
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+              "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+            }
+          },
+          "required": [
+            "label",
+            "href"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 2
+      }
+    },
+    "required": [
+      "title"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "glow-standin",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "H1 steps 96/77/58/40 across xl/lg/md/base."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.heroheadline"
+  ],
+  "variantRules": {
+    "plain": {
+      "forbids": [
+        "actions"
+      ]
+    },
+    "single-action": {
+      "requires": [
+        "actions"
+      ],
+      "maxActions": 1
+    },
+    "two-actions": {
+      "requires": [
+        "actions"
+      ],
+      "minActions": 2
+    },
+    "glow": {
+      "forbids": [
+        "actions"
+      ]
+    }
+  }
+}

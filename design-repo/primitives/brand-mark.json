@@ -1,0 +1,25 @@
+{
+  "registryId": "primitive.brand-mark",
+  "version": "1.0.0",
+  "description": "Kestrel mark / wordmark / lockup (the clone's own fictional brand artwork).",
+  "props": {
+    "form": {
+      "enum": [
+        "mark",
+        "wordmark",
+        "lockup"
+      ]
+    },
+    "tone": {
+      "enum": [
+        "colour",
+        "ink",
+        "white"
+      ]
+    }
+  },
+  "tokens": [],
+  "measuredFrom": [
+    "part.brand-mark"
+  ]
+}

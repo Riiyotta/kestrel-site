@@ -1,0 +1,158 @@
+{
+  "id": "proof.stories-home",
+  "category": "proof",
+  "version": "1.0.0",
+  "purpose": "Homepage customer-stories carousel: H2 and six photo + quote cards with a pink-dot pager.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "home": "501x695 cards, 5s autoplay."
+  },
+  "composes": [
+    "component.story-slideshow"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 6
+      },
+      "stories": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "quote": {
+              "type": "string",
+              "maxWords": 35
+            },
+            "name": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "role": {
+              "type": "string",
+              "maxWords": 6
+            },
+            "photo": {
+              "type": "object",
+              "properties": {
+                "assetRole": {
+                  "const": "photo.stock-person"
+                },
+                "src": {
+                  "enum": [
+                    "/assets/photos/compare-avatar-1.webp",
+                    "/assets/photos/compare-avatar-2.webp",
+                    "/assets/photos/compare-avatar-3.webp",
+                    "/assets/photos/hero-bl.webp",
+                    "/assets/photos/hero-br.webp",
+                    "/assets/photos/hero-center.webp",
+                    "/assets/photos/hero-tl.webp",
+                    "/assets/photos/hero-tr.webp",
+                    "/assets/photos/nav-feature-industries.webp",
+                    "/assets/photos/nav-feature-product.webp",
+                    "/assets/photos/playbook-avatar-c.webp",
+                    "/assets/photos/playbook-avatar-p2l.webp",
+                    "/assets/photos/playbook-avatar-p2r.webp",
+                    "/assets/photos/playbook-avatar-p4l.webp",
+                    "/assets/photos/playbook-avatar-p4r.webp",
+                    "/assets/photos/playbook-avatar-p6l.webp",
+                    "/assets/photos/playbook-avatar-p6r.webp",
+                    "/assets/photos/proof-portrait-1.webp",
+                    "/assets/photos/proof-portrait-2.webp",
+                    "/assets/photos/story-1.webp",
+                    "/assets/photos/story-2.webp",
+                    "/assets/photos/story-3.webp",
+                    "/assets/photos/story-4.webp",
+                    "/assets/photos/story-5.webp",
+                    "/assets/photos/story-6.webp",
+                    "/assets/photos/video-teaser-thumb.webp"
+                  ]
+                }
+              },
+              "required": [
+                "assetRole",
+                "src"
+              ],
+              "additionalProperties": false
+            },
+            "logo": {
+              "type": "object",
+              "properties": {
+                "assetRole": {
+                  "const": "logo.placeholder"
+                },
+                "name": {
+                  "type": "string",
+                  "maxWords": 3
+                },
+                "shape": {
+                  "enum": [
+                    "arc",
+                    "bars",
+                    "circle",
+                    "diamond",
+                    "plus",
+                    "ring",
+                    "square",
+                    "triangle"
+                  ]
+                }
+              },
+              "required": [
+                "assetRole",
+                "name",
+                "shape"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "quote",
+            "name",
+            "role",
+            "photo",
+            "logo"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 6,
+        "maxItems": 6
+      }
+    },
+    "required": [
+      "title",
+      "stories"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "slideshow-autoplay",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "294x470 cards, 20px gap."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true
+  },
+  "measuredFrom": [
+    "src.stories",
+    "mo.slide"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "decor.legacy-original",
+      "files": "public/assets/decor/stories-blobs.png"
+    }
+  ]
+}

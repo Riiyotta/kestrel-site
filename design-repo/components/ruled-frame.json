@@ -1,0 +1,12 @@
+{
+  "registryId": "component.ruled-frame",
+  "version": "1.0.0",
+  "description": "Ruled frame holding plans, footnotes, compare table and FAQ.",
+  "composes": [],
+  "tokens": [
+    "{color.border.rule}"
+  ],
+  "measuredFrom": [
+    "part.ruled-frame"
+  ]
+}

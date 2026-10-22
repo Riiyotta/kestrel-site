@@ -1,0 +1,140 @@
+{
+  "id": "content.post-wall",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Three-column masonry wall of social-post-style cards from fictional support leaders.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Masonry."
+  },
+  "composes": [
+    "component.social-post-card"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "posts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "author": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "maxWords": 3
+                },
+                "headline": {
+                  "type": "string",
+                  "maxWords": 9
+                },
+                "avatar": {
+                  "type": "object",
+                  "properties": {
+                    "assetRole": {
+                      "const": "photo.stock-person"
+                    },
+                    "src": {
+                      "enum": [
+                        "/assets/photos/compare-avatar-1.webp",
+                        "/assets/photos/compare-avatar-2.webp",
+                        "/assets/photos/compare-avatar-3.webp",
+                        "/assets/photos/hero-bl.webp",
+                        "/assets/photos/hero-br.webp",
+                        "/assets/photos/hero-center.webp",
+                        "/assets/photos/hero-tl.webp",
+                        "/assets/photos/hero-tr.webp",
+                        "/assets/photos/nav-feature-industries.webp",
+                        "/assets/photos/nav-feature-product.webp",
+                        "/assets/photos/playbook-avatar-c.webp",
+                        "/assets/photos/playbook-avatar-p2l.webp",
+                        "/assets/photos/playbook-avatar-p2r.webp",
+                        "/assets/photos/playbook-avatar-p4l.webp",
+                        "/assets/photos/playbook-avatar-p4r.webp",
+                        "/assets/photos/playbook-avatar-p6l.webp",
+                        "/assets/photos/playbook-avatar-p6r.webp",
+                        "/assets/photos/proof-portrait-1.webp",
+                        "/assets/photos/proof-portrait-2.webp",
+                        "/assets/photos/story-1.webp",
+                        "/assets/photos/story-2.webp",
+                        "/assets/photos/story-3.webp",
+                        "/assets/photos/story-4.webp",
+                        "/assets/photos/story-5.webp",
+                        "/assets/photos/story-6.webp",
+                        "/assets/photos/video-teaser-thumb.webp"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "assetRole",
+                    "src"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "name",
+                "headline",
+                "avatar"
+              ],
+              "additionalProperties": false
+            },
+            "age": {
+              "type": "string",
+              "pattern": "^[0-9]+[hdwmy]$"
+            },
+            "body": {
+              "type": "string",
+              "maxWords": 71
+            },
+            "column": {
+              "enum": [
+                1,
+                2,
+                3
+              ]
+            }
+          },
+          "required": [
+            "author",
+            "age",
+            "body",
+            "column"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 12
+      }
+    },
+    "required": [
+      "posts"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "md",
+      "change": "grid-collapse",
+      "detail": "Two columns."
+    },
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "One column."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.postwall"
+  ]
+}

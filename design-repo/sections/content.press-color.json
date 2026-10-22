@@ -1,0 +1,50 @@
+{
+  "id": "content.press-color",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Colour section: primary swatches (clone colour tokens), black/white pair and a 2x2 gradient palette.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Palette blocks."
+  },
+  "composes": [
+    "component.color-swatch"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "body": {
+        "type": "string",
+        "maxWords": 57
+      }
+    },
+    "required": [
+      "title",
+      "body"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "grid-collapse",
+      "detail": "Two-column swatches."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.presskit"
+  ]
+}

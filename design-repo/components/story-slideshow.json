@@ -1,0 +1,27 @@
+{
+  "registryId": "component.story-slideshow",
+  "version": "1.0.0",
+  "description": "Slideshow engine: 5s autoplay, spring slide, dots/pill pager.",
+  "composes": [
+    "primitive.photo",
+    "primitive.pill-link"
+  ],
+  "tokens": [
+    "{component.pager.dot}"
+  ],
+  "measuredFrom": [
+    "part.story-slideshow"
+  ],
+  "variants": {
+    "card": [
+      "home",
+      "wide",
+      "split",
+      "testimonial",
+      "employee"
+    ]
+  },
+  "motionProfiles": [
+    "slideshow-autoplay"
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "$description": "Semantic colour roles. Reference these from contracts; never raw hex. Every alias resolves through tokens/themes/light.json.",
+  "color": {
+    "text": {
+      "primary": {
+        "$value": "{color.ink.default}",
+        "description": "Headings and body copy on white."
+      },
+      "chrome": {
+        "$value": "{color.ink.nav}",
+        "description": "Navigation, footer and dropdown labels (most-used text colour in the crawl)."
+      },
+      "strong": {
+        "$value": "{color.ink.900}",
+        "description": "Near-black UI text: tags, buttons on light, teaser title."
+      },
+      "body": {
+        "$value": "{color.body}",
+        "description": "Hero sub and long-form body grey."
+      },
+      "body-soft": {
+        "$value": "{color.body-75}",
+        "description": "75% black secondary paragraphs (pricing, detail pages, section subs)."
+      },
+      "secondary": {
+        "$value": "{color.muted.default}",
+        "description": "Secondary/meta text."
+      },
+      "tertiary": {
+        "$value": "{color.muted.3}",
+        "description": "Prose grey on product pages."
+      },
+      "inverse": {
+        "$value": "{color.white}",
+        "description": "Text on dark surfaces."
+      },
+      "link": {
+        "$value": "{color.brand.indigo}",
+        "description": "Inline rich-text links."
+      },
+      "link-hover": {
+        "$value": "{color.link.hover}",
+        "description": "Inline link hover."
+      },
+      "note": {
+        "$value": "{color.ai-note}",
+        "description": "Assistant note line (rendered at opacity 0)."
+      },
+      "chrome-rest": {
+        "$value": "{color.nav-rest}",
+        "description": "Dimmed nav labels while a dropdown is open."
+      }
+    },
+    "surface": {
+      "page": {
+        "$value": "{color.white}",
+        "description": "Default page background."
+      },
+      "inverse": {
+        "$value": "{color.ink.900}",
+        "description": "Dark buttons and dark panels."
+      },
+      "chip": {
+        "$value": "{color.chip}",
+        "description": "Neutral chip / pill fill."
+      },
+      "soft": {
+        "$value": "{color.tag-bg}",
+        "description": "Soft card fill (#F7F7F7)."
+      },
+      "muted": {
+        "$value": "{color.card-gray}",
+        "description": "Grey card and placeholder fill."
+      },
+      "panel": {
+        "$value": "{color.panel}",
+        "description": "Bento and side panels."
+      },
+      "meta": {
+        "$value": "{color.meta-card}",
+        "description": "Meta cards, table value cells, accordion bands."
+      },
+      "glass": {
+        "$value": "{color.glass-30}",
+        "description": "Translucent glass card (30% white)."
+      },
+      "glass-strong": {
+        "$value": "{color.nav-glass}",
+        "description": "Navigation glass pill."
+      },
+      "tag-glass": {
+        "$value": "{color.tag-glass}",
+        "description": "Hero floating tag outer glass."
+      },
+      "marquee": {
+        "$value": "{color.marquee-bg}",
+        "description": "Logo marquee card fill."
+      },
+      "scrim": {
+        "$value": "{color.scrim}",
+        "description": "Overlay scrim behind open dropdowns."
+      },
+      "jobs": {
+        "$value": "{color.jobs.bg}",
+        "description": "Jobs microsite page background."
+      },
+      "jobs-panel": {
+        "$value": "{color.jobs.panel}",
+        "description": "Jobs microsite panels."
+      },
+      "glossary": {
+        "$value": "{color.glossary-bg}",
+        "description": "Glossary hero band."
+      },
+      "rail": {
+        "$value": "{color.rail-tint}",
+        "description": "Tinted rail band on the blog index."
+      },
+      "tint-pink": {
+        "$value": "{color.tint.pink}",
+        "description": "Pink theme fill (stories, tags, cards)."
+      },
+      "tint-lavender": {
+        "$value": "{color.tint.lavender}",
+        "description": "Lavender theme fill."
+      },
+      "tint-green": {
+        "$value": "{color.tint.green}",
+        "description": "Green theme fill."
+      },
+      "tint-yellow": {
+        "$value": "{color.tint.yellow}",
+        "description": "Yellow theme fill."
+      },
+      "tint-peach": {
+        "$value": "{color.tint.peach}",
+        "description": "Peach theme fill."
+      },
+      "tint-red": {
+        "$value": "{color.tint.red}",
+        "description": "Red theme fill (story themes)."
+      }
+    },
+    "border": {
+      "default": {
+        "$value": "{color.card-border}",
+        "description": "1px card and marquee borders (rgba 0,0,0,.1)."
+      },
+      "hairline": {
+        "$value": "{color.hairline}",
+        "description": "Hairline rules in articles and inputs."
+      },
+      "rule": {
+        "$value": "{color.rule-soft}",
+        "description": "Ruled frames and dividers on pricing."
+      },
+      "strong": {
+        "$value": "{color.ink.default}",
+        "description": "Black outlines (press kit tiles, case-study card)."
+      },
+      "button-light": {
+        "$value": "{color.btn-rim-light}",
+        "description": "Inset rim on light buttons."
+      },
+      "button-dark": {
+        "$value": "{color.btn-rim-dark}",
+        "description": "Inset rim on dark buttons."
+      },
+      "field": {
+        "$value": "{color.field.border}",
+        "description": "Bordered form field."
+      }
+    },
+    "action": {
+      "primary": {
+        "$value": "{color.ink.900}",
+        "description": "Dark (primary) button fill."
+      },
+      "primary-text": {
+        "$value": "{color.white}",
+        "description": "Primary button label."
+      },
+      "secondary": {
+        "$value": "{color.white}",
+        "description": "Light (secondary) button fill."
+      },
+      "secondary-text": {
+        "$value": "{color.ink.default}",
+        "description": "Secondary button label."
+      },
+      "new-badge": {
+        "$value": "{color.new-magenta}",
+        "description": "'New' badge accent in nav/footer."
+      },
+      "focus": {
+        "$value": "{color.field.focus}",
+        "description": "Field focus ring colour."
+      }
+    },
+    "brand": {
+      "indigo": {
+        "$value": "{color.brand.indigo}",
+        "description": "Brand gradient stop / link colour."
+      },
+      "magenta": {
+        "$value": "{color.brand.magenta}",
+        "description": "Brand gradient stop / pager dots."
+      },
+      "ember": {
+        "$value": "{color.brand.ember}",
+        "description": "Brand gradient stop."
+      },
+      "sun": {
+        "$value": "{color.brand.sun}",
+        "description": "Brand gradient stop."
+      }
+    },
+    "theme-text": {
+      "pink": {
+        "$value": "{color.tag-text.pink}",
+        "description": "Text on pink tints."
+      },
+      "lavender": {
+        "$value": "{color.tag-text.lavender}",
+        "description": "Text on lavender tints."
+      },
+      "green": {
+        "$value": "{color.tag-text.green}",
+        "description": "Text on green tints."
+      },
+      "yellow": {
+        "$value": "{color.tag-text.yellow}",
+        "description": "Text on yellow tints."
+      },
+      "red": {
+        "$value": "{color.tag-text.red}",
+        "description": "Text on peach/red tints."
+      }
+    }
+  }
+}

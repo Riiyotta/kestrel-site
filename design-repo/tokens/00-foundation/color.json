@@ -1,0 +1,2010 @@
+{
+  "$description": "Every colour the clone declares AND actually uses (src usage count and/or rendered-crawl count > 0). Values copied from the resolved config; rendered = occurrences in the computed-style crawl of all 69 page routes at 1440 and 390 (extraction/style-histogram.json).",
+  "color": {
+    "ink": {
+      "900": {
+        "$type": "color",
+        "$value": "#1A1A1A",
+        "usage": {
+          "srcRefs": 63,
+          "rendered": 1646
+        },
+        "measuredFrom": [
+          "cfg.colors.ink.900"
+        ]
+      },
+      "default": {
+        "$type": "color",
+        "$value": "#000000",
+        "usage": {
+          "srcRefs": 248,
+          "rendered": 7130
+        },
+        "measuredFrom": [
+          "cfg.colors.ink.default"
+        ]
+      },
+      "nav": {
+        "$type": "color",
+        "$value": "#0D0D0D",
+        "usage": {
+          "srcRefs": 13,
+          "rendered": 7419
+        },
+        "measuredFrom": [
+          "cfg.colors.ink.nav"
+        ]
+      },
+      "deep": {
+        "$type": "color",
+        "$value": "#0F0F10",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 72
+        },
+        "measuredFrom": [
+          "cfg.colors.ink.deep"
+        ]
+      }
+    },
+    "body": {
+      "$type": "color",
+      "$value": "#333333",
+      "usage": {
+        "srcRefs": 13,
+        "rendered": 74
+      },
+      "measuredFrom": [
+        "cfg.colors.body"
+      ]
+    },
+    "muted": {
+      "2": {
+        "$type": "color",
+        "$value": "#7A7A7A",
+        "usage": {
+          "srcRefs": 3,
+          "rendered": 402
+        },
+        "measuredFrom": [
+          "cfg.colors.muted.2"
+        ]
+      },
+      "3": {
+        "$type": "color",
+        "$value": "#808080",
+        "usage": {
+          "srcRefs": 16,
+          "rendered": 1010
+        },
+        "measuredFrom": [
+          "cfg.colors.muted.3"
+        ]
+      },
+      "4": {
+        "$type": "color",
+        "$value": "#595959",
+        "usage": {
+          "srcRefs": 3,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.muted.4"
+        ]
+      },
+      "5": {
+        "$type": "color",
+        "$value": "#787878",
+        "usage": {
+          "srcRefs": 6,
+          "rendered": 82
+        },
+        "measuredFrom": [
+          "cfg.colors.muted.5"
+        ]
+      },
+      "6": {
+        "$type": "color",
+        "$value": "#6E6E6E",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 18
+        },
+        "measuredFrom": [
+          "cfg.colors.muted.6"
+        ]
+      },
+      "7": {
+        "$type": "color",
+        "$value": "#737373",
+        "usage": {
+          "srcRefs": 5,
+          "rendered": 64
+        },
+        "measuredFrom": [
+          "cfg.colors.muted.7"
+        ]
+      },
+      "default": {
+        "$type": "color",
+        "$value": "#666666",
+        "usage": {
+          "srcRefs": 52,
+          "rendered": 2040
+        },
+        "measuredFrom": [
+          "cfg.colors.muted.default"
+        ]
+      }
+    },
+    "line-gray": {
+      "$type": "color",
+      "$value": "#B2B2B2",
+      "usage": {
+        "srcRefs": 9,
+        "rendered": 6
+      },
+      "measuredFrom": [
+        "cfg.colors.line-gray"
+      ]
+    },
+    "card-gray": {
+      "$type": "color",
+      "$value": "#E5E5E5",
+      "usage": {
+        "srcRefs": 54,
+        "rendered": 362
+      },
+      "measuredFrom": [
+        "cfg.colors.card-gray"
+      ]
+    },
+    "tint": {
+      "lavender": {
+        "$type": "color",
+        "$value": "#E9E9F8",
+        "usage": {
+          "srcRefs": 34,
+          "rendered": 32
+        },
+        "measuredFrom": [
+          "cfg.colors.tint.lavender"
+        ]
+      },
+      "green": {
+        "$type": "color",
+        "$value": "#E7F4E8",
+        "usage": {
+          "srcRefs": 21,
+          "rendered": 83
+        },
+        "measuredFrom": [
+          "cfg.colors.tint.green"
+        ]
+      },
+      "pink": {
+        "$type": "color",
+        "$value": "#FEEAFC",
+        "usage": {
+          "srcRefs": 28,
+          "rendered": 109
+        },
+        "measuredFrom": [
+          "cfg.colors.tint.pink"
+        ]
+      },
+      "yellow": {
+        "$type": "color",
+        "$value": "#FBF6E4",
+        "usage": {
+          "srcRefs": 27,
+          "rendered": 24
+        },
+        "measuredFrom": [
+          "cfg.colors.tint.yellow"
+        ]
+      },
+      "red": {
+        "$type": "color",
+        "$value": "#FDECE9",
+        "usage": {
+          "srcRefs": 4,
+          "rendered": 20
+        },
+        "measuredFrom": [
+          "cfg.colors.tint.red"
+        ]
+      },
+      "peach": {
+        "$type": "color",
+        "$value": "#FCEDE8",
+        "usage": {
+          "srcRefs": 3,
+          "rendered": 34
+        },
+        "measuredFrom": [
+          "cfg.colors.tint.peach"
+        ]
+      }
+    },
+    "chip": {
+      "$type": "color",
+      "$value": "#F4F4F5",
+      "usage": {
+        "srcRefs": 4,
+        "rendered": 473
+      },
+      "measuredFrom": [
+        "cfg.colors.chip"
+      ]
+    },
+    "tag-bg": {
+      "$type": "color",
+      "$value": "#F7F7F7",
+      "usage": {
+        "srcRefs": 11,
+        "rendered": 306
+      },
+      "measuredFrom": [
+        "cfg.colors.tag-bg"
+      ]
+    },
+    "new-magenta": {
+      "$type": "color",
+      "$value": "#DF26FE",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 134
+      },
+      "measuredFrom": [
+        "cfg.colors.new-magenta"
+      ]
+    },
+    "tag-text": {
+      "yellow": {
+        "$type": "color",
+        "$value": "#3F3306",
+        "usage": {
+          "srcRefs": 6,
+          "rendered": 32
+        },
+        "measuredFrom": [
+          "cfg.colors.tag-text.yellow"
+        ]
+      },
+      "lavender": {
+        "$type": "color",
+        "$value": "#1E2060",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 5
+        },
+        "measuredFrom": [
+          "cfg.colors.tag-text.lavender"
+        ]
+      },
+      "pink": {
+        "$type": "color",
+        "$value": "#400B39",
+        "usage": {
+          "srcRefs": 8,
+          "rendered": 136
+        },
+        "measuredFrom": [
+          "cfg.colors.tag-text.pink"
+        ]
+      },
+      "green": {
+        "$type": "color",
+        "$value": "#0C2D10",
+        "usage": {
+          "srcRefs": 11,
+          "rendered": 74
+        },
+        "measuredFrom": [
+          "cfg.colors.tag-text.green"
+        ]
+      },
+      "red": {
+        "$type": "color",
+        "$value": "#3B1208",
+        "usage": {
+          "srcRefs": 6,
+          "rendered": 74
+        },
+        "measuredFrom": [
+          "cfg.colors.tag-text.red"
+        ]
+      }
+    },
+    "tag-meta": {
+      "pink": {
+        "$type": "color",
+        "$value": "#801573",
+        "usage": {
+          "srcRefs": 4,
+          "rendered": 17
+        },
+        "measuredFrom": [
+          "cfg.colors.tag-meta.pink"
+        ]
+      },
+      "lavender": {
+        "$type": "color",
+        "$value": "#3436A5",
+        "usage": {
+          "srcRefs": 5,
+          "rendered": 3
+        },
+        "measuredFrom": [
+          "cfg.colors.tag-meta.lavender"
+        ]
+      },
+      "green": {
+        "$type": "color",
+        "$value": "#185B1F",
+        "usage": {
+          "srcRefs": 7,
+          "rendered": 12
+        },
+        "measuredFrom": [
+          "cfg.colors.tag-meta.green"
+        ]
+      },
+      "yellow": {
+        "$type": "color",
+        "$value": "#7D6508",
+        "usage": {
+          "srcRefs": 5,
+          "rendered": 16
+        },
+        "measuredFrom": [
+          "cfg.colors.tag-meta.yellow"
+        ]
+      },
+      "red": {
+        "$type": "color",
+        "$value": "#752512",
+        "usage": {
+          "srcRefs": 3,
+          "rendered": 12
+        },
+        "measuredFrom": [
+          "cfg.colors.tag-meta.red"
+        ]
+      }
+    },
+    "brand": {
+      "indigo": {
+        "$type": "color",
+        "$value": "#4348DC",
+        "usage": {
+          "srcRefs": 37,
+          "rendered": 397
+        },
+        "measuredFrom": [
+          "cfg.colors.brand.indigo"
+        ]
+      },
+      "magenta": {
+        "$type": "color",
+        "$value": "#FF29E5",
+        "usage": {
+          "srcRefs": 28,
+          "rendered": 85
+        },
+        "measuredFrom": [
+          "cfg.colors.brand.magenta"
+        ]
+      },
+      "ember": {
+        "$type": "color",
+        "$value": "#EA4921",
+        "usage": {
+          "srcRefs": 6,
+          "rendered": 2
+        },
+        "measuredFrom": [
+          "cfg.colors.brand.ember"
+        ]
+      },
+      "sun": {
+        "$type": "color",
+        "$value": "#FACB12",
+        "usage": {
+          "srcRefs": 22,
+          "rendered": 2
+        },
+        "measuredFrom": [
+          "cfg.colors.brand.sun"
+        ]
+      }
+    },
+    "track": {
+      "$type": "color",
+      "$value": "#E4E4E4",
+      "usage": {
+        "srcRefs": 3,
+        "rendered": 23
+      },
+      "measuredFrom": [
+        "cfg.colors.track"
+      ]
+    },
+    "nav-rest": {
+      "$type": "color",
+      "$value": "rgba(13,13,13,.6)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 469
+      },
+      "measuredFrom": [
+        "cfg.colors.nav-rest"
+      ]
+    },
+    "nav-hover-bg": {
+      "$type": "color",
+      "$value": "rgba(13,13,13,.06)",
+      "usage": {
+        "srcRefs": 3,
+        "rendered": 67
+      },
+      "measuredFrom": [
+        "cfg.colors.nav-hover-bg"
+      ]
+    },
+    "nav-glass": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.86)",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 134
+      },
+      "measuredFrom": [
+        "cfg.colors.nav-glass"
+      ]
+    },
+    "scrim": {
+      "$type": "color",
+      "$value": "rgba(36,28,20,.16)",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 134
+      },
+      "measuredFrom": [
+        "cfg.colors.scrim"
+      ]
+    },
+    "dd-shell": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.42)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 67
+      },
+      "measuredFrom": [
+        "cfg.colors.dd-shell"
+      ]
+    },
+    "dd-eyebrow": {
+      "$type": "color",
+      "$value": "rgba(13,13,13,.5)",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 201
+      },
+      "measuredFrom": [
+        "cfg.colors.dd-eyebrow"
+      ]
+    },
+    "dd-title": {
+      "$type": "color",
+      "$value": "#1C1C1E",
+      "usage": {
+        "srcRefs": 4,
+        "rendered": 469
+      },
+      "measuredFrom": [
+        "cfg.colors.dd-title"
+      ]
+    },
+    "dd-desc": {
+      "$type": "color",
+      "$value": "rgba(13,13,13,.6)",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 469
+      },
+      "measuredFrom": [
+        "cfg.colors.dd-desc"
+      ]
+    },
+    "dd-feature": {
+      "$type": "color",
+      "$value": "#1B1B1F",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 67
+      },
+      "measuredFrom": [
+        "cfg.colors.dd-feature"
+      ]
+    },
+    "dd-feature-chip": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.16)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 67
+      },
+      "measuredFrom": [
+        "cfg.colors.dd-feature-chip"
+      ]
+    },
+    "dd-feature-link": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.92)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 69
+      },
+      "measuredFrom": [
+        "cfg.colors.dd-feature-link"
+      ]
+    },
+    "btn-rim-dark": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.15)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.btn-rim-dark"
+      ]
+    },
+    "btn-rim-light": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.15)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.btn-rim-light"
+      ]
+    },
+    "announce-border": {
+      "$type": "color",
+      "$value": "#E6E6E6",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 48
+      },
+      "measuredFrom": [
+        "cfg.colors.announce-border"
+      ]
+    },
+    "tag-glass": {
+      "$type": "color",
+      "$value": "rgba(231,231,231,.5)",
+      "usage": {
+        "srcRefs": 3,
+        "rendered": 822
+      },
+      "measuredFrom": [
+        "cfg.colors.tag-glass"
+      ]
+    },
+    "tag-glass-inner": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.8)",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 29
+      },
+      "measuredFrom": [
+        "cfg.colors.tag-glass-inner"
+      ]
+    },
+    "tag-border": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.2)",
+      "usage": {
+        "srcRefs": 3,
+        "rendered": 6
+      },
+      "measuredFrom": [
+        "cfg.colors.tag-border"
+      ]
+    },
+    "chip-border": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.1)",
+      "usage": {
+        "srcRefs": 5,
+        "rendered": 126
+      },
+      "measuredFrom": [
+        "cfg.colors.chip-border"
+      ]
+    },
+    "nav-glass-open": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.5)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.nav-glass-open"
+      ]
+    },
+    "menu-divider": {
+      "$type": "color",
+      "$value": "#ECECED",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.menu-divider"
+      ]
+    },
+    "teaser-bg": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.78)",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 80
+      },
+      "measuredFrom": [
+        "cfg.colors.teaser-bg"
+      ]
+    },
+    "teaser-close": {
+      "$type": "color",
+      "$value": "#4D4D4D",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 43
+      },
+      "measuredFrom": [
+        "cfg.colors.teaser-close"
+      ]
+    },
+    "ai-note": {
+      "$type": "color",
+      "$value": "#828282",
+      "usage": {
+        "srcRefs": 3,
+        "rendered": 4
+      },
+      "measuredFrom": [
+        "cfg.colors.ai-note"
+      ]
+    },
+    "footer-rule": {
+      "$type": "color",
+      "$value": "rgba(43,43,43,.15)",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.footer-rule"
+      ]
+    },
+    "legal-rule": {
+      "$type": "color",
+      "$value": "#E3E3E3",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.legal-rule"
+      ]
+    },
+    "glass-30": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.3)",
+      "usage": {
+        "srcRefs": 5,
+        "rendered": 294
+      },
+      "measuredFrom": [
+        "cfg.colors.glass-30"
+      ]
+    },
+    "marquee-bg": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.4)",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 65
+      },
+      "measuredFrom": [
+        "cfg.colors.marquee-bg"
+      ]
+    },
+    "card-border": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.1)",
+      "usage": {
+        "srcRefs": 8,
+        "rendered": 126
+      },
+      "measuredFrom": [
+        "cfg.colors.card-border"
+      ]
+    },
+    "dd-tile-hover": {
+      "$type": "color",
+      "$value": "#F6F6F7",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.dd-tile-hover"
+      ]
+    },
+    "teaser-card-hover": {
+      "$type": "color",
+      "$value": "rgba(240,240,238,.9)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.teaser-card-hover"
+      ]
+    },
+    "tile-glass": {
+      "$type": "color",
+      "$value": "rgba(231,231,231,.3)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 10
+      },
+      "measuredFrom": [
+        "cfg.colors.tile-glass"
+      ]
+    },
+    "pager-bg": {
+      "$type": "color",
+      "$value": "rgba(229,229,229,.4)",
+      "usage": {
+        "srcRefs": 4,
+        "rendered": 15
+      },
+      "measuredFrom": [
+        "cfg.colors.pager-bg"
+      ]
+    },
+    "jobs": {
+      "bg": {
+        "$type": "color",
+        "$value": "#EEEEEE",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 4
+        },
+        "measuredFrom": [
+          "cfg.colors.jobs.bg"
+        ]
+      },
+      "panel": {
+        "$type": "color",
+        "$value": "#F4F4F5",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 473
+        },
+        "measuredFrom": [
+          "cfg.colors.jobs.panel"
+        ]
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "#717171",
+        "usage": {
+          "srcRefs": 12,
+          "rendered": 52
+        },
+        "measuredFrom": [
+          "cfg.colors.jobs.muted"
+        ]
+      },
+      "muted-2": {
+        "$type": "color",
+        "$value": "#9AA0A6",
+        "usage": {
+          "srcRefs": 6,
+          "rendered": 78
+        },
+        "measuredFrom": [
+          "cfg.colors.jobs.muted-2"
+        ]
+      },
+      "stat-label": {
+        "$type": "color",
+        "$value": "#18181B",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 6
+        },
+        "measuredFrom": [
+          "cfg.colors.jobs.stat-label"
+        ]
+      },
+      "stat-desc": {
+        "$type": "color",
+        "$value": "#71717A",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 6
+        },
+        "measuredFrom": [
+          "cfg.colors.jobs.stat-desc"
+        ]
+      },
+      "hairline": {
+        "$type": "color",
+        "$value": "rgba(0,0,0,.08)",
+        "usage": {
+          "srcRefs": 4,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.jobs.hairline"
+        ]
+      },
+      "logo-tile": {
+        "$type": "color",
+        "$value": "#F5F5F5",
+        "usage": {
+          "srcRefs": 3,
+          "rendered": 48
+        },
+        "measuredFrom": [
+          "cfg.colors.jobs.logo-tile"
+        ]
+      },
+      "logo-border": {
+        "$type": "color",
+        "$value": "rgba(0,0,0,.06)",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.jobs.logo-border"
+        ]
+      },
+      "silk-base": {
+        "$type": "color",
+        "$value": "#0B0B0F",
+        "usage": {
+          "srcRefs": 0,
+          "rendered": 32
+        },
+        "measuredFrom": [
+          "cfg.colors.jobs.silk-base"
+        ]
+      }
+    },
+    "body-75": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.75)",
+      "usage": {
+        "srcRefs": 22,
+        "rendered": 715
+      },
+      "measuredFrom": [
+        "cfg.colors.body-75"
+      ]
+    },
+    "dl-tile": {
+      "default": {
+        "$type": "color",
+        "$value": "#E6E6E6",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 48
+        },
+        "measuredFrom": [
+          "cfg.colors.dl-tile.default"
+        ]
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "#B0B0B0",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.dl-tile.hover"
+        ]
+      },
+      "label": {
+        "$type": "color",
+        "$value": "#474747",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 48
+        },
+        "measuredFrom": [
+          "cfg.colors.dl-tile.label"
+        ]
+      }
+    },
+    "preview-border": {
+      "$type": "color",
+      "$value": "#CCCCCC",
+      "usage": {
+        "srcRefs": 4,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.colors.preview-border"
+      ]
+    },
+    "specimen-label": {
+      "$type": "color",
+      "$value": "#4D4D4D",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 43
+      },
+      "measuredFrom": [
+        "cfg.colors.specimen-label"
+      ]
+    },
+    "link": {
+      "hover": {
+        "$type": "color",
+        "$value": "#5F63D9",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.link.hover"
+        ]
+      }
+    },
+    "feature-eyebrow": {
+      "$type": "color",
+      "$value": "#9C9C96",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 60
+      },
+      "measuredFrom": [
+        "cfg.colors.feature-eyebrow"
+      ]
+    },
+    "catalog-desc": {
+      "$type": "color",
+      "$value": "#8A8A8A",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 10
+      },
+      "measuredFrom": [
+        "cfg.colors.catalog-desc"
+      ]
+    },
+    "soft-hover": {
+      "$type": "color",
+      "$value": "#EEEEEE",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 4
+      },
+      "measuredFrom": [
+        "cfg.colors.soft-hover"
+      ]
+    },
+    "panel": {
+      "$type": "color",
+      "$value": "#F2F2F2",
+      "usage": {
+        "srcRefs": 4,
+        "rendered": 20
+      },
+      "measuredFrom": [
+        "cfg.colors.panel"
+      ]
+    },
+    "meta-card": {
+      "$type": "color",
+      "$value": "#FBFBFB",
+      "usage": {
+        "srcRefs": 7,
+        "rendered": 230
+      },
+      "measuredFrom": [
+        "cfg.colors.meta-card"
+      ]
+    },
+    "filter-hover": {
+      "$type": "color",
+      "$value": "#E0E0E0",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.filter-hover"
+      ]
+    },
+    "rule-soft": {
+      "$type": "color",
+      "$value": "rgba(24,24,24,.07)",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 44
+      },
+      "measuredFrom": [
+        "cfg.colors.rule-soft"
+      ]
+    },
+    "silver": {
+      "$type": "color",
+      "$value": "#999999",
+      "usage": {
+        "srcRefs": 5,
+        "rendered": 4
+      },
+      "measuredFrom": [
+        "cfg.colors.silver"
+      ]
+    },
+    "hairline": {
+      "$type": "color",
+      "$value": "#E8E8E8",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 3
+      },
+      "measuredFrom": [
+        "cfg.colors.hairline"
+      ]
+    },
+    "chip-soft": {
+      "default": {
+        "$type": "color",
+        "$value": "#F4F4F4",
+        "usage": {
+          "srcRefs": 6,
+          "rendered": 141
+        },
+        "measuredFrom": [
+          "cfg.colors.chip-soft.default"
+        ]
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "#EAEAEA",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.chip-soft.hover"
+        ]
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#3C3C3C",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 16
+        },
+        "measuredFrom": [
+          "cfg.colors.chip-soft.text"
+        ]
+      }
+    },
+    "loadmore-border": {
+      "$type": "color",
+      "$value": "#DCDCDC",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.colors.loadmore-border"
+      ]
+    },
+    "quote-rule": {
+      "$type": "color",
+      "$value": "#DDDDDD",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.quote-rule"
+      ]
+    },
+    "takeaway-dot": {
+      "$type": "color",
+      "$value": "#A0A0A0",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.takeaway-dot"
+      ]
+    },
+    "field": {
+      "default": {
+        "$type": "color",
+        "$value": "#FAFAFA",
+        "usage": {
+          "srcRefs": 5,
+          "rendered": 146
+        },
+        "measuredFrom": [
+          "cfg.colors.field.default"
+        ]
+      },
+      "border": {
+        "$type": "color",
+        "$value": "rgba(136,136,136,.6)",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 16
+        },
+        "measuredFrom": [
+          "cfg.colors.field.border"
+        ]
+      },
+      "soft": {
+        "$type": "color",
+        "$value": "rgba(187,187,187,.15)",
+        "usage": {
+          "srcRefs": 3,
+          "rendered": 26
+        },
+        "measuredFrom": [
+          "cfg.colors.field.soft"
+        ]
+      },
+      "soft-border": {
+        "$type": "color",
+        "$value": "rgba(136,136,136,.1)",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 2
+        },
+        "measuredFrom": [
+          "cfg.colors.field.soft-border"
+        ]
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "#0099FF",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.field.focus"
+        ]
+      }
+    },
+    "demo-card": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.84)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 14
+      },
+      "measuredFrom": [
+        "cfg.colors.demo-card"
+      ]
+    },
+    "submit-hover": {
+      "$type": "color",
+      "$value": "#404040",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.colors.submit-hover"
+      ]
+    },
+    "outline-border": {
+      "$type": "color",
+      "$value": "#222222",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.colors.outline-border"
+      ]
+    },
+    "toc": {
+      "accent": {
+        "$type": "color",
+        "$value": "#4B4BF7",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.toc.accent"
+        ]
+      },
+      "accent-2": {
+        "$type": "color",
+        "$value": "#EC4899",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.toc.accent-2"
+        ]
+      },
+      "past": {
+        "$type": "color",
+        "$value": "#A3A3A3",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 16
+        },
+        "measuredFrom": [
+          "cfg.colors.toc.past"
+        ]
+      },
+      "upcoming": {
+        "$type": "color",
+        "$value": "#D4D4D4",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 16
+        },
+        "measuredFrom": [
+          "cfg.colors.toc.upcoming"
+        ]
+      },
+      "tick": {
+        "$type": "color",
+        "$value": "#111111",
+        "usage": {
+          "srcRefs": 4,
+          "rendered": 94
+        },
+        "measuredFrom": [
+          "cfg.colors.toc.tick"
+        ]
+      },
+      "meta": {
+        "$type": "color",
+        "$value": "#7D7D7D",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.toc.meta"
+        ]
+      },
+      "item": {
+        "$type": "color",
+        "$value": "#5A5A5A",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 50
+        },
+        "measuredFrom": [
+          "cfg.colors.toc.item"
+        ]
+      }
+    },
+    "share": {
+      "bg": {
+        "$type": "color",
+        "$value": "rgba(255,255,255,.9)",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 19
+        },
+        "measuredFrom": [
+          "cfg.colors.share.bg"
+        ]
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "#F4F6F8",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 16
+        },
+        "measuredFrom": [
+          "cfg.colors.share.hover"
+        ]
+      }
+    },
+    "cta-chip": {
+      "label": {
+        "$type": "color",
+        "$value": "#1E1E1E",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 22
+        },
+        "measuredFrom": [
+          "cfg.colors.cta-chip.label"
+        ]
+      },
+      "rule": {
+        "$type": "color",
+        "$value": "#E2E2E2",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 22
+        },
+        "measuredFrom": [
+          "cfg.colors.cta-chip.rule"
+        ]
+      }
+    },
+    "faq": {
+      "border": {
+        "$type": "color",
+        "$value": "#EBECED",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 72
+        },
+        "measuredFrom": [
+          "cfg.colors.faq.border"
+        ]
+      },
+      "plus": {
+        "$type": "color",
+        "$value": "#5A616E",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 72
+        },
+        "measuredFrom": [
+          "cfg.colors.faq.plus"
+        ]
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "#252E3D",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.faq.icon"
+        ]
+      }
+    },
+    "matrix": {
+      "border": {
+        "$type": "color",
+        "$value": "#E5E7EB",
+        "usage": {
+          "srcRefs": 5,
+          "rendered": 84
+        },
+        "measuredFrom": [
+          "cfg.colors.matrix.border"
+        ]
+      },
+      "head": {
+        "$type": "color",
+        "$value": "#FAFAFB",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 6
+        },
+        "measuredFrom": [
+          "cfg.colors.matrix.head"
+        ]
+      },
+      "us": {
+        "$type": "color",
+        "$value": "rgba(79,70,229,.04)",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 84
+        },
+        "measuredFrom": [
+          "cfg.colors.matrix.us"
+        ]
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#111827",
+        "usage": {
+          "srcRefs": 5,
+          "rendered": 168
+        },
+        "measuredFrom": [
+          "cfg.colors.matrix.text"
+        ]
+      },
+      "row": {
+        "$type": "color",
+        "$value": "#F3F4F6",
+        "usage": {
+          "srcRefs": 3,
+          "rendered": 156
+        },
+        "measuredFrom": [
+          "cfg.colors.matrix.row"
+        ]
+      },
+      "yes": {
+        "$type": "color",
+        "$value": "#34D399",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.matrix.yes"
+        ]
+      },
+      "no": {
+        "$type": "color",
+        "$value": "#FB7185",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.matrix.no"
+        ]
+      },
+      "value": {
+        "$type": "color",
+        "$value": "#374151",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 146
+        },
+        "measuredFrom": [
+          "cfg.colors.matrix.value"
+        ]
+      },
+      "sub": {
+        "$type": "color",
+        "$value": "#6B7280",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 156
+        },
+        "measuredFrom": [
+          "cfg.colors.matrix.sub"
+        ]
+      }
+    },
+    "grid-head": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.2)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 12
+      },
+      "measuredFrom": [
+        "cfg.colors.grid-head"
+      ]
+    },
+    "rail-tint": {
+      "$type": "color",
+      "$value": "rgba(66,71,219,.04)",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.colors.rail-tint"
+      ]
+    },
+    "employee": {
+      "pink": {
+        "$type": "color",
+        "$value": "#FFEAFC",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 12
+        },
+        "measuredFrom": [
+          "cfg.colors.employee.pink"
+        ]
+      },
+      "cream": {
+        "$type": "color",
+        "$value": "#FBF6E5",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 10
+        },
+        "measuredFrom": [
+          "cfg.colors.employee.cream"
+        ]
+      },
+      "peach": {
+        "$type": "color",
+        "$value": "#FEECEA",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 12
+        },
+        "measuredFrom": [
+          "cfg.colors.employee.peach"
+        ]
+      }
+    },
+    "tint-dot": {
+      "pink": {
+        "$type": "color",
+        "$value": "#FFC9F9",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 2
+        },
+        "measuredFrom": [
+          "cfg.colors.tint-dot.pink"
+        ]
+      },
+      "yellow": {
+        "$type": "color",
+        "$value": "#FBEFC1",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 2
+        },
+        "measuredFrom": [
+          "cfg.colors.tint-dot.yellow"
+        ]
+      },
+      "red": {
+        "$type": "color",
+        "$value": "#F9C8BC",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 2
+        },
+        "measuredFrom": [
+          "cfg.colors.tint-dot.red"
+        ]
+      },
+      "green": {
+        "$type": "color",
+        "$value": "#C8E9CB",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 4
+        },
+        "measuredFrom": [
+          "cfg.colors.tint-dot.green"
+        ]
+      },
+      "neutral": {
+        "$type": "color",
+        "$value": "#E5E5E5",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 362
+        },
+        "measuredFrom": [
+          "cfg.colors.tint-dot.neutral"
+        ]
+      }
+    },
+    "side-card": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.6)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 8
+      },
+      "measuredFrom": [
+        "cfg.colors.side-card"
+      ]
+    },
+    "meta-dot": {
+      "$type": "color",
+      "$value": "#17171C",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 70
+      },
+      "measuredFrom": [
+        "cfg.colors.meta-dot"
+      ]
+    },
+    "cta-body": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.8)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 29
+      },
+      "measuredFrom": [
+        "cfg.colors.cta-body"
+      ]
+    },
+    "topic-bar": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.94)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 4
+      },
+      "measuredFrom": [
+        "cfg.colors.topic-bar"
+      ]
+    },
+    "report": {
+      "ink": {
+        "$type": "color",
+        "$value": "#141414",
+        "usage": {
+          "srcRefs": 9,
+          "rendered": 50
+        },
+        "measuredFrom": [
+          "cfg.colors.report.ink"
+        ]
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "#5F5F66",
+        "usage": {
+          "srcRefs": 4,
+          "rendered": 12
+        },
+        "measuredFrom": [
+          "cfg.colors.report.muted"
+        ]
+      },
+      "trust": {
+        "$type": "color",
+        "$value": "#9A9AA2",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 2
+        },
+        "measuredFrom": [
+          "cfg.colors.report.trust"
+        ]
+      },
+      "card": {
+        "$type": "color",
+        "$value": "#F5F5F7",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 10
+        },
+        "measuredFrom": [
+          "cfg.colors.report.card"
+        ]
+      },
+      "caption": {
+        "$type": "color",
+        "$value": "#4E4E55",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 6
+        },
+        "measuredFrom": [
+          "cfg.colors.report.caption"
+        ]
+      },
+      "magenta": {
+        "$type": "color",
+        "$value": "#E04BD6",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 2
+        },
+        "measuredFrom": [
+          "cfg.colors.report.magenta"
+        ]
+      },
+      "lilac": {
+        "$type": "color",
+        "$value": "#CDCEF3",
+        "usage": {
+          "srcRefs": 2,
+          "rendered": 2
+        },
+        "measuredFrom": [
+          "cfg.colors.report.lilac"
+        ]
+      },
+      "rule": {
+        "$type": "color",
+        "$value": "#ECECEF",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 0
+        },
+        "measuredFrom": [
+          "cfg.colors.report.rule"
+        ]
+      },
+      "pink-mid": {
+        "$type": "color",
+        "$value": "#801470",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 8
+        },
+        "measuredFrom": [
+          "cfg.colors.report.pink-mid"
+        ]
+      }
+    },
+    "on-art": {
+      "78": {
+        "$type": "color",
+        "$value": "rgba(255,255,255,.78)",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 80
+        },
+        "measuredFrom": [
+          "cfg.colors.on-art.78"
+        ]
+      },
+      "92": {
+        "$type": "color",
+        "$value": "rgba(255,255,255,.92)",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 69
+        },
+        "measuredFrom": [
+          "cfg.colors.on-art.92"
+        ]
+      },
+      "94": {
+        "$type": "color",
+        "$value": "rgba(255,255,255,.94)",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 4
+        },
+        "measuredFrom": [
+          "cfg.colors.on-art.94"
+        ]
+      },
+      "95": {
+        "$type": "color",
+        "$value": "rgba(255,255,255,.95)",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 8
+        },
+        "measuredFrom": [
+          "cfg.colors.on-art.95"
+        ]
+      }
+    },
+    "social": {
+      "bg": {
+        "$type": "color",
+        "$value": "#F3F4F9",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 24
+        },
+        "measuredFrom": [
+          "cfg.colors.social.bg"
+        ]
+      },
+      "link": {
+        "$type": "color",
+        "$value": "#0077B5",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 5
+        },
+        "measuredFrom": [
+          "cfg.colors.social.link"
+        ]
+      },
+      "age": {
+        "$type": "color",
+        "$value": "rgba(0,0,0,.6)",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 24
+        },
+        "measuredFrom": [
+          "cfg.colors.social.age"
+        ]
+      }
+    },
+    "glossary-bg": {
+      "$type": "color",
+      "$value": "#FBFAF9",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.colors.glossary-bg"
+      ]
+    },
+    "orbit-glow": {
+      "$type": "color",
+      "$value": "rgba(255,195,248,.5)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 4
+      },
+      "measuredFrom": [
+        "cfg.colors.orbit-glow"
+      ]
+    },
+    "catalog-rule": {
+      "$type": "color",
+      "$value": "#9DC0D5",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 0
+      },
+      "measuredFrom": [
+        "cfg.colors.catalog-rule"
+      ]
+    },
+    "story-tint": {
+      "peach": {
+        "$type": "color",
+        "$value": "#FDECE8",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 56
+        },
+        "measuredFrom": [
+          "cfg.colors.story-tint.peach"
+        ]
+      },
+      "pink": {
+        "$type": "color",
+        "$value": "#FFEBFD",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 56
+        },
+        "measuredFrom": [
+          "cfg.colors.story-tint.pink"
+        ]
+      }
+    },
+    "about-fade": {
+      "$type": "color",
+      "$value": "#F9F9F9",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.colors.about-fade"
+      ]
+    },
+    "mark": {
+      "$type": "color",
+      "$value": "#D7D5F1",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.colors.mark"
+      ]
+    },
+    "quote-ink": {
+      "$type": "color",
+      "$value": "#1C1C1C",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 4
+      },
+      "measuredFrom": [
+        "cfg.colors.quote-ink"
+      ]
+    },
+    "blog-rule": {
+      "$type": "color",
+      "$value": "#F0F0F0",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.colors.blog-rule"
+      ]
+    },
+    "video-time": {
+      "$type": "color",
+      "$value": "#5100FF",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.colors.video-time"
+      ]
+    },
+    "vs-card": {
+      "$type": "color",
+      "$value": "#F8F8F8",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 24
+      },
+      "measuredFrom": [
+        "cfg.colors.vs-card"
+      ]
+    },
+    "values-card": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.85)",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 10
+      },
+      "measuredFrom": [
+        "cfg.colors.values-card"
+      ]
+    },
+    "roles-widget": {
+      "accent": {
+        "$type": "color",
+        "$value": "#5B3FFF",
+        "usage": {
+          "srcRefs": 3,
+          "rendered": 12
+        },
+        "measuredFrom": [
+          "cfg.colors.roles-widget.accent"
+        ]
+      },
+      "meta": {
+        "$type": "color",
+        "$value": "#555555",
+        "usage": {
+          "srcRefs": 1,
+          "rendered": 12
+        },
+        "measuredFrom": [
+          "cfg.colors.roles-widget.meta"
+        ]
+      }
+    },
+    "white": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "usage": {
+        "srcRefs": 146,
+        "rendered": 3364
+      },
+      "measuredFrom": [
+        "css.base.white"
+      ],
+      "note": "Framework default palette white (page background, inverse text); not redefined in the config."
+    }
+  }
+}

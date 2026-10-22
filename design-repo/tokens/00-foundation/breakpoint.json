@@ -1,0 +1,34 @@
+{
+  "$description": "Mobile-first breakpoints: base (<810, phone), md 810 (tablet), lg 1200 (desktop), xl 1440 (desktop XL).",
+  "breakpoint": {
+    "md": {
+      "$type": "dimension",
+      "$value": "810px",
+      "measuredFrom": [
+        "cfg.screens.md"
+      ]
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "1200px",
+      "measuredFrom": [
+        "cfg.screens.lg"
+      ]
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "1440px",
+      "measuredFrom": [
+        "cfg.screens.xl"
+      ]
+    },
+    "base": {
+      "$type": "dimension",
+      "$value": "0px",
+      "measuredFrom": [
+        "cfg.screens.md"
+      ],
+      "note": "Phone: everything below md (810px)."
+    }
+  }
+}

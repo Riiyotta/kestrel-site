@@ -1,0 +1,41 @@
+{
+  "id": "navigation.toc",
+  "category": "navigation",
+  "version": "1.0.0",
+  "purpose": "Table of contents derived from the body headings.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "hover": "Fixed left list that expands labels on hover (blog post, 1200px+).",
+    "tick": "Fixed left tick rail with hover popover (guide, 1200px+).",
+    "inline": "'In this guide' disclosure above the body (guide, below 1200px)."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "toc-interaction",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "lg",
+      "change": "swap-variant",
+      "detail": "hover/tick shown from 1200px; inline shown below 1200px."
+    }
+  ],
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "measuredFrom": [
+    "src.toc",
+    "mo.tick"
+  ],
+  "notes": "A guide page carries two TOC nodes (inline + tick); rules key on (section, variant)."
+}

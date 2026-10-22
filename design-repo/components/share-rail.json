@@ -1,0 +1,12 @@
+{
+  "registryId": "component.share-rail",
+  "version": "1.0.0",
+  "description": "Fixed share rail.",
+  "composes": [],
+  "tokens": [
+    "{component.share-rail.fill}"
+  ],
+  "measuredFrom": [
+    "part.share-rail"
+  ]
+}

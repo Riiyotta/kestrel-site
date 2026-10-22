@@ -1,0 +1,16 @@
+{
+  "registryId": "primitive.search-input",
+  "version": "1.0.0",
+  "description": "Pill search input filtering the guide list locally.",
+  "props": {
+    "placeholder": {
+      "type": "string"
+    }
+  },
+  "tokens": [
+    "{color.border.hairline}"
+  ],
+  "measuredFrom": [
+    "part.search-input"
+  ]
+}

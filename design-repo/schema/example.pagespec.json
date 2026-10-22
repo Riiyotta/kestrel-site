@@ -1,0 +1,214 @@
+{
+  "id": "page.escalation-paths",
+  "route": "/articles/escalation-paths",
+  "template": "template.article-detail",
+  "theme": "light",
+  "head": {
+    "title": "Escalation paths that keep the context | Kestrel"
+  },
+  "nodes": [
+    {
+      "id": "nav",
+      "type": "chrome.nav",
+      "variant": "standard",
+      "content": {},
+      "motion": {
+        "profile": "nav-chrome",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "header",
+      "type": "hero.article-header",
+      "variant": "standard",
+      "content": {
+        "topic": "Operations",
+        "title": "Escalation paths that keep the context",
+        "description": "How to hand a case from the agent to a person so the customer never has to explain it twice.",
+        "author": {
+          "name": "Mira Castellanos",
+          "avatar": {
+            "assetRole": "photo.stock-person",
+            "src": "/assets/photos/playbook-avatar-c.webp"
+          }
+        },
+        "updated": "Oct 20, 2026"
+      },
+      "motion": {
+        "profile": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "toc-inline",
+      "type": "navigation.toc",
+      "variant": "inline",
+      "content": {},
+      "motion": {
+        "profile": "toc-interaction",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "body",
+      "type": "content.rich-text",
+      "variant": "article",
+      "content": {
+        "blocks": [
+          {
+            "type": "takeaways",
+            "title": "Key takeaways",
+            "items": [
+              "Pass the summary, the steps already tried and the reason for the hand-off.",
+              "Route by skill and urgency, not by whoever is free first."
+            ]
+          },
+          {
+            "type": "h2",
+            "text": "Why hand-offs lose the thread"
+          },
+          {
+            "type": "p",
+            "html": "Most repeat contacts start at a hand-off. The person who picks up the case sees a ticket, not the conversation, so the customer starts again. A good path carries <strong>what was checked</strong> and <em>why</em> it stopped."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "A two-line summary written for the next person",
+              "The account checks that already passed",
+              "The rule that triggered the hand-off"
+            ]
+          },
+          {
+            "type": "blockquote",
+            "html": "Our leads read four lines and know exactly where to pick up.",
+            "cite": "Support lead at a fictional lender"
+          },
+          {
+            "type": "h2",
+            "text": "Designing the route"
+          },
+          {
+            "type": "p",
+            "html": "Map each intent to a named queue and a time limit. Review the paths monthly with the <a href=\"/articles/support-metrics-that-matter\">metrics that matter</a> beside them."
+          }
+        ]
+      },
+      "motion": {
+        "profile": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "faq",
+      "type": "content.faq-accordion",
+      "variant": "hairline",
+      "content": {
+        "items": [
+          {
+            "q": "Should every escalation go to a senior agent?",
+            "a": "No. Route by the skill the case needs; seniority is only one of several signals."
+          },
+          {
+            "q": "How long should a summary be?",
+            "a": "Two or three short lines. If it needs more, the playbook step that stopped is usually unclear."
+          }
+        ]
+      },
+      "motion": {
+        "profile": "accordion",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "keep-reading",
+      "type": "content.keep-reading",
+      "variant": "standard",
+      "content": {
+        "guides": [
+          {
+            "title": "Reducing a ticket backlog without burning out the team",
+            "description": "A week-by-week plan for clearing old cases while new ones keep arriving.",
+            "topic": "Operations",
+            "date": "Sep 30, 2026",
+            "author": {
+              "name": "Mira Castellanos",
+              "avatar": {
+                "assetRole": "photo.stock-person",
+                "src": "/assets/photos/playbook-avatar-c.webp"
+              }
+            },
+            "href": "/articles/reducing-ticket-backlog"
+          },
+          {
+            "title": "First response time, explained",
+            "description": "What the number measures, what it hides and how to pair it with quality.",
+            "topic": "Metrics",
+            "date": "Sep 12, 2026",
+            "author": {
+              "name": "Mira Castellanos",
+              "avatar": {
+                "assetRole": "photo.stock-person",
+                "src": "/assets/photos/playbook-avatar-c.webp"
+              }
+            },
+            "href": "/articles/first-response-time-explained"
+          }
+        ]
+      },
+      "motion": {
+        "profile": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "toc-tick",
+      "type": "navigation.toc",
+      "variant": "tick",
+      "content": {},
+      "motion": {
+        "profile": "toc-interaction",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "share",
+      "type": "navigation.share-rail",
+      "variant": "standard",
+      "content": {},
+      "motion": {
+        "profile": "toc-interaction",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "chip",
+      "type": "cta.article-chip",
+      "variant": "standard",
+      "content": {
+        "tag": "Demo",
+        "label": "See Kestrel hand a case to your team",
+        "href": "/get-a-demo",
+        "trailing": "Start free trial",
+        "trailingHref": "#"
+      },
+      "motion": {
+        "profile": "toc-interaction",
+        "reducedMotionFallback": "instant-state-change"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "chrome.footer",
+      "variant": "standard",
+      "content": {
+        "ctaHeading": "Bring us the queue you dread",
+        "ctaSub": "Run a free 14-day pilot of Kestrel."
+      },
+      "motion": {
+        "profile": "glow-standin",
+        "reducedMotionFallback": "static-rest-frame"
+      }
+    }
+  ]
+}

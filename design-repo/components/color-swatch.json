@@ -1,0 +1,10 @@
+{
+  "registryId": "component.color-swatch",
+  "version": "1.0.0",
+  "description": "Press-kit colour swatch.",
+  "composes": [],
+  "tokens": [],
+  "measuredFrom": [
+    "part.color-swatch"
+  ]
+}

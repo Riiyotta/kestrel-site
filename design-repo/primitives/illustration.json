@@ -1,0 +1,17 @@
+{
+  "registryId": "primitive.illustration",
+  "version": "1.0.0",
+  "description": "Static product illustration panel (scene x tint) standing in for the original's Rive/video tiles.",
+  "props": {
+    "scene": {
+      "type": "string"
+    },
+    "tint": {
+      "type": "string"
+    }
+  },
+  "tokens": [],
+  "measuredFrom": [
+    "part.illustration"
+  ]
+}

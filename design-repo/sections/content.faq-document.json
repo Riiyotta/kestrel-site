@@ -1,0 +1,127 @@
+{
+  "id": "content.faq-document",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Static FAQ document: topic sections of always-visible questions with rich-text answers.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "600px document column."
+  },
+  "composes": [
+    "component.rich-text"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "sections": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "q": {
+                    "type": "string",
+                    "maxWords": 11
+                  },
+                  "a": {
+                    "type": "array",
+                    "items": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "p"
+                            },
+                            "html": {
+                              "type": "string",
+                              "maxWords": 59
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "html"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "const": "ul"
+                            },
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "maxWords": 5
+                              },
+                              "minItems": 1,
+                              "maxItems": 4
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "items"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 4
+                  }
+                },
+                "required": [
+                  "q",
+                  "a"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "maxItems": 3
+            }
+          },
+          "required": [
+            "title",
+            "items"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 8
+      }
+    },
+    "required": [
+      "sections"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "md",
+      "change": "show",
+      "detail": "Empty sticky index column from 810px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.faqdocbody"
+  ]
+}

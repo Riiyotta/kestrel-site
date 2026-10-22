@@ -1,0 +1,39 @@
+{
+  "registryId": "primitive.button",
+  "version": "1.0.0",
+  "description": "Pill button: dark (primary) or light (secondary) at lg 42 / md 34 / xl 50 tall, plus the outline link variant with a rotating arrow.",
+  "props": {
+    "variant": {
+      "enum": [
+        "dark",
+        "light",
+        "outline"
+      ]
+    },
+    "size": {
+      "enum": [
+        "lg",
+        "md",
+        "xl"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  },
+  "tokens": [
+    "{component.button.dark-fill}",
+    "{component.button.light-fill}",
+    "{component.button.radius}",
+    "{component.button.label}"
+  ],
+  "measuredFrom": [
+    "part.button"
+  ],
+  "states": {
+    "hover": "shadow alpha 0 -> 1 after a 60ms hold, 0.36s cubic-bezier(.6,.15,.25,1); outline: arrow rotates -45deg (pill spring)"
+  }
+}

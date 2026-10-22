@@ -1,0 +1,48 @@
+{
+  "id": "hero.pricing-title",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Pricing opener: left H1 beside a short statement of how billing works.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Row at lg+, stacked below."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 2
+      },
+      "statement": {
+        "type": "string",
+        "maxWords": 76
+      }
+    },
+    "required": [
+      "title",
+      "statement"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Stacked below 1200px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.pricing"
+  ]
+}

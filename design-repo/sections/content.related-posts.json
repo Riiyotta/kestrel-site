@@ -1,0 +1,90 @@
+{
+  "id": "content.related-posts",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Related posts under a post: H2 + two cards.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Two 588px cards."
+  },
+  "composes": [
+    "component.blog-card"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "posts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxWords": 17
+            },
+            "date": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "cover": {
+              "type": "object",
+              "properties": {
+                "tone": {
+                  "enum": [
+                    "indigo",
+                    "lavender",
+                    "magenta",
+                    "mint",
+                    "peach",
+                    "sun"
+                  ]
+                }
+              },
+              "required": [
+                "tone"
+              ],
+              "additionalProperties": false
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+              "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+            }
+          },
+          "required": [
+            "title",
+            "date",
+            "cover",
+            "href"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 2
+      }
+    },
+    "required": [
+      "posts"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Cards stack."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.blogpost"
+  ]
+}

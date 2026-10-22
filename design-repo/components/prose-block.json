@@ -1,0 +1,12 @@
+{
+  "registryId": "component.prose-block",
+  "version": "1.0.0",
+  "description": "ProseSection wrapper: H2 + item blocks in a 1040px column.",
+  "composes": [
+    "component.rich-text"
+  ],
+  "tokens": [],
+  "measuredFrom": [
+    "part.prose-block"
+  ]
+}

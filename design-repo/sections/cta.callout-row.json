@@ -1,0 +1,112 @@
+{
+  "id": "cta.callout-row",
+  "category": "cta",
+  "version": "1.0.0",
+  "purpose": "Single image-left callout row with H3, body and a dark button.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "One row."
+  },
+  "composes": [
+    "component.feature-row"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 12
+      },
+      "body": {
+        "type": "string",
+        "maxWords": 46
+      },
+      "cta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      },
+      "art": {
+        "type": "object",
+        "properties": {
+          "assetRole": {
+            "const": "illustration.product-art"
+          },
+          "scene": {
+            "enum": [
+              "channels",
+              "chart",
+              "chat",
+              "flow",
+              "lock",
+              "outreach",
+              "people",
+              "phone",
+              "queue",
+              "review",
+              "shield",
+              "test"
+            ]
+          },
+          "tint": {
+            "enum": [
+              "brand",
+              "green",
+              "grey",
+              "lavender",
+              "peach",
+              "pink",
+              "yellow"
+            ]
+          }
+        },
+        "required": [
+          "assetRole",
+          "scene",
+          "tint"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "title",
+      "body",
+      "cta",
+      "art"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Art stacks above text."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.featurerows"
+  ]
+}

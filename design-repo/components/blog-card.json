@@ -1,0 +1,10 @@
+{
+  "registryId": "component.blog-card",
+  "version": "1.0.0",
+  "description": "Blog card with tone cover, title and meta.",
+  "composes": [],
+  "tokens": [],
+  "measuredFrom": [
+    "part.blog-card"
+  ]
+}

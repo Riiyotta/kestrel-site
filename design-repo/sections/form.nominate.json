@@ -1,0 +1,114 @@
+{
+  "id": "form.nominate",
+  "category": "form",
+  "version": "1.0.0",
+  "purpose": "Wide labelled nomination form with soft fields, a file drop zone and a full-width submit.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Single column form."
+  },
+  "composes": [
+    "primitive.field",
+    "primitive.file-drop-zone",
+    "primitive.submit-button"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "fields": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "pattern": "^[a-z_]+$"
+            },
+            "label": {
+              "type": "string",
+              "maxWords": 4
+            },
+            "type": {
+              "enum": [
+                "text",
+                "email",
+                "url",
+                "textarea",
+                "select"
+              ]
+            },
+            "required": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 6
+      },
+      "upload": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 15
+          },
+          "helper": {
+            "type": "string",
+            "maxWords": 15
+          }
+        },
+        "required": [
+          "label",
+          "helper"
+        ],
+        "additionalProperties": false
+      },
+      "submitLabel": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "successMessage": {
+        "type": "string",
+        "maxWords": 33
+      },
+      "submission": {
+        "const": "local-success-state",
+        "description": "Forms never send data anywhere; submit swaps in a local success message."
+      }
+    },
+    "required": [
+      "fields",
+      "upload",
+      "submitLabel",
+      "successMessage",
+      "submission"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Name and email fields stack."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.nominate",
+    "src.form"
+  ]
+}

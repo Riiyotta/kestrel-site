@@ -1,0 +1,51 @@
+{
+  "id": "feature.system-find",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Homepage systems story: headline + long sub beside floating integration tiles joined by connector lines.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "home": "Tiles on time loops."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 14
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 108
+      }
+    },
+    "required": [
+      "title",
+      "sub"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "tile-time-loops",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "md",
+      "change": "stack",
+      "detail": "Headline over a 710x925 connector tree with 56px tiles."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true
+  },
+  "measuredFrom": [
+    "src.integrations",
+    "mo.mirror"
+  ]
+}

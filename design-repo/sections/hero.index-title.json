@@ -1,0 +1,73 @@
+{
+  "id": "hero.index-title",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Content-index opener: left-aligned H1 + lede; the guides variant adds an uppercase eyebrow and a search box.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "blog": "H1 + lede.",
+    "articles": "Eyebrow + H1 + lede + pill search input (filters locally)."
+  },
+  "composes": [
+    "primitive.search-input"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "eyebrow": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "title": {
+        "type": "string",
+        "maxWords": 11
+      },
+      "lede": {
+        "type": "string",
+        "maxWords": 17
+      },
+      "search": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "title",
+      "lede"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Search input stacks under the text below 1200px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.blogindex",
+    "src.articleindex"
+  ],
+  "variantRules": {
+    "articles": {
+      "requires": [
+        "eyebrow",
+        "search"
+      ]
+    },
+    "blog": {
+      "forbids": [
+        "eyebrow",
+        "search"
+      ]
+    }
+  }
+}

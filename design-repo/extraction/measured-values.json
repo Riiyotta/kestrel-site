@@ -1,0 +1,6612 @@
+{
+  "$description": "Citation ledger. Every measuredFrom key used anywhere in the repo resolves here to path:line[-line] in the source project plus a 'contains' snippet that must appear in that range. These point OUTSIDE design-repo/ on purpose (build-time evidence); verify_all.py checks them when the source tree is next to the repo and only warns when it is absent.",
+  "sourceStack": "React 18 + Vite 5, Tailwind CSS v3 (tokens in tailwind.config.cjs), custom CSS, framer-motion, Lenis smooth scroll, react-router 6 (documentation only).",
+  "citations": {
+    "assets.credits": {
+      "path": "IMAGE_CREDITS.md",
+      "lines": "3",
+      "contains": "Pexels License"
+    },
+    "assets.scenes": {
+      "path": "src/components/product/ProductArt.jsx",
+      "lines": "63",
+      "contains": "const SCENES = {"
+    },
+    "assets.shapes": {
+      "path": "src/components/PlaceholderLogo.jsx",
+      "lines": "6-15",
+      "contains": "const SHAPES = {"
+    },
+    "assets.slots": {
+      "path": "public/assets/photos/slots.json",
+      "lines": "3",
+      "contains": "\"slots\": {"
+    },
+    "assets.tints": {
+      "path": "src/components/product/ProductArt.jsx",
+      "lines": "10-18",
+      "contains": "const TINTS = {"
+    },
+    "cfg.backdropBlur.demo-quote": {
+      "path": "tailwind.config.cjs",
+      "lines": "740",
+      "contains": "demo-quote"
+    },
+    "cfg.backdropBlur.glow": {
+      "path": "tailwind.config.cjs",
+      "lines": "249",
+      "contains": "glow"
+    },
+    "cfg.backdropBlur.nav": {
+      "path": "tailwind.config.cjs",
+      "lines": "251",
+      "contains": "nav"
+    },
+    "cfg.backdropBlur.nav-open": {
+      "path": "tailwind.config.cjs",
+      "lines": "252",
+      "contains": "nav-open"
+    },
+    "cfg.backdropBlur.orbit": {
+      "path": "tailwind.config.cjs",
+      "lines": "739",
+      "contains": "orbit"
+    },
+    "cfg.backdropBlur.quote-card": {
+      "path": "tailwind.config.cjs",
+      "lines": "683",
+      "contains": "quote-card"
+    },
+    "cfg.backdropBlur.scrim": {
+      "path": "tailwind.config.cjs",
+      "lines": "248",
+      "contains": "scrim"
+    },
+    "cfg.backdropBlur.share": {
+      "path": "tailwind.config.cjs",
+      "lines": "595",
+      "contains": "share"
+    },
+    "cfg.backdropBlur.side-menu": {
+      "path": "tailwind.config.cjs",
+      "lines": "682",
+      "contains": "side-menu"
+    },
+    "cfg.backdropBlur.tag": {
+      "path": "tailwind.config.cjs",
+      "lines": "250",
+      "contains": "tag"
+    },
+    "cfg.backdropBlur.teaser": {
+      "path": "tailwind.config.cjs",
+      "lines": "254",
+      "contains": "teaser"
+    },
+    "cfg.backdropBlur.ticket": {
+      "path": "tailwind.config.cjs",
+      "lines": "253",
+      "contains": "ticket"
+    },
+    "cfg.backdropBlur.values": {
+      "path": "tailwind.config.cjs",
+      "lines": "820",
+      "contains": "values"
+    },
+    "cfg.backdropBlur.video-bar": {
+      "path": "tailwind.config.cjs",
+      "lines": "819",
+      "contains": "video-bar"
+    },
+    "cfg.backgroundImage.about-fade": {
+      "path": "tailwind.config.cjs",
+      "lines": "777",
+      "contains": "about-fade"
+    },
+    "cfg.backgroundImage.brain-fade": {
+      "path": "tailwind.config.cjs",
+      "lines": "347",
+      "contains": "brain-fade"
+    },
+    "cfg.backgroundImage.brand-3": {
+      "path": "tailwind.config.cjs",
+      "lines": "267",
+      "contains": "brand-3"
+    },
+    "cfg.backgroundImage.brand-4": {
+      "path": "tailwind.config.cjs",
+      "lines": "266",
+      "contains": "brand-4"
+    },
+    "cfg.backgroundImage.brand-ring": {
+      "path": "tailwind.config.cjs",
+      "lines": "268",
+      "contains": "brand-ring"
+    },
+    "cfg.backgroundImage.brand-ring-glow": {
+      "path": "tailwind.config.cjs",
+      "lines": "269",
+      "contains": "brand-ring-glow"
+    },
+    "cfg.backgroundImage.careers-glow": {
+      "path": "tailwind.config.cjs",
+      "lines": "824",
+      "contains": "careers-glow"
+    },
+    "cfg.backgroundImage.dd-fade-black": {
+      "path": "tailwind.config.cjs",
+      "lines": "274",
+      "contains": "dd-fade-black"
+    },
+    "cfg.backgroundImage.dd-fade-navy": {
+      "path": "tailwind.config.cjs",
+      "lines": "273",
+      "contains": "dd-fade-navy"
+    },
+    "cfg.backgroundImage.demo-art": {
+      "path": "tailwind.config.cjs",
+      "lines": "745",
+      "contains": "demo-art"
+    },
+    "cfg.backgroundImage.frame-mask": {
+      "path": "tailwind.config.cjs",
+      "lines": "278",
+      "contains": "frame-mask"
+    },
+    "cfg.backgroundImage.int-fade": {
+      "path": "tailwind.config.cjs",
+      "lines": "691",
+      "contains": "int-fade"
+    },
+    "cfg.backgroundImage.menu-fade": {
+      "path": "tailwind.config.cjs",
+      "lines": "276",
+      "contains": "menu-fade"
+    },
+    "cfg.backgroundImage.nav-sheen": {
+      "path": "tailwind.config.cjs",
+      "lines": "272",
+      "contains": "nav-sheen"
+    },
+    "cfg.backgroundImage.plans-glow": {
+      "path": "tailwind.config.cjs",
+      "lines": "599",
+      "contains": "plans-glow"
+    },
+    "cfg.backgroundImage.progress": {
+      "path": "tailwind.config.cjs",
+      "lines": "270",
+      "contains": "progress"
+    },
+    "cfg.backgroundImage.progress-rail": {
+      "path": "tailwind.config.cjs",
+      "lines": "604",
+      "contains": "progress-rail"
+    },
+    "cfg.backgroundImage.report-mesh": {
+      "path": "tailwind.config.cjs",
+      "lines": "687",
+      "contains": "report-mesh"
+    },
+    "cfg.backgroundImage.report-number": {
+      "path": "tailwind.config.cjs",
+      "lines": "689",
+      "contains": "report-number"
+    },
+    "cfg.backgroundImage.ticket": {
+      "path": "tailwind.config.cjs",
+      "lines": "349",
+      "contains": "ticket"
+    },
+    "cfg.backgroundImage.toc-backdrop": {
+      "path": "tailwind.config.cjs",
+      "lines": "602",
+      "contains": "toc-backdrop"
+    },
+    "cfg.backgroundImage.tools-fade": {
+      "path": "tailwind.config.cjs",
+      "lines": "343",
+      "contains": "tools-fade"
+    },
+    "cfg.backgroundImage.white-fade": {
+      "path": "tailwind.config.cjs",
+      "lines": "345",
+      "contains": "white-fade"
+    },
+    "cfg.blur.glow": {
+      "path": "tailwind.config.cjs",
+      "lines": "259",
+      "contains": "glow"
+    },
+    "cfg.blur.glow-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "260",
+      "contains": "glow-lg"
+    },
+    "cfg.blur.orbit": {
+      "path": "tailwind.config.cjs",
+      "lines": "736",
+      "contains": "orbit"
+    },
+    "cfg.blur.orbit-sm": {
+      "path": "tailwind.config.cjs",
+      "lines": "735",
+      "contains": "orbit-sm"
+    },
+    "cfg.blur.reveal": {
+      "path": "tailwind.config.cjs",
+      "lines": "261",
+      "contains": "reveal"
+    },
+    "cfg.blur.tag": {
+      "path": "tailwind.config.cjs",
+      "lines": "250",
+      "contains": "tag"
+    },
+    "cfg.borderRadius.announce": {
+      "path": "tailwind.config.cjs",
+      "lines": "188",
+      "contains": "announce"
+    },
+    "cfg.borderRadius.avatar-sm": {
+      "path": "tailwind.config.cjs",
+      "lines": "671",
+      "contains": "avatar-sm"
+    },
+    "cfg.borderRadius.brain-chip": {
+      "path": "tailwind.config.cjs",
+      "lines": "206",
+      "contains": "brain-chip"
+    },
+    "cfg.borderRadius.brain-outer": {
+      "path": "tailwind.config.cjs",
+      "lines": "201",
+      "contains": "brain-outer"
+    },
+    "cfg.borderRadius.card": {
+      "path": "tailwind.config.cjs",
+      "lines": "200",
+      "contains": "card"
+    },
+    "cfg.borderRadius.chip-round": {
+      "path": "tailwind.config.cjs",
+      "lines": "190",
+      "contains": "chip-round"
+    },
+    "cfg.borderRadius.demo-avatar": {
+      "path": "tailwind.config.cjs",
+      "lines": "727",
+      "contains": "demo-avatar"
+    },
+    "cfg.borderRadius.dot-progress": {
+      "path": "tailwind.config.cjs",
+      "lines": "340",
+      "contains": "dot-progress"
+    },
+    "cfg.borderRadius.emp-text": {
+      "path": "tailwind.config.cjs",
+      "lines": "579",
+      "contains": "emp-text"
+    },
+    "cfg.borderRadius.field-soft": {
+      "path": "tailwind.config.cjs",
+      "lines": "580",
+      "contains": "field-soft"
+    },
+    "cfg.borderRadius.footer-link": {
+      "path": "tailwind.config.cjs",
+      "lines": "207",
+      "contains": "footer-link"
+    },
+    "cfg.borderRadius.footer-mark": {
+      "path": "tailwind.config.cjs",
+      "lines": "199",
+      "contains": "footer-mark"
+    },
+    "cfg.borderRadius.glass": {
+      "path": "tailwind.config.cjs",
+      "lines": "198",
+      "contains": "glass"
+    },
+    "cfg.borderRadius.hero-tag": {
+      "path": "tailwind.config.cjs",
+      "lines": "189",
+      "contains": "hero-tag"
+    },
+    "cfg.borderRadius.icon-tile": {
+      "path": "tailwind.config.cjs",
+      "lines": "192",
+      "contains": "icon-tile"
+    },
+    "cfg.borderRadius.icon-tile-inner": {
+      "path": "tailwind.config.cjs",
+      "lines": "193",
+      "contains": "icon-tile-inner"
+    },
+    "cfg.borderRadius.inner": {
+      "path": "tailwind.config.cjs",
+      "lines": "202",
+      "contains": "inner"
+    },
+    "cfg.borderRadius.int-tile": {
+      "path": "tailwind.config.cjs",
+      "lines": "672",
+      "contains": "int-tile"
+    },
+    "cfg.borderRadius.jobs-logo": {
+      "path": "tailwind.config.cjs",
+      "lines": "440",
+      "contains": "jobs-logo"
+    },
+    "cfg.borderRadius.logo-tile": {
+      "path": "tailwind.config.cjs",
+      "lines": "191",
+      "contains": "logo-tile"
+    },
+    "cfg.borderRadius.logo-tile-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "339",
+      "contains": "logo-tile-phone"
+    },
+    "cfg.borderRadius.nav-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "196",
+      "contains": "nav-phone"
+    },
+    "cfg.borderRadius.nav-phone-open": {
+      "path": "tailwind.config.cjs",
+      "lines": "197",
+      "contains": "nav-phone-open"
+    },
+    "cfg.borderRadius.nav-pill": {
+      "path": "tailwind.config.cjs",
+      "lines": "187",
+      "contains": "nav-pill"
+    },
+    "cfg.borderRadius.photo": {
+      "path": "tailwind.config.cjs",
+      "lines": "195",
+      "contains": "photo"
+    },
+    "cfg.borderRadius.photo-frame": {
+      "path": "tailwind.config.cjs",
+      "lines": "194",
+      "contains": "photo-frame"
+    },
+    "cfg.borderRadius.photo-sm": {
+      "path": "tailwind.config.cjs",
+      "lines": "578",
+      "contains": "photo-sm"
+    },
+    "cfg.borderRadius.pill": {
+      "path": "tailwind.config.cjs",
+      "lines": "186",
+      "contains": "pill"
+    },
+    "cfg.borderRadius.playbook": {
+      "path": "tailwind.config.cjs",
+      "lines": "203",
+      "contains": "playbook"
+    },
+    "cfg.borderRadius.sm": {
+      "path": "tailwind.config.cjs",
+      "lines": "205",
+      "contains": "sm"
+    },
+    "cfg.borderRadius.teaser-card": {
+      "path": "tailwind.config.cjs",
+      "lines": "208",
+      "contains": "teaser-card"
+    },
+    "cfg.borderRadius.tile": {
+      "path": "tailwind.config.cjs",
+      "lines": "204",
+      "contains": "tile"
+    },
+    "cfg.borderRadius.xs": {
+      "path": "tailwind.config.cjs",
+      "lines": "577",
+      "contains": "xs"
+    },
+    "cfg.boxShadow.btn-dark-hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "225",
+      "contains": "btn-dark-hover"
+    },
+    "cfg.boxShadow.btn-dark-rest": {
+      "path": "tailwind.config.cjs",
+      "lines": "224",
+      "contains": "btn-dark-rest"
+    },
+    "cfg.boxShadow.btn-light-hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "227",
+      "contains": "btn-light-hover"
+    },
+    "cfg.boxShadow.btn-light-rest": {
+      "path": "tailwind.config.cjs",
+      "lines": "226",
+      "contains": "btn-light-rest"
+    },
+    "cfg.boxShadow.btn-rim-dark": {
+      "path": "tailwind.config.cjs",
+      "lines": "228",
+      "contains": "btn-rim-dark"
+    },
+    "cfg.boxShadow.btn-rim-light": {
+      "path": "tailwind.config.cjs",
+      "lines": "229",
+      "contains": "btn-rim-light"
+    },
+    "cfg.boxShadow.card-rest": {
+      "path": "tailwind.config.cjs",
+      "lines": "223",
+      "contains": "card-rest"
+    },
+    "cfg.boxShadow.cta-chip": {
+      "path": "tailwind.config.cjs",
+      "lines": "589",
+      "contains": "cta-chip"
+    },
+    "cfg.boxShadow.dd-chip": {
+      "path": "tailwind.config.cjs",
+      "lines": "236",
+      "contains": "dd-chip"
+    },
+    "cfg.boxShadow.dd-feature-rim": {
+      "path": "tailwind.config.cjs",
+      "lines": "220",
+      "contains": "dd-feature-rim"
+    },
+    "cfg.boxShadow.dd-icon": {
+      "path": "tailwind.config.cjs",
+      "lines": "219",
+      "contains": "dd-icon"
+    },
+    "cfg.boxShadow.dd-icon-hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "237",
+      "contains": "dd-icon-hover"
+    },
+    "cfg.boxShadow.dd-shell-glass": {
+      "path": "tailwind.config.cjs",
+      "lines": "235",
+      "contains": "dd-shell-glass"
+    },
+    "cfg.boxShadow.faq-card": {
+      "path": "tailwind.config.cjs",
+      "lines": "585",
+      "contains": "faq-card"
+    },
+    "cfg.boxShadow.field-focus": {
+      "path": "tailwind.config.cjs",
+      "lines": "583",
+      "contains": "field-focus"
+    },
+    "cfg.boxShadow.footer-mark": {
+      "path": "tailwind.config.cjs",
+      "lines": "242",
+      "contains": "footer-mark"
+    },
+    "cfg.boxShadow.glass": {
+      "path": "tailwind.config.cjs",
+      "lines": "213",
+      "contains": "glass"
+    },
+    "cfg.boxShadow.glass-form": {
+      "path": "tailwind.config.cjs",
+      "lines": "584",
+      "contains": "glass-form"
+    },
+    "cfg.boxShadow.glass-rim": {
+      "path": "tailwind.config.cjs",
+      "lines": "214",
+      "contains": "glass-rim"
+    },
+    "cfg.boxShadow.hair": {
+      "path": "tailwind.config.cjs",
+      "lines": "217",
+      "contains": "hair"
+    },
+    "cfg.boxShadow.int-tile": {
+      "path": "tailwind.config.cjs",
+      "lines": "676",
+      "contains": "int-tile"
+    },
+    "cfg.boxShadow.jobs-btn": {
+      "path": "tailwind.config.cjs",
+      "lines": "443",
+      "contains": "jobs-btn"
+    },
+    "cfg.boxShadow.matrix": {
+      "path": "tailwind.config.cjs",
+      "lines": "587",
+      "contains": "matrix"
+    },
+    "cfg.boxShadow.menu-btn-dark": {
+      "path": "tailwind.config.cjs",
+      "lines": "230",
+      "contains": "menu-btn-dark"
+    },
+    "cfg.boxShadow.nav": {
+      "path": "tailwind.config.cjs",
+      "lines": "215",
+      "contains": "nav"
+    },
+    "cfg.boxShadow.nav-indicator": {
+      "path": "tailwind.config.cjs",
+      "lines": "218",
+      "contains": "nav-indicator"
+    },
+    "cfg.boxShadow.orbit-tile": {
+      "path": "tailwind.config.cjs",
+      "lines": "732",
+      "contains": "orbit-tile"
+    },
+    "cfg.boxShadow.orbit-tile-sm": {
+      "path": "tailwind.config.cjs",
+      "lines": "731",
+      "contains": "orbit-tile-sm"
+    },
+    "cfg.boxShadow.read-card": {
+      "path": "tailwind.config.cjs",
+      "lines": "678",
+      "contains": "read-card"
+    },
+    "cfg.boxShadow.ring-hairline": {
+      "path": "tailwind.config.cjs",
+      "lines": "591",
+      "contains": "ring-hairline"
+    },
+    "cfg.boxShadow.share-rail": {
+      "path": "tailwind.config.cjs",
+      "lines": "588",
+      "contains": "share-rail"
+    },
+    "cfg.boxShadow.side-menu": {
+      "path": "tailwind.config.cjs",
+      "lines": "675",
+      "contains": "side-menu"
+    },
+    "cfg.boxShadow.silk-rim": {
+      "path": "tailwind.config.cjs",
+      "lines": "444",
+      "contains": "silk-rim"
+    },
+    "cfg.boxShadow.social": {
+      "path": "tailwind.config.cjs",
+      "lines": "679",
+      "contains": "social"
+    },
+    "cfg.boxShadow.teaser": {
+      "path": "tailwind.config.cjs",
+      "lines": "231",
+      "contains": "teaser"
+    },
+    "cfg.boxShadow.teaser-card": {
+      "path": "tailwind.config.cjs",
+      "lines": "238",
+      "contains": "teaser-card"
+    },
+    "cfg.boxShadow.teaser-dot": {
+      "path": "tailwind.config.cjs",
+      "lines": "240",
+      "contains": "teaser-dot"
+    },
+    "cfg.boxShadow.teaser-media": {
+      "path": "tailwind.config.cjs",
+      "lines": "241",
+      "contains": "teaser-media"
+    },
+    "cfg.boxShadow.teaser-x": {
+      "path": "tailwind.config.cjs",
+      "lines": "239",
+      "contains": "teaser-x"
+    },
+    "cfg.boxShadow.ticket": {
+      "path": "tailwind.config.cjs",
+      "lines": "222",
+      "contains": "ticket"
+    },
+    "cfg.boxShadow.tile": {
+      "path": "tailwind.config.cjs",
+      "lines": "221",
+      "contains": "tile"
+    },
+    "cfg.boxShadow.toc-pop": {
+      "path": "tailwind.config.cjs",
+      "lines": "590",
+      "contains": "toc-pop"
+    },
+    "cfg.boxShadow.ui-shot": {
+      "path": "tailwind.config.cjs",
+      "lines": "677",
+      "contains": "ui-shot"
+    },
+    "cfg.boxShadow.video-bar": {
+      "path": "tailwind.config.cjs",
+      "lines": "816",
+      "contains": "video-bar"
+    },
+    "cfg.boxShadow.video-frame": {
+      "path": "tailwind.config.cjs",
+      "lines": "815",
+      "contains": "video-frame"
+    },
+    "cfg.colors.about-fade": {
+      "path": "tailwind.config.cjs",
+      "lines": "771",
+      "contains": "'about-fade': '#F9F9F9', // C A3 about Proof gradi"
+    },
+    "cfg.colors.ai-note": {
+      "path": "tailwind.config.cjs",
+      "lines": "69",
+      "contains": "'ai-note': '#828282', // §13b"
+    },
+    "cfg.colors.announce-border": {
+      "path": "tailwind.config.cjs",
+      "lines": "54",
+      "contains": "'announce-border': '#E6E6E6',"
+    },
+    "cfg.colors.blog-rule": {
+      "path": "tailwind.config.cjs",
+      "lines": "803",
+      "contains": "'blog-rule': '#F0F0F0', // A T2.6 BlogGrid 2px top"
+    },
+    "cfg.colors.body": {
+      "path": "tailwind.config.cjs",
+      "lines": "23",
+      "contains": "body: '#333333'"
+    },
+    "cfg.colors.body-75": {
+      "path": "tailwind.config.cjs",
+      "lines": "387",
+      "contains": "'body-75': 'rgba(0,0,0,.75)',"
+    },
+    "cfg.colors.brand.ember": {
+      "path": "tailwind.config.cjs",
+      "lines": "36",
+      "contains": "ember: '#EA4921'"
+    },
+    "cfg.colors.brand.indigo": {
+      "path": "tailwind.config.cjs",
+      "lines": "36",
+      "contains": "indigo: '#4348DC'"
+    },
+    "cfg.colors.brand.magenta": {
+      "path": "tailwind.config.cjs",
+      "lines": "36",
+      "contains": "magenta: '#FF29E5'"
+    },
+    "cfg.colors.brand.sun": {
+      "path": "tailwind.config.cjs",
+      "lines": "36",
+      "contains": "sun: '#FACB12'"
+    },
+    "cfg.colors.btn-rim-dark": {
+      "path": "tailwind.config.cjs",
+      "lines": "52",
+      "contains": "'btn-rim-dark': 'rgba(255,255,255,.15)',"
+    },
+    "cfg.colors.btn-rim-light": {
+      "path": "tailwind.config.cjs",
+      "lines": "53",
+      "contains": "'btn-rim-light': 'rgba(0,0,0,.15)',"
+    },
+    "cfg.colors.card-border": {
+      "path": "tailwind.config.cjs",
+      "lines": "75",
+      "contains": "'card-border': 'rgba(0,0,0,.1)', // §7"
+    },
+    "cfg.colors.card-gray": {
+      "path": "tailwind.config.cjs",
+      "lines": "26",
+      "contains": "'card-gray': '#E5E5E5',"
+    },
+    "cfg.colors.catalog-desc": {
+      "path": "tailwind.config.cjs",
+      "lines": "473",
+      "contains": "'catalog-desc': '#8A8A8A', // A T3.3 category desc"
+    },
+    "cfg.colors.catalog-rule": {
+      "path": "tailwind.config.cjs",
+      "lines": "718",
+      "contains": "'catalog-rule': '#9DC0D5', // sampled: 1px rule on"
+    },
+    "cfg.colors.chip": {
+      "path": "tailwind.config.cjs",
+      "lines": "28",
+      "contains": "chip: '#F4F4F5'"
+    },
+    "cfg.colors.chip-border": {
+      "path": "tailwind.config.cjs",
+      "lines": "60",
+      "contains": "'chip-border': 'rgba(0,0,0,.1)',"
+    },
+    "cfg.colors.chip-soft.default": {
+      "path": "tailwind.config.cjs",
+      "lines": "481",
+      "contains": "DEFAULT: '#F4F4F4'"
+    },
+    "cfg.colors.chip-soft.hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "481",
+      "contains": "hover: '#EAEAEA'"
+    },
+    "cfg.colors.chip-soft.text": {
+      "path": "tailwind.config.cjs",
+      "lines": "481",
+      "contains": "text: '#3C3C3C'"
+    },
+    "cfg.colors.cta-body": {
+      "path": "tailwind.config.cjs",
+      "lines": "634",
+      "contains": "'cta-body': 'rgba(255,255,255,.8)', // B T4 trial "
+    },
+    "cfg.colors.cta-chip.label": {
+      "path": "tailwind.config.cjs",
+      "lines": "506",
+      "contains": "label: '#1E1E1E'"
+    },
+    "cfg.colors.cta-chip.rule": {
+      "path": "tailwind.config.cjs",
+      "lines": "506",
+      "contains": "rule: '#E2E2E2'"
+    },
+    "cfg.colors.dd-desc": {
+      "path": "tailwind.config.cjs",
+      "lines": "47",
+      "contains": "'dd-desc': 'rgba(13,13,13,.6)',"
+    },
+    "cfg.colors.dd-eyebrow": {
+      "path": "tailwind.config.cjs",
+      "lines": "45",
+      "contains": "'dd-eyebrow': 'rgba(13,13,13,.5)',"
+    },
+    "cfg.colors.dd-feature": {
+      "path": "tailwind.config.cjs",
+      "lines": "48",
+      "contains": "'dd-feature': '#1B1B1F',"
+    },
+    "cfg.colors.dd-feature-chip": {
+      "path": "tailwind.config.cjs",
+      "lines": "49",
+      "contains": "'dd-feature-chip': 'rgba(255,255,255,.16)',"
+    },
+    "cfg.colors.dd-feature-link": {
+      "path": "tailwind.config.cjs",
+      "lines": "50",
+      "contains": "'dd-feature-link': 'rgba(255,255,255,.92)',"
+    },
+    "cfg.colors.dd-shell": {
+      "path": "tailwind.config.cjs",
+      "lines": "44",
+      "contains": "'dd-shell': 'rgba(255,255,255,.42)',"
+    },
+    "cfg.colors.dd-tile-hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "77",
+      "contains": "'dd-tile-hover': '#F6F6F7', // dropdown tile / pla"
+    },
+    "cfg.colors.dd-title": {
+      "path": "tailwind.config.cjs",
+      "lines": "46",
+      "contains": "'dd-title': '#1C1C1E',"
+    },
+    "cfg.colors.demo-card": {
+      "path": "tailwind.config.cjs",
+      "lines": "493",
+      "contains": "'demo-card': 'rgba(255,255,255,.84)', // A T1.7b /"
+    },
+    "cfg.colors.dl-tile.default": {
+      "path": "tailwind.config.cjs",
+      "lines": "388",
+      "contains": "DEFAULT: '#E6E6E6'"
+    },
+    "cfg.colors.dl-tile.hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "388",
+      "contains": "hover: '#B0B0B0'"
+    },
+    "cfg.colors.dl-tile.label": {
+      "path": "tailwind.config.cjs",
+      "lines": "388",
+      "contains": "label: '#474747'"
+    },
+    "cfg.colors.employee.cream": {
+      "path": "tailwind.config.cjs",
+      "lines": "522",
+      "contains": "cream: '#FBF6E5'"
+    },
+    "cfg.colors.employee.peach": {
+      "path": "tailwind.config.cjs",
+      "lines": "522",
+      "contains": "peach: '#FEECEA'"
+    },
+    "cfg.colors.employee.pink": {
+      "path": "tailwind.config.cjs",
+      "lines": "522",
+      "contains": "pink: '#FFEAFC'"
+    },
+    "cfg.colors.faq.border": {
+      "path": "tailwind.config.cjs",
+      "lines": "507",
+      "contains": "border: '#EBECED'"
+    },
+    "cfg.colors.faq.icon": {
+      "path": "tailwind.config.cjs",
+      "lines": "507",
+      "contains": "icon: '#252E3D'"
+    },
+    "cfg.colors.faq.plus": {
+      "path": "tailwind.config.cjs",
+      "lines": "507",
+      "contains": "plus: '#5A616E'"
+    },
+    "cfg.colors.feature-eyebrow": {
+      "path": "tailwind.config.cjs",
+      "lines": "472",
+      "contains": "'feature-eyebrow': '#9C9C96', // A P3 eyebrow"
+    },
+    "cfg.colors.field.border": {
+      "path": "tailwind.config.cjs",
+      "lines": "488",
+      "contains": "border: 'rgba(136,136,136,.6)'"
+    },
+    "cfg.colors.field.default": {
+      "path": "tailwind.config.cjs",
+      "lines": "487",
+      "contains": "DEFAULT: '#FAFAFA'"
+    },
+    "cfg.colors.field.focus": {
+      "path": "tailwind.config.cjs",
+      "lines": "491",
+      "contains": "focus: '#0099FF'"
+    },
+    "cfg.colors.field.soft": {
+      "path": "tailwind.config.cjs",
+      "lines": "489",
+      "contains": "soft: 'rgba(187,187,187,.15)'"
+    },
+    "cfg.colors.field.soft-border": {
+      "path": "tailwind.config.cjs",
+      "lines": "490",
+      "contains": "'soft-border': 'rgba(136,136,136,.1)', // C soft s"
+    },
+    "cfg.colors.filter-hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "477",
+      "contains": "'filter-hover': '#E0E0E0', // A T3.3 sidebar filte"
+    },
+    "cfg.colors.footer-rule": {
+      "path": "tailwind.config.cjs",
+      "lines": "70",
+      "contains": "'footer-rule': 'rgba(43,43,43,.15)', // §14"
+    },
+    "cfg.colors.glass-30": {
+      "path": "tailwind.config.cjs",
+      "lines": "73",
+      "contains": "'glass-30': 'rgba(255,255,255,.3)', // §8/§14 glas"
+    },
+    "cfg.colors.glossary-bg": {
+      "path": "tailwind.config.cjs",
+      "lines": "652",
+      "contains": "'glossary-bg': '#FBFAF9', // B T11 hero"
+    },
+    "cfg.colors.grid-head": {
+      "path": "tailwind.config.cjs",
+      "lines": "519",
+      "contains": "'grid-head': 'rgba(255,255,255,.2)', // B T7 Compa"
+    },
+    "cfg.colors.hairline": {
+      "path": "tailwind.config.cjs",
+      "lines": "480",
+      "contains": "hairline: '#E8E8E8'"
+    },
+    "cfg.colors.ink.900": {
+      "path": "tailwind.config.cjs",
+      "lines": "22",
+      "contains": "900: '#1A1A1A'"
+    },
+    "cfg.colors.ink.deep": {
+      "path": "tailwind.config.cjs",
+      "lines": "464",
+      "contains": "deep: '#0F0F10'"
+    },
+    "cfg.colors.ink.default": {
+      "path": "tailwind.config.cjs",
+      "lines": "22",
+      "contains": "DEFAULT: '#000000'"
+    },
+    "cfg.colors.ink.nav": {
+      "path": "tailwind.config.cjs",
+      "lines": "22",
+      "contains": "nav: '#0D0D0D'"
+    },
+    "cfg.colors.jobs.bg": {
+      "path": "tailwind.config.cjs",
+      "lines": "375",
+      "contains": "bg: '#EEEEEE'"
+    },
+    "cfg.colors.jobs.hairline": {
+      "path": "tailwind.config.cjs",
+      "lines": "381",
+      "contains": "hairline: 'rgba(0,0,0,.08)'"
+    },
+    "cfg.colors.jobs.logo-border": {
+      "path": "tailwind.config.cjs",
+      "lines": "383",
+      "contains": "'logo-border': 'rgba(0,0,0,.06)',"
+    },
+    "cfg.colors.jobs.logo-tile": {
+      "path": "tailwind.config.cjs",
+      "lines": "382",
+      "contains": "'logo-tile': '#F5F5F5',"
+    },
+    "cfg.colors.jobs.muted": {
+      "path": "tailwind.config.cjs",
+      "lines": "377",
+      "contains": "muted: '#717171'"
+    },
+    "cfg.colors.jobs.muted-2": {
+      "path": "tailwind.config.cjs",
+      "lines": "378",
+      "contains": "'muted-2': '#9AA0A6',"
+    },
+    "cfg.colors.jobs.panel": {
+      "path": "tailwind.config.cjs",
+      "lines": "376",
+      "contains": "panel: '#F4F4F5'"
+    },
+    "cfg.colors.jobs.silk-base": {
+      "path": "tailwind.config.cjs",
+      "lines": "384",
+      "contains": "'silk-base': '#0B0B0F', // T4 J2 CSS stand-in base"
+    },
+    "cfg.colors.jobs.stat-desc": {
+      "path": "tailwind.config.cjs",
+      "lines": "380",
+      "contains": "'stat-desc': '#71717A',"
+    },
+    "cfg.colors.jobs.stat-label": {
+      "path": "tailwind.config.cjs",
+      "lines": "379",
+      "contains": "'stat-label': '#18181B',"
+    },
+    "cfg.colors.legal-rule": {
+      "path": "tailwind.config.cjs",
+      "lines": "71",
+      "contains": "'legal-rule': '#E3E3E3', // §14"
+    },
+    "cfg.colors.line-gray": {
+      "path": "tailwind.config.cjs",
+      "lines": "25",
+      "contains": "'line-gray': '#B2B2B2',"
+    },
+    "cfg.colors.link.hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "471",
+      "contains": "hover: '#5F63D9'"
+    },
+    "cfg.colors.loadmore-border": {
+      "path": "tailwind.config.cjs",
+      "lines": "483",
+      "contains": "'loadmore-border': '#DCDCDC', // B T5 LoadMoreButt"
+    },
+    "cfg.colors.mark": {
+      "path": "tailwind.config.cjs",
+      "lines": "801",
+      "contains": "mark: '#D7D5F1'"
+    },
+    "cfg.colors.marquee-bg": {
+      "path": "tailwind.config.cjs",
+      "lines": "74",
+      "contains": "'marquee-bg': 'rgba(255,255,255,.4)', // §7"
+    },
+    "cfg.colors.matrix.border": {
+      "path": "tailwind.config.cjs",
+      "lines": "509",
+      "contains": "border: '#E5E7EB'"
+    },
+    "cfg.colors.matrix.head": {
+      "path": "tailwind.config.cjs",
+      "lines": "510",
+      "contains": "head: '#FAFAFB'"
+    },
+    "cfg.colors.matrix.no": {
+      "path": "tailwind.config.cjs",
+      "lines": "515",
+      "contains": "no: '#FB7185'"
+    },
+    "cfg.colors.matrix.row": {
+      "path": "tailwind.config.cjs",
+      "lines": "513",
+      "contains": "row: '#F3F4F6'"
+    },
+    "cfg.colors.matrix.sub": {
+      "path": "tailwind.config.cjs",
+      "lines": "517",
+      "contains": "sub: '#6B7280'"
+    },
+    "cfg.colors.matrix.text": {
+      "path": "tailwind.config.cjs",
+      "lines": "512",
+      "contains": "text: '#111827'"
+    },
+    "cfg.colors.matrix.us": {
+      "path": "tailwind.config.cjs",
+      "lines": "511",
+      "contains": "us: 'rgba(79,70,229,.04)'"
+    },
+    "cfg.colors.matrix.value": {
+      "path": "tailwind.config.cjs",
+      "lines": "516",
+      "contains": "value: '#374151'"
+    },
+    "cfg.colors.matrix.yes": {
+      "path": "tailwind.config.cjs",
+      "lines": "514",
+      "contains": "yes: '#34D399'"
+    },
+    "cfg.colors.menu-divider": {
+      "path": "tailwind.config.cjs",
+      "lines": "64",
+      "contains": "'menu-divider': '#ECECED',"
+    },
+    "cfg.colors.meta-card": {
+      "path": "tailwind.config.cjs",
+      "lines": "476",
+      "contains": "'meta-card': '#FBFBFB', // A T4 MetaCard, A T5 acc"
+    },
+    "cfg.colors.meta-dot": {
+      "path": "tailwind.config.cjs",
+      "lines": "633",
+      "contains": "'meta-dot': '#17171C', // B T3 BlogCard meta dot"
+    },
+    "cfg.colors.muted.2": {
+      "path": "tailwind.config.cjs",
+      "lines": "24",
+      "contains": "2: '#7A7A7A'"
+    },
+    "cfg.colors.muted.3": {
+      "path": "tailwind.config.cjs",
+      "lines": "24",
+      "contains": "3: '#808080'"
+    },
+    "cfg.colors.muted.4": {
+      "path": "tailwind.config.cjs",
+      "lines": "466",
+      "contains": "4: '#595959'"
+    },
+    "cfg.colors.muted.5": {
+      "path": "tailwind.config.cjs",
+      "lines": "467",
+      "contains": "5: '#787878'"
+    },
+    "cfg.colors.muted.6": {
+      "path": "tailwind.config.cjs",
+      "lines": "468",
+      "contains": "6: '#6E6E6E'"
+    },
+    "cfg.colors.muted.7": {
+      "path": "tailwind.config.cjs",
+      "lines": "469",
+      "contains": "7: '#737373'"
+    },
+    "cfg.colors.muted.default": {
+      "path": "tailwind.config.cjs",
+      "lines": "24",
+      "contains": "DEFAULT: '#666666'"
+    },
+    "cfg.colors.nav-glass": {
+      "path": "tailwind.config.cjs",
+      "lines": "41",
+      "contains": "'nav-glass': 'rgba(255,255,255,.86)',"
+    },
+    "cfg.colors.nav-glass-open": {
+      "path": "tailwind.config.cjs",
+      "lines": "62",
+      "contains": "'nav-glass-open': 'rgba(255,255,255,.5)',"
+    },
+    "cfg.colors.nav-hover-bg": {
+      "path": "tailwind.config.cjs",
+      "lines": "40",
+      "contains": "'nav-hover-bg': 'rgba(13,13,13,.06)',"
+    },
+    "cfg.colors.nav-rest": {
+      "path": "tailwind.config.cjs",
+      "lines": "39",
+      "contains": "'nav-rest': 'rgba(13,13,13,.6)',"
+    },
+    "cfg.colors.new-magenta": {
+      "path": "tailwind.config.cjs",
+      "lines": "30",
+      "contains": "'new-magenta': '#DF26FE',"
+    },
+    "cfg.colors.on-art.78": {
+      "path": "tailwind.config.cjs",
+      "lines": "650",
+      "contains": "78: 'rgba(255,255,255,.78)'"
+    },
+    "cfg.colors.on-art.92": {
+      "path": "tailwind.config.cjs",
+      "lines": "650",
+      "contains": "92: 'rgba(255,255,255,.92)'"
+    },
+    "cfg.colors.on-art.94": {
+      "path": "tailwind.config.cjs",
+      "lines": "650",
+      "contains": "94: 'rgba(255,255,255,.94)'"
+    },
+    "cfg.colors.on-art.95": {
+      "path": "tailwind.config.cjs",
+      "lines": "650",
+      "contains": "95: 'rgba(255,255,255,.95)'"
+    },
+    "cfg.colors.orbit-glow": {
+      "path": "tailwind.config.cjs",
+      "lines": "717",
+      "contains": "'orbit-glow': 'rgba(255,195,248,.5)', // A T2.5 El"
+    },
+    "cfg.colors.outline-border": {
+      "path": "tailwind.config.cjs",
+      "lines": "495",
+      "contains": "'outline-border': '#222222', // C partner submit b"
+    },
+    "cfg.colors.pager-bg": {
+      "path": "tailwind.config.cjs",
+      "lines": "299",
+      "contains": "'pager-bg': 'rgba(229,229,229,.4)',"
+    },
+    "cfg.colors.panel": {
+      "path": "tailwind.config.cjs",
+      "lines": "475",
+      "contains": "panel: '#F2F2F2'"
+    },
+    "cfg.colors.preview-border": {
+      "path": "tailwind.config.cjs",
+      "lines": "389",
+      "contains": "'preview-border': '#CCCCCC',"
+    },
+    "cfg.colors.quote-ink": {
+      "path": "tailwind.config.cjs",
+      "lines": "802",
+      "contains": "'quote-ink': '#1C1C1C', // A T2.7 QuoteCard name /"
+    },
+    "cfg.colors.quote-rule": {
+      "path": "tailwind.config.cjs",
+      "lines": "484",
+      "contains": "'quote-rule': '#DDDDDD', // B R.2 blockquote rule"
+    },
+    "cfg.colors.rail-tint": {
+      "path": "tailwind.config.cjs",
+      "lines": "521",
+      "contains": "'rail-tint': 'rgba(66,71,219,.04)', // B T3 CardRa"
+    },
+    "cfg.colors.report.caption": {
+      "path": "tailwind.config.cjs",
+      "lines": "641",
+      "contains": "caption: '#4E4E55'"
+    },
+    "cfg.colors.report.card": {
+      "path": "tailwind.config.cjs",
+      "lines": "640",
+      "contains": "card: '#F5F5F7'"
+    },
+    "cfg.colors.report.ink": {
+      "path": "tailwind.config.cjs",
+      "lines": "637",
+      "contains": "ink: '#141414'"
+    },
+    "cfg.colors.report.lilac": {
+      "path": "tailwind.config.cjs",
+      "lines": "643",
+      "contains": "lilac: '#CDCEF3'"
+    },
+    "cfg.colors.report.magenta": {
+      "path": "tailwind.config.cjs",
+      "lines": "642",
+      "contains": "magenta: '#E04BD6'"
+    },
+    "cfg.colors.report.muted": {
+      "path": "tailwind.config.cjs",
+      "lines": "638",
+      "contains": "muted: '#5F5F66'"
+    },
+    "cfg.colors.report.pink-mid": {
+      "path": "tailwind.config.cjs",
+      "lines": "648",
+      "contains": "'pink-mid': '#801470', // StoryRail company (pink)"
+    },
+    "cfg.colors.report.rule": {
+      "path": "tailwind.config.cjs",
+      "lines": "647",
+      "contains": "rule: '#ECECEF'"
+    },
+    "cfg.colors.report.trust": {
+      "path": "tailwind.config.cjs",
+      "lines": "639",
+      "contains": "trust: '#9A9AA2'"
+    },
+    "cfg.colors.roles-widget.accent": {
+      "path": "tailwind.config.cjs",
+      "lines": "807",
+      "contains": "'#5B3FFF'"
+    },
+    "cfg.colors.roles-widget.meta": {
+      "path": "tailwind.config.cjs",
+      "lines": "807",
+      "contains": "'#555555'"
+    },
+    "cfg.colors.rule-soft": {
+      "path": "tailwind.config.cjs",
+      "lines": "478",
+      "contains": "'rule-soft': 'rgba(24,24,24,.07)', // A T5 ruled f"
+    },
+    "cfg.colors.scrim": {
+      "path": "tailwind.config.cjs",
+      "lines": "42",
+      "contains": "scrim: 'rgba(36,28,20,.16)'"
+    },
+    "cfg.colors.share.bg": {
+      "path": "tailwind.config.cjs",
+      "lines": "505",
+      "contains": "bg: 'rgba(255,255,255,.9)'"
+    },
+    "cfg.colors.share.hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "505",
+      "contains": "hover: '#F4F6F8'"
+    },
+    "cfg.colors.side-card": {
+      "path": "tailwind.config.cjs",
+      "lines": "632",
+      "contains": "'side-card': 'rgba(255,255,255,.6)', // B T2 Story"
+    },
+    "cfg.colors.silver": {
+      "path": "tailwind.config.cjs",
+      "lines": "479",
+      "contains": "silver: '#999999'"
+    },
+    "cfg.colors.social.age": {
+      "path": "tailwind.config.cjs",
+      "lines": "651",
+      "contains": "age: 'rgba(0,0,0,.6)'"
+    },
+    "cfg.colors.social.bg": {
+      "path": "tailwind.config.cjs",
+      "lines": "651",
+      "contains": "bg: '#F3F4F9'"
+    },
+    "cfg.colors.social.link": {
+      "path": "tailwind.config.cjs",
+      "lines": "651",
+      "contains": "link: '#0077B5'"
+    },
+    "cfg.colors.soft-hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "474",
+      "contains": "'soft-hover': '#EEEEEE', // A P4 IntegrationCard h"
+    },
+    "cfg.colors.specimen-label": {
+      "path": "tailwind.config.cjs",
+      "lines": "390",
+      "contains": "'specimen-label': '#4D4D4D',"
+    },
+    "cfg.colors.story-tint.peach": {
+      "path": "tailwind.config.cjs",
+      "lines": "770",
+      "contains": "peach: '#FDECE8'"
+    },
+    "cfg.colors.story-tint.pink": {
+      "path": "tailwind.config.cjs",
+      "lines": "770",
+      "contains": "pink: '#FFEBFD'"
+    },
+    "cfg.colors.submit-hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "494",
+      "contains": "'submit-hover': '#404040', // C nominate submit ho"
+    },
+    "cfg.colors.tag-bg": {
+      "path": "tailwind.config.cjs",
+      "lines": "29",
+      "contains": "'tag-bg': '#F7F7F7',"
+    },
+    "cfg.colors.tag-border": {
+      "path": "tailwind.config.cjs",
+      "lines": "59",
+      "contains": "'tag-border': 'rgba(0,0,0,.2)',"
+    },
+    "cfg.colors.tag-glass": {
+      "path": "tailwind.config.cjs",
+      "lines": "57",
+      "contains": "'tag-glass': 'rgba(231,231,231,.5)',"
+    },
+    "cfg.colors.tag-glass-inner": {
+      "path": "tailwind.config.cjs",
+      "lines": "58",
+      "contains": "'tag-glass-inner': 'rgba(255,255,255,.8)',"
+    },
+    "cfg.colors.tag-meta.green": {
+      "path": "tailwind.config.cjs",
+      "lines": "34",
+      "contains": "green: '#185B1F'"
+    },
+    "cfg.colors.tag-meta.lavender": {
+      "path": "tailwind.config.cjs",
+      "lines": "34",
+      "contains": "lavender: '#3436A5'"
+    },
+    "cfg.colors.tag-meta.pink": {
+      "path": "tailwind.config.cjs",
+      "lines": "34",
+      "contains": "pink: '#801573'"
+    },
+    "cfg.colors.tag-meta.red": {
+      "path": "tailwind.config.cjs",
+      "lines": "527",
+      "contains": "red: '#752512'"
+    },
+    "cfg.colors.tag-meta.yellow": {
+      "path": "tailwind.config.cjs",
+      "lines": "34",
+      "contains": "yellow: '#7D6508'"
+    },
+    "cfg.colors.tag-text.green": {
+      "path": "tailwind.config.cjs",
+      "lines": "32",
+      "contains": "green: '#0C2D10'"
+    },
+    "cfg.colors.tag-text.lavender": {
+      "path": "tailwind.config.cjs",
+      "lines": "32",
+      "contains": "lavender: '#1E2060'"
+    },
+    "cfg.colors.tag-text.pink": {
+      "path": "tailwind.config.cjs",
+      "lines": "32",
+      "contains": "pink: '#400B39'"
+    },
+    "cfg.colors.tag-text.red": {
+      "path": "tailwind.config.cjs",
+      "lines": "526",
+      "contains": "red: '#3B1208'"
+    },
+    "cfg.colors.tag-text.yellow": {
+      "path": "tailwind.config.cjs",
+      "lines": "32",
+      "contains": "yellow: '#3F3306'"
+    },
+    "cfg.colors.takeaway-dot": {
+      "path": "tailwind.config.cjs",
+      "lines": "485",
+      "contains": "'takeaway-dot': '#A0A0A0', // B R.5 key-takeaways "
+    },
+    "cfg.colors.teaser-bg": {
+      "path": "tailwind.config.cjs",
+      "lines": "66",
+      "contains": "'teaser-bg': 'rgba(255,255,255,.78)',"
+    },
+    "cfg.colors.teaser-card-hover": {
+      "path": "tailwind.config.cjs",
+      "lines": "78",
+      "contains": "'teaser-card-hover': 'rgba(240,240,238,.9)', // .l"
+    },
+    "cfg.colors.teaser-close": {
+      "path": "tailwind.config.cjs",
+      "lines": "67",
+      "contains": "'teaser-close': '#4D4D4D',"
+    },
+    "cfg.colors.tile-glass": {
+      "path": "tailwind.config.cjs",
+      "lines": "297",
+      "contains": "'tile-glass': 'rgba(231,231,231,.3)', // §9 icon-t"
+    },
+    "cfg.colors.tint-dot.green": {
+      "path": "tailwind.config.cjs",
+      "lines": "528",
+      "contains": "green: '#C8E9CB'"
+    },
+    "cfg.colors.tint-dot.neutral": {
+      "path": "tailwind.config.cjs",
+      "lines": "528",
+      "contains": "neutral: '#E5E5E5'"
+    },
+    "cfg.colors.tint-dot.pink": {
+      "path": "tailwind.config.cjs",
+      "lines": "528",
+      "contains": "pink: '#FFC9F9'"
+    },
+    "cfg.colors.tint-dot.red": {
+      "path": "tailwind.config.cjs",
+      "lines": "528",
+      "contains": "red: '#F9C8BC'"
+    },
+    "cfg.colors.tint-dot.yellow": {
+      "path": "tailwind.config.cjs",
+      "lines": "528",
+      "contains": "yellow: '#FBEFC1'"
+    },
+    "cfg.colors.tint.green": {
+      "path": "tailwind.config.cjs",
+      "lines": "27",
+      "contains": "green: '#E7F4E8'"
+    },
+    "cfg.colors.tint.lavender": {
+      "path": "tailwind.config.cjs",
+      "lines": "27",
+      "contains": "lavender: '#E9E9F8'"
+    },
+    "cfg.colors.tint.peach": {
+      "path": "tailwind.config.cjs",
+      "lines": "525",
+      "contains": "peach: '#FCEDE8'"
+    },
+    "cfg.colors.tint.pink": {
+      "path": "tailwind.config.cjs",
+      "lines": "27",
+      "contains": "pink: '#FEEAFC'"
+    },
+    "cfg.colors.tint.red": {
+      "path": "tailwind.config.cjs",
+      "lines": "525",
+      "contains": "red: '#FDECE9'"
+    },
+    "cfg.colors.tint.yellow": {
+      "path": "tailwind.config.cjs",
+      "lines": "27",
+      "contains": "yellow: '#FBF6E4'"
+    },
+    "cfg.colors.toc.accent": {
+      "path": "tailwind.config.cjs",
+      "lines": "497",
+      "contains": "accent: '#4B4BF7'"
+    },
+    "cfg.colors.toc.accent-2": {
+      "path": "tailwind.config.cjs",
+      "lines": "498",
+      "contains": "'accent-2': '#EC4899', // B T4 active tick when th"
+    },
+    "cfg.colors.toc.item": {
+      "path": "tailwind.config.cjs",
+      "lines": "503",
+      "contains": "item: '#5A5A5A'"
+    },
+    "cfg.colors.toc.meta": {
+      "path": "tailwind.config.cjs",
+      "lines": "502",
+      "contains": "meta: '#7D7D7D'"
+    },
+    "cfg.colors.toc.past": {
+      "path": "tailwind.config.cjs",
+      "lines": "499",
+      "contains": "past: '#A3A3A3'"
+    },
+    "cfg.colors.toc.tick": {
+      "path": "tailwind.config.cjs",
+      "lines": "501",
+      "contains": "tick: '#111111'"
+    },
+    "cfg.colors.toc.upcoming": {
+      "path": "tailwind.config.cjs",
+      "lines": "500",
+      "contains": "upcoming: '#D4D4D4'"
+    },
+    "cfg.colors.topic-bar": {
+      "path": "tailwind.config.cjs",
+      "lines": "635",
+      "contains": "'topic-bar': 'rgba(255,255,255,.94)', // B T5 stic"
+    },
+    "cfg.colors.track": {
+      "path": "tailwind.config.cjs",
+      "lines": "37",
+      "contains": "track: '#E4E4E4'"
+    },
+    "cfg.colors.values-card": {
+      "path": "tailwind.config.cjs",
+      "lines": "806",
+      "contains": "'values-card': 'rgba(255,255,255,.85)', // C C3 Va"
+    },
+    "cfg.colors.video-time": {
+      "path": "tailwind.config.cjs",
+      "lines": "804",
+      "contains": "'video-time': '#5100FF', // A T2 VideoFrame time l"
+    },
+    "cfg.colors.vs-card": {
+      "path": "tailwind.config.cjs",
+      "lines": "805",
+      "contains": "'vs-card': '#F8F8F8', // B T8 VsIntroCards"
+    },
+    "cfg.container": {
+      "path": "tailwind.config.cjs",
+      "lines": "170",
+      "contains": "container: '1280px'"
+    },
+    "cfg.fontFamily.display": {
+      "path": "tailwind.config.cjs",
+      "lines": "85",
+      "contains": "display: ['Fraunces'"
+    },
+    "cfg.fontFamily.rethink": {
+      "path": "tailwind.config.cjs",
+      "lines": "393",
+      "contains": "rethink: ['\"Rethink Sans\"'"
+    },
+    "cfg.fontFamily.sans": {
+      "path": "tailwind.config.cjs",
+      "lines": "86",
+      "contains": "sans: ['Inter'"
+    },
+    "cfg.fontSize.ai-note": {
+      "path": "tailwind.config.cjs",
+      "lines": "132",
+      "contains": "ai-note"
+    },
+    "cfg.fontSize.announce": {
+      "path": "tailwind.config.cjs",
+      "lines": "116",
+      "contains": "announce"
+    },
+    "cfg.fontSize.attr-13": {
+      "path": "tailwind.config.cjs",
+      "lines": "667",
+      "contains": "attr-13"
+    },
+    "cfg.fontSize.band-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "540",
+      "contains": "band-md"
+    },
+    "cfg.fontSize.band-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "541",
+      "contains": "band-phone"
+    },
+    "cfg.fontSize.band-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "539",
+      "contains": "band-xl"
+    },
+    "cfg.fontSize.blog-feature-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "660",
+      "contains": "blog-feature-lg"
+    },
+    "cfg.fontSize.blog-feature-sm": {
+      "path": "tailwind.config.cjs",
+      "lines": "661",
+      "contains": "blog-feature-sm"
+    },
+    "cfg.fontSize.blog-feature-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "659",
+      "contains": "blog-feature-xl"
+    },
+    "cfg.fontSize.blog-meta": {
+      "path": "tailwind.config.cjs",
+      "lines": "662",
+      "contains": "blog-meta"
+    },
+    "cfg.fontSize.blog-meta-sm": {
+      "path": "tailwind.config.cjs",
+      "lines": "663",
+      "contains": "blog-meta-sm"
+    },
+    "cfg.fontSize.body-14-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "112",
+      "contains": "body-14-phone"
+    },
+    "cfg.fontSize.body-16": {
+      "path": "tailwind.config.cjs",
+      "lines": "111",
+      "contains": "body-16"
+    },
+    "cfg.fontSize.body-16-loose": {
+      "path": "tailwind.config.cjs",
+      "lines": "544",
+      "contains": "body-16-loose"
+    },
+    "cfg.fontSize.body-16-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "311",
+      "contains": "body-16-md"
+    },
+    "cfg.fontSize.body-17": {
+      "path": "tailwind.config.cjs",
+      "lines": "547",
+      "contains": "body-17"
+    },
+    "cfg.fontSize.body-18": {
+      "path": "tailwind.config.cjs",
+      "lines": "110",
+      "contains": "body-18"
+    },
+    "cfg.fontSize.body-18-loose": {
+      "path": "tailwind.config.cjs",
+      "lines": "550",
+      "contains": "body-18-loose"
+    },
+    "cfg.fontSize.body-20": {
+      "path": "tailwind.config.cjs",
+      "lines": "108",
+      "contains": "body-20"
+    },
+    "cfg.fontSize.chat": {
+      "path": "tailwind.config.cjs",
+      "lines": "118",
+      "contains": "chat"
+    },
+    "cfg.fontSize.chat-sys": {
+      "path": "tailwind.config.cjs",
+      "lines": "119",
+      "contains": "chat-sys"
+    },
+    "cfg.fontSize.compare-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "103",
+      "contains": "compare-lg"
+    },
+    "cfg.fontSize.compare-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "102",
+      "contains": "compare-xl"
+    },
+    "cfg.fontSize.dd-chip": {
+      "path": "tailwind.config.cjs",
+      "lines": "129",
+      "contains": "dd-chip"
+    },
+    "cfg.fontSize.dd-desc": {
+      "path": "tailwind.config.cjs",
+      "lines": "127",
+      "contains": "dd-desc"
+    },
+    "cfg.fontSize.dd-feature": {
+      "path": "tailwind.config.cjs",
+      "lines": "128",
+      "contains": "dd-feature"
+    },
+    "cfg.fontSize.dd-link": {
+      "path": "tailwind.config.cjs",
+      "lines": "130",
+      "contains": "dd-link"
+    },
+    "cfg.fontSize.dd-title": {
+      "path": "tailwind.config.cjs",
+      "lines": "126",
+      "contains": "dd-title"
+    },
+    "cfg.fontSize.detail-h2": {
+      "path": "tailwind.config.cjs",
+      "lines": "721",
+      "contains": "detail-h2"
+    },
+    "cfg.fontSize.display-18": {
+      "path": "tailwind.config.cjs",
+      "lines": "665",
+      "contains": "t('18px', '23.4px'"
+    },
+    "cfg.fontSize.display-20": {
+      "path": "tailwind.config.cjs",
+      "lines": "664",
+      "contains": "t('20px', '26px'"
+    },
+    "cfg.fontSize.dl-label": {
+      "path": "tailwind.config.cjs",
+      "lines": "419",
+      "contains": "dl-label"
+    },
+    "cfg.fontSize.emp-name": {
+      "path": "tailwind.config.cjs",
+      "lines": "568",
+      "contains": "emp-name"
+    },
+    "cfg.fontSize.emp-quote": {
+      "path": "tailwind.config.cjs",
+      "lines": "567",
+      "contains": "emp-quote"
+    },
+    "cfg.fontSize.eyebrow": {
+      "path": "tailwind.config.cjs",
+      "lines": "125",
+      "contains": "eyebrow"
+    },
+    "cfg.fontSize.faq-card-q": {
+      "path": "tailwind.config.cjs",
+      "lines": "548",
+      "contains": "faq-card-q"
+    },
+    "cfg.fontSize.faq-doc": {
+      "path": "tailwind.config.cjs",
+      "lines": "666",
+      "contains": "faq-doc"
+    },
+    "cfg.fontSize.faq-glyph": {
+      "path": "tailwind.config.cjs",
+      "lines": "549",
+      "contains": "faq-glyph"
+    },
+    "cfg.fontSize.faq-q": {
+      "path": "tailwind.config.cjs",
+      "lines": "545",
+      "contains": "faq-q"
+    },
+    "cfg.fontSize.faq-q-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "546",
+      "contains": "faq-q-phone"
+    },
+    "cfg.fontSize.field-14": {
+      "path": "tailwind.config.cjs",
+      "lines": "553",
+      "contains": "field-14"
+    },
+    "cfg.fontSize.field-16": {
+      "path": "tailwind.config.cjs",
+      "lines": "554",
+      "contains": "field-16"
+    },
+    "cfg.fontSize.footer-title-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "316",
+      "contains": "footer-title-lg"
+    },
+    "cfg.fontSize.footer-title-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "315",
+      "contains": "footer-title-md"
+    },
+    "cfg.fontSize.form-label": {
+      "path": "tailwind.config.cjs",
+      "lines": "552",
+      "contains": "form-label"
+    },
+    "cfg.fontSize.form-title": {
+      "path": "tailwind.config.cjs",
+      "lines": "551",
+      "contains": "form-title"
+    },
+    "cfg.fontSize.gradient-head": {
+      "path": "tailwind.config.cjs",
+      "lines": "420",
+      "contains": "gradient-head"
+    },
+    "cfg.fontSize.h1-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "93",
+      "contains": "h1-lg"
+    },
+    "cfg.fontSize.h1-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "140",
+      "contains": "h1-md"
+    },
+    "cfg.fontSize.h1-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "94",
+      "contains": "h1-phone"
+    },
+    "cfg.fontSize.h1-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "92",
+      "contains": "h1-xl"
+    },
+    "cfg.fontSize.h2-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "96",
+      "contains": "h2-lg"
+    },
+    "cfg.fontSize.h2-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "305",
+      "contains": "h2-md"
+    },
+    "cfg.fontSize.h2-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "97",
+      "contains": "h2-phone"
+    },
+    "cfg.fontSize.h2-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "95",
+      "contains": "h2-xl"
+    },
+    "cfg.fontSize.h3-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "100",
+      "contains": "h3-lg"
+    },
+    "cfg.fontSize.h3-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "306",
+      "contains": "h3-md"
+    },
+    "cfg.fontSize.h3-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "101",
+      "contains": "h3-phone"
+    },
+    "cfg.fontSize.h3-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "99",
+      "contains": "h3-xl"
+    },
+    "cfg.fontSize.input-soft": {
+      "path": "tailwind.config.cjs",
+      "lines": "555",
+      "contains": "input-soft"
+    },
+    "cfg.fontSize.inter-16": {
+      "path": "tailwind.config.cjs",
+      "lines": "560",
+      "contains": "inter-16"
+    },
+    "cfg.fontSize.jobs-13": {
+      "path": "tailwind.config.cjs",
+      "lines": "407",
+      "contains": "jobs-13"
+    },
+    "cfg.fontSize.jobs-13-tight": {
+      "path": "tailwind.config.cjs",
+      "lines": "408",
+      "contains": "jobs-13-tight"
+    },
+    "cfg.fontSize.jobs-14": {
+      "path": "tailwind.config.cjs",
+      "lines": "409",
+      "contains": "jobs-14"
+    },
+    "cfg.fontSize.jobs-14-tight": {
+      "path": "tailwind.config.cjs",
+      "lines": "410",
+      "contains": "jobs-14-tight"
+    },
+    "cfg.fontSize.jobs-body": {
+      "path": "tailwind.config.cjs",
+      "lines": "405",
+      "contains": "jobs-body"
+    },
+    "cfg.fontSize.jobs-card-title": {
+      "path": "tailwind.config.cjs",
+      "lines": "411",
+      "contains": "jobs-card-title"
+    },
+    "cfg.fontSize.jobs-eyebrow": {
+      "path": "tailwind.config.cjs",
+      "lines": "406",
+      "contains": "jobs-eyebrow"
+    },
+    "cfg.fontSize.jobs-h1-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "398",
+      "contains": "jobs-h1-lg"
+    },
+    "cfg.fontSize.jobs-h1-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "399",
+      "contains": "jobs-h1-md"
+    },
+    "cfg.fontSize.jobs-h1-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "400",
+      "contains": "jobs-h1-phone"
+    },
+    "cfg.fontSize.jobs-h1-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "397",
+      "contains": "jobs-h1-xl"
+    },
+    "cfg.fontSize.jobs-h2": {
+      "path": "tailwind.config.cjs",
+      "lines": "404",
+      "contains": "jobs-h2"
+    },
+    "cfg.fontSize.jobs-h2-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "403",
+      "contains": "jobs-h2-lg"
+    },
+    "cfg.fontSize.jobs-h2-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "402",
+      "contains": "jobs-h2-xl"
+    },
+    "cfg.fontSize.jobs-silk-title": {
+      "path": "tailwind.config.cjs",
+      "lines": "412",
+      "contains": "jobs-silk-title"
+    },
+    "cfg.fontSize.jobs-stat-desc": {
+      "path": "tailwind.config.cjs",
+      "lines": "417",
+      "contains": "jobs-stat-desc"
+    },
+    "cfg.fontSize.jobs-stat-label": {
+      "path": "tailwind.config.cjs",
+      "lines": "416",
+      "contains": "jobs-stat-label"
+    },
+    "cfg.fontSize.jobs-stat-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "414",
+      "contains": "jobs-stat-md"
+    },
+    "cfg.fontSize.jobs-stat-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "415",
+      "contains": "jobs-stat-phone"
+    },
+    "cfg.fontSize.jobs-stat-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "413",
+      "contains": "jobs-stat-xl"
+    },
+    "cfg.fontSize.label": {
+      "path": "tailwind.config.cjs",
+      "lines": "117",
+      "contains": "label"
+    },
+    "cfg.fontSize.label-13": {
+      "path": "tailwind.config.cjs",
+      "lines": "556",
+      "contains": "label-13"
+    },
+    "cfg.fontSize.label-15": {
+      "path": "tailwind.config.cjs",
+      "lines": "543",
+      "contains": "label-15"
+    },
+    "cfg.fontSize.legal-10": {
+      "path": "tailwind.config.cjs",
+      "lines": "724",
+      "contains": "legal-10"
+    },
+    "cfg.fontSize.matrix-label": {
+      "path": "tailwind.config.cjs",
+      "lines": "574",
+      "contains": "matrix-label"
+    },
+    "cfg.fontSize.matrix-title": {
+      "path": "tailwind.config.cjs",
+      "lines": "573",
+      "contains": "matrix-title"
+    },
+    "cfg.fontSize.menu-row": {
+      "path": "tailwind.config.cjs",
+      "lines": "133",
+      "contains": "menu-row"
+    },
+    "cfg.fontSize.meta": {
+      "path": "tailwind.config.cjs",
+      "lines": "131",
+      "contains": "meta"
+    },
+    "cfg.fontSize.name-11": {
+      "path": "tailwind.config.cjs",
+      "lines": "313",
+      "contains": "name-11"
+    },
+    "cfg.fontSize.name-11-tight": {
+      "path": "tailwind.config.cjs",
+      "lines": "656",
+      "contains": "name-11-tight"
+    },
+    "cfg.fontSize.name-12": {
+      "path": "tailwind.config.cjs",
+      "lines": "137",
+      "contains": "name-12"
+    },
+    "cfg.fontSize.name-13": {
+      "path": "tailwind.config.cjs",
+      "lines": "312",
+      "contains": "name-13"
+    },
+    "cfg.fontSize.name-18": {
+      "path": "tailwind.config.cjs",
+      "lines": "774",
+      "contains": "name-18"
+    },
+    "cfg.fontSize.name-20": {
+      "path": "tailwind.config.cjs",
+      "lines": "109",
+      "contains": "name-20"
+    },
+    "cfg.fontSize.new-tag": {
+      "path": "tailwind.config.cjs",
+      "lines": "136",
+      "contains": "new-tag"
+    },
+    "cfg.fontSize.para-14-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "113",
+      "contains": "para-14-phone"
+    },
+    "cfg.fontSize.pill-14": {
+      "path": "tailwind.config.cjs",
+      "lines": "722",
+      "contains": "pill-14"
+    },
+    "cfg.fontSize.quote": {
+      "path": "tailwind.config.cjs",
+      "lines": "104",
+      "contains": "quote"
+    },
+    "cfg.fontSize.quote-18": {
+      "path": "tailwind.config.cjs",
+      "lines": "542",
+      "contains": "quote-18"
+    },
+    "cfg.fontSize.quote-18-27": {
+      "path": "tailwind.config.cjs",
+      "lines": "723",
+      "contains": "quote-18-27"
+    },
+    "cfg.fontSize.quote-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "308",
+      "contains": "quote-lg"
+    },
+    "cfg.fontSize.quote-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "307",
+      "contains": "quote-md"
+    },
+    "cfg.fontSize.quote-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "303",
+      "contains": "quote-phone"
+    },
+    "cfg.fontSize.role-12": {
+      "path": "tailwind.config.cjs",
+      "lines": "138",
+      "contains": "role-12"
+    },
+    "cfg.fontSize.small": {
+      "path": "tailwind.config.cjs",
+      "lines": "120",
+      "contains": "small"
+    },
+    "cfg.fontSize.small-13": {
+      "path": "tailwind.config.cjs",
+      "lines": "121",
+      "contains": "small-13"
+    },
+    "cfg.fontSize.small-13-tight": {
+      "path": "tailwind.config.cjs",
+      "lines": "122",
+      "contains": "small-13-tight"
+    },
+    "cfg.fontSize.social-name": {
+      "path": "tailwind.config.cjs",
+      "lines": "668",
+      "contains": "social-name"
+    },
+    "cfg.fontSize.specimen-label": {
+      "path": "tailwind.config.cjs",
+      "lines": "421",
+      "contains": "specimen-label"
+    },
+    "cfg.fontSize.specimen-sans-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "423",
+      "contains": "specimen-sans-md"
+    },
+    "cfg.fontSize.specimen-sans-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "422",
+      "contains": "specimen-sans-xl"
+    },
+    "cfg.fontSize.split-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "570",
+      "contains": "split-lg"
+    },
+    "cfg.fontSize.split-lg-tight": {
+      "path": "tailwind.config.cjs",
+      "lines": "571",
+      "contains": "split-lg-tight"
+    },
+    "cfg.fontSize.split-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "572",
+      "contains": "split-md"
+    },
+    "cfg.fontSize.split-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "569",
+      "contains": "split-xl"
+    },
+    "cfg.fontSize.stat": {
+      "path": "tailwind.config.cjs",
+      "lines": "98",
+      "contains": "stat"
+    },
+    "cfg.fontSize.stat-lg-sm": {
+      "path": "tailwind.config.cjs",
+      "lines": "310",
+      "contains": "stat-lg-sm"
+    },
+    "cfg.fontSize.stat-md-sm": {
+      "path": "tailwind.config.cjs",
+      "lines": "309",
+      "contains": "stat-md-sm"
+    },
+    "cfg.fontSize.story-13": {
+      "path": "tailwind.config.cjs",
+      "lines": "114",
+      "contains": "story-13"
+    },
+    "cfg.fontSize.story-34": {
+      "path": "tailwind.config.cjs",
+      "lines": "657",
+      "contains": "story-34"
+    },
+    "cfg.fontSize.story-name-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "655",
+      "contains": "story-name-md"
+    },
+    "cfg.fontSize.story-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "658",
+      "contains": "story-phone"
+    },
+    "cfg.fontSize.sub-14": {
+      "path": "tailwind.config.cjs",
+      "lines": "557",
+      "contains": "sub-14"
+    },
+    "cfg.fontSize.sub-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "106",
+      "contains": "sub-lg"
+    },
+    "cfg.fontSize.sub-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "141",
+      "contains": "sub-md"
+    },
+    "cfg.fontSize.sub-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "107",
+      "contains": "sub-phone"
+    },
+    "cfg.fontSize.sub-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "105",
+      "contains": "sub-xl"
+    },
+    "cfg.fontSize.tab-18": {
+      "path": "tailwind.config.cjs",
+      "lines": "558",
+      "contains": "tab-18"
+    },
+    "cfg.fontSize.tab-18-tight": {
+      "path": "tailwind.config.cjs",
+      "lines": "559",
+      "contains": "tab-18-tight"
+    },
+    "cfg.fontSize.tag": {
+      "path": "tailwind.config.cjs",
+      "lines": "115",
+      "contains": "tag"
+    },
+    "cfg.fontSize.teaser": {
+      "path": "tailwind.config.cjs",
+      "lines": "134",
+      "contains": "teaser"
+    },
+    "cfg.fontSize.teaser-close": {
+      "path": "tailwind.config.cjs",
+      "lines": "135",
+      "contains": "teaser-close"
+    },
+    "cfg.fontSize.teaser-pill": {
+      "path": "tailwind.config.cjs",
+      "lines": "143",
+      "contains": "teaser-pill"
+    },
+    "cfg.fontSize.tile-label": {
+      "path": "tailwind.config.cjs",
+      "lines": "123",
+      "contains": "tile-label"
+    },
+    "cfg.fontSize.tile-label-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "314",
+      "contains": "tile-label-md"
+    },
+    "cfg.fontSize.tile-label-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "124",
+      "contains": "tile-label-phone"
+    },
+    "cfg.fontSize.tip-12": {
+      "path": "tailwind.config.cjs",
+      "lines": "566",
+      "contains": "tip-12"
+    },
+    "cfg.fontSize.title-20": {
+      "path": "tailwind.config.cjs",
+      "lines": "536",
+      "contains": "title-20"
+    },
+    "cfg.fontSize.title-22": {
+      "path": "tailwind.config.cjs",
+      "lines": "534",
+      "contains": "title-22"
+    },
+    "cfg.fontSize.title-24": {
+      "path": "tailwind.config.cjs",
+      "lines": "535",
+      "contains": "title-24"
+    },
+    "cfg.fontSize.title-24-h4": {
+      "path": "tailwind.config.cjs",
+      "lines": "537",
+      "contains": "title-24-h4"
+    },
+    "cfg.fontSize.title-24-tight": {
+      "path": "tailwind.config.cjs",
+      "lines": "538",
+      "contains": "title-24-tight"
+    },
+    "cfg.fontSize.title-28": {
+      "path": "tailwind.config.cjs",
+      "lines": "533",
+      "contains": "title-28"
+    },
+    "cfg.fontSize.title-32": {
+      "path": "tailwind.config.cjs",
+      "lines": "531",
+      "contains": "title-32"
+    },
+    "cfg.fontSize.title-38": {
+      "path": "tailwind.config.cjs",
+      "lines": "532",
+      "contains": "title-38"
+    },
+    "cfg.fontSize.toc-12": {
+      "path": "tailwind.config.cjs",
+      "lines": "561",
+      "contains": "toc-12"
+    },
+    "cfg.fontSize.toc-13": {
+      "path": "tailwind.config.cjs",
+      "lines": "562",
+      "contains": "toc-13"
+    },
+    "cfg.fontSize.toc-14": {
+      "path": "tailwind.config.cjs",
+      "lines": "563",
+      "contains": "toc-14"
+    },
+    "cfg.fontSize.toc-15": {
+      "path": "tailwind.config.cjs",
+      "lines": "564",
+      "contains": "toc-15"
+    },
+    "cfg.fontSize.toc-15-loose": {
+      "path": "tailwind.config.cjs",
+      "lines": "565",
+      "contains": "toc-15-loose"
+    },
+    "cfg.fontSize.values-body": {
+      "path": "tailwind.config.cjs",
+      "lines": "811",
+      "contains": "values-body"
+    },
+    "cfg.fontSize.values-title": {
+      "path": "tailwind.config.cjs",
+      "lines": "810",
+      "contains": "values-title"
+    },
+    "cfg.fontSize.vs-word-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "812",
+      "contains": "vs-word-md"
+    },
+    "cfg.fontWeight.display-sub": {
+      "path": "tailwind.config.cjs",
+      "lines": "166",
+      "contains": "'display-sub': '340'"
+    },
+    "cfg.gutter": {
+      "path": "tailwind.config.cjs",
+      "lines": "179",
+      "contains": "gutter: '80px'"
+    },
+    "cfg.letterSpacing.announce": {
+      "path": "tailwind.config.cjs",
+      "lines": "155",
+      "contains": "'0.15px'"
+    },
+    "cfg.letterSpacing.display-sub": {
+      "path": "tailwind.config.cjs",
+      "lines": "151",
+      "contains": "'-0.02em'"
+    },
+    "cfg.letterSpacing.nav-label": {
+      "path": "tailwind.config.cjs",
+      "lines": "153",
+      "contains": "'-0.2px'"
+    },
+    "cfg.letterSpacing.sub-md-reset": {
+      "path": "tailwind.config.cjs",
+      "lines": "158",
+      "contains": "'0px'"
+    },
+    "cfg.letterSpacing.teaser-sub": {
+      "path": "tailwind.config.cjs",
+      "lines": "161",
+      "contains": "'0.13px'"
+    },
+    "cfg.maxWidth.body-lg-narrow": {
+      "path": "tailwind.config.cjs",
+      "lines": "324",
+      "contains": "body-lg-narrow"
+    },
+    "cfg.maxWidth.card-stack": {
+      "path": "tailwind.config.cjs",
+      "lines": "332",
+      "contains": "card-stack"
+    },
+    "cfg.maxWidth.compare-head": {
+      "path": "tailwind.config.cjs",
+      "lines": "320",
+      "contains": "compare-head"
+    },
+    "cfg.maxWidth.confidence-body": {
+      "path": "tailwind.config.cjs",
+      "lines": "323",
+      "contains": "confidence-body"
+    },
+    "cfg.maxWidth.confidence-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "328",
+      "contains": "confidence-phone"
+    },
+    "cfg.maxWidth.container": {
+      "path": "tailwind.config.cjs",
+      "lines": "170",
+      "contains": "container"
+    },
+    "cfg.maxWidth.cta-heading-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "334",
+      "contains": "cta-heading-lg"
+    },
+    "cfg.maxWidth.cta-heading-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "333",
+      "contains": "cta-heading-xl"
+    },
+    "cfg.maxWidth.header-body-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "327",
+      "contains": "header-body-md"
+    },
+    "cfg.maxWidth.hero-sub-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "173",
+      "contains": "hero-sub-lg"
+    },
+    "cfg.maxWidth.hero-sub-md": {
+      "path": "tailwind.config.cjs",
+      "lines": "175",
+      "contains": "hero-sub-md"
+    },
+    "cfg.maxWidth.hero-sub-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "172",
+      "contains": "hero-sub-xl"
+    },
+    "cfg.maxWidth.jobs-ai-head": {
+      "path": "tailwind.config.cjs",
+      "lines": "429",
+      "contains": "jobs-ai-head"
+    },
+    "cfg.maxWidth.jobs-blurb": {
+      "path": "tailwind.config.cjs",
+      "lines": "432",
+      "contains": "jobs-blurb"
+    },
+    "cfg.maxWidth.jobs-cards": {
+      "path": "tailwind.config.cjs",
+      "lines": "430",
+      "contains": "jobs-cards"
+    },
+    "cfg.maxWidth.jobs-footer": {
+      "path": "tailwind.config.cjs",
+      "lines": "431",
+      "contains": "jobs-footer"
+    },
+    "cfg.maxWidth.jobs-title-lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "428",
+      "contains": "jobs-title-lg"
+    },
+    "cfg.maxWidth.jobs-title-xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "427",
+      "contains": "jobs-title-xl"
+    },
+    "cfg.maxWidth.mcp": {
+      "path": "tailwind.config.cjs",
+      "lines": "434",
+      "contains": "mcp"
+    },
+    "cfg.maxWidth.nav-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "174",
+      "contains": "nav-phone"
+    },
+    "cfg.maxWidth.notfound-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "426",
+      "contains": "notfound-phone"
+    },
+    "cfg.maxWidth.page": {
+      "path": "tailwind.config.cjs",
+      "lines": "171",
+      "contains": "page"
+    },
+    "cfg.maxWidth.playbook-body": {
+      "path": "tailwind.config.cjs",
+      "lines": "326",
+      "contains": "playbook-body"
+    },
+    "cfg.maxWidth.playbook-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "331",
+      "contains": "playbook-phone"
+    },
+    "cfg.maxWidth.proof-sub": {
+      "path": "tailwind.config.cjs",
+      "lines": "319",
+      "contains": "proof-sub"
+    },
+    "cfg.maxWidth.silk-title": {
+      "path": "tailwind.config.cjs",
+      "lines": "433",
+      "contains": "silk-title"
+    },
+    "cfg.maxWidth.system": {
+      "path": "tailwind.config.cjs",
+      "lines": "325",
+      "contains": "system"
+    },
+    "cfg.maxWidth.system-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "330",
+      "contains": "system-phone"
+    },
+    "cfg.maxWidth.system-phone-h": {
+      "path": "tailwind.config.cjs",
+      "lines": "329",
+      "contains": "system-phone-h"
+    },
+    "cfg.maxWidth.tagline-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "336",
+      "contains": "tagline-phone"
+    },
+    "cfg.maxWidth.tools-body": {
+      "path": "tailwind.config.cjs",
+      "lines": "322",
+      "contains": "tools-body"
+    },
+    "cfg.screens.lg": {
+      "path": "tailwind.config.cjs",
+      "lines": "18",
+      "contains": "md: '810px', lg: '1200px', xl: '1440px'"
+    },
+    "cfg.screens.md": {
+      "path": "tailwind.config.cjs",
+      "lines": "18",
+      "contains": "md: '810px', lg: '1200px', xl: '1440px'"
+    },
+    "cfg.screens.xl": {
+      "path": "tailwind.config.cjs",
+      "lines": "18",
+      "contains": "md: '810px', lg: '1200px', xl: '1440px'"
+    },
+    "cfg.spacing.gutter": {
+      "path": "tailwind.config.cjs",
+      "lines": "179",
+      "contains": "gutter"
+    },
+    "cfg.spacing.gutter-phone": {
+      "path": "tailwind.config.cjs",
+      "lines": "180",
+      "contains": "gutter-phone"
+    },
+    "cfg.spacing.nav-top": {
+      "path": "tailwind.config.cjs",
+      "lines": "181",
+      "contains": "nav-top"
+    },
+    "cfg.transitionTimingFunction.nav": {
+      "path": "tailwind.config.cjs",
+      "lines": "362",
+      "contains": "nav"
+    },
+    "cfg.transitionTimingFunction.ui": {
+      "path": "tailwind.config.cjs",
+      "lines": "607",
+      "contains": "ui"
+    },
+    "cfg.transitionTimingFunction.zoom": {
+      "path": "tailwind.config.cjs",
+      "lines": "608",
+      "contains": "zoom"
+    },
+    "cfg.width.press-sidebar": {
+      "path": "tailwind.config.cjs",
+      "lines": "437",
+      "contains": "press-sidebar"
+    },
+    "cmp.button": {
+      "path": "src/components/Button.jsx",
+      "lines": "6",
+      "contains": "Variants: 'dark' (Main, #1A1A1A)"
+    },
+    "cmp.faq": {
+      "path": "src/components/ui/FaqAccordion.jsx",
+      "lines": "27",
+      "contains": "prefers-reduced-motion"
+    },
+    "cmp.marquee": {
+      "path": "src/components/ui/LogoMarquee.jsx",
+      "lines": "11",
+      "contains": "Card (`card`, default): 132 tall"
+    },
+    "cmp.nav": {
+      "path": "src/components/Nav.jsx",
+      "lines": "22",
+      "contains": "NAV – CLONE_SPEC §4"
+    },
+    "cmp.pill": {
+      "path": "src/components/AnnouncementPill.jsx",
+      "lines": "6",
+      "contains": "Outer 277x54"
+    },
+    "cmp.teaser": {
+      "path": "src/components/VideoTeaser.jsx",
+      "lines": "3",
+      "contains": "CARD variant: fixed right 32"
+    },
+    "copy.about.logos-h": {
+      "path": "src/data/company.js",
+      "lines": "27",
+      "contains": "Support teams in lending, he"
+    },
+    "copy.ainote": {
+      "path": "src/components/Stories.jsx",
+      "lines": "613",
+      "contains": "Reading this page through an"
+    },
+    "copy.art.date": {
+      "path": "src/data/articles.js",
+      "lines": "40",
+      "contains": "Oct 12, 2026"
+    },
+    "copy.art.desc": {
+      "path": "src/data/articles.js",
+      "lines": "82",
+      "contains": "How Net Promoter Score is ca"
+    },
+    "copy.art.title": {
+      "path": "src/data/articles.js",
+      "lines": "107",
+      "contains": "First response time: how to "
+    },
+    "copy.art.topic": {
+      "path": "src/data/articles.js",
+      "lines": "131",
+      "contains": "Customer experience"
+    },
+    "copy.band": {
+      "path": "src/data/productPages.js",
+      "lines": "103",
+      "contains": "Built to resolve every case,"
+    },
+    "copy.bento.item": {
+      "path": "src/data/productLandings.js",
+      "lines": "337",
+      "contains": "Follow-up you do not have to"
+    },
+    "copy.bento.itembody": {
+      "path": "src/data/productLandings.js",
+      "lines": "296",
+      "contains": "Where a policy is silent, su"
+    },
+    "copy.bento.quote": {
+      "path": "src/data/productLandings.js",
+      "lines": "279",
+      "contains": "We had years of tickets and "
+    },
+    "copy.bento.sub": {
+      "path": "src/data/productLandings.js",
+      "lines": "269",
+      "contains": "Hand Copilot the operational"
+    },
+    "copy.bento.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "292",
+      "contains": "From a rough note to a teste"
+    },
+    "copy.bg.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "214",
+      "contains": "From the Kestrel journal"
+    },
+    "copy.blog.cat": {
+      "path": "src/data/blog.js",
+      "lines": "17",
+      "contains": "AI learnings"
+    },
+    "copy.blog.rail": {
+      "path": "src/data/blog.js",
+      "lines": "10",
+      "contains": "Browse all"
+    },
+    "copy.blog.title": {
+      "path": "src/data/blog.js",
+      "lines": "192",
+      "contains": "The Roost, episode 10: what "
+    },
+    "copy.callout.body": {
+      "path": "src/data/productPages.js",
+      "lines": "465",
+      "contains": "Yes. With Kestrel Voice, the"
+    },
+    "copy.callout.title": {
+      "path": "src/data/industryPages.js",
+      "lines": "278",
+      "contains": "Can patients reach Kestrel b"
+    },
+    "copy.car.bullet": {
+      "path": "src/data/productLandings.js",
+      "lines": "63",
+      "contains": "in the same window, with the"
+    },
+    "copy.car.item": {
+      "path": "src/data/productLandings.js",
+      "lines": "454",
+      "contains": "Account changes"
+    },
+    "copy.car.itemsub": {
+      "path": "src/data/productLandings.js",
+      "lines": "59",
+      "contains": "On your site and inside your"
+    },
+    "copy.car.sub": {
+      "path": "src/data/productLandings.js",
+      "lines": "55",
+      "contains": "Customers pick the channel; "
+    },
+    "copy.car.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "410",
+      "contains": "Five calls Kestrel Voice tak"
+    },
+    "copy.careers.h": {
+      "path": "src/data/company.js",
+      "lines": "100",
+      "contains": "Engineers, designers and ope"
+    },
+    "copy.careers.line": {
+      "path": "src/data/company.js",
+      "lines": "75",
+      "contains": "you wish you got."
+    },
+    "copy.careers.sub": {
+      "path": "src/data/company.js",
+      "lines": "78",
+      "contains": "Our weeks mix customer calls"
+    },
+    "copy.case.body": {
+      "path": "src/data/productLandings.js",
+      "lines": "480",
+      "contains": "Voltway moved its outage lin"
+    },
+    "copy.case.sub": {
+      "path": "src/data/productLandings.js",
+      "lines": "478",
+      "contains": "Customer story: Voltway Ener"
+    },
+    "copy.case.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "479",
+      "contains": "Voltway Energy’s outage line"
+    },
+    "copy.cat.desc": {
+      "path": "src/data/integrations.js",
+      "lines": "211",
+      "contains": "Every action has an owner, a"
+    },
+    "copy.cf.group": {
+      "path": "src/data/pricing.js",
+      "lines": "93",
+      "contains": "Subscription and launch help"
+    },
+    "copy.cf.row": {
+      "path": "src/data/pricing.js",
+      "lines": "111",
+      "contains": "Chat, email and SMS"
+    },
+    "copy.cf.value": {
+      "path": "src/data/pricing.js",
+      "lines": "101",
+      "contains": "Two guided setup calls"
+    },
+    "copy.chip.label": {
+      "path": "src/data/articles.js",
+      "lines": "20",
+      "contains": "Watch Kestrel resolve a bill"
+    },
+    "copy.cmp.body": {
+      "path": "src/components/Compare.jsx",
+      "lines": "24",
+      "contains": "A scripted bot knows the art"
+    },
+    "copy.cmp.h2": {
+      "path": "src/components/Compare.jsx",
+      "lines": "23",
+      "contains": "Scripts run out"
+    },
+    "copy.cmp.scenario": {
+      "path": "src/components/Compare.jsx",
+      "lines": "41",
+      "contains": "Split a large energy bill"
+    },
+    "copy.cmpt.against": {
+      "path": "src/data/competitors.js",
+      "lines": "100",
+      "contains": "Build your own on an LLM API"
+    },
+    "copy.cmpt.cell": {
+      "path": "src/data/competitors.js",
+      "lines": "76",
+      "contains": "A menu of buttons that ends "
+    },
+    "copy.cmpt.label": {
+      "path": "src/data/competitors.js",
+      "lines": "76",
+      "contains": "How it works"
+    },
+    "copy.conf.body": {
+      "path": "src/components/Confidence.jsx",
+      "lines": "33",
+      "contains": "Every playbook has two endin"
+    },
+    "copy.conf.h": {
+      "path": "src/components/Confidence.jsx",
+      "lines": "32",
+      "contains": "Knows who to call when it ca"
+    },
+    "copy.conf.tag": {
+      "path": "src/components/Confidence.jsx",
+      "lines": "53",
+      "contains": "Route by request type"
+    },
+    "copy.cont.item": {
+      "path": "src/data/report.js",
+      "lines": "45",
+      "contains": "Lost context: what customers"
+    },
+    "copy.cta-label": {
+      "path": "src/data/productLandings.js",
+      "lines": "147",
+      "contains": "Browse the connector library"
+    },
+    "copy.demo.quote": {
+      "path": "src/pages/GetADemo.jsx",
+      "lines": "29",
+      "contains": "We ran three AI agents side "
+    },
+    "copy.diff.body": {
+      "path": "src/data/competitors.js",
+      "lines": "31",
+      "contains": "No intent answers customers "
+    },
+    "copy.diff.item": {
+      "path": "src/data/competitors.js",
+      "lines": "45",
+      "contains": "Your team holds the pen"
+    },
+    "copy.diff.sub": {
+      "path": "src/data/competitors.js",
+      "lines": "18",
+      "contains": "None of these is unusual on "
+    },
+    "copy.diff.title": {
+      "path": "src/data/competitors.js",
+      "lines": "20",
+      "contains": "10 things to test in a two-w"
+    },
+    "copy.doc.lede": {
+      "path": "src/data/faq.js",
+      "lines": "10",
+      "contains": "Answers to the questions we "
+    },
+    "copy.doc.title": {
+      "path": "src/data/faq.js",
+      "lines": "9",
+      "contains": "Kestrel FAQ"
+    },
+    "copy.doc.updated": {
+      "path": "src/data/faq.js",
+      "lines": "11",
+      "contains": "Last updated: October 2026"
+    },
+    "copy.emp.quote": {
+      "path": "src/data/company.js",
+      "lines": "52",
+      "contains": "“The first thing I did here "
+    },
+    "copy.ev.benefit": {
+      "path": "src/data/industryPages.js",
+      "lines": "287",
+      "contains": "Map one workflow end to end."
+    },
+    "copy.ev.intro": {
+      "path": "src/data/industryPages.js",
+      "lines": "285",
+      "contains": "We are hosting short working"
+    },
+    "copy.ev.title": {
+      "path": "src/data/industryPages.js",
+      "lines": "284",
+      "contains": "Meet the Kestrel team at the"
+    },
+    "copy.exp.para": {
+      "path": "src/data/productLandings.js",
+      "lines": "471",
+      "contains": "Every call follows the same "
+    },
+    "copy.exp.sub": {
+      "path": "src/data/productLandings.js",
+      "lines": "467",
+      "contains": "Rules that travel with the c"
+    },
+    "copy.exp.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "466",
+      "contains": "What the caller never hears:"
+    },
+    "copy.faq.a": {
+      "path": "src/data/pricing.js",
+      "lines": "161",
+      "contains": "A conversation counts once t"
+    },
+    "copy.faq.q": {
+      "path": "src/data/pricing.js",
+      "lines": "188",
+      "contains": "Is there a cheaper way in fo"
+    },
+    "copy.faq.title": {
+      "path": "src/data/competitors.js",
+      "lines": "20",
+      "contains": "10 things to test in a two-w"
+    },
+    "copy.fd.li": {
+      "path": "src/data/faq.js",
+      "lines": "24",
+      "contains": "Chat and in-app messaging"
+    },
+    "copy.fd.p": {
+      "path": "src/data/faq.js",
+      "lines": "16",
+      "contains": "Kestrel is an AI resolution "
+    },
+    "copy.fd.q": {
+      "path": "src/data/faq.js",
+      "lines": "33",
+      "contains": "Can I test a workflow before"
+    },
+    "copy.fd.title": {
+      "path": "src/data/faq.js",
+      "lines": "14",
+      "contains": "Getting started"
+    },
+    "copy.find.cap": {
+      "path": "src/data/report.js",
+      "lines": "31",
+      "contains": "escalations happened because"
+    },
+    "copy.footer.cta": {
+      "path": "src/components/Footer.jsx",
+      "lines": "15",
+      "contains": "Run a free 14-day pilot of K"
+    },
+    "copy.form.body": {
+      "path": "src/data/leadForms.js",
+      "lines": "39",
+      "contains": "We team up with agencies, co"
+    },
+    "copy.form.label": {
+      "path": "src/data/leadForms.js",
+      "lines": "64",
+      "contains": "Company you’re nominating"
+    },
+    "copy.form.submit": {
+      "path": "src/data/leadForms.js",
+      "lines": "60",
+      "contains": "Send nomination"
+    },
+    "copy.form.success": {
+      "path": "src/data/leadForms.js",
+      "lines": "42",
+      "contains": "Thanks for reaching out. Thi"
+    },
+    "copy.form.title": {
+      "path": "src/pages/GetADemo.jsx",
+      "lines": "59",
+      "contains": "Let’s book a time to chat"
+    },
+    "copy.gl.eyebrow": {
+      "path": "src/data/glossary.js",
+      "lines": "1",
+      "contains": "Glossary"
+    },
+    "copy.gl.intro": {
+      "path": "src/data/glossary.js",
+      "lines": "20",
+      "contains": "Plain-language definitions o"
+    },
+    "copy.gl.title": {
+      "path": "src/data/glossary.js",
+      "lines": "18",
+      "contains": "The customer support glossar"
+    },
+    "copy.guide.label": {
+      "path": "src/data/articles.js",
+      "lines": "11",
+      "contains": "Read the guide →"
+    },
+    "copy.head.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "13",
+      "contains": "Kestrel platform | AI custom"
+    },
+    "copy.hero.announce": {
+      "path": "src/components/Hero.jsx",
+      "lines": "28",
+      "contains": "Kestrel Voice 2.0 is live"
+    },
+    "copy.hero.h1line": {
+      "path": "src/components/Hero.jsx",
+      "lines": "29",
+      "contains": "Customer cases, closed by AI"
+    },
+    "copy.hero.reassure": {
+      "path": "src/components/Hero.jsx",
+      "lines": "36",
+      "contains": "Free 14-day pilot on your ow"
+    },
+    "copy.hero.sub": {
+      "path": "src/components/Hero.jsx",
+      "lines": "31",
+      "contains": "Kestrel picks up a customer'"
+    },
+    "copy.hero.tag": {
+      "path": "src/components/Hero.jsx",
+      "lines": "38",
+      "contains": "Claim photos received"
+    },
+    "copy.hh.sub": {
+      "path": "src/data/productLandings.js",
+      "lines": "16",
+      "contains": "Most support queues are full"
+    },
+    "copy.hh.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "15",
+      "contains": "Give your support team its e"
+    },
+    "copy.idx.eyebrow": {
+      "path": "src/data/articles.js",
+      "lines": "1",
+      "contains": "CX guides"
+    },
+    "copy.idx.lede": {
+      "path": "src/data/articles.js",
+      "lines": "9",
+      "contains": "Clear, opinionated explainer"
+    },
+    "copy.idx.title": {
+      "path": "src/data/articles.js",
+      "lines": "8",
+      "contains": "Field guides for the people "
+    },
+    "copy.int.category": {
+      "path": "src/data/integrations.js",
+      "lines": "151",
+      "contains": "Actions and data"
+    },
+    "copy.int.desc": {
+      "path": "src/data/integrations.js",
+      "lines": "98",
+      "contains": "Ask Kestrel questions from t"
+    },
+    "copy.int.lede": {
+      "path": "src/data/integrations.js",
+      "lines": "110",
+      "contains": "Hand Kestrel the caller’s de"
+    },
+    "copy.int.name": {
+      "path": "src/data/integrations.js",
+      "lines": "94",
+      "contains": "Ticket Desk"
+    },
+    "copy.intd.h": {
+      "path": "src/data/integrations.js",
+      "lines": "122",
+      "contains": "What it is"
+    },
+    "copy.intd.p": {
+      "path": "src/data/integrations.js",
+      "lines": "124",
+      "contains": "It is a small REST endpoint,"
+    },
+    "copy.job.desc": {
+      "path": "src/data/cxJobs.js",
+      "lines": "55",
+      "contains": "Run seller and buyer support"
+    },
+    "copy.job.loc": {
+      "path": "src/data/cxJobs.js",
+      "lines": "35",
+      "contains": "Port Arden, Coastal Region"
+    },
+    "copy.job.meta": {
+      "path": "src/data/company.js",
+      "lines": "119",
+      "contains": "Full time"
+    },
+    "copy.job.title": {
+      "path": "src/data/company.js",
+      "lines": "120",
+      "contains": "Machine Learning Engineer, E"
+    },
+    "copy.jobs.body": {
+      "path": "src/pages/CxJobs.jsx",
+      "lines": "62",
+      "contains": "We collect open customer-sup"
+    },
+    "copy.jobs.company": {
+      "path": "src/data/cxJobs.js",
+      "lines": "8",
+      "contains": "Harbor & Vale"
+    },
+    "copy.jobs.cta": {
+      "path": "src/pages/CxJobs.jsx",
+      "lines": "82",
+      "contains": "Connect the MCP server"
+    },
+    "copy.jobs.eyebrow": {
+      "path": "src/pages/CxJobs.jsx",
+      "lines": "55",
+      "contains": "Support + AI roles · refresh"
+    },
+    "copy.jobs.footer-link": {
+      "path": "src/data/cxJobs.js",
+      "lines": "82",
+      "contains": "Ask your AI"
+    },
+    "copy.jobs.footer-title": {
+      "path": "src/data/cxJobs.js",
+      "lines": "82",
+      "contains": "Quick links"
+    },
+    "copy.jobs.h": {
+      "path": "src/pages/CxJobs.jsx",
+      "lines": "57",
+      "contains": "Every CX role where AI does "
+    },
+    "copy.jobs.role": {
+      "path": "src/data/cxJobs.js",
+      "lines": "75",
+      "contains": "Program Manager, AI Agent an"
+    },
+    "copy.jobs.stat-desc": {
+      "path": "src/data/cxJobs.js",
+      "lines": "19",
+      "contains": "The list is rechecked every "
+    },
+    "copy.jobs.stat-label": {
+      "path": "src/data/cxJobs.js",
+      "lines": "17",
+      "contains": "Roles listed"
+    },
+    "copy.legal.h4": {
+      "path": "src/data/legal.js",
+      "lines": "34",
+      "contains": "Customer data processed on t"
+    },
+    "copy.legal.p": {
+      "path": "src/data/legal.js",
+      "lines": "170",
+      "contains": "10.1 These Terms start when "
+    },
+    "copy.legal.title": {
+      "path": "src/data/legal.js",
+      "lines": "180",
+      "contains": "Terms of service"
+    },
+    "copy.logo-name": {
+      "path": "src/data/company.js",
+      "lines": "31",
+      "contains": "Brindle Health"
+    },
+    "copy.mx.label": {
+      "path": "src/data/competitors.js",
+      "lines": "227",
+      "contains": "Acts in billing and core sys"
+    },
+    "copy.mx.sub": {
+      "path": "src/data/competitors.js",
+      "lines": "192",
+      "contains": "How the two approaches diffe"
+    },
+    "copy.nf.sub": {
+      "path": "src/pages/NotFound.jsx",
+      "lines": "18",
+      "contains": "Let&apos;s get you back to s"
+    },
+    "copy.nf.title": {
+      "path": "src/pages/NotFound.jsx",
+      "lines": "15",
+      "contains": "That page isn&apos;t here"
+    },
+    "copy.nom.upload": {
+      "path": "src/data/leadForms.js",
+      "lines": "67",
+      "contains": "Click to choose a file or dr"
+    },
+    "copy.orbit.body": {
+      "path": "src/data/productLandings.js",
+      "lines": "146",
+      "contains": "Connect helpdesks, billing, "
+    },
+    "copy.orbit.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "145",
+      "contains": "Connects to the systems your"
+    },
+    "copy.pb.body": {
+      "path": "src/components/Playbook.jsx",
+      "lines": "29",
+      "contains": "Kestrel logs which step it t"
+    },
+    "copy.pb.card": {
+      "path": "src/components/Playbook.jsx",
+      "lines": "48",
+      "contains": "SMS Request Resolved"
+    },
+    "copy.pb.h": {
+      "path": "src/components/Playbook.jsx",
+      "lines": "28",
+      "contains": "Your steps, in order."
+    },
+    "copy.pb.quote": {
+      "path": "src/components/Playbook.jsx",
+      "lines": "48",
+      "contains": "“I can’t make my flight”"
+    },
+    "copy.person-name": {
+      "path": "src/data/company.js",
+      "lines": "53",
+      "contains": "Lena Vogt"
+    },
+    "copy.person-role": {
+      "path": "src/data/competitors.js",
+      "lines": "175",
+      "contains": "Director of Member Care, Coi"
+    },
+    "copy.pfaq.a": {
+      "path": "src/data/productPages.js",
+      "lines": "146",
+      "contains": "It works the case the way a "
+    },
+    "copy.pfaq.q": {
+      "path": "src/data/productPages.js",
+      "lines": "375",
+      "contains": "How much of our traffic shou"
+    },
+    "copy.photo-alt": {
+      "path": "src/data/company.js",
+      "lines": "23",
+      "contains": "A Kestrel teammate on a call"
+    },
+    "copy.pk.h": {
+      "path": "src/pages/PressKit.jsx",
+      "lines": "20",
+      "contains": "01 Logo"
+    },
+    "copy.pk.p": {
+      "path": "src/pages/PressKit.jsx",
+      "lines": "90",
+      "contains": "The logo is the anchor of th"
+    },
+    "copy.plan.foot": {
+      "path": "src/data/pricing.js",
+      "lines": "18",
+      "contains": "*Voice minutes run from pick"
+    },
+    "copy.plan.group": {
+      "path": "src/data/pricing.js",
+      "lines": "31",
+      "contains": "In your monthly pool"
+    },
+    "copy.plan.name": {
+      "path": "src/data/pricing.js",
+      "lines": "17",
+      "contains": "Hover"
+    },
+    "copy.plan.note": {
+      "path": "src/data/pricing.js",
+      "lines": "67",
+      "contains": "Best for multi-brand groups "
+    },
+    "copy.plan.row": {
+      "path": "src/data/pricing.js",
+      "lines": "35",
+      "contains": "Each extra text resolution"
+    },
+    "copy.plan.value": {
+      "path": "src/data/pricing.js",
+      "lines": "17",
+      "contains": "1,000"
+    },
+    "copy.post.date": {
+      "path": "src/data/blog.js",
+      "lines": "28",
+      "contains": "October 14"
+    },
+    "copy.post.title": {
+      "path": "src/data/blog.js",
+      "lines": "192",
+      "contains": "The Roost, episode 10: what "
+    },
+    "copy.postcta.body": {
+      "path": "src/pages/content/BlogPost.jsx",
+      "lines": "21",
+      "contains": "Kestrel works a slice of you"
+    },
+    "copy.postcta.title": {
+      "path": "src/pages/content/BlogPost.jsx",
+      "lines": "21",
+      "contains": "Pilot Kestrel free for 14 da"
+    },
+    "copy.pricing.statement": {
+      "path": "src/data/pricing.js",
+      "lines": "17",
+      "contains": "Kestrel is a monthly subscri"
+    },
+    "copy.pricing.title": {
+      "path": "src/data/pricing.js",
+      "lines": "2",
+      "contains": "Pricing"
+    },
+    "copy.proof.h2": {
+      "path": "src/components/Proof.jsx",
+      "lines": "35",
+      "contains": "Counted, not claimed."
+    },
+    "copy.proof.quote": {
+      "path": "src/components/Proof.jsx",
+      "lines": "85",
+      "contains": "“Refund requests used to wai"
+    },
+    "copy.proof.stat": {
+      "path": "src/components/Proof.jsx",
+      "lines": "79",
+      "contains": "Fewer repeat contacts"
+    },
+    "copy.proof.sub": {
+      "path": "src/components/Proof.jsx",
+      "lines": "36",
+      "contains": "Each figure here comes from "
+    },
+    "copy.prose.item-title": {
+      "path": "src/data/productLandings.js",
+      "lines": "250",
+      "contains": "Three ways to keep an agent "
+    },
+    "copy.prose.li": {
+      "path": "src/data/productPages.js",
+      "lines": "92",
+      "contains": "<strong>Channels:</strong> K"
+    },
+    "copy.prose.p": {
+      "path": "src/data/productLandings.js",
+      "lines": "380",
+      "contains": "<strong>Kestrel Voice</stron"
+    },
+    "copy.prose.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "376",
+      "contains": "What should a voice agent be"
+    },
+    "copy.pv.para": {
+      "path": "src/data/productLandings.js",
+      "lines": "371",
+      "contains": "Hold queues are where goodwi"
+    },
+    "copy.pv.ticker": {
+      "path": "src/data/productLandings.js",
+      "lines": "227",
+      "contains": "Relied on by support leaders"
+    },
+    "copy.pv.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "369",
+      "contains": "A phone line that never puts"
+    },
+    "copy.rail.title": {
+      "path": "src/data/report.js",
+      "lines": "58",
+      "contains": "How Coinwell resolves card d"
+    },
+    "copy.rel.link": {
+      "path": "src/data/productPages.js",
+      "lines": "584",
+      "contains": "unts as a good NPS score for"
+    },
+    "copy.rel.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "485",
+      "contains": "What else should I read abou"
+    },
+    "copy.relstory.h": {
+      "path": "src/pages/content/StoryDetail.jsx",
+      "lines": "41",
+      "contains": "Read other stories"
+    },
+    "copy.rep.fact": {
+      "path": "src/data/report.js",
+      "lines": "7",
+      "contains": " ended with a person"
+    },
+    "copy.rep.learn": {
+      "path": "src/data/report.js",
+      "lines": "20",
+      "contains": "How much time a clean handof"
+    },
+    "copy.rep.lede": {
+      "path": "src/data/report.js",
+      "lines": "7",
+      "contains": "We followed 1,200 support co"
+    },
+    "copy.rep.method": {
+      "path": "src/data/report.js",
+      "lines": "15",
+      "contains": "Method: invented sample of e"
+    },
+    "copy.rep.title": {
+      "path": "src/data/report.js",
+      "lines": "6",
+      "contains": "Most AI handoffs lose the th"
+    },
+    "copy.rows.body": {
+      "path": "src/data/productLandings.js",
+      "lines": "112",
+      "contains": "Kestrel Agent reads the acco"
+    },
+    "copy.rows.eyebrow": {
+      "path": "src/data/productPages.js",
+      "lines": "340",
+      "contains": "Write and test"
+    },
+    "copy.rows.title": {
+      "path": "src/data/productPages.js",
+      "lines": "107",
+      "contains": "How does the agent know what"
+    },
+    "copy.rq.attr": {
+      "path": "src/data/report.js",
+      "lines": "36",
+      "contains": "Priya Okafor, Head of Suppor"
+    },
+    "copy.rq.text": {
+      "path": "src/data/report.js",
+      "lines": "35",
+      "contains": "Once the summary landed with"
+    },
+    "copy.rt.cite": {
+      "path": "src/data/blog.js",
+      "lines": "69",
+      "contains": "Support lead at an early-acc"
+    },
+    "copy.rt.h2": {
+      "path": "src/data/blog.js",
+      "lines": "51",
+      "contains": "What you can do today"
+    },
+    "copy.rt.h3": {
+      "path": "src/data/blog.js",
+      "lines": "45",
+      "contains": "Plain language first"
+    },
+    "copy.rt.li": {
+      "path": "src/data/blog.js",
+      "lines": "55",
+      "contains": "Draft a workflow from a shor"
+    },
+    "copy.rt.p": {
+      "path": "src/data/blog.js",
+      "lines": "43",
+      "contains": "In conversations with dozens"
+    },
+    "copy.rt.quote": {
+      "path": "src/data/blog.js",
+      "lines": "68",
+      "contains": "The first time we replayed a"
+    },
+    "copy.rt.takeaway": {
+      "path": "src/data/articles.js",
+      "lines": "50",
+      "contains": "Pair every speed metric with"
+    },
+    "copy.rt.takeaway-title": {
+      "path": "src/components/ui/RichText.jsx",
+      "lines": "27",
+      "contains": "Key takeaways"
+    },
+    "copy.setup.a": {
+      "path": "src/data/integrations.js",
+      "lines": "62",
+      "contains": "Usually in the second or thi"
+    },
+    "copy.setup.intro": {
+      "path": "src/data/integrations.js",
+      "lines": "53",
+      "contains": "Most teams promote their fir"
+    },
+    "copy.setup.q": {
+      "path": "src/data/integrations.js",
+      "lines": "58",
+      "contains": "When does Kestrel take its f"
+    },
+    "copy.setup.step": {
+      "path": "src/data/integrations.js",
+      "lines": "31",
+      "contains": "1. Map one queue (day one)"
+    },
+    "copy.setup.text": {
+      "path": "src/data/integrations.js",
+      "lines": "32",
+      "contains": "Pick a single queue or brand"
+    },
+    "copy.setup.title": {
+      "path": "src/data/integrations.js",
+      "lines": "26",
+      "contains": "What setup really looks like"
+    },
+    "copy.split.byline": {
+      "path": "src/data/industryPages.js",
+      "lines": "40",
+      "contains": "Reviewed by the Kestrel fina"
+    },
+    "copy.split.intro": {
+      "path": "src/data/productPages.js",
+      "lines": "65",
+      "contains": "Think about the cases your b"
+    },
+    "copy.split.lede": {
+      "path": "src/data/productPages.js",
+      "lines": "293",
+      "contains": "Connect your tools, describe"
+    },
+    "copy.split.selfserve": {
+      "path": "src/data/productPages.js",
+      "lines": "294",
+      "contains": "ld your first playbook today"
+    },
+    "copy.split.title": {
+      "path": "src/data/productPages.js",
+      "lines": "63",
+      "contains": "Hand the routine half of you"
+    },
+    "copy.ss.quote": {
+      "path": "src/data/productPages.js",
+      "lines": "24",
+      "contains": "“Our members used to wait tw"
+    },
+    "copy.ss.sub": {
+      "path": "src/data/competitors.js",
+      "lines": "193",
+      "contains": "Notes from support leaders w"
+    },
+    "copy.ss.title": {
+      "path": "src/data/productLandings.js",
+      "lines": "150",
+      "contains": "Teams that switched, in thei"
+    },
+    "copy.ssec.cell": {
+      "path": "src/data/stories.js",
+      "lines": "59",
+      "contains": "Files complete by D-14"
+    },
+    "copy.ssec.h": {
+      "path": "src/data/stories.js",
+      "lines": "38",
+      "contains": "The challenge"
+    },
+    "copy.ssec.mq": {
+      "path": "src/data/stories.js",
+      "lines": "114",
+      "contains": "\"Our nurses used to start ev"
+    },
+    "copy.ssec.p": {
+      "path": "src/data/stories.js",
+      "lines": "51",
+      "contains": "Ledgerly gave Kestrel read a"
+    },
+    "copy.ssec.stat": {
+      "path": "src/data/stories.js",
+      "lines": "56",
+      "contains": "Complete files a week earlie"
+    },
+    "copy.st.p": {
+      "path": "src/data/company.js",
+      "lines": "43",
+      "contains": "Kestrel was started by three"
+    },
+    "copy.st.title": {
+      "path": "src/data/company.js",
+      "lines": "14",
+      "contains": "Why we exist"
+    },
+    "copy.stories.h2": {
+      "path": "src/components/Stories.jsx",
+      "lines": "31",
+      "contains": "Field notes from our teams."
+    },
+    "copy.stories.quote": {
+      "path": "src/components/Stories.jsx",
+      "lines": "54",
+      "contains": "“We used to hire a wave of t"
+    },
+    "copy.story.cat": {
+      "path": "src/data/stories.js",
+      "lines": "15",
+      "contains": "Complex SaaS"
+    },
+    "copy.story.hero-quote": {
+      "path": "src/data/stories.js",
+      "lines": "32",
+      "contains": "Our accountants used to spen"
+    },
+    "copy.story.quote": {
+      "path": "src/data/stories.js",
+      "lines": "440",
+      "contains": "“We thought of Kestrel as a "
+    },
+    "copy.story.title": {
+      "path": "src/data/stories.js",
+      "lines": "25",
+      "contains": "How Ledgerly chases missing "
+    },
+    "copy.strip.label": {
+      "path": "src/data/competitors.js",
+      "lines": "189",
+      "contains": "Running in production at len"
+    },
+    "copy.sys.h": {
+      "path": "src/components/Integrations.jsx",
+      "lines": "20",
+      "contains": "Kestrel acts in the systems "
+    },
+    "copy.sys.sub": {
+      "path": "src/components/Integrations.jsx",
+      "lines": "22",
+      "contains": "Kestrel connects through acc"
+    },
+    "copy.term": {
+      "path": "src/data/glossary.js",
+      "lines": "11",
+      "contains": "Voice of the customer"
+    },
+    "copy.tools.body": {
+      "path": "src/components/Tools.jsx",
+      "lines": "25",
+      "contains": "A caller, a texter and an em"
+    },
+    "copy.tools.h": {
+      "path": "src/components/Tools.jsx",
+      "lines": "24",
+      "contains": "Five channels, one agent."
+    },
+    "copy.tools.tile": {
+      "path": "src/components/Tools.jsx",
+      "lines": "52",
+      "contains": "Chat"
+    },
+    "copy.val.body": {
+      "path": "src/data/company.js",
+      "lines": "95",
+      "contains": "The best time to argue is be"
+    },
+    "copy.val.title": {
+      "path": "src/data/company.js",
+      "lines": "92",
+      "contains": "Leave every system a little "
+    },
+    "copy.vf.body": {
+      "path": "src/data/competitors.js",
+      "lines": "287",
+      "contains": "The cases that cost the most"
+    },
+    "copy.vf.title": {
+      "path": "src/data/competitors.js",
+      "lines": "288",
+      "contains": "Costs that follow the work"
+    },
+    "copy.vs.bullet": {
+      "path": "src/data/competitors.js",
+      "lines": "216",
+      "contains": "Takes actions in your system"
+    },
+    "copy.vs.intro": {
+      "path": "src/data/competitors.js",
+      "lines": "260",
+      "contains": "Most helpdesk suites now sel"
+    },
+    "copy.vs.introcard": {
+      "path": "src/data/competitors.js",
+      "lines": "222",
+      "contains": "A legacy chatbot follows a d"
+    },
+    "copy.vs.label": {
+      "path": "src/data/competitors.js",
+      "lines": "189",
+      "contains": "Running in production at len"
+    },
+    "copy.vs.subtitle": {
+      "path": "src/data/competitors.js",
+      "lines": "211",
+      "contains": "Swap the decision tree for a"
+    },
+    "copy.vs.them": {
+      "path": "src/data/competitors.js",
+      "lines": "209",
+      "contains": "Legacy bots"
+    },
+    "copy.vs.trusted": {
+      "path": "src/data/competitors.js",
+      "lines": "190",
+      "contains": "Coinwell, Ledgerly, Brindle "
+    },
+    "copy.wall.body": {
+      "path": "src/data/thoughts.js",
+      "lines": "14",
+      "contains": "We sampled 50 conversations "
+    },
+    "copy.wall.h": {
+      "path": "src/data/leadForms.js",
+      "lines": "31",
+      "contains": "Picked by support teams who "
+    },
+    "copy.wall.headline": {
+      "path": "src/data/thoughts.js",
+      "lines": "13",
+      "contains": "Head of Support at a fintech"
+    },
+    "css.base.white": {
+      "path": "src/index.css",
+      "lines": "52",
+      "contains": "background-color: theme('colors.white')"
+    },
+    "html.fonts": {
+      "path": "index.html",
+      "lines": "13",
+      "contains": "family=Fraunces"
+    },
+    "ia.stale": {
+      "path": "ia.json",
+      "lines": "6",
+      "contains": "\"status\": \"partly planned"
+    },
+    "mo.band": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "12-13",
+      "contains": "BAND_SPRING"
+    },
+    "mo.cards": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "16-17",
+      "contains": "CARDS_OPEN"
+    },
+    "mo.carousel": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "21-23",
+      "contains": "CAROUSEL_SCROLL"
+    },
+    "mo.chip": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "27-29",
+      "contains": "CHIP_FILL"
+    },
+    "mo.compare": {
+      "path": "src/lib/motion.js",
+      "lines": "143-144",
+      "contains": "COMPARE_FADE"
+    },
+    "mo.ease-out": {
+      "path": "src/lib/motion.js",
+      "lines": "130-135",
+      "contains": "FRAMER_EASE_OUT = [0.12, 0.23, 0.5, 1]"
+    },
+    "mo.faq-panel": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "6-8",
+      "contains": "FAQ_PANEL"
+    },
+    "mo.hydration": {
+      "path": "src/lib/motion.js",
+      "lines": "228-235",
+      "contains": "LIVE_HYDRATION_S = 3.8"
+    },
+    "mo.jobs-ticker": {
+      "path": "src/pages/CxJobs.jsx",
+      "lines": "15-17",
+      "contains": "TICKER_SPEED = 38.8"
+    },
+    "mo.label": {
+      "path": "src/lib/motion.js",
+      "lines": "145-146",
+      "contains": "LABEL_SPRING"
+    },
+    "mo.letter": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "9-11",
+      "contains": "LETTER_REVEAL"
+    },
+    "mo.logo-glow": {
+      "path": "src/components/Confidence.jsx",
+      "lines": "12-13",
+      "contains": "45deg/s"
+    },
+    "mo.marquee": {
+      "path": "src/index.css",
+      "lines": "305-317",
+      "contains": "marqueeLeft"
+    },
+    "mo.mirror": {
+      "path": "src/lib/motion.js",
+      "lines": "239-245",
+      "contains": "repeatType \"mirror\""
+    },
+    "mo.nav-close": {
+      "path": "src/lib/motion.js",
+      "lines": "20-26",
+      "contains": "NAV_CLOSE = { duration: 0.21"
+    },
+    "mo.nav-ease": {
+      "path": "src/lib/motion.js",
+      "lines": "9-11",
+      "contains": "NAV_EASE = [0.22, 1, 0.36, 1]"
+    },
+    "mo.nav-fade": {
+      "path": "src/lib/motion.js",
+      "lines": "12-14",
+      "contains": "NAV_FADE = { duration: 0.35"
+    },
+    "mo.nav-morph": {
+      "path": "src/lib/motion.js",
+      "lines": "15-19",
+      "contains": "NAV_MORPH = { duration: 0.33"
+    },
+    "mo.orbit": {
+      "path": "src/components/commerce/IntegrationOrbit.jsx",
+      "lines": "15-17",
+      "contains": "8.04"
+    },
+    "mo.panel": {
+      "path": "src/lib/motion.js",
+      "lines": "27-29",
+      "contains": "PANEL_IN"
+    },
+    "mo.phone": {
+      "path": "src/lib/motion.js",
+      "lines": "31-41",
+      "contains": "PHONE_CLOSE"
+    },
+    "mo.phone-bars": {
+      "path": "src/lib/motion.js",
+      "lines": "42-43",
+      "contains": "PHONE_BARS"
+    },
+    "mo.pill-appear": {
+      "path": "src/lib/motion.js",
+      "lines": "62-65",
+      "contains": "PILL_APPEAR"
+    },
+    "mo.pill-breath": {
+      "path": "src/lib/motion.js",
+      "lines": "66-75",
+      "contains": "5.0s period"
+    },
+    "mo.pill-hover": {
+      "path": "src/lib/motion.js",
+      "lines": "57-61",
+      "contains": "PILL_HOVER = { type: 'spring', stiffness: 70"
+    },
+    "mo.plus": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "18-19",
+      "contains": "PLUS_ROTATE"
+    },
+    "mo.popover": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "35-37",
+      "contains": "TOC_POPOVER"
+    },
+    "mo.proof-hover": {
+      "path": "src/lib/motion.js",
+      "lines": "147-148",
+      "contains": "PROOF_HOVER"
+    },
+    "mo.rail": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "24-25",
+      "contains": "RAIL_SCROLL"
+    },
+    "mo.reveal": {
+      "path": "src/lib/motion.js",
+      "lines": "48-50",
+      "contains": "REVEAL = { duration: 1.5"
+    },
+    "mo.reveal-blur": {
+      "path": "src/lib/motion.js",
+      "lines": "51-55",
+      "contains": "REVEAL_BLUR"
+    },
+    "mo.reveal04": {
+      "path": "src/lib/motion.js",
+      "lines": "130-135",
+      "contains": "REVEAL_04"
+    },
+    "mo.reveal06": {
+      "path": "src/lib/motion.js",
+      "lines": "130-135",
+      "contains": "REVEAL_06"
+    },
+    "mo.rows": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "14-15",
+      "contains": "ROWS_SPRING"
+    },
+    "mo.scrub": {
+      "path": "src/lib/motion.js",
+      "lines": "152-154",
+      "contains": "targetY"
+    },
+    "mo.slide": {
+      "path": "src/lib/motion.js",
+      "lines": "137-139",
+      "contains": "SLIDE_SPRING"
+    },
+    "mo.smooth-follow": {
+      "path": "src/lib/motion.js",
+      "lines": "96-112",
+      "contains": "time constant ~100ms"
+    },
+    "mo.standin-brain": {
+      "path": "src/index.css",
+      "lines": "318-334",
+      "contains": "brainBlobs 12s"
+    },
+    "mo.standin-hero": {
+      "path": "src/index.css",
+      "lines": "272-299",
+      "contains": "heroGlowWash 11s"
+    },
+    "mo.standin-silk": {
+      "path": "src/index.css",
+      "lines": "419-438",
+      "contains": "silkDrift 14s"
+    },
+    "mo.story-hover": {
+      "path": "src/lib/motion.js",
+      "lines": "149-150",
+      "contains": "STORY_HOVER"
+    },
+    "mo.sub": {
+      "path": "src/lib/motion.js",
+      "lines": "44-46",
+      "contains": "SUB_CLOSE"
+    },
+    "mo.teaser": {
+      "path": "src/index.css",
+      "lines": "259-266",
+      "contains": "lvcIn 0.7s"
+    },
+    "mo.tick": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "33-34",
+      "contains": "TICK_GROW"
+    },
+    "mo.tree": {
+      "path": "src/lib/motion.js",
+      "lines": "140-142",
+      "contains": "TREE_SPRING"
+    },
+    "mo.ui-ease": {
+      "path": "src/lib/uiMotion.js",
+      "lines": "31-32",
+      "contains": "UI_EASE"
+    },
+    "part.announcement-pill": {
+      "path": "src/components/AnnouncementPill.jsx",
+      "lines": "5",
+      "contains": "Announcement pill \"Variant 1\""
+    },
+    "part.avatar": {
+      "path": "src/components/content/GuideCard.jsx",
+      "lines": "18",
+      "contains": "export function Avatar"
+    },
+    "part.blog-card": {
+      "path": "src/components/content/BlogCard.jsx",
+      "lines": "44",
+      "contains": "export default function BlogCard"
+    },
+    "part.brand-mark": {
+      "path": "src/components/Logo.jsx",
+      "lines": "5",
+      "contains": "export function KestrelMark"
+    },
+    "part.button": {
+      "path": "src/components/Button.jsx",
+      "lines": "6",
+      "contains": "Variants: 'dark' (Main, #1A1A1A)"
+    },
+    "part.card-carousel": {
+      "path": "src/components/ui/CardCarousel.jsx",
+      "lines": "57",
+      "contains": "export default function CardCarousel"
+    },
+    "part.color-swatch": {
+      "path": "src/components/presskit/ColorSwatch.jsx",
+      "lines": "12",
+      "contains": "export default function ColorSwatch"
+    },
+    "part.compare-table": {
+      "path": "src/components/ui/CompareTable.jsx",
+      "lines": "283",
+      "contains": "export default function CompareTable"
+    },
+    "part.cta-chip": {
+      "path": "src/components/ui/CtaChip.jsx",
+      "lines": "13",
+      "contains": "export default function CtaChip"
+    },
+    "part.demo-form": {
+      "path": "src/components/ui/DemoForm.jsx",
+      "lines": "29",
+      "contains": "export default function DemoForm"
+    },
+    "part.download-tile": {
+      "path": "src/components/presskit/DownloadTile.jsx",
+      "lines": "3",
+      "contains": "export default function DownloadTile"
+    },
+    "part.employee-card": {
+      "path": "src/components/ui/EmployeeCard.jsx",
+      "lines": "31",
+      "contains": "export default function EmployeeCard"
+    },
+    "part.faq-accordion": {
+      "path": "src/components/ui/FaqAccordion.jsx",
+      "lines": "146",
+      "contains": "export default function FaqAccordion"
+    },
+    "part.feature-row": {
+      "path": "src/components/ui/FeatureRows.jsx",
+      "lines": "79",
+      "contains": "export default function FeatureRows"
+    },
+    "part.field": {
+      "path": "src/components/ui/Field.jsx",
+      "lines": "90",
+      "contains": "export default function Field({"
+    },
+    "part.file-drop-zone": {
+      "path": "src/components/ui/Field.jsx",
+      "lines": "160",
+      "contains": "export function FileDropZone"
+    },
+    "part.filter-chips": {
+      "path": "src/components/ui/FilterChips.jsx",
+      "lines": "42",
+      "contains": "export default function FilterChips"
+    },
+    "part.guide-card": {
+      "path": "src/components/content/GuideCard.jsx",
+      "lines": "38",
+      "contains": "export function GuideCard"
+    },
+    "part.icon-glyph": {
+      "path": "src/components/company/Vs.jsx",
+      "lines": "48",
+      "contains": "export function CategoryIcon"
+    },
+    "part.illustration": {
+      "path": "src/components/product/ProductArt.jsx",
+      "lines": "242",
+      "contains": "export default function ProductArt"
+    },
+    "part.integration-card": {
+      "path": "src/components/ui/IntegrationCard.jsx",
+      "lines": "11",
+      "contains": "export default function IntegrationCard"
+    },
+    "part.integration-orbit": {
+      "path": "src/components/commerce/IntegrationOrbit.jsx",
+      "lines": "27",
+      "contains": "export default function IntegrationOrbit"
+    },
+    "part.job-card": {
+      "path": "src/components/cxjobs/JobCard.jsx",
+      "lines": "15",
+      "contains": "export default function JobCard"
+    },
+    "part.jobs-button": {
+      "path": "src/components/cxjobs/JobsButton.jsx",
+      "lines": "6",
+      "contains": "export default function JobsButton"
+    },
+    "part.letter-reveal": {
+      "path": "src/components/ui/LetterReveal.jsx",
+      "lines": "16",
+      "contains": "export default function LetterReveal"
+    },
+    "part.load-more-button": {
+      "path": "src/components/ui/LoadMoreButton.jsx",
+      "lines": "6",
+      "contains": "export default function LoadMoreButton"
+    },
+    "part.logo-marquee": {
+      "path": "src/components/ui/LogoMarquee.jsx",
+      "lines": "53",
+      "contains": "export default function LogoMarquee"
+    },
+    "part.logo-placeholder": {
+      "path": "src/components/PlaceholderLogo.jsx",
+      "lines": "1",
+      "contains": "Placeholder customer / partner marks"
+    },
+    "part.meta-card": {
+      "path": "src/components/commerce/MetaCard.jsx",
+      "lines": "19",
+      "contains": "export default function MetaCard"
+    },
+    "part.photo": {
+      "path": "public/assets/photos/slots.json",
+      "lines": "14",
+      "contains": "\"objectFit\": \"cover\""
+    },
+    "part.pill-link": {
+      "path": "src/components/content/StoryCard.jsx",
+      "lines": "35",
+      "contains": "export function PillLinkButton"
+    },
+    "part.pricing-card": {
+      "path": "src/components/ui/PricingCard.jsx",
+      "lines": "15",
+      "contains": "export default function PricingCard"
+    },
+    "part.prose-block": {
+      "path": "src/components/ui/ProseSection.jsx",
+      "lines": "18",
+      "contains": "export default function ProseSection"
+    },
+    "part.rich-text": {
+      "path": "src/components/ui/RichText.jsx",
+      "lines": "125",
+      "contains": "export default function RichText"
+    },
+    "part.ruled-frame": {
+      "path": "src/components/ui/RuledFrame.jsx",
+      "lines": "11",
+      "contains": "export default function RuledFrame"
+    },
+    "part.search-input": {
+      "path": "src/components/ui/SearchInput.jsx",
+      "lines": "11",
+      "contains": "export default function SearchInput"
+    },
+    "part.section-heading": {
+      "path": "src/components/ui/SectionHeading.jsx",
+      "lines": "18",
+      "contains": "export default function SectionHeading"
+    },
+    "part.share-rail": {
+      "path": "src/components/ui/ShareRail.jsx",
+      "lines": "55",
+      "contains": "export default function ShareRail"
+    },
+    "part.silk-job-card": {
+      "path": "src/components/cxjobs/SilkJobCard.jsx",
+      "lines": "11",
+      "contains": "export default function SilkJobCard"
+    },
+    "part.social-post-card": {
+      "path": "src/components/content/PostWall.jsx",
+      "lines": "24",
+      "contains": "export function SocialPostCard"
+    },
+    "part.story-card": {
+      "path": "src/components/content/StoryCard.jsx",
+      "lines": "179",
+      "contains": "export default function StoryCard"
+    },
+    "part.story-slideshow": {
+      "path": "src/components/Stories.jsx",
+      "lines": "453",
+      "contains": "export function VariantSlideshow"
+    },
+    "part.submit-button": {
+      "path": "src/components/ui/Field.jsx",
+      "lines": "210",
+      "contains": "export function SubmitButton"
+    },
+    "part.tag-chip": {
+      "path": "src/pages/content/ArticleDetail.jsx",
+      "lines": "57",
+      "contains": "rounded-sm bg-chip-soft"
+    },
+    "part.toc": {
+      "path": "src/components/ui/Toc.jsx",
+      "lines": "180",
+      "contains": "export default function Toc"
+    },
+    "part.type-specimen": {
+      "path": "src/components/presskit/TypeSpecimen.jsx",
+      "lines": "13",
+      "contains": "export default function TypeSpecimen"
+    },
+    "part.video-frame": {
+      "path": "src/components/product/VideoFrame.jsx",
+      "lines": "38",
+      "contains": "export default function VideoFrame"
+    },
+    "pg.about": {
+      "path": "src/pages/company/About.jsx",
+      "lines": "16",
+      "contains": "export default function About"
+    },
+    "pg.aeo": {
+      "path": "src/pages/product/AeoDetail.jsx",
+      "lines": "16-18",
+      "contains": "Section order: T1.1 SplitHero"
+    },
+    "pg.compdetail": {
+      "path": "src/pages/product/CompetitorDetail.jsx",
+      "lines": "23",
+      "contains": "export default function CompetitorDetail"
+    },
+    "pg.compidx": {
+      "path": "src/pages/company/CompetitorsIndex.jsx",
+      "lines": "52",
+      "contains": "export default function CompetitorsIndex"
+    },
+    "pg.copilot": {
+      "path": "src/pages/product/Copilot.jsx",
+      "lines": "19",
+      "contains": "export default function Copilot"
+    },
+    "pg.demo": {
+      "path": "src/pages/GetADemo.jsx",
+      "lines": "33",
+      "contains": "export default function GetADemo"
+    },
+    "pg.faq": {
+      "path": "src/pages/content/Faq.jsx",
+      "lines": "9",
+      "contains": "export default function Faq"
+    },
+    "pg.home": {
+      "path": "src/pages/Home.jsx",
+      "lines": "10",
+      "contains": "export default function Home"
+    },
+    "pg.integrations": {
+      "path": "src/pages/IntegrationsLibrary.jsx",
+      "lines": "35",
+      "contains": "export default function IntegrationsLibrary"
+    },
+    "pg.producthome": {
+      "path": "src/pages/product/ProductHome.jsx",
+      "lines": "28",
+      "contains": "export default function ProductHome"
+    },
+    "pg.report": {
+      "path": "src/pages/content/ReportLanding.jsx",
+      "lines": "10",
+      "contains": "export default function ReportLanding"
+    },
+    "pg.thoughts": {
+      "path": "src/pages/content/ThoughtsIndex.jsx",
+      "lines": "9",
+      "contains": "export default function ThoughtsIndex"
+    },
+    "pg.voice": {
+      "path": "src/pages/product/Voice.jsx",
+      "lines": "30",
+      "contains": "export default function Voice"
+    },
+    "rm.css": {
+      "path": "src/index.css",
+      "lines": "294",
+      "contains": "@media (prefers-reduced-motion: reduce)"
+    },
+    "rm.faq": {
+      "path": "src/components/ui/FaqAccordion.jsx",
+      "lines": "27",
+      "contains": "prefers-reduced-motion: open/close is instant"
+    },
+    "rm.integrations": {
+      "path": "src/components/Integrations.jsx",
+      "lines": "15",
+      "contains": "stay the reduced-motion frame"
+    },
+    "rm.letter": {
+      "path": "src/components/ui/LetterReveal.jsx",
+      "lines": "9",
+      "contains": "prefers-reduced-motion: rendered static"
+    },
+    "rm.orbit": {
+      "path": "src/components/commerce/IntegrationOrbit.jsx",
+      "lines": "19",
+      "contains": "prefers-reduced-motion: static"
+    },
+    "rm.teaser": {
+      "path": "src/components/VideoTeaser.jsx",
+      "lines": "22",
+      "contains": "prefers-reduced-motion: animation + transitions off"
+    },
+    "rt.commerce": {
+      "path": "src/routes/commerce.jsx",
+      "lines": "10-16",
+      "contains": "get-a-demo"
+    },
+    "rt.company": {
+      "path": "src/routes/company.jsx",
+      "lines": "14-20",
+      "contains": "competitors"
+    },
+    "rt.content": {
+      "path": "src/routes/content.jsx",
+      "lines": "16-27",
+      "contains": "the-handoff-gap"
+    },
+    "rt.llms": {
+      "path": "src/App.jsx",
+      "lines": "34",
+      "contains": "/llms-txt"
+    },
+    "rt.product": {
+      "path": "src/routes/product.jsx",
+      "lines": "18-28",
+      "contains": "aeoProductSlugs.map"
+    },
+    "src.ainote": {
+      "path": "src/components/Stories.jsx",
+      "lines": "608-616",
+      "contains": "§13b AI-assistant note (live)"
+    },
+    "src.app": {
+      "path": "src/App.jsx",
+      "lines": "19-41",
+      "contains": "groups.flatMap((g) => g.siteRoutes)"
+    },
+    "src.articledetail": {
+      "path": "src/pages/content/ArticleDetail.jsx",
+      "lines": "26",
+      "contains": "export default function ArticleDetail"
+    },
+    "src.articleindex": {
+      "path": "src/pages/content/ArticleIndex.jsx",
+      "lines": "25",
+      "contains": "export default function ArticleIndex"
+    },
+    "src.avatarhero": {
+      "path": "src/components/company/AvatarHero.jsx",
+      "lines": "62",
+      "contains": "export default function AvatarHero"
+    },
+    "src.blogfeatured": {
+      "path": "src/components/content/BlogFeatured.jsx",
+      "lines": "8",
+      "contains": "export default function BlogFeatured"
+    },
+    "src.blogindex": {
+      "path": "src/pages/content/BlogIndex.jsx",
+      "lines": "19",
+      "contains": "export default function BlogIndex"
+    },
+    "src.blogpost": {
+      "path": "src/pages/content/BlogPost.jsx",
+      "lines": "25",
+      "contains": "export default function BlogPost"
+    },
+    "src.cardcarousel": {
+      "path": "src/components/ui/CardCarousel.jsx",
+      "lines": "57",
+      "contains": "export default function CardCarousel"
+    },
+    "src.careers": {
+      "path": "src/pages/company/Careers.jsx",
+      "lines": "19",
+      "contains": "export default function Careers"
+    },
+    "src.catalog": {
+      "path": "src/components/commerce/IntegrationCatalog.jsx",
+      "lines": "54",
+      "contains": "export default function IntegrationCatalog"
+    },
+    "src.coach": {
+      "path": "src/components/product/Coach.jsx",
+      "lines": "33",
+      "contains": "export function BentoBlock"
+    },
+    "src.collage": {
+      "path": "src/components/company/PhotoCollage.jsx",
+      "lines": "18",
+      "contains": "export default function PhotoCollage"
+    },
+    "src.compare": {
+      "path": "src/components/Compare.jsx",
+      "lines": "5-19",
+      "contains": "COMPARE – CLONE_SPEC §8"
+    },
+    "src.comparetable": {
+      "path": "src/components/ui/CompareTable.jsx",
+      "lines": "283",
+      "contains": "export default function CompareTable"
+    },
+    "src.confidence": {
+      "path": "src/components/Confidence.jsx",
+      "lines": "6-13",
+      "contains": "Motion (live bundle scroll-target transforms"
+    },
+    "src.contents": {
+      "path": "src/components/content/Report.jsx",
+      "lines": "134",
+      "contains": "export function NumberedContents"
+    },
+    "src.copilot": {
+      "path": "src/pages/product/Copilot.jsx",
+      "lines": "11-17",
+      "contains": "T2.1 hero (0–1760)"
+    },
+    "src.ctachip": {
+      "path": "src/components/ui/CtaChip.jsx",
+      "lines": "13",
+      "contains": "export default function CtaChip"
+    },
+    "src.cxjobs": {
+      "path": "src/pages/CxJobs.jsx",
+      "lines": "51",
+      "contains": "J1 Hero: padding"
+    },
+    "src.demoart": {
+      "path": "src/components/commerce/DemoArt.jsx",
+      "lines": "14",
+      "contains": "export default function DemoArt"
+    },
+    "src.demoform": {
+      "path": "src/components/ui/DemoForm.jsx",
+      "lines": "29",
+      "contains": "export default function DemoForm"
+    },
+    "src.detailheader": {
+      "path": "src/components/commerce/DetailHeader.jsx",
+      "lines": "13",
+      "contains": "export default function DetailHeader"
+    },
+    "src.docsidebar": {
+      "path": "src/components/presskit/DocSidebar.jsx",
+      "lines": "20",
+      "contains": "export default function DocSidebar"
+    },
+    "src.employee": {
+      "path": "src/components/ui/EmployeeCard.jsx",
+      "lines": "31",
+      "contains": "export default function EmployeeCard"
+    },
+    "src.event": {
+      "path": "src/components/product/EventBlock.jsx",
+      "lines": "16",
+      "contains": "export default function EventBlock"
+    },
+    "src.explainer": {
+      "path": "src/components/product/Voice.jsx",
+      "lines": "20",
+      "contains": "export function SplitExplainer"
+    },
+    "src.faq": {
+      "path": "src/components/ui/FaqAccordion.jsx",
+      "lines": "146",
+      "contains": "export default function FaqAccordion"
+    },
+    "src.faqdoc": {
+      "path": "src/components/content/FaqDocument.jsx",
+      "lines": "12",
+      "contains": "export function DocHeader"
+    },
+    "src.faqdocbody": {
+      "path": "src/components/content/FaqDocument.jsx",
+      "lines": "22",
+      "contains": "export default function FaqDocument"
+    },
+    "src.fcgrid": {
+      "path": "src/components/company/FeatureCardGrid.jsx",
+      "lines": "57",
+      "contains": "export default function FeatureCardGrid"
+    },
+    "src.featurerows": {
+      "path": "src/components/ui/FeatureRows.jsx",
+      "lines": "79",
+      "contains": "export default function FeatureRows"
+    },
+    "src.findings": {
+      "path": "src/components/content/Report.jsx",
+      "lines": "95",
+      "contains": "export function FindingCards"
+    },
+    "src.footer": {
+      "path": "src/components/Footer.jsx",
+      "lines": "6-17",
+      "contains": "FOOTER V5"
+    },
+    "src.form": {
+      "path": "src/components/ui/Field.jsx",
+      "lines": "259",
+      "contains": "export function Form"
+    },
+    "src.gallery": {
+      "path": "src/components/company/PhotoGallery.jsx",
+      "lines": "33",
+      "contains": "export default function PhotoGallery"
+    },
+    "src.glossary": {
+      "path": "src/pages/content/Glossary.jsx",
+      "lines": "12",
+      "contains": "export default function Glossary"
+    },
+    "src.guidecard": {
+      "path": "src/components/content/GuideCard.jsx",
+      "lines": "57",
+      "contains": "export function GuideFeatured"
+    },
+    "src.hero": {
+      "path": "src/components/Hero.jsx",
+      "lines": "15-24",
+      "contains": "HERO – CLONE_SPEC §6"
+    },
+    "src.heroheadline": {
+      "path": "src/components/ui/HeroHeadline.jsx",
+      "lines": "20",
+      "contains": "export default function HeroHeadline"
+    },
+    "src.intdetail": {
+      "path": "src/pages/IntegrationDetail.jsx",
+      "lines": "21",
+      "contains": "export default function IntegrationDetail"
+    },
+    "src.integrations": {
+      "path": "src/components/Integrations.jsx",
+      "lines": "4-17",
+      "contains": "SYSTEM-FIND / INTEGRATIONS"
+    },
+    "src.jobcard": {
+      "path": "src/components/cxjobs/JobCard.jsx",
+      "lines": "15",
+      "contains": "export default function JobCard"
+    },
+    "src.jobsfooter": {
+      "path": "src/components/cxjobs/JobsFooter.jsx",
+      "lines": "8",
+      "contains": "export default function JobsFooter"
+    },
+    "src.jobsheader": {
+      "path": "src/components/cxjobs/JobsHeader.jsx",
+      "lines": "6",
+      "contains": "export default function JobsHeader"
+    },
+    "src.layout": {
+      "path": "src/layouts/SiteLayout.jsx",
+      "lines": "19",
+      "contains": "const NO_TEASER"
+    },
+    "src.legal": {
+      "path": "src/pages/company/LegalPage.jsx",
+      "lines": "23",
+      "contains": "export default function LegalPage"
+    },
+    "src.logowall": {
+      "path": "src/components/ui/LogoWall.jsx",
+      "lines": "15",
+      "contains": "export default function LogoWall"
+    },
+    "src.marquee": {
+      "path": "src/components/ui/LogoMarquee.jsx",
+      "lines": "5-17",
+      "contains": "LogoMarquee – generic logo ticker"
+    },
+    "src.mcp": {
+      "path": "src/components/cxjobs/McpFlowIllustration.jsx",
+      "lines": "138",
+      "contains": "export default function McpFlowIllustration"
+    },
+    "src.nav": {
+      "path": "src/components/Nav.jsx",
+      "lines": "22-44",
+      "contains": "NAV – CLONE_SPEC §4"
+    },
+    "src.nominate": {
+      "path": "src/pages/company/NominatePage.jsx",
+      "lines": "20",
+      "contains": "export default function NominatePage"
+    },
+    "src.notfound": {
+      "path": "src/pages/NotFound.jsx",
+      "lines": "9",
+      "contains": "export default function NotFound"
+    },
+    "src.openroles": {
+      "path": "src/components/company/OpenRoles.jsx",
+      "lines": "24",
+      "contains": "export default function OpenRoles"
+    },
+    "src.orbit": {
+      "path": "src/components/commerce/IntegrationOrbit.jsx",
+      "lines": "5-22",
+      "contains": "IntegrationOrbit – SPEC_PAGES_A T2.5"
+    },
+    "src.partner": {
+      "path": "src/pages/company/PartnerPage.jsx",
+      "lines": "21",
+      "contains": "export default function PartnerPage"
+    },
+    "src.playbook": {
+      "path": "src/components/Playbook.jsx",
+      "lines": "5-25",
+      "contains": "PLAYBOOK HEADER + BOTTOM TREE + CARD FAN"
+    },
+    "src.postctas": {
+      "path": "src/components/content/PostCTAs.jsx",
+      "lines": "11",
+      "contains": "export default function PostCTAs"
+    },
+    "src.postwall": {
+      "path": "src/components/content/PostWall.jsx",
+      "lines": "67",
+      "contains": "export default function PostWall"
+    },
+    "src.presskit": {
+      "path": "src/pages/PressKit.jsx",
+      "lines": "9-11",
+      "contains": "T5 Press kit (SPEC_PAGES_C.md T5)"
+    },
+    "src.pricing": {
+      "path": "src/pages/Pricing.jsx",
+      "lines": "10-14",
+      "contains": "T5.1 hero"
+    },
+    "src.pricingcard": {
+      "path": "src/components/ui/PricingCard.jsx",
+      "lines": "15",
+      "contains": "export default function PricingCard"
+    },
+    "src.prodsections": {
+      "path": "src/components/product/ProductSections.jsx",
+      "lines": "66",
+      "contains": "export function BlogGrid"
+    },
+    "src.proof": {
+      "path": "src/components/Proof.jsx",
+      "lines": "8-30",
+      "contains": "PROOF – CLONE_SPEC §7"
+    },
+    "src.proof-logos": {
+      "path": "src/components/Proof.jsx",
+      "lines": "431",
+      "contains": "export default function Proof({ variant = 'home'"
+    },
+    "src.prose": {
+      "path": "src/components/ui/ProseSection.jsx",
+      "lines": "18",
+      "contains": "export default function ProseSection"
+    },
+    "src.quotepanel": {
+      "path": "src/components/content/Report.jsx",
+      "lines": "119",
+      "contains": "export function QuotePanel"
+    },
+    "src.report": {
+      "path": "src/components/content/Report.jsx",
+      "lines": "20",
+      "contains": "export function ReportHero"
+    },
+    "src.richtext": {
+      "path": "src/components/ui/RichText.jsx",
+      "lines": "125",
+      "contains": "export default function RichText"
+    },
+    "src.sectionheading": {
+      "path": "src/components/ui/SectionHeading.jsx",
+      "lines": "18",
+      "contains": "export default function SectionHeading"
+    },
+    "src.setup": {
+      "path": "src/components/commerce/SetupSection.jsx",
+      "lines": "19",
+      "contains": "export default function SetupSection"
+    },
+    "src.share": {
+      "path": "src/components/ui/ShareRail.jsx",
+      "lines": "55",
+      "contains": "export default function ShareRail"
+    },
+    "src.sidemenu": {
+      "path": "src/components/content/StorySideMenu.jsx",
+      "lines": "18",
+      "contains": "export default function StorySideMenu"
+    },
+    "src.silk": {
+      "path": "src/components/cxjobs/SilkJobCard.jsx",
+      "lines": "11",
+      "contains": "export default function SilkJobCard"
+    },
+    "src.splithero": {
+      "path": "src/components/product/SplitHero.jsx",
+      "lines": "24",
+      "contains": "export default function SplitHero"
+    },
+    "src.splittext": {
+      "path": "src/components/ui/SplitText.jsx",
+      "lines": "15",
+      "contains": "export default function SplitText"
+    },
+    "src.stats": {
+      "path": "src/components/cxjobs/StatsRow.jsx",
+      "lines": "6",
+      "contains": "export default function StatsRow"
+    },
+    "src.stories": {
+      "path": "src/components/Stories.jsx",
+      "lines": "11-29",
+      "contains": "Motion (live Framer Slideshow props"
+    },
+    "src.storycard": {
+      "path": "src/components/content/StoryCard.jsx",
+      "lines": "179",
+      "contains": "export default function StoryCard"
+    },
+    "src.storyhero": {
+      "path": "src/components/content/StoryHero.jsx",
+      "lines": "17",
+      "contains": "export default function StoryHero"
+    },
+    "src.storyrail": {
+      "path": "src/components/content/Report.jsx",
+      "lines": "169",
+      "contains": "export function StoryRail"
+    },
+    "src.storysection": {
+      "path": "src/components/content/StorySection.jsx",
+      "lines": "104",
+      "contains": "export default function StorySection"
+    },
+    "src.teaser": {
+      "path": "src/components/VideoTeaser.jsx",
+      "lines": "1-23",
+      "contains": "Floating video teaser"
+    },
+    "src.termindex": {
+      "path": "src/components/content/TermIndex.jsx",
+      "lines": "9",
+      "contains": "export default function TermIndex"
+    },
+    "src.tickerblock": {
+      "path": "src/components/product/TickerBlock.jsx",
+      "lines": "4-10",
+      "contains": "TickerBlock – SPEC_PAGES_A T2"
+    },
+    "src.toc": {
+      "path": "src/components/ui/Toc.jsx",
+      "lines": "30",
+      "contains": "export function HoverToc"
+    },
+    "src.tools": {
+      "path": "src/components/Tools.jsx",
+      "lines": "5-21",
+      "contains": "\"YOUR TOOLS\" ICON ARC"
+    },
+    "src.topicbar": {
+      "path": "src/components/content/TopicBar.jsx",
+      "lines": "9",
+      "contains": "export default function TopicBar"
+    },
+    "src.values": {
+      "path": "src/components/company/ValuesBento.jsx",
+      "lines": "46",
+      "contains": "export default function ValuesBento"
+    },
+    "src.voice": {
+      "path": "src/pages/product/Voice.jsx",
+      "lines": "14-26",
+      "contains": "T2.1 hero (0–1882)"
+    },
+    "src.voicecmp": {
+      "path": "src/components/product/Voice.jsx",
+      "lines": "45",
+      "contains": "export function CaseStudyCard"
+    },
+    "src.vs": {
+      "path": "src/components/company/Vs.jsx",
+      "lines": "86",
+      "contains": "export function VsHero"
+    },
+    "src.vsfeat": {
+      "path": "src/components/company/Vs.jsx",
+      "lines": "139",
+      "contains": "export function VsFeatureCards"
+    },
+    "src.vsintro": {
+      "path": "src/components/company/Vs.jsx",
+      "lines": "119",
+      "contains": "export function VsIntroCards"
+    }
+  },
+  "copyBudgets": {
+    "about.logos-h": {
+      "observedMaxWords": 13,
+      "budget": 16,
+      "instances": 1,
+      "longestInstanceAt": "copy.about.logos-h"
+    },
+    "ainote": {
+      "observedMaxWords": 29,
+      "budget": 35,
+      "instances": 1,
+      "longestInstanceAt": "copy.ainote"
+    },
+    "art.date": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 11,
+      "longestInstanceAt": "copy.art.date"
+    },
+    "art.desc": {
+      "observedMaxWords": 27,
+      "budget": 33,
+      "instances": 11,
+      "longestInstanceAt": "copy.art.desc"
+    },
+    "art.title": {
+      "observedMaxWords": 14,
+      "budget": 17,
+      "instances": 11,
+      "longestInstanceAt": "copy.art.title"
+    },
+    "art.topic": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 11,
+      "longestInstanceAt": "copy.art.topic"
+    },
+    "band": {
+      "observedMaxWords": 14,
+      "budget": 17,
+      "instances": 10,
+      "longestInstanceAt": "copy.band"
+    },
+    "bento.item": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 15,
+      "longestInstanceAt": "copy.bento.item"
+    },
+    "bento.itembody": {
+      "observedMaxWords": 29,
+      "budget": 35,
+      "instances": 15,
+      "longestInstanceAt": "copy.bento.itembody"
+    },
+    "bento.quote": {
+      "observedMaxWords": 50,
+      "budget": 60,
+      "instances": 1,
+      "longestInstanceAt": "copy.bento.quote"
+    },
+    "bento.sub": {
+      "observedMaxWords": 26,
+      "budget": 32,
+      "instances": 5,
+      "longestInstanceAt": "copy.bento.sub"
+    },
+    "bento.title": {
+      "observedMaxWords": 8,
+      "budget": 10,
+      "instances": 6,
+      "longestInstanceAt": "copy.bento.title"
+    },
+    "bg.title": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 1,
+      "longestInstanceAt": "copy.bg.title"
+    },
+    "blog.cat": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 6,
+      "longestInstanceAt": "copy.blog.cat"
+    },
+    "blog.rail": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 2,
+      "longestInstanceAt": "copy.blog.rail"
+    },
+    "blog.title": {
+      "observedMaxWords": 14,
+      "budget": 17,
+      "instances": 8,
+      "longestInstanceAt": "copy.blog.title"
+    },
+    "callout.body": {
+      "observedMaxWords": 38,
+      "budget": 46,
+      "instances": 10,
+      "longestInstanceAt": "copy.callout.body"
+    },
+    "callout.title": {
+      "observedMaxWords": 10,
+      "budget": 12,
+      "instances": 10,
+      "longestInstanceAt": "copy.callout.title"
+    },
+    "car.bullet": {
+      "observedMaxWords": 13,
+      "budget": 16,
+      "instances": 30,
+      "longestInstanceAt": "copy.car.bullet"
+    },
+    "car.item": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 10,
+      "longestInstanceAt": "copy.car.item"
+    },
+    "car.itemsub": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 10,
+      "longestInstanceAt": "copy.car.itemsub"
+    },
+    "car.sub": {
+      "observedMaxWords": 18,
+      "budget": 22,
+      "instances": 2,
+      "longestInstanceAt": "copy.car.sub"
+    },
+    "car.title": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 2,
+      "longestInstanceAt": "copy.car.title"
+    },
+    "careers.h": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 4,
+      "longestInstanceAt": "copy.careers.h"
+    },
+    "careers.line": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 2,
+      "longestInstanceAt": "copy.careers.line"
+    },
+    "careers.sub": {
+      "observedMaxWords": 30,
+      "budget": 36,
+      "instances": 4,
+      "longestInstanceAt": "copy.careers.sub"
+    },
+    "case.body": {
+      "observedMaxWords": 53,
+      "budget": 64,
+      "instances": 1,
+      "longestInstanceAt": "copy.case.body"
+    },
+    "case.sub": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 1,
+      "longestInstanceAt": "copy.case.sub"
+    },
+    "case.title": {
+      "observedMaxWords": 11,
+      "budget": 14,
+      "instances": 2,
+      "longestInstanceAt": "copy.case.title"
+    },
+    "cat.desc": {
+      "observedMaxWords": 90,
+      "budget": 108,
+      "instances": 5,
+      "longestInstanceAt": "copy.cat.desc"
+    },
+    "cf.group": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 7,
+      "longestInstanceAt": "copy.cf.group"
+    },
+    "cf.row": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 19,
+      "longestInstanceAt": "copy.cf.row"
+    },
+    "cf.value": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 21,
+      "longestInstanceAt": "copy.cf.value"
+    },
+    "chip.label": {
+      "observedMaxWords": 6,
+      "budget": 8,
+      "instances": 3,
+      "longestInstanceAt": "copy.chip.label"
+    },
+    "cmp.body": {
+      "observedMaxWords": 22,
+      "budget": 27,
+      "instances": 2,
+      "longestInstanceAt": "copy.cmp.body"
+    },
+    "cmp.h2": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 2,
+      "longestInstanceAt": "copy.cmp.h2"
+    },
+    "cmp.scenario": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 3,
+      "longestInstanceAt": "copy.cmp.scenario"
+    },
+    "cmpt.against": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 6,
+      "longestInstanceAt": "copy.cmpt.against"
+    },
+    "cmpt.cell": {
+      "observedMaxWords": 14,
+      "budget": 17,
+      "instances": 84,
+      "longestInstanceAt": "copy.cmpt.cell"
+    },
+    "cmpt.label": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 42,
+      "longestInstanceAt": "copy.cmpt.label"
+    },
+    "conf.body": {
+      "observedMaxWords": 25,
+      "budget": 30,
+      "instances": 1,
+      "longestInstanceAt": "copy.conf.body"
+    },
+    "conf.h": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 2,
+      "longestInstanceAt": "copy.conf.h"
+    },
+    "conf.tag": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 4,
+      "longestInstanceAt": "copy.conf.tag"
+    },
+    "cont.item": {
+      "observedMaxWords": 9,
+      "budget": 11,
+      "instances": 9,
+      "longestInstanceAt": "copy.cont.item"
+    },
+    "cta-label": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 21,
+      "longestInstanceAt": "copy.cta-label"
+    },
+    "demo.quote": {
+      "observedMaxWords": 19,
+      "budget": 23,
+      "instances": 1,
+      "longestInstanceAt": "copy.demo.quote"
+    },
+    "diff.body": {
+      "observedMaxWords": 37,
+      "budget": 45,
+      "instances": 6,
+      "longestInstanceAt": "copy.diff.body"
+    },
+    "diff.item": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 6,
+      "longestInstanceAt": "copy.diff.item"
+    },
+    "diff.sub": {
+      "observedMaxWords": 30,
+      "budget": 36,
+      "instances": 2,
+      "longestInstanceAt": "copy.diff.sub"
+    },
+    "diff.title": {
+      "observedMaxWords": 12,
+      "budget": 15,
+      "instances": 3,
+      "longestInstanceAt": "copy.diff.title"
+    },
+    "doc.lede": {
+      "observedMaxWords": 10,
+      "budget": 12,
+      "instances": 1,
+      "longestInstanceAt": "copy.doc.lede"
+    },
+    "doc.title": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 1,
+      "longestInstanceAt": "copy.doc.title"
+    },
+    "doc.updated": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 1,
+      "longestInstanceAt": "copy.doc.updated"
+    },
+    "emp.quote": {
+      "observedMaxWords": 39,
+      "budget": 47,
+      "instances": 10,
+      "longestInstanceAt": "copy.emp.quote"
+    },
+    "ev.benefit": {
+      "observedMaxWords": 25,
+      "budget": 30,
+      "instances": 4,
+      "longestInstanceAt": "copy.ev.benefit"
+    },
+    "ev.intro": {
+      "observedMaxWords": 24,
+      "budget": 29,
+      "instances": 1,
+      "longestInstanceAt": "copy.ev.intro"
+    },
+    "ev.title": {
+      "observedMaxWords": 9,
+      "budget": 11,
+      "instances": 1,
+      "longestInstanceAt": "copy.ev.title"
+    },
+    "exp.para": {
+      "observedMaxWords": 41,
+      "budget": 50,
+      "instances": 3,
+      "longestInstanceAt": "copy.exp.para"
+    },
+    "exp.sub": {
+      "observedMaxWords": 6,
+      "budget": 8,
+      "instances": 1,
+      "longestInstanceAt": "copy.exp.sub"
+    },
+    "exp.title": {
+      "observedMaxWords": 10,
+      "budget": 12,
+      "instances": 1,
+      "longestInstanceAt": "copy.exp.title"
+    },
+    "faq.a": {
+      "observedMaxWords": 37,
+      "budget": 45,
+      "instances": 74,
+      "longestInstanceAt": "copy.faq.a"
+    },
+    "faq.q": {
+      "observedMaxWords": 18,
+      "budget": 22,
+      "instances": 74,
+      "longestInstanceAt": "copy.faq.q"
+    },
+    "faq.title": {
+      "observedMaxWords": 12,
+      "budget": 15,
+      "instances": 3,
+      "longestInstanceAt": "copy.faq.title"
+    },
+    "fd.li": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 4,
+      "longestInstanceAt": "copy.fd.li"
+    },
+    "fd.p": {
+      "observedMaxWords": 49,
+      "budget": 59,
+      "instances": 24,
+      "longestInstanceAt": "copy.fd.p"
+    },
+    "fd.q": {
+      "observedMaxWords": 9,
+      "budget": 11,
+      "instances": 24,
+      "longestInstanceAt": "copy.fd.q"
+    },
+    "fd.title": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 8,
+      "longestInstanceAt": "copy.fd.title"
+    },
+    "find.cap": {
+      "observedMaxWords": 22,
+      "budget": 27,
+      "instances": 3,
+      "longestInstanceAt": "copy.find.cap"
+    },
+    "footer.cta": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 2,
+      "longestInstanceAt": "copy.footer.cta"
+    },
+    "form.body": {
+      "observedMaxWords": 30,
+      "budget": 36,
+      "instances": 2,
+      "longestInstanceAt": "copy.form.body"
+    },
+    "form.label": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 9,
+      "longestInstanceAt": "copy.form.label"
+    },
+    "form.submit": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 2,
+      "longestInstanceAt": "copy.form.submit"
+    },
+    "form.success": {
+      "observedMaxWords": 27,
+      "budget": 33,
+      "instances": 3,
+      "longestInstanceAt": "copy.form.success"
+    },
+    "form.title": {
+      "observedMaxWords": 6,
+      "budget": 8,
+      "instances": 2,
+      "longestInstanceAt": "copy.form.title"
+    },
+    "gl.eyebrow": {
+      "observedMaxWords": 1,
+      "budget": 2,
+      "instances": 1,
+      "longestInstanceAt": "copy.gl.eyebrow"
+    },
+    "gl.intro": {
+      "observedMaxWords": 38,
+      "budget": 46,
+      "instances": 1,
+      "longestInstanceAt": "copy.gl.intro"
+    },
+    "gl.title": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 1,
+      "longestInstanceAt": "copy.gl.title"
+    },
+    "guide.label": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 3,
+      "longestInstanceAt": "copy.guide.label"
+    },
+    "head.title": {
+      "observedMaxWords": 10,
+      "budget": 12,
+      "instances": 22,
+      "longestInstanceAt": "copy.head.title"
+    },
+    "hero.announce": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 1,
+      "longestInstanceAt": "copy.hero.announce"
+    },
+    "hero.h1line": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 2,
+      "longestInstanceAt": "copy.hero.h1line"
+    },
+    "hero.reassure": {
+      "observedMaxWords": 15,
+      "budget": 18,
+      "instances": 1,
+      "longestInstanceAt": "copy.hero.reassure"
+    },
+    "hero.sub": {
+      "observedMaxWords": 35,
+      "budget": 42,
+      "instances": 1,
+      "longestInstanceAt": "copy.hero.sub"
+    },
+    "hero.tag": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 5,
+      "longestInstanceAt": "copy.hero.tag"
+    },
+    "hh.sub": {
+      "observedMaxWords": 110,
+      "budget": 132,
+      "instances": 6,
+      "longestInstanceAt": "copy.hh.sub"
+    },
+    "hh.title": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 6,
+      "longestInstanceAt": "copy.hh.title"
+    },
+    "idx.eyebrow": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 1,
+      "longestInstanceAt": "copy.idx.eyebrow"
+    },
+    "idx.lede": {
+      "observedMaxWords": 14,
+      "budget": 17,
+      "instances": 2,
+      "longestInstanceAt": "copy.idx.lede"
+    },
+    "idx.title": {
+      "observedMaxWords": 9,
+      "budget": 11,
+      "instances": 2,
+      "longestInstanceAt": "copy.idx.title"
+    },
+    "int.category": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 4,
+      "longestInstanceAt": "copy.int.category"
+    },
+    "int.desc": {
+      "observedMaxWords": 20,
+      "budget": 24,
+      "instances": 25,
+      "longestInstanceAt": "copy.int.desc"
+    },
+    "int.lede": {
+      "observedMaxWords": 14,
+      "budget": 17,
+      "instances": 2,
+      "longestInstanceAt": "copy.int.lede"
+    },
+    "int.name": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 25,
+      "longestInstanceAt": "copy.int.name"
+    },
+    "intd.h": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 6,
+      "longestInstanceAt": "copy.intd.h"
+    },
+    "intd.p": {
+      "observedMaxWords": 100,
+      "budget": 120,
+      "instances": 6,
+      "longestInstanceAt": "copy.intd.p"
+    },
+    "job.desc": {
+      "observedMaxWords": 16,
+      "budget": 20,
+      "instances": 8,
+      "longestInstanceAt": "copy.job.desc"
+    },
+    "job.loc": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 8,
+      "longestInstanceAt": "copy.job.loc"
+    },
+    "job.meta": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 18,
+      "longestInstanceAt": "copy.job.meta"
+    },
+    "job.title": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 6,
+      "longestInstanceAt": "copy.job.title"
+    },
+    "jobs.body": {
+      "observedMaxWords": 42,
+      "budget": 51,
+      "instances": 2,
+      "longestInstanceAt": "copy.jobs.body"
+    },
+    "jobs.company": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 16,
+      "longestInstanceAt": "copy.jobs.company"
+    },
+    "jobs.cta": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 3,
+      "longestInstanceAt": "copy.jobs.cta"
+    },
+    "jobs.eyebrow": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 3,
+      "longestInstanceAt": "copy.jobs.eyebrow"
+    },
+    "jobs.footer-link": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 10,
+      "longestInstanceAt": "copy.jobs.footer-link"
+    },
+    "jobs.footer-title": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 3,
+      "longestInstanceAt": "copy.jobs.footer-title"
+    },
+    "jobs.h": {
+      "observedMaxWords": 9,
+      "budget": 11,
+      "instances": 4,
+      "longestInstanceAt": "copy.jobs.h"
+    },
+    "jobs.role": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 16,
+      "longestInstanceAt": "copy.jobs.role"
+    },
+    "jobs.stat-desc": {
+      "observedMaxWords": 6,
+      "budget": 8,
+      "instances": 3,
+      "longestInstanceAt": "copy.jobs.stat-desc"
+    },
+    "jobs.stat-label": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 3,
+      "longestInstanceAt": "copy.jobs.stat-label"
+    },
+    "legal.h4": {
+      "observedMaxWords": 6,
+      "budget": 8,
+      "instances": 23,
+      "longestInstanceAt": "copy.legal.h4"
+    },
+    "legal.p": {
+      "observedMaxWords": 402,
+      "budget": 483,
+      "instances": 32,
+      "longestInstanceAt": "copy.legal.p"
+    },
+    "legal.title": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 2,
+      "longestInstanceAt": "copy.legal.title"
+    },
+    "logo-name": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 24,
+      "longestInstanceAt": "copy.logo-name"
+    },
+    "mx.label": {
+      "observedMaxWords": 6,
+      "budget": 8,
+      "instances": 78,
+      "longestInstanceAt": "copy.mx.label"
+    },
+    "mx.sub": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 6,
+      "longestInstanceAt": "copy.mx.sub"
+    },
+    "nf.sub": {
+      "observedMaxWords": 11,
+      "budget": 14,
+      "instances": 1,
+      "longestInstanceAt": "copy.nf.sub"
+    },
+    "nf.title": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 1,
+      "longestInstanceAt": "copy.nf.title"
+    },
+    "nom.upload": {
+      "observedMaxWords": 12,
+      "budget": 15,
+      "instances": 2,
+      "longestInstanceAt": "copy.nom.upload"
+    },
+    "orbit.body": {
+      "observedMaxWords": 26,
+      "budget": 32,
+      "instances": 1,
+      "longestInstanceAt": "copy.orbit.body"
+    },
+    "orbit.title": {
+      "observedMaxWords": 8,
+      "budget": 10,
+      "instances": 1,
+      "longestInstanceAt": "copy.orbit.title"
+    },
+    "pb.body": {
+      "observedMaxWords": 18,
+      "budget": 22,
+      "instances": 1,
+      "longestInstanceAt": "copy.pb.body"
+    },
+    "pb.card": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 7,
+      "longestInstanceAt": "copy.pb.card"
+    },
+    "pb.h": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 2,
+      "longestInstanceAt": "copy.pb.h"
+    },
+    "pb.quote": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 11,
+      "longestInstanceAt": "copy.pb.quote"
+    },
+    "person-name": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 28,
+      "longestInstanceAt": "copy.person-name"
+    },
+    "person-role": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 40,
+      "longestInstanceAt": "copy.person-role"
+    },
+    "pfaq.a": {
+      "observedMaxWords": 49,
+      "budget": 59,
+      "instances": 83,
+      "longestInstanceAt": "copy.pfaq.a"
+    },
+    "pfaq.q": {
+      "observedMaxWords": 12,
+      "budget": 15,
+      "instances": 83,
+      "longestInstanceAt": "copy.pfaq.q"
+    },
+    "photo-alt": {
+      "observedMaxWords": 9,
+      "budget": 11,
+      "instances": 11,
+      "longestInstanceAt": "copy.photo-alt"
+    },
+    "pk.h": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 4,
+      "longestInstanceAt": "copy.pk.h"
+    },
+    "pk.p": {
+      "observedMaxWords": 47,
+      "budget": 57,
+      "instances": 7,
+      "longestInstanceAt": "copy.pk.p"
+    },
+    "plan.foot": {
+      "observedMaxWords": 14,
+      "budget": 17,
+      "instances": 2,
+      "longestInstanceAt": "copy.plan.foot"
+    },
+    "plan.group": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 9,
+      "longestInstanceAt": "copy.plan.group"
+    },
+    "plan.name": {
+      "observedMaxWords": 1,
+      "budget": 2,
+      "instances": 3,
+      "longestInstanceAt": "copy.plan.name"
+    },
+    "plan.note": {
+      "observedMaxWords": 12,
+      "budget": 15,
+      "instances": 6,
+      "longestInstanceAt": "copy.plan.note"
+    },
+    "plan.row": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 12,
+      "longestInstanceAt": "copy.plan.row"
+    },
+    "plan.value": {
+      "observedMaxWords": 1,
+      "budget": 2,
+      "instances": 12,
+      "longestInstanceAt": "copy.plan.value"
+    },
+    "post.date": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 8,
+      "longestInstanceAt": "copy.post.date"
+    },
+    "post.title": {
+      "observedMaxWords": 14,
+      "budget": 17,
+      "instances": 8,
+      "longestInstanceAt": "copy.post.title"
+    },
+    "postcta.body": {
+      "observedMaxWords": 16,
+      "budget": 20,
+      "instances": 2,
+      "longestInstanceAt": "copy.postcta.body"
+    },
+    "postcta.title": {
+      "observedMaxWords": 6,
+      "budget": 8,
+      "instances": 2,
+      "longestInstanceAt": "copy.postcta.title"
+    },
+    "pricing.statement": {
+      "observedMaxWords": 63,
+      "budget": 76,
+      "instances": 1,
+      "longestInstanceAt": "copy.pricing.statement"
+    },
+    "pricing.title": {
+      "observedMaxWords": 1,
+      "budget": 2,
+      "instances": 1,
+      "longestInstanceAt": "copy.pricing.title"
+    },
+    "proof.h2": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 1,
+      "longestInstanceAt": "copy.proof.h2"
+    },
+    "proof.quote": {
+      "observedMaxWords": 14,
+      "budget": 17,
+      "instances": 2,
+      "longestInstanceAt": "copy.proof.quote"
+    },
+    "proof.stat": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 3,
+      "longestInstanceAt": "copy.proof.stat"
+    },
+    "proof.sub": {
+      "observedMaxWords": 16,
+      "budget": 20,
+      "instances": 1,
+      "longestInstanceAt": "copy.proof.sub"
+    },
+    "prose.item-title": {
+      "observedMaxWords": 10,
+      "budget": 12,
+      "instances": 13,
+      "longestInstanceAt": "copy.prose.item-title"
+    },
+    "prose.li": {
+      "observedMaxWords": 25,
+      "budget": 30,
+      "instances": 130,
+      "longestInstanceAt": "copy.prose.li"
+    },
+    "prose.p": {
+      "observedMaxWords": 64,
+      "budget": 77,
+      "instances": 50,
+      "longestInstanceAt": "copy.prose.p"
+    },
+    "prose.title": {
+      "observedMaxWords": 13,
+      "budget": 16,
+      "instances": 26,
+      "longestInstanceAt": "copy.prose.title"
+    },
+    "pv.para": {
+      "observedMaxWords": 100,
+      "budget": 120,
+      "instances": 4,
+      "longestInstanceAt": "copy.pv.para"
+    },
+    "pv.ticker": {
+      "observedMaxWords": 6,
+      "budget": 8,
+      "instances": 2,
+      "longestInstanceAt": "copy.pv.ticker"
+    },
+    "pv.title": {
+      "observedMaxWords": 9,
+      "budget": 11,
+      "instances": 2,
+      "longestInstanceAt": "copy.pv.title"
+    },
+    "rail.title": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 3,
+      "longestInstanceAt": "copy.rail.title"
+    },
+    "rel.link": {
+      "observedMaxWords": 11,
+      "budget": 14,
+      "instances": 43,
+      "longestInstanceAt": "copy.rel.link"
+    },
+    "rel.title": {
+      "observedMaxWords": 9,
+      "budget": 11,
+      "instances": 10,
+      "longestInstanceAt": "copy.rel.title"
+    },
+    "relstory.h": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 1,
+      "longestInstanceAt": "copy.relstory.h"
+    },
+    "rep.fact": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 3,
+      "longestInstanceAt": "copy.rep.fact"
+    },
+    "rep.learn": {
+      "observedMaxWords": 13,
+      "budget": 16,
+      "instances": 4,
+      "longestInstanceAt": "copy.rep.learn"
+    },
+    "rep.lede": {
+      "observedMaxWords": 50,
+      "budget": 60,
+      "instances": 3,
+      "longestInstanceAt": "copy.rep.lede"
+    },
+    "rep.method": {
+      "observedMaxWords": 22,
+      "budget": 27,
+      "instances": 1,
+      "longestInstanceAt": "copy.rep.method"
+    },
+    "rep.title": {
+      "observedMaxWords": 11,
+      "budget": 14,
+      "instances": 4,
+      "longestInstanceAt": "copy.rep.title"
+    },
+    "rows.body": {
+      "observedMaxWords": 43,
+      "budget": 52,
+      "instances": 36,
+      "longestInstanceAt": "copy.rows.body"
+    },
+    "rows.eyebrow": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 30,
+      "longestInstanceAt": "copy.rows.eyebrow"
+    },
+    "rows.title": {
+      "observedMaxWords": 11,
+      "budget": 14,
+      "instances": 35,
+      "longestInstanceAt": "copy.rows.title"
+    },
+    "rq.attr": {
+      "observedMaxWords": 8,
+      "budget": 10,
+      "instances": 1,
+      "longestInstanceAt": "copy.rq.attr"
+    },
+    "rq.text": {
+      "observedMaxWords": 16,
+      "budget": 20,
+      "instances": 1,
+      "longestInstanceAt": "copy.rq.text"
+    },
+    "rt.cite": {
+      "observedMaxWords": 6,
+      "budget": 8,
+      "instances": 2,
+      "longestInstanceAt": "copy.rt.cite"
+    },
+    "rt.h2": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 42,
+      "longestInstanceAt": "copy.rt.h2"
+    },
+    "rt.h3": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 2,
+      "longestInstanceAt": "copy.rt.h3"
+    },
+    "rt.li": {
+      "observedMaxWords": 13,
+      "budget": 16,
+      "instances": 28,
+      "longestInstanceAt": "copy.rt.li"
+    },
+    "rt.p": {
+      "observedMaxWords": 48,
+      "budget": 58,
+      "instances": 51,
+      "longestInstanceAt": "copy.rt.p"
+    },
+    "rt.quote": {
+      "observedMaxWords": 21,
+      "budget": 26,
+      "instances": 2,
+      "longestInstanceAt": "copy.rt.quote"
+    },
+    "rt.takeaway": {
+      "observedMaxWords": 18,
+      "budget": 22,
+      "instances": 33,
+      "longestInstanceAt": "copy.rt.takeaway"
+    },
+    "rt.takeaway-title": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 1,
+      "longestInstanceAt": "copy.rt.takeaway-title"
+    },
+    "setup.a": {
+      "observedMaxWords": 102,
+      "budget": 123,
+      "instances": 4,
+      "longestInstanceAt": "copy.setup.a"
+    },
+    "setup.intro": {
+      "observedMaxWords": 76,
+      "budget": 92,
+      "instances": 3,
+      "longestInstanceAt": "copy.setup.intro"
+    },
+    "setup.q": {
+      "observedMaxWords": 8,
+      "budget": 10,
+      "instances": 3,
+      "longestInstanceAt": "copy.setup.q"
+    },
+    "setup.step": {
+      "observedMaxWords": 6,
+      "budget": 8,
+      "instances": 5,
+      "longestInstanceAt": "copy.setup.step"
+    },
+    "setup.text": {
+      "observedMaxWords": 37,
+      "budget": 45,
+      "instances": 5,
+      "longestInstanceAt": "copy.setup.text"
+    },
+    "setup.title": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 2,
+      "longestInstanceAt": "copy.setup.title"
+    },
+    "split.byline": {
+      "observedMaxWords": 8,
+      "budget": 10,
+      "instances": 3,
+      "longestInstanceAt": "copy.split.byline"
+    },
+    "split.intro": {
+      "observedMaxWords": 95,
+      "budget": 114,
+      "instances": 9,
+      "longestInstanceAt": "copy.split.intro"
+    },
+    "split.lede": {
+      "observedMaxWords": 30,
+      "budget": 36,
+      "instances": 10,
+      "longestInstanceAt": "copy.split.lede"
+    },
+    "split.selfserve": {
+      "observedMaxWords": 14,
+      "budget": 17,
+      "instances": 4,
+      "longestInstanceAt": "copy.split.selfserve"
+    },
+    "split.title": {
+      "observedMaxWords": 12,
+      "budget": 15,
+      "instances": 10,
+      "longestInstanceAt": "copy.split.title"
+    },
+    "ss.quote": {
+      "observedMaxWords": 23,
+      "budget": 28,
+      "instances": 33,
+      "longestInstanceAt": "copy.ss.quote"
+    },
+    "ss.sub": {
+      "observedMaxWords": 8,
+      "budget": 10,
+      "instances": 6,
+      "longestInstanceAt": "copy.ss.sub"
+    },
+    "ss.title": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 10,
+      "longestInstanceAt": "copy.ss.title"
+    },
+    "ssec.cell": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 33,
+      "longestInstanceAt": "copy.ssec.cell"
+    },
+    "ssec.h": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 24,
+      "longestInstanceAt": "copy.ssec.h"
+    },
+    "ssec.mq": {
+      "observedMaxWords": 31,
+      "budget": 38,
+      "instances": 2,
+      "longestInstanceAt": "copy.ssec.mq"
+    },
+    "ssec.p": {
+      "observedMaxWords": 61,
+      "budget": 74,
+      "instances": 30,
+      "longestInstanceAt": "copy.ssec.p"
+    },
+    "ssec.stat": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 3,
+      "longestInstanceAt": "copy.ssec.stat"
+    },
+    "st.p": {
+      "observedMaxWords": 193,
+      "budget": 232,
+      "instances": 5,
+      "longestInstanceAt": "copy.st.p"
+    },
+    "st.title": {
+      "observedMaxWords": 3,
+      "budget": 4,
+      "instances": 2,
+      "longestInstanceAt": "copy.st.title"
+    },
+    "stories.h2": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 1,
+      "longestInstanceAt": "copy.stories.h2"
+    },
+    "stories.quote": {
+      "observedMaxWords": 29,
+      "budget": 35,
+      "instances": 10,
+      "longestInstanceAt": "copy.stories.quote"
+    },
+    "story.cat": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 5,
+      "longestInstanceAt": "copy.story.cat"
+    },
+    "story.hero-quote": {
+      "observedMaxWords": 53,
+      "budget": 64,
+      "instances": 8,
+      "longestInstanceAt": "copy.story.hero-quote"
+    },
+    "story.quote": {
+      "observedMaxWords": 33,
+      "budget": 40,
+      "instances": 2,
+      "longestInstanceAt": "copy.story.quote"
+    },
+    "story.title": {
+      "observedMaxWords": 13,
+      "budget": 16,
+      "instances": 8,
+      "longestInstanceAt": "copy.story.title"
+    },
+    "strip.label": {
+      "observedMaxWords": 10,
+      "budget": 12,
+      "instances": 9,
+      "longestInstanceAt": "copy.strip.label"
+    },
+    "sys.h": {
+      "observedMaxWords": 11,
+      "budget": 14,
+      "instances": 1,
+      "longestInstanceAt": "copy.sys.h"
+    },
+    "sys.sub": {
+      "observedMaxWords": 90,
+      "budget": 108,
+      "instances": 1,
+      "longestInstanceAt": "copy.sys.sub"
+    },
+    "term": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 41,
+      "longestInstanceAt": "copy.term"
+    },
+    "tools.body": {
+      "observedMaxWords": 24,
+      "budget": 29,
+      "instances": 1,
+      "longestInstanceAt": "copy.tools.body"
+    },
+    "tools.h": {
+      "observedMaxWords": 4,
+      "budget": 5,
+      "instances": 1,
+      "longestInstanceAt": "copy.tools.h"
+    },
+    "tools.tile": {
+      "observedMaxWords": 1,
+      "budget": 2,
+      "instances": 5,
+      "longestInstanceAt": "copy.tools.tile"
+    },
+    "val.body": {
+      "observedMaxWords": 31,
+      "budget": 38,
+      "instances": 5,
+      "longestInstanceAt": "copy.val.body"
+    },
+    "val.title": {
+      "observedMaxWords": 12,
+      "budget": 15,
+      "instances": 5,
+      "longestInstanceAt": "copy.val.title"
+    },
+    "vf.body": {
+      "observedMaxWords": 49,
+      "budget": 59,
+      "instances": 18,
+      "longestInstanceAt": "copy.vf.body"
+    },
+    "vf.title": {
+      "observedMaxWords": 5,
+      "budget": 6,
+      "instances": 18,
+      "longestInstanceAt": "copy.vf.title"
+    },
+    "vs.bullet": {
+      "observedMaxWords": 18,
+      "budget": 22,
+      "instances": 24,
+      "longestInstanceAt": "copy.vs.bullet"
+    },
+    "vs.intro": {
+      "observedMaxWords": 86,
+      "budget": 104,
+      "instances": 6,
+      "longestInstanceAt": "copy.vs.intro"
+    },
+    "vs.introcard": {
+      "observedMaxWords": 77,
+      "budget": 93,
+      "instances": 12,
+      "longestInstanceAt": "copy.vs.introcard"
+    },
+    "vs.label": {
+      "observedMaxWords": 10,
+      "budget": 12,
+      "instances": 12,
+      "longestInstanceAt": "copy.vs.label"
+    },
+    "vs.subtitle": {
+      "observedMaxWords": 10,
+      "budget": 12,
+      "instances": 6,
+      "longestInstanceAt": "copy.vs.subtitle"
+    },
+    "vs.them": {
+      "observedMaxWords": 2,
+      "budget": 3,
+      "instances": 6,
+      "longestInstanceAt": "copy.vs.them"
+    },
+    "vs.trusted": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 6,
+      "longestInstanceAt": "copy.vs.trusted"
+    },
+    "wall.body": {
+      "observedMaxWords": 59,
+      "budget": 71,
+      "instances": 12,
+      "longestInstanceAt": "copy.wall.body"
+    },
+    "wall.h": {
+      "observedMaxWords": 10,
+      "budget": 12,
+      "instances": 1,
+      "longestInstanceAt": "copy.wall.h"
+    },
+    "wall.headline": {
+      "observedMaxWords": 7,
+      "budget": 9,
+      "instances": 12,
+      "longestInstanceAt": "copy.wall.headline"
+    }
+  },
+  "itemCounts": {
+    "about.emps": {
+      "observedMax": 2,
+      "observedMin": 2,
+      "samples": 1
+    },
+    "about.logos": {
+      "observedMax": 7,
+      "observedMin": 7,
+      "samples": 1
+    },
+    "bento.items": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 5
+    },
+    "bento.n": {
+      "observedMax": 7,
+      "observedMin": 7,
+      "samples": 1
+    },
+    "blog.all": {
+      "observedMax": 8,
+      "observedMin": 8,
+      "samples": 1
+    },
+    "blog.cats": {
+      "observedMax": 6,
+      "observedMin": 6,
+      "samples": 1
+    },
+    "blog.pods": {
+      "observedMax": 4,
+      "observedMin": 4,
+      "samples": 1
+    },
+    "car.bullets": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 10
+    },
+    "car.n": {
+      "observedMax": 5,
+      "observedMin": 5,
+      "samples": 2
+    },
+    "careers.avatars": {
+      "observedMax": 10,
+      "observedMin": 10,
+      "samples": 1
+    },
+    "careers.emps": {
+      "observedMax": 8,
+      "observedMin": 8,
+      "samples": 1
+    },
+    "careers.lines": {
+      "observedMax": 2,
+      "observedMin": 2,
+      "samples": 1
+    },
+    "cat.items": {
+      "observedMax": 13,
+      "observedMin": 4,
+      "samples": 4
+    },
+    "cat.n": {
+      "observedMax": 4,
+      "observedMin": 4,
+      "samples": 1
+    },
+    "cf.n": {
+      "observedMax": 7,
+      "observedMin": 7,
+      "samples": 1
+    },
+    "cf.rows": {
+      "observedMax": 4,
+      "observedMin": 2,
+      "samples": 7
+    },
+    "cmpt.n": {
+      "observedMax": 6,
+      "observedMin": 6,
+      "samples": 1
+    },
+    "cmpt.rows": {
+      "observedMax": 7,
+      "observedMin": 7,
+      "samples": 6
+    },
+    "cont.n": {
+      "observedMax": 9,
+      "observedMin": 9,
+      "samples": 1
+    },
+    "diff.n": {
+      "observedMax": 6,
+      "observedMin": 6,
+      "samples": 1
+    },
+    "ev.n": {
+      "observedMax": 4,
+      "observedMin": 4,
+      "samples": 1
+    },
+    "exp.n": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 1
+    },
+    "faq.n": {
+      "observedMax": 10,
+      "observedMin": 10,
+      "samples": 1
+    },
+    "fd.items": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 8
+    },
+    "fd.li-count": {
+      "observedMax": 4,
+      "observedMin": 4,
+      "samples": 1
+    },
+    "fd.n": {
+      "observedMax": 8,
+      "observedMin": 8,
+      "samples": 1
+    },
+    "find.n": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 1
+    },
+    "gal.n": {
+      "observedMax": 6,
+      "observedMin": 6,
+      "samples": 1
+    },
+    "guide.n": {
+      "observedMax": 10,
+      "observedMin": 10,
+      "samples": 1
+    },
+    "intd.n": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 2
+    },
+    "job.n": {
+      "observedMax": 6,
+      "observedMin": 6,
+      "samples": 1
+    },
+    "jobs.feat": {
+      "observedMax": 8,
+      "observedMin": 8,
+      "samples": 1
+    },
+    "jobs.footer-cols": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 1
+    },
+    "jobs.footer-links": {
+      "observedMax": 4,
+      "observedMin": 3,
+      "samples": 3
+    },
+    "jobs.open": {
+      "observedMax": 8,
+      "observedMin": 8,
+      "samples": 1
+    },
+    "jobs.stats": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 1
+    },
+    "legal.n": {
+      "observedMax": 31,
+      "observedMin": 24,
+      "samples": 2
+    },
+    "mx.n": {
+      "observedMax": 13,
+      "observedMin": 13,
+      "samples": 6
+    },
+    "partner.body": {
+      "observedMax": 2,
+      "observedMin": 2,
+      "samples": 1
+    },
+    "pfaq.n": {
+      "observedMax": 8,
+      "observedMin": 6,
+      "samples": 3
+    },
+    "prose.blocks": {
+      "observedMax": 6,
+      "observedMin": 2,
+      "samples": 6
+    },
+    "prose.items": {
+      "observedMax": 2,
+      "observedMin": 2,
+      "samples": 3
+    },
+    "prose.li-count": {
+      "observedMax": 6,
+      "observedMin": 2,
+      "samples": 9
+    },
+    "rail.n": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 1
+    },
+    "rel.n": {
+      "observedMax": 5,
+      "observedMin": 4,
+      "samples": 3
+    },
+    "rep.facts": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 1
+    },
+    "rep.learns": {
+      "observedMax": 4,
+      "observedMin": 4,
+      "samples": 1
+    },
+    "rows.n": {
+      "observedMax": 5,
+      "observedMin": 5,
+      "samples": 1
+    },
+    "rt.blocks": {
+      "observedMax": 15,
+      "observedMin": 5,
+      "samples": 11
+    },
+    "rt.li-count": {
+      "observedMax": 4,
+      "observedMin": 3,
+      "samples": 6
+    },
+    "rt.takeaway-count": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 11
+    },
+    "setup.faqn": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 1
+    },
+    "setup.n": {
+      "observedMax": 5,
+      "observedMin": 5,
+      "samples": 1
+    },
+    "setup.sup": {
+      "observedMax": 2,
+      "observedMin": 2,
+      "samples": 1
+    },
+    "ss.items": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 6
+    },
+    "ssec.n": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 8
+    },
+    "ssec.paras": {
+      "observedMax": 2,
+      "observedMin": 1,
+      "samples": 24
+    },
+    "ssec.rows": {
+      "observedMax": 4,
+      "observedMin": 4,
+      "samples": 3
+    },
+    "st.n": {
+      "observedMax": 4,
+      "observedMin": 1,
+      "samples": 2
+    },
+    "story.cats": {
+      "observedMax": 5,
+      "observedMin": 5,
+      "samples": 1
+    },
+    "story.idx": {
+      "observedMax": 10,
+      "observedMin": 10,
+      "samples": 1
+    },
+    "strip.logos": {
+      "observedMax": 11,
+      "observedMin": 11,
+      "samples": 10
+    },
+    "term.n": {
+      "observedMax": 8,
+      "observedMin": 1,
+      "samples": 19
+    },
+    "val.n": {
+      "observedMax": 5,
+      "observedMin": 5,
+      "samples": 1
+    },
+    "vf.n": {
+      "observedMax": 3,
+      "observedMin": 3,
+      "samples": 6
+    },
+    "vs.bullets": {
+      "observedMax": 4,
+      "observedMin": 4,
+      "samples": 6
+    },
+    "wall.logos": {
+      "observedMax": 17,
+      "observedMin": 17,
+      "samples": 1
+    },
+    "wall.n": {
+      "observedMax": 12,
+      "observedMin": 12,
+      "samples": 1
+    }
+  },
+  "excludedTokens": [
+    {
+      "category": "colors",
+      "configKey": "announce-hover",
+      "reason": "no src usage, not observed in rendered crawl"
+    },
+    {
+      "category": "colors",
+      "configKey": "mark-ring",
+      "reason": "no src usage, not observed in rendered crawl"
+    },
+    {
+      "category": "colors",
+      "configKey": "tab-ring",
+      "reason": "no src usage, not observed in rendered crawl"
+    },
+    {
+      "category": "colors",
+      "configKey": "arrow-ring",
+      "reason": "no src usage, not observed in rendered crawl"
+    },
+    {
+      "category": "colors",
+      "configKey": "report.amber",
+      "reason": "no src usage, not observed in rendered crawl"
+    },
+    {
+      "category": "colors",
+      "configKey": "report.violet",
+      "reason": "no src usage, not observed in rendered crawl"
+    },
+    {
+      "category": "colors",
+      "configKey": "report.orange",
+      "reason": "no src usage, not observed in rendered crawl"
+    },
+    {
+      "category": "boxShadow",
+      "configKey": "dd-shell",
+      "reason": "no src usage"
+    },
+    {
+      "category": "boxShadow",
+      "configKey": "card-lift",
+      "reason": "no src usage"
+    },
+    {
+      "category": "maxWidth",
+      "configKey": "compare-phone",
+      "reason": "no src usage"
+    },
+    {
+      "category": "maxWidth",
+      "configKey": "tagline",
+      "reason": "no src usage"
+    },
+    {
+      "category": "transitionTimingFunction",
+      "configKey": "card",
+      "reason": "no src usage"
+    }
+  ],
+  "renderedEvidence": {
+    "crawl": "Computed-style crawl of all 69 page routes (plus one unknown path and one glossary term link) at 1440 and 390, reduced motion, local dev server. Summary in extraction/style-histogram.json.",
+    "homepageHeights": {
+      "1440": 10669,
+      "1280": 10773,
+      "1000": 10950,
+      "390": 9653
+    },
+    "homepageHeightsReproducedInCrawl": {
+      "1440": 10669,
+      "390": 9653
+    },
+    "outboundHosts": "Only fonts.googleapis.com / fonts.gstatic.com (web-font CSS and files). No other outbound request was observed on any route; forms post nowhere."
+  },
+  "corrections": [
+    {
+      "claim": "ia.json: 6 templates (product-overview, product-coach, product-voice, competitor-detail, company-about, company-careers) are planned.",
+      "finding": "All six are built and routed (src/routes/product.jsx). Template node lists were derived from the page components.",
+      "measuredFrom": [
+        "ia.stale",
+        "rt.product"
+      ]
+    },
+    {
+      "claim": "Specs: announcement glow period 4.5s.",
+      "finding": "Frame-measured period is 5.0s.",
+      "measuredFrom": [
+        "mo.pill-breath"
+      ]
+    },
+    {
+      "claim": "Specs: logo glow rotates at 72deg/s.",
+      "finding": "Measured 45deg/s (8s per turn). A stale comment in src/components/Confidence.jsx still says 'likely the shared 72deg/s loop'; the measured header value is used.",
+      "measuredFrom": [
+        "mo.logo-glow"
+      ]
+    },
+    {
+      "claim": "Specs: integration tiles move with scroll parallax (k * scrollY).",
+      "finding": "They float on time-based mirrored loops from page hydration.",
+      "measuredFrom": [
+        "mo.mirror"
+      ]
+    },
+    {
+      "claim": "Specs: proof cards lift on hover.",
+      "finding": "Hover is scale 1.02 only; lift 0px.",
+      "measuredFrom": [
+        "mo.proof-hover"
+      ]
+    },
+    {
+      "claim": "ia.json: product-coach = hero.headline + media.video-frame + proof.logo-ticker-labelled + feature.coach-bento + proof.coach-quote-card + cta.coach-banner.",
+      "finding": "The page renders one hero section (with video and ticker) and one bento section (with quote card and CTA banner).",
+      "measuredFrom": [
+        "pg.copilot"
+      ]
+    },
+    {
+      "claim": "ia.json: about page uses content.split-text once.",
+      "finding": "Rendered twice (mission + team).",
+      "measuredFrom": [
+        "pg.about"
+      ]
+    },
+    {
+      "claim": "ia.json: chrome.assistant-note.",
+      "finding": "Kept: it is a Kestrel-authored opacity-0 pointer to llms.txt. The original's hidden 'AI Agent Instructions' layer is a different thing and was deliberately not reproduced.",
+      "measuredFrom": [
+        "src.ainote"
+      ]
+    },
+    {
+      "claim": "ia.json: template.llms-txt with section content.llms-txt.",
+      "finding": "Not a page shape: /llms-txt is a redirect and /llms.txt a static text file. Recorded under routing.nonPageRoutes instead of as a template.",
+      "measuredFrom": [
+        "rt.llms"
+      ]
+    },
+    {
+      "claim": "src/routes/company.jsx comment: competitor detail pages fall through to the 404.",
+      "finding": "Stale comment; /competitors/:slug is routed in src/routes/product.jsx.",
+      "measuredFrom": [
+        "rt.product"
+      ]
+    }
+  ],
+  "unimplementedMotion": [
+    "catalog-appear (integration catalogue on-load fade)",
+    "other-apps-appear (integration detail)"
+  ]
+}

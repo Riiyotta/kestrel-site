@@ -1,0 +1,104 @@
+{
+  "id": "form.demo-signup",
+  "category": "form",
+  "version": "1.0.0",
+  "purpose": "Get-a-demo form column: back link, demo form, trial prompt and legal links; a local scheduler placeholder replaces it on submit.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Form column."
+  },
+  "composes": [
+    "component.demo-form"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 8
+      },
+      "fields": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "pattern": "^[a-z_]+$"
+            },
+            "label": {
+              "type": "string",
+              "maxWords": 4
+            },
+            "type": {
+              "enum": [
+                "text",
+                "email",
+                "url",
+                "textarea",
+                "select"
+              ]
+            },
+            "required": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 6
+      },
+      "submitLabel": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "successMessage": {
+        "type": "string",
+        "maxWords": 33
+      },
+      "submission": {
+        "const": "local-success-state",
+        "description": "Forms never send data anywhere; submit swaps in a local success message."
+      }
+    },
+    "required": [
+      "title",
+      "fields",
+      "submitLabel",
+      "successMessage",
+      "submission"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Art column stacks under the form."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.demoform",
+    "src.form"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "embed.standin",
+      "files": "scheduler placeholder replacing a live third-party scheduler"
+    }
+  ]
+}

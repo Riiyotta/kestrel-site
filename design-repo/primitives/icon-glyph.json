@@ -1,0 +1,16 @@
+{
+  "registryId": "primitive.icon-glyph",
+  "version": "1.0.0",
+  "description": "Generic stroke glyph from the clone's own drawn set (no third-party icons).",
+  "props": {
+    "name": {
+      "type": "string"
+    }
+  },
+  "tokens": [
+    "{color.text.primary}"
+  ],
+  "measuredFrom": [
+    "part.icon-glyph"
+  ]
+}

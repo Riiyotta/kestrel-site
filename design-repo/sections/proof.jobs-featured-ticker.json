@@ -1,0 +1,94 @@
+{
+  "id": "proof.jobs-featured-ticker",
+  "category": "proof",
+  "version": "1.0.0",
+  "purpose": "Jobs microsite ticker of featured roles on silk-gradient cards.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "348px cards at 38.8px/s."
+  },
+  "composes": [
+    "component.silk-job-card"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "roles": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "company": {
+              "type": "string",
+              "maxWords": 4
+            },
+            "shape": {
+              "enum": [
+                "arc",
+                "bars",
+                "circle",
+                "diamond",
+                "plus",
+                "ring",
+                "square",
+                "triangle"
+              ]
+            },
+            "hue": {
+              "enum": [
+                "ember",
+                "indigo",
+                "magenta",
+                "sun"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxWords": 9
+            }
+          },
+          "required": [
+            "company",
+            "shape",
+            "hue",
+            "title"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 4,
+        "maxItems": 8
+      }
+    },
+    "required": [
+      "roles"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "jobs-ticker",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Cards keep width; track bleeds to both edges."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.silk",
+    "mo.jobs-ticker"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "backdrop.webgl-standin",
+      "files": "CSS silk card gradient"
+    }
+  ]
+}

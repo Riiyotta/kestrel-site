@@ -1,0 +1,53 @@
+{
+  "id": "chrome.video-teaser",
+  "category": "chrome",
+  "version": "1.0.0",
+  "purpose": "Floating corner teaser inviting visitors to watch a short product video (opens nothing in the clone).",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Card at md+, pill below md."
+  },
+  "composes": [
+    "primitive.photo"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "teaser-entrance",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "swap-variant",
+      "detail": "Centred bottom pill with thumbnail dot, single-line label."
+    },
+    {
+      "breakpoint": "md",
+      "change": "swap-variant",
+      "detail": "Bottom-right card with 16:9 thumbnail, title and play pill."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true
+  },
+  "measuredFrom": [
+    "src.teaser",
+    "src.layout"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "photo.stock-person",
+      "files": "/assets/photos/video-teaser-thumb.webp"
+    }
+  ],
+  "notes": "Present on site-layout routes except those matching routing.noTeaserPatterns (templates/templates.json)."
+}

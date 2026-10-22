@@ -1,0 +1,13 @@
+{
+  "registryId": "component.demo-form",
+  "version": "1.0.0",
+  "description": "Demo form (local success state only).",
+  "composes": [
+    "primitive.field",
+    "primitive.submit-button"
+  ],
+  "tokens": [],
+  "measuredFrom": [
+    "part.demo-form"
+  ]
+}

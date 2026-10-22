@@ -1,0 +1,20 @@
+{
+  "registryId": "component.filter-chips",
+  "version": "1.0.0",
+  "description": "Filter chips in story / tabs / sidebar variants.",
+  "composes": [],
+  "tokens": [],
+  "measuredFrom": [
+    "part.filter-chips"
+  ],
+  "variants": {
+    "variant": [
+      "story",
+      "tabs",
+      "sidebar"
+    ]
+  },
+  "motionProfiles": [
+    "filter-chips"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "registryId": "component.employee-card",
+  "version": "1.0.0",
+  "description": "Teammate quote card (horizontal / vertical).",
+  "composes": [
+    "primitive.photo"
+  ],
+  "tokens": [],
+  "measuredFrom": [
+    "part.employee-card"
+  ],
+  "variants": {
+    "layout": [
+      "horizontal",
+      "vertical"
+    ]
+  }
+}

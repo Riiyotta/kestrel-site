@@ -1,0 +1,97 @@
+{
+  "id": "content.jobs-open-roles",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Jobs microsite open roles: H2 + view-all link + job card grid.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Three-column grid."
+  },
+  "composes": [
+    "component.job-card"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 11
+      },
+      "roles": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "company": {
+              "type": "string",
+              "maxWords": 4
+            },
+            "shape": {
+              "enum": [
+                "arc",
+                "bars",
+                "circle",
+                "diamond",
+                "plus",
+                "ring",
+                "square",
+                "triangle"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxWords": 9
+            },
+            "desc": {
+              "type": "string",
+              "maxWords": 20
+            },
+            "location": {
+              "type": "string",
+              "maxWords": 5
+            }
+          },
+          "required": [
+            "company",
+            "shape",
+            "title",
+            "desc",
+            "location"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 8
+      }
+    },
+    "required": [
+      "title",
+      "roles"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "md",
+      "change": "grid-collapse",
+      "detail": "Two columns."
+    },
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "One column."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.jobcard"
+  ]
+}

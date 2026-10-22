@@ -1,0 +1,56 @@
+{
+  "id": "content.related-reading",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Related reading: one H3 and a bulleted list of internal links.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Prose list, no H2."
+  },
+  "composes": [
+    "component.prose-block"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 11
+      },
+      "links": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 14
+        },
+        "minItems": 2,
+        "maxItems": 5
+      }
+    },
+    "required": [
+      "title",
+      "links"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Same column, smaller type."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.prose"
+  ],
+  "notes": "links are inline-HTML <a href> strings pointing at internal routes."
+}

@@ -1,0 +1,93 @@
+{
+  "id": "commerce.compare-features",
+  "category": "commerce",
+  "version": "1.0.0",
+  "purpose": "Plan comparison table: sticky header with plan CTAs and collapsible feature bands.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Accordion bands."
+  },
+  "composes": [
+    "component.compare-table"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "groups": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "maxWords": 5
+            },
+            "rows": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "label": {
+                    "type": "string",
+                    "maxWords": 5
+                  },
+                  "values": {
+                    "type": "array",
+                    "items": {
+                      "type": [
+                        "string",
+                        "boolean"
+                      ],
+                      "maxWords": 5
+                    },
+                    "minItems": 3,
+                    "maxItems": 3
+                  }
+                },
+                "required": [
+                  "label",
+                  "values"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "maxItems": 4
+            }
+          },
+          "required": [
+            "label",
+            "rows"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 7
+      }
+    },
+    "required": [
+      "groups"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "accordion",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "scroll-horizontal",
+      "detail": "Horizontal scroll with sticky first column below 1200px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.comparetable",
+    "mo.band"
+  ]
+}

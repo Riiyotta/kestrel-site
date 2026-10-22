@@ -1,0 +1,109 @@
+{
+  "id": "form.partner",
+  "category": "form",
+  "version": "1.0.0",
+  "purpose": "Partner page hero + form: H1 and body beside a glass form card over a streak backdrop.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Two columns."
+  },
+  "composes": [
+    "primitive.field",
+    "primitive.submit-button"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 8
+      },
+      "body": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 36
+        },
+        "minItems": 1,
+        "maxItems": 2
+      },
+      "fields": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "pattern": "^[a-z_]+$"
+            },
+            "label": {
+              "type": "string",
+              "maxWords": 4
+            },
+            "type": {
+              "enum": [
+                "text",
+                "email",
+                "url",
+                "textarea",
+                "select"
+              ]
+            },
+            "required": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 6
+      },
+      "submitLabel": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "successMessage": {
+        "type": "string",
+        "maxWords": 33
+      },
+      "submission": {
+        "const": "local-success-state",
+        "description": "Forms never send data anywhere; submit swaps in a local success message."
+      }
+    },
+    "required": [
+      "title",
+      "body",
+      "fields",
+      "submitLabel",
+      "successMessage",
+      "submission"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Form stacks under the copy below 1200px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.partner",
+    "src.form"
+  ]
+}

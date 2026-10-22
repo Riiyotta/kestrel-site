@@ -1,0 +1,98 @@
+{
+  "id": "content.blog-rail",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Tinted rail of podcast cards with ring arrows in the header.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Rail."
+  },
+  "composes": [
+    "component.card-carousel",
+    "component.blog-card"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "posts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxWords": 17
+            },
+            "date": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "cover": {
+              "type": "object",
+              "properties": {
+                "tone": {
+                  "enum": [
+                    "indigo",
+                    "lavender",
+                    "magenta",
+                    "mint",
+                    "peach",
+                    "sun"
+                  ]
+                }
+              },
+              "required": [
+                "tone"
+              ],
+              "additionalProperties": false
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+              "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+            }
+          },
+          "required": [
+            "title",
+            "date",
+            "cover",
+            "href"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 2,
+        "maxItems": 4
+      }
+    },
+    "required": [
+      "title",
+      "posts"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "carousel-arrows",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "300px cards."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.blogindex",
+    "mo.rail"
+  ]
+}

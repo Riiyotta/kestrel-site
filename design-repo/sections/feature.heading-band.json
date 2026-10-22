@@ -1,0 +1,45 @@
+{
+  "id": "feature.heading-band",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Centred display H2 band introducing the feature rows.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "64/77 band."
+  },
+  "composes": [
+    "component.section-heading"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 17
+      }
+    },
+    "required": [
+      "title"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Steps 64 -> 42 -> 32."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.sectionheading"
+  ]
+}

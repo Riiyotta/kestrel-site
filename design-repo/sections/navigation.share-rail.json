@@ -1,0 +1,37 @@
+{
+  "id": "navigation.share-rail",
+  "category": "navigation",
+  "version": "1.0.0",
+  "purpose": "Fixed right share rail: copy link, share links and 'summarise with an assistant' links (generic glyphs, '#' targets).",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Rail."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "toc-interaction",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "lg",
+      "change": "show",
+      "detail": "Desktop only."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.share"
+  ]
+}

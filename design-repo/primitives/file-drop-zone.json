@@ -1,0 +1,16 @@
+{
+  "registryId": "primitive.file-drop-zone",
+  "version": "1.0.0",
+  "description": "Click-or-drop file zone (local only; nothing is uploaded).",
+  "props": {
+    "helper": {
+      "type": "string"
+    }
+  },
+  "tokens": [
+    "{component.field.soft-fill}"
+  ],
+  "measuredFrom": [
+    "part.file-drop-zone"
+  ]
+}

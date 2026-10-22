@@ -1,0 +1,74 @@
+{
+  "id": "content.finding-cards",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Report findings: H2 + three stat cards with mini charts.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Three cards."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 14
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "stat": {
+              "type": "string",
+              "pattern": "^[0-9.,%x+~]+$"
+            },
+            "caption": {
+              "type": "string",
+              "maxWords": 27
+            },
+            "chart": {
+              "enum": [
+                "bars",
+                "donut"
+              ]
+            }
+          },
+          "required": [
+            "stat",
+            "caption",
+            "chart"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "required": [
+      "title",
+      "items"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Cards stack."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.findings"
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "hero.product-video",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Product landing opener: centred H1, explanatory paragraphs, a product video frame, demo/trial buttons and a labelled logo ticker.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "coach": "Two paragraphs, 1200px video frame with controls.",
+    "voice": "Sub + intro over the glow stand-in, full-width autoplay video frame."
+  },
+  "composes": [
+    "component.video-frame",
+    "component.logo-marquee",
+    "primitive.button"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 11
+      },
+      "paragraphs": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 120
+        },
+        "minItems": 1,
+        "maxItems": 2
+      },
+      "video": {
+        "type": "object",
+        "properties": {
+          "assetRole": {
+            "const": "illustration.product-art"
+          },
+          "scene": {
+            "enum": [
+              "channels",
+              "chart",
+              "chat",
+              "flow",
+              "lock",
+              "outreach",
+              "people",
+              "phone",
+              "queue",
+              "review",
+              "shield",
+              "test"
+            ]
+          },
+          "tint": {
+            "enum": [
+              "brand",
+              "green",
+              "grey",
+              "lavender",
+              "peach",
+              "pink",
+              "yellow"
+            ]
+          }
+        },
+        "required": [
+          "assetRole",
+          "scene",
+          "tint"
+        ],
+        "additionalProperties": false
+      },
+      "primaryCta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      },
+      "secondaryCta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      },
+      "tickerLine": {
+        "type": "string",
+        "maxWords": 8
+      }
+    },
+    "required": [
+      "title",
+      "paragraphs",
+      "video",
+      "primaryCta",
+      "secondaryCta"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "marquee",
+      "glow-standin",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "H1 40px, paragraphs 16/20.8, video full width."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.copilot",
+    "src.voice"
+  ],
+  "notes": "The video frame shows a static poster illustration; no media plays."
+}

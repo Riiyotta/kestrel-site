@@ -1,0 +1,76 @@
+{
+  "$description": "Semantic radius, elevation and gradient roles.",
+  "shape": {
+    "pill": {
+      "$value": "{radius.pill}"
+    },
+    "card": {
+      "$value": "{radius.card}"
+    },
+    "glass": {
+      "$value": "{radius.glass}"
+    },
+    "photo": {
+      "$value": "{radius.photo}"
+    },
+    "tile": {
+      "$value": "{radius.tile}"
+    },
+    "inner": {
+      "$value": "{radius.inner}"
+    },
+    "small": {
+      "$value": "{radius.sm}"
+    },
+    "announce": {
+      "$value": "{radius.announce}"
+    },
+    "footer-link": {
+      "$value": "{radius.footer-link}"
+    }
+  },
+  "elevation": {
+    "glass": {
+      "$value": "{shadow.glass}"
+    },
+    "glass-rim": {
+      "$value": "{shadow.glass-rim}"
+    },
+    "nav": {
+      "$value": "{shadow.nav}"
+    },
+    "tile": {
+      "$value": "{shadow.tile}"
+    },
+    "button-hover-dark": {
+      "$value": "{shadow.btn-dark-hover}"
+    },
+    "button-hover-light": {
+      "$value": "{shadow.btn-light-hover}"
+    },
+    "teaser": {
+      "$value": "{shadow.teaser}"
+    },
+    "faq-card": {
+      "$value": "{shadow.faq-card}"
+    },
+    "matrix": {
+      "$value": "{shadow.matrix}"
+    }
+  },
+  "gradient": {
+    "brand-4": {
+      "$value": "{gradient.brand-4}",
+      "description": "Four-stop brand gradient (indigo, magenta, ember, sun)."
+    },
+    "brand-3": {
+      "$value": "{gradient.brand-3}"
+    },
+    "brand-ring": {
+      "$value": "{gradient.brand-ring}"
+    },
+    "progress": {
+      "$value": "{gradient.progress}"
+    }
+  }
+}

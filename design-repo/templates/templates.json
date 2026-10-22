@@ -1,0 +1,2381 @@
+{
+  "$description": "One template per distinct page shape (29 shapes for 69 page routes; plus 2 non-page routes = the 71 routes of the route inventory). Node lists were derived from the page components, not copied from ia.json; each node carries section, variants, required and repeatable. The semantic validator matches PageSpec nodes on (section, variant) against this list, in order.",
+  "routing": {
+    "layouts": {
+      "site": "Global nav, footer and (unless excluded) the floating teaser.",
+      "standalone-bare": "No chrome at all.",
+      "standalone-own-chrome": "Own header/footer or sidebar, no global chrome."
+    },
+    "noTeaserPatterns": [
+      "/product",
+      "/product/*",
+      "/industry/*",
+      "/pricing",
+      "/integrations",
+      "/integrations/*",
+      "/articles/*"
+    ],
+    "noTeaserEvidence": "src.layout",
+    "nonPageRoutes": [
+      {
+        "route": "/llms-txt",
+        "kind": "redirect",
+        "target": "/llms.txt",
+        "measuredFrom": [
+          "rt.llms"
+        ]
+      },
+      {
+        "route": "/llms.txt",
+        "kind": "static-text-file",
+        "note": "Plain-text index served as a file; not a page shape, no PageSpec."
+      }
+    ],
+    "excludedRoutes": [
+      {
+        "route": "/__primitives",
+        "reason": "Dev-only primitive showcase (rendered only in development builds); not a page template."
+      }
+    ],
+    "intentional404": [
+      {
+        "pattern": "/glossary/*",
+        "reason": "Term pages were deliberately not built; term links render the 404 page."
+      }
+    ],
+    "heroLessTemplates": [
+      "template.get-a-demo",
+      "template.company-about",
+      "template.lead-form-partner",
+      "template.legal",
+      "template.press-kit",
+      "template.not-found"
+    ]
+  },
+  "templates": {
+    "template.home": {
+      "id": "template.home",
+      "name": "Homepage",
+      "version": "1.0.0",
+      "description": "Brand homepage: scroll-staged hero, proof bento, five-part gradient-flow story, stories carousel. Audited document heights 10669 / 10773 / 10950 / 9653 at 1440 / 1280 / 1000 / 390.",
+      "layout": "site",
+      "routes": [
+        "/"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.home",
+          "variants": [
+            "home"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.home-bento",
+          "variants": [
+            "home"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.compare-cards",
+          "variants": [
+            "home"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.tools-arc",
+          "variants": [
+            "home"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.confidence",
+          "variants": [
+            "home"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.system-find",
+          "variants": [
+            "home"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.playbook",
+          "variants": [
+            "home"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.stories-home",
+          "variants": [
+            "home"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.assistant-note",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.home",
+        "src.app"
+      ]
+    },
+    "template.aeo-detail": {
+      "id": "template.aeo-detail",
+      "name": "Product / industry detail",
+      "version": "1.0.0",
+      "description": "One data-driven template for 7 product and 3 industry answer pages. Optional nodes are pinned per route by routeNodeRules (exact data).",
+      "layout": "site",
+      "routes": [
+        "/product/ai-agents",
+        "/product/guardrails",
+        "/product/how-it-works",
+        "/product/outbound",
+        "/product/quality-assurance",
+        "/product/simulations",
+        "/product/trust",
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/insurance"
+      ],
+      "routeKind": "data-driven",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.split",
+          "variants": [
+            "product",
+            "industry"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-strip",
+          "variants": [
+            "bare"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.prose-tools",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.heading-band",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.rows",
+          "variants": [
+            "media-472"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.story-slideshow",
+          "variants": [
+            "wide"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "cta.callout-row",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "form.event-demo",
+          "variants": [
+            "standard"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "content.related-reading",
+          "variants": [
+            "standard"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "content.prose-faq",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.aeo",
+        "rt.product"
+      ],
+      "routeVariants": {
+        "hero.split": {
+          "/product/ai-agents": "product",
+          "/product/guardrails": "product",
+          "/product/how-it-works": "product",
+          "/product/outbound": "product",
+          "/product/quality-assurance": "product",
+          "/product/simulations": "product",
+          "/product/trust": "product",
+          "/industry/financial-services": "industry",
+          "/industry/healthcare": "industry",
+          "/industry/insurance": "industry"
+        }
+      },
+      "routeNodeRules": {
+        "proof.story-slideshow": [
+          "/product/ai-agents",
+          "/industry/financial-services",
+          "/industry/healthcare"
+        ],
+        "form.event-demo": [
+          "/industry/healthcare"
+        ],
+        "content.related-reading": [
+          "/product/ai-agents",
+          "/product/guardrails",
+          "/product/how-it-works",
+          "/product/outbound",
+          "/product/quality-assurance",
+          "/product/simulations",
+          "/product/trust"
+        ]
+      }
+    },
+    "template.product-overview": {
+      "id": "template.product-overview",
+      "name": "Product overview",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/product"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.headline",
+          "variants": [
+            "two-actions"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-strip",
+          "variants": [
+            "wall"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.prose-tools",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.card-carousel",
+          "variants": [
+            "square"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.rows",
+          "variants": [
+            "media-600"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.integration-orbit",
+          "variants": [
+            "product"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.story-slideshow",
+          "variants": [
+            "split"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.related-reading",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.prose-faq",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.blog-grid",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.producthome",
+        "rt.product"
+      ],
+      "iaJsonDiff": "ia.json marks this template 'planned'; it is built and routed (src/pages/product/ProductHome.jsx, src/routes/product.jsx)."
+    },
+    "template.product-coach": {
+      "id": "template.product-coach",
+      "name": "Product: operations assistant",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/product/coach"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.product-video",
+          "variants": [
+            "coach"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.prose-tools",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.coach-bento",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.related-reading",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.prose-faq",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.copilot",
+        "rt.product"
+      ],
+      "iaJsonDiff": "ia.json marks it 'planned' and lists hero.headline + media.video-frame + proof.logo-ticker-labelled + feature.coach-bento + proof.coach-quote-card + cta.coach-banner; the built page renders one hero section (title, video, buttons, ticker) and one bento section holding the quote card and CTA banner."
+    },
+    "template.product-voice": {
+      "id": "template.product-voice",
+      "name": "Product: voice",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/product/voice"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.product-video",
+          "variants": [
+            "voice"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.prose-tools",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.card-carousel",
+          "variants": [
+            "rectangle"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.split-explainer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.case-study-card",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.related-reading",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.prose-faq",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.voice",
+        "rt.product"
+      ],
+      "iaJsonDiff": "ia.json marks it 'planned' and models the video and ticker as separate sections; the built hero section contains both."
+    },
+    "template.integrations-library": {
+      "id": "template.integrations-library",
+      "name": "Integration library",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/integrations"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.headline",
+          "variants": [
+            "single-action"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.integration-orbit",
+          "variants": [
+            "library"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-strip",
+          "variants": [
+            "labelled"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.integration-catalog",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.integration-setup",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.integrations",
+        "rt.commerce"
+      ]
+    },
+    "template.integration-detail": {
+      "id": "template.integration-detail",
+      "name": "Integration detail",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/integrations/api",
+        "/integrations/mcp"
+      ],
+      "routeKind": "data-driven",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.integration-detail",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.integration-body",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.other-apps",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.intdetail",
+        "rt.commerce"
+      ]
+    },
+    "template.pricing": {
+      "id": "template.pricing",
+      "name": "Pricing",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/pricing"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.pricing-title",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "commerce.plans",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "commerce.compare-features",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq-accordion",
+          "variants": [
+            "panel"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.pricing",
+        "rt.commerce"
+      ]
+    },
+    "template.get-a-demo": {
+      "id": "template.get-a-demo",
+      "name": "Get a demo",
+      "version": "1.0.0",
+      "description": "Standalone viewport-height page: no nav, footer or teaser.",
+      "layout": "standalone-bare",
+      "routes": [
+        "/get-a-demo"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "form.demo-signup",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.demo-art",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.assistant-note",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.demo",
+        "rt.commerce"
+      ]
+    },
+    "template.story-index": {
+      "id": "template.story-index",
+      "name": "Customer stories index",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/customer-stories"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.headline",
+          "variants": [
+            "plain"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.story-card-list",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.storycard",
+        "rt.content"
+      ]
+    },
+    "template.story-detail": {
+      "id": "template.story-detail",
+      "name": "Customer story",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/customer-stories/ledgerly-handles-tax-season",
+        "/customer-stories/brindle-health-after-hours",
+        "/customer-stories/voltway-outage-updates",
+        "/customer-stories/stackhouse-onboarding-workflows",
+        "/customer-stories/coinwell-card-disputes",
+        "/customer-stories/mendwell-billing-clarity",
+        "/customer-stories/halden-power-moving-home",
+        "/customer-stories/patchwork-admin-requests"
+      ],
+      "routeKind": "data-driven",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.story",
+          "variants": [
+            "quote",
+            "split"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.story-side-menu",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.story-sections",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.related-stories",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.storyhero",
+        "rt.content"
+      ],
+      "routeVariants": {
+        "hero.story": {
+          "/customer-stories/ledgerly-handles-tax-season": "quote",
+          "/customer-stories/brindle-health-after-hours": "split",
+          "/customer-stories/voltway-outage-updates": "quote",
+          "/customer-stories/stackhouse-onboarding-workflows": "split",
+          "/customer-stories/coinwell-card-disputes": "quote",
+          "/customer-stories/mendwell-billing-clarity": "split",
+          "/customer-stories/halden-power-moving-home": "split",
+          "/customer-stories/patchwork-admin-requests": "quote"
+        }
+      }
+    },
+    "template.blog-index": {
+      "id": "template.blog-index",
+      "name": "Blog index",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/blog"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.index-title",
+          "variants": [
+            "blog"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.blog-featured",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.blog-rail",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.blog-browse",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.blogindex",
+        "rt.content"
+      ]
+    },
+    "template.blog-post": {
+      "id": "template.blog-post",
+      "name": "Blog post",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/blog/introducing-kestrel-workflows-studio",
+        "/blog/five-lessons-from-a-year-of-ai-escalations",
+        "/blog/kestrel-opens-london-office",
+        "/blog/what-good-cx-looks-like-in-regulated-industries",
+        "/blog/roost-podcast-ep-12-quality-at-scale",
+        "/blog/roost-podcast-ep-11-first-90-days",
+        "/blog/roost-podcast-ep-10-voice-support",
+        "/blog/roost-podcast-ep-09-support-metrics"
+      ],
+      "routeKind": "data-driven",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.post-header",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.rich-text",
+          "variants": [
+            "blog"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.post-ctas",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.related-posts",
+          "variants": [
+            "standard"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.toc",
+          "variants": [
+            "hover"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.share-rail",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.blogpost",
+        "rt.content"
+      ]
+    },
+    "template.article-index": {
+      "id": "template.article-index",
+      "name": "Guide index",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/articles"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.index-title",
+          "variants": [
+            "articles"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.guide-featured",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.topic-bar",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.guide-grid",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.articleindex",
+        "rt.content"
+      ]
+    },
+    "template.article-detail": {
+      "id": "template.article-detail",
+      "name": "Guide",
+      "version": "1.0.0",
+      "description": "No video teaser: the sticky CTA chip replaces it.",
+      "layout": "site",
+      "routes": [
+        "/articles/support-metrics-that-matter",
+        "/articles/what-is-a-good-nps",
+        "/articles/first-response-time-explained",
+        "/articles/measuring-customer-effort",
+        "/articles/csat-survey-design",
+        "/articles/ai-agent-guardrails",
+        "/articles/ai-support-first-90-days",
+        "/articles/reducing-ticket-backlog",
+        "/articles/support-team-scheduling",
+        "/articles/writing-help-centre-articles",
+        "/articles/escalation-paths"
+      ],
+      "routeKind": "data-driven",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.article-header",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.toc",
+          "variants": [
+            "inline"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.rich-text",
+          "variants": [
+            "article"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq-accordion",
+          "variants": [
+            "hairline"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "content.keep-reading",
+          "variants": [
+            "standard"
+          ],
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.toc",
+          "variants": [
+            "tick"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.share-rail",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.article-chip",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.articledetail",
+        "rt.content"
+      ]
+    },
+    "template.competitor-index": {
+      "id": "template.competitor-index",
+      "name": "Comparison index",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/competitors"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.headline",
+          "variants": [
+            "glow"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-strip",
+          "variants": [
+            "labelled"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.difference-cards",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq-accordion",
+          "variants": [
+            "rows"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "compare.grid-tables",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.compidx",
+        "rt.company"
+      ]
+    },
+    "template.competitor-detail": {
+      "id": "template.competitor-detail",
+      "name": "Kestrel vs a category",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/competitors/kestrel-vs-legacy-chatbots",
+        "/competitors/kestrel-vs-helpdesk-add-ons",
+        "/competitors/kestrel-vs-build-your-own",
+        "/competitors/kestrel-vs-outsourced-bpo",
+        "/competitors/kestrel-vs-phone-trees",
+        "/competitors/kestrel-vs-single-channel-assistants"
+      ],
+      "routeKind": "data-driven",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.vs",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-strip",
+          "variants": [
+            "labelled"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "compare.vs-intro-cards",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "compare.matrix",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "compare.vs-feature-cards",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.story-slideshow",
+          "variants": [
+            "testimonial"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq-accordion",
+          "variants": [
+            "cards"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.compdetail",
+        "rt.product"
+      ],
+      "iaJsonDiff": "ia.json marks it 'planned' (no route); it is built (src/pages/product/CompetitorDetail.jsx) and routed in src/routes/product.jsx. The comment in src/routes/company.jsx saying detail pages fall through to the 404 is stale."
+    },
+    "template.report-landing": {
+      "id": "template.report-landing",
+      "name": "Report landing",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/content/the-handoff-gap"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.report",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-strip",
+          "variants": [
+            "trust"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.finding-cards",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.quote-panel",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.numbered-contents",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.story-rail",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.report",
+        "rt.content"
+      ]
+    },
+    "template.thoughts-index": {
+      "id": "template.thoughts-index",
+      "name": "Thoughts wall",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/thoughts-on-cx"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.headline",
+          "variants": [
+            "plain"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.post-wall",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.thoughts",
+        "rt.content"
+      ]
+    },
+    "template.glossary": {
+      "id": "template.glossary",
+      "name": "Glossary",
+      "version": "1.0.0",
+      "description": "Term links target /glossary/<slug>, which deliberately renders the 404 page; there is no term template.",
+      "layout": "site",
+      "routes": [
+        "/glossary"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.glossary",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.term-index",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.glossary",
+        "rt.content"
+      ]
+    },
+    "template.faq": {
+      "id": "template.faq",
+      "name": "FAQ document",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/faq"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.doc-header",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq-document",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.faq",
+        "rt.content"
+      ]
+    },
+    "template.company-about": {
+      "id": "template.company-about",
+      "name": "About",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/about"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.split-text",
+          "variants": [
+            "mission"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.photo-collage",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.about-logos",
+          "variants": [
+            "logos"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.split-text",
+          "variants": [
+            "team"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.employee-quotes",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "pg.about",
+        "rt.product"
+      ],
+      "iaJsonDiff": "ia.json marks it 'planned' and lists content.split-text once; the built page renders it twice (mission H1, team H2)."
+    },
+    "template.company-careers": {
+      "id": "template.company-careers",
+      "name": "Careers",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/careers"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.avatar",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.photo-gallery",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.values-bento",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.employee-testimonials",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.open-roles",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.careers",
+        "rt.product"
+      ],
+      "iaJsonDiff": "ia.json marks it 'planned'; it is built (src/pages/company/Careers.jsx) and routed in src/routes/product.jsx."
+    },
+    "template.lead-form-partner": {
+      "id": "template.lead-form-partner",
+      "name": "Partner form",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/partner"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "form.partner",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-wall",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.partner",
+        "rt.company"
+      ]
+    },
+    "template.lead-form-nominate": {
+      "id": "template.lead-form-nominate",
+      "name": "Nomination form",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/nominate"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.headline",
+          "variants": [
+            "plain"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "form.nominate",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-wall",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.nominate",
+        "rt.company"
+      ]
+    },
+    "template.legal": {
+      "id": "template.legal",
+      "name": "Legal document",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "site",
+      "routes": [
+        "/privacy-policy",
+        "/terms-of-service"
+      ],
+      "routeKind": "data-driven",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.legal-document",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.legal",
+        "rt.company"
+      ]
+    },
+    "template.cx-jobs": {
+      "id": "template.cx-jobs",
+      "name": "Jobs microsite",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "standalone-own-chrome",
+      "routes": [
+        "/cx-jobs"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.jobs-header",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.jobs",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.jobs-featured-ticker",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.jobs-stats",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "feature.jobs-mcp",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.jobs-open-roles",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.jobs-report",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.jobs-footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.cxjobs",
+        "src.app"
+      ]
+    },
+    "template.press-kit": {
+      "id": "template.press-kit",
+      "name": "Brand guidelines",
+      "version": "1.0.0",
+      "description": "",
+      "layout": "standalone-own-chrome",
+      "routes": [
+        "/press-kit"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "navigation.doc-sidebar",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.press-hero",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.press-intro",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.press-contents",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.press-logo",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.press-color",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.press-typography",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.presskit",
+        "src.app"
+      ]
+    },
+    "template.not-found": {
+      "id": "template.not-found",
+      "name": "Not found",
+      "version": "1.0.0",
+      "description": "Rendered for any unknown path, for unknown detail slugs, and deliberately for /glossary/<slug> term links.",
+      "layout": "site",
+      "routes": [
+        "*"
+      ],
+      "routeKind": "static",
+      "evidence": "measured",
+      "sourceStatusAtExtraction": "built-and-routed",
+      "nodes": [
+        {
+          "section": "chrome.nav",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.not-found",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.video-teaser",
+          "variants": [
+            "standard"
+          ],
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src.notfound",
+        "src.app"
+      ]
+    }
+  }
+}

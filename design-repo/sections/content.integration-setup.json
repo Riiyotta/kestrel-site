@@ -1,0 +1,111 @@
+{
+  "id": "content.integration-setup",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Setup steps and a short static Q&A explaining what connecting Kestrel involves.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Full-width prose."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 6
+      },
+      "intro": {
+        "type": "string",
+        "maxWords": 92
+      },
+      "steps": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxWords": 8
+            },
+            "text": {
+              "type": "string",
+              "maxWords": 45
+            }
+          },
+          "required": [
+            "title",
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 2,
+        "maxItems": 5
+      },
+      "support": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 92
+        },
+        "minItems": 0,
+        "maxItems": 2
+      },
+      "faqTitle": {
+        "type": "string",
+        "maxWords": 6
+      },
+      "faq": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "maxWords": 10
+            },
+            "a": {
+              "type": "string",
+              "maxWords": 123
+            }
+          },
+          "required": [
+            "q",
+            "a"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 3
+      }
+    },
+    "required": [
+      "title",
+      "intro",
+      "steps",
+      "support",
+      "faqTitle",
+      "faq"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Narrower padding."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.setup"
+  ]
+}

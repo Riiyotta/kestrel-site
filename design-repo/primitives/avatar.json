@@ -1,0 +1,20 @@
+{
+  "registryId": "primitive.avatar",
+  "version": "1.0.0",
+  "description": "Small square/rounded author avatar (21-24px).",
+  "props": {
+    "src": {
+      "type": "string"
+    },
+    "size": {
+      "enum": [
+        21,
+        24
+      ]
+    }
+  },
+  "tokens": [],
+  "measuredFrom": [
+    "part.avatar"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "compare.vs-intro-cards",
+  "category": "compare",
+  "version": "1.0.0",
+  "purpose": "Two 'What is X?' cards with logo tiles: Kestrel and the compared category.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Two cards."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "us": {
+        "type": "string",
+        "maxWords": 93
+      },
+      "them": {
+        "type": "string",
+        "maxWords": 93
+      }
+    },
+    "required": [
+      "us",
+      "them"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Cards stack."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.vsintro"
+  ]
+}

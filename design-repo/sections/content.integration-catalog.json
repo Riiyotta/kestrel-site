@@ -1,0 +1,128 @@
+{
+  "id": "content.integration-catalog",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Filterable integration catalogue: sticky category filter beside category blocks of integration cards.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Sidebar + blocks."
+  },
+  "composes": [
+    "component.integration-card",
+    "component.filter-chips"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "categories": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "maxWords": 4
+            },
+            "description": {
+              "type": "string",
+              "maxWords": 108
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "maxWords": 3
+                  },
+                  "description": {
+                    "type": "string",
+                    "maxWords": 24
+                  },
+                  "logo": {
+                    "type": "object",
+                    "properties": {
+                      "assetRole": {
+                        "const": "logo.placeholder"
+                      },
+                      "name": {
+                        "type": "string",
+                        "maxWords": 3
+                      },
+                      "shape": {
+                        "enum": [
+                          "arc",
+                          "bars",
+                          "circle",
+                          "diamond",
+                          "plus",
+                          "ring",
+                          "square",
+                          "triangle"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "assetRole",
+                      "name",
+                      "shape"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "href": {
+                    "type": "string",
+                    "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+                    "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+                  }
+                },
+                "required": [
+                  "name",
+                  "description",
+                  "logo",
+                  "href"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "maxItems": 13
+            }
+          },
+          "required": [
+            "label",
+            "description",
+            "items"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 4
+      }
+    },
+    "required": [
+      "categories"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "filter-chips",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Filter becomes a chip row; cards single column."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.catalog"
+  ],
+  "notes": "The on-load fade of catalogue blocks is flagged in source but not implemented, so no motion profile covers it."
+}

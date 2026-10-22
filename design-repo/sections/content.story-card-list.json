@@ -1,0 +1,300 @@
+{
+  "id": "content.story-card-list",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Customer-story index body: themed category filter chips over a list of featured, wide and quote story cards.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Chips + card list."
+  },
+  "composes": [
+    "component.story-card",
+    "component.filter-chips"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "categories": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "theme": {
+              "enum": [
+                "green",
+                "neutral",
+                "pink",
+                "red",
+                "yellow"
+              ]
+            },
+            "icon": {
+              "type": "object",
+              "properties": {
+                "assetRole": {
+                  "const": "icon.glyph"
+                },
+                "name": {
+                  "enum": [
+                    "bolt",
+                    "bubble",
+                    "channels",
+                    "check",
+                    "code",
+                    "coin",
+                    "cross",
+                    "dot",
+                    "ear",
+                    "globe",
+                    "headset",
+                    "heart",
+                    "inbox",
+                    "key",
+                    "keypad",
+                    "layers",
+                    "pen",
+                    "people",
+                    "shield",
+                    "stack",
+                    "target",
+                    "tree",
+                    "wrench"
+                  ]
+                }
+              },
+              "required": [
+                "assetRole",
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "label",
+            "theme",
+            "icon"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 2,
+        "maxItems": 5
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "layout": {
+                  "enum": [
+                    "featured",
+                    "wide"
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "maxWords": 16
+                },
+                "theme": {
+                  "enum": [
+                    "green",
+                    "neutral",
+                    "pink",
+                    "red",
+                    "yellow"
+                  ]
+                },
+                "person": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "maxWords": 3
+                    },
+                    "role": {
+                      "type": "string",
+                      "maxWords": 6
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "role"
+                  ],
+                  "additionalProperties": false
+                },
+                "logo": {
+                  "type": "object",
+                  "properties": {
+                    "assetRole": {
+                      "const": "logo.placeholder"
+                    },
+                    "name": {
+                      "type": "string",
+                      "maxWords": 3
+                    },
+                    "shape": {
+                      "enum": [
+                        "arc",
+                        "bars",
+                        "circle",
+                        "diamond",
+                        "plus",
+                        "ring",
+                        "square",
+                        "triangle"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "assetRole",
+                    "name",
+                    "shape"
+                  ],
+                  "additionalProperties": false
+                },
+                "photo": {
+                  "type": "object",
+                  "properties": {
+                    "assetRole": {
+                      "const": "photo.stock-person"
+                    },
+                    "src": {
+                      "enum": [
+                        "/assets/photos/compare-avatar-1.webp",
+                        "/assets/photos/compare-avatar-2.webp",
+                        "/assets/photos/compare-avatar-3.webp",
+                        "/assets/photos/hero-bl.webp",
+                        "/assets/photos/hero-br.webp",
+                        "/assets/photos/hero-center.webp",
+                        "/assets/photos/hero-tl.webp",
+                        "/assets/photos/hero-tr.webp",
+                        "/assets/photos/nav-feature-industries.webp",
+                        "/assets/photos/nav-feature-product.webp",
+                        "/assets/photos/playbook-avatar-c.webp",
+                        "/assets/photos/playbook-avatar-p2l.webp",
+                        "/assets/photos/playbook-avatar-p2r.webp",
+                        "/assets/photos/playbook-avatar-p4l.webp",
+                        "/assets/photos/playbook-avatar-p4r.webp",
+                        "/assets/photos/playbook-avatar-p6l.webp",
+                        "/assets/photos/playbook-avatar-p6r.webp",
+                        "/assets/photos/proof-portrait-1.webp",
+                        "/assets/photos/proof-portrait-2.webp",
+                        "/assets/photos/story-1.webp",
+                        "/assets/photos/story-2.webp",
+                        "/assets/photos/story-3.webp",
+                        "/assets/photos/story-4.webp",
+                        "/assets/photos/story-5.webp",
+                        "/assets/photos/story-6.webp",
+                        "/assets/photos/video-teaser-thumb.webp"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "assetRole",
+                    "src"
+                  ],
+                  "additionalProperties": false
+                },
+                "href": {
+                  "type": "string",
+                  "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+                  "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+                }
+              },
+              "required": [
+                "layout",
+                "title",
+                "theme",
+                "person",
+                "logo",
+                "photo",
+                "href"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "layout": {
+                  "const": "quote"
+                },
+                "quote": {
+                  "type": "string",
+                  "maxWords": 40
+                },
+                "theme": {
+                  "enum": [
+                    "green",
+                    "neutral",
+                    "pink",
+                    "red",
+                    "yellow"
+                  ]
+                },
+                "person": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "maxWords": 3
+                    },
+                    "role": {
+                      "type": "string",
+                      "maxWords": 6
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "role"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "layout",
+                "quote",
+                "theme",
+                "person"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 10
+      }
+    },
+    "required": [
+      "categories",
+      "items"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "filter-chips",
+      "slideshow-autoplay",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Cards stack image above text."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.storycard",
+    "mo.chip"
+  ]
+}

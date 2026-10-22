@@ -1,0 +1,66 @@
+{
+  "id": "cta.article-chip",
+  "category": "cta",
+  "version": "1.0.0",
+  "purpose": "Sticky bottom CTA chip shown after 300px of scroll and hidden at the footer; replaces the video teaser on guides.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Chip."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "tag": {
+        "type": "string",
+        "maxWords": 8
+      },
+      "label": {
+        "type": "string",
+        "maxWords": 8
+      },
+      "href": {
+        "type": "string",
+        "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+        "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+      },
+      "trailing": {
+        "type": "string",
+        "maxWords": 8
+      },
+      "trailingHref": {
+        "type": "string",
+        "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+        "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+      }
+    },
+    "required": [
+      "tag",
+      "label",
+      "href",
+      "trailing",
+      "trailingHref"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "toc-interaction",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Full-width chip on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.ctachip"
+  ]
+}

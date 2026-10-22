@@ -1,0 +1,69 @@
+{
+  "$description": "Semantic type roles (largest step shown; responsive steps named in the description).",
+  "type": {
+    "display-1": {
+      "$value": "{fontSize.h1-xl}",
+      "description": "H1 at xl; steps h1-lg / h1-md / h1-phone at smaller breakpoints."
+    },
+    "display-2": {
+      "$value": "{fontSize.h2-xl}",
+      "description": "H2 at xl; steps h2-lg / h2-md / h2-phone."
+    },
+    "display-3": {
+      "$value": "{fontSize.h3-xl}",
+      "description": "H3 / section heading at xl; steps h3-lg / h3-md / h3-phone."
+    },
+    "band": {
+      "$value": "{fontSize.band-xl}",
+      "description": "Centred H2 band on product detail pages."
+    },
+    "quote": {
+      "$value": "{fontSize.quote}",
+      "description": "Display-face quote / label line (30/30)."
+    },
+    "stat": {
+      "$value": "{fontSize.stat}",
+      "description": "Big stat numerals."
+    },
+    "hero-sub": {
+      "$value": "{fontSize.sub-xl}",
+      "description": "Hero sub at xl; steps sub-lg / sub-md / sub-phone."
+    },
+    "body-lg": {
+      "$value": "{fontSize.body-20}",
+      "description": "Large body 20/26."
+    },
+    "body": {
+      "$value": "{fontSize.body-16}",
+      "description": "Body 16/22.4."
+    },
+    "body-sm": {
+      "$value": "{fontSize.small}",
+      "description": "Small 14/18."
+    },
+    "label": {
+      "$value": "{fontSize.label}",
+      "description": "Button and chip labels 14/14."
+    },
+    "eyebrow": {
+      "$value": "{fontSize.eyebrow}",
+      "description": "Uppercase 10px eyebrow."
+    },
+    "title-lg": {
+      "$value": "{fontSize.title-38}",
+      "description": "Rich-text H2 (blog) / 600 rows H2."
+    },
+    "title-md": {
+      "$value": "{fontSize.title-32}",
+      "description": "Prose H3."
+    },
+    "family-display": {
+      "$value": "{fontFamily.display}",
+      "description": "Display face (Fraunces)."
+    },
+    "family-text": {
+      "$value": "{fontFamily.sans}",
+      "description": "Text face (Inter)."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "navigation.doc-sidebar",
+  "category": "navigation",
+  "version": "1.0.0",
+  "purpose": "Press-kit sticky left sidebar standing in for the global nav: logo link, contents anchors, home link.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "18% width sidebar."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "links": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+              "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+            }
+          },
+          "required": [
+            "label",
+            "href"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 4
+      }
+    },
+    "required": [
+      "links"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Becomes a top block on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "measuredFrom": [
+    "src.docsidebar"
+  ]
+}

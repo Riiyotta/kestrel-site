@@ -1,0 +1,129 @@
+{
+  "id": "feature.card-carousel",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Snap carousel of capability cards with heading, sub and round arrow controls.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "square": "332px square channel cards (product overview).",
+    "rectangle": "332x217 principle cards, left-aligned heading (voice)."
+  },
+  "composes": [
+    "component.card-carousel"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 9
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 22
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "subtitle": {
+              "type": "string",
+              "maxWords": 9
+            },
+            "bullets": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxWords": 16
+              },
+              "minItems": 1,
+              "maxItems": 3
+            },
+            "art": {
+              "type": "object",
+              "properties": {
+                "assetRole": {
+                  "const": "illustration.product-art"
+                },
+                "scene": {
+                  "enum": [
+                    "channels",
+                    "chart",
+                    "chat",
+                    "flow",
+                    "lock",
+                    "outreach",
+                    "people",
+                    "phone",
+                    "queue",
+                    "review",
+                    "shield",
+                    "test"
+                  ]
+                },
+                "tint": {
+                  "enum": [
+                    "brand",
+                    "green",
+                    "grey",
+                    "lavender",
+                    "peach",
+                    "pink",
+                    "yellow"
+                  ]
+                }
+              },
+              "required": [
+                "assetRole",
+                "scene",
+                "tint"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "title",
+            "subtitle",
+            "bullets",
+            "art"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 5
+      }
+    },
+    "required": [
+      "title",
+      "sub",
+      "items"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "carousel-arrows",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "scroll-horizontal",
+      "detail": "Swipeable track, arrows hidden on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.cardcarousel",
+    "mo.carousel"
+  ]
+}

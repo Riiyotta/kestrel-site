@@ -1,0 +1,127 @@
+{
+  "id": "hero.avatar",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Careers opener: floating teammate avatars around a multi-line H1 and one 'see open roles' button.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Ten floating avatars."
+  },
+  "composes": [
+    "primitive.avatar",
+    "primitive.button"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "lines": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 5
+        },
+        "minItems": 1,
+        "maxItems": 2
+      },
+      "cta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      },
+      "avatars": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "assetRole": {
+              "const": "photo.stock-person"
+            },
+            "src": {
+              "enum": [
+                "/assets/photos/compare-avatar-1.webp",
+                "/assets/photos/compare-avatar-2.webp",
+                "/assets/photos/compare-avatar-3.webp",
+                "/assets/photos/hero-bl.webp",
+                "/assets/photos/hero-br.webp",
+                "/assets/photos/hero-center.webp",
+                "/assets/photos/hero-tl.webp",
+                "/assets/photos/hero-tr.webp",
+                "/assets/photos/nav-feature-industries.webp",
+                "/assets/photos/nav-feature-product.webp",
+                "/assets/photos/playbook-avatar-c.webp",
+                "/assets/photos/playbook-avatar-p2l.webp",
+                "/assets/photos/playbook-avatar-p2r.webp",
+                "/assets/photos/playbook-avatar-p4l.webp",
+                "/assets/photos/playbook-avatar-p4r.webp",
+                "/assets/photos/playbook-avatar-p6l.webp",
+                "/assets/photos/playbook-avatar-p6r.webp",
+                "/assets/photos/proof-portrait-1.webp",
+                "/assets/photos/proof-portrait-2.webp",
+                "/assets/photos/story-1.webp",
+                "/assets/photos/story-2.webp",
+                "/assets/photos/story-3.webp",
+                "/assets/photos/story-4.webp",
+                "/assets/photos/story-5.webp",
+                "/assets/photos/story-6.webp",
+                "/assets/photos/video-teaser-thumb.webp"
+              ]
+            }
+          },
+          "required": [
+            "assetRole",
+            "src"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 10
+      }
+    },
+    "required": [
+      "lines",
+      "cta",
+      "avatars"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "reveal-fade-up",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Fewer, smaller avatars on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.avatarhero"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "gradient.css-art",
+      "files": "careers glow"
+    }
+  ]
+}

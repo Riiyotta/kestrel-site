@@ -1,0 +1,99 @@
+{
+  "id": "hero.report",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Report landing opener on gradient art: H1, lede, a read-the-report card with facts, and a what-you-will-learn list.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Gradient panel."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 14
+      },
+      "lede": {
+        "type": "string",
+        "maxWords": 60
+      },
+      "facts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string",
+              "maxWords": 6
+            },
+            "label": {
+              "type": "string",
+              "maxWords": 6
+            }
+          },
+          "required": [
+            "value",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 3
+      },
+      "method": {
+        "type": "string",
+        "maxWords": 27
+      },
+      "cta": {
+        "type": "string",
+        "maxWords": 5
+      },
+      "learn": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 16
+        },
+        "minItems": 1,
+        "maxItems": 4
+      }
+    },
+    "required": [
+      "title",
+      "lede",
+      "facts",
+      "method",
+      "cta",
+      "learn"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Card and learn grid stack."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.report"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "gradient.css-art",
+      "files": "report mesh gradient"
+    }
+  ],
+  "notes": "Figures are invented sample data and labelled as such in the source."
+}

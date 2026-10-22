@@ -1,0 +1,57 @@
+{
+  "id": "content.press-logo",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Logo section: light and dark lockup previews and a 2x2 icon grid with download tiles (Kestrel's own marks).",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Previews + icon grid."
+  },
+  "composes": [
+    "component.download-tile",
+    "primitive.brand-mark"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "body": {
+        "type": "string",
+        "maxWords": 57
+      }
+    },
+    "required": [
+      "title",
+      "body"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Icon grid single column."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.presskit"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "brand.kestrel-mark",
+      "files": "public/assets/presskit/*.svg"
+    }
+  ]
+}

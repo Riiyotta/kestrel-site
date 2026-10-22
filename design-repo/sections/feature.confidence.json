@@ -1,0 +1,72 @@
+{
+  "id": "feature.confidence",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Homepage escalation promise: glowing logo tile, two-clause heading and scrubbed brain tags.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "home": "Logo glow + header + tags."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 9
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "body": {
+        "type": "string",
+        "maxWords": 30
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 5
+        },
+        "minItems": 5,
+        "maxItems": 5
+      }
+    },
+    "required": [
+      "title",
+      "body",
+      "tags"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "confidence-stage",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "swap-variant",
+      "detail": "Five round pills showing only the last label part."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true
+  },
+  "measuredFrom": [
+    "src.confidence",
+    "mo.logo-glow"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "backdrop.webgl-standin",
+      "files": "CSS brain glow"
+    }
+  ]
+}

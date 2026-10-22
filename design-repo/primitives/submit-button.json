@@ -1,0 +1,23 @@
+{
+  "registryId": "primitive.submit-button",
+  "version": "1.0.0",
+  "description": "Form submit button: demo, block (full width) or outline.",
+  "props": {
+    "variant": {
+      "enum": [
+        "demo",
+        "block",
+        "outline"
+      ]
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "tokens": [
+    "{color.action.primary}"
+  ],
+  "measuredFrom": [
+    "part.submit-button"
+  ]
+}

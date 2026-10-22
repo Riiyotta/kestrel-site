@@ -1,0 +1,70 @@
+{
+  "id": "content.not-found",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "404 block: centred H2, hero-scale sub and a dark back-home button.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Centred column."
+  },
+  "composes": [
+    "primitive.button"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 5
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 14
+      },
+      "cta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "title",
+      "sub",
+      "cta"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "H2 wraps in 244px on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.notfound"
+  ]
+}

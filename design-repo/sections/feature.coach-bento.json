@@ -1,0 +1,289 @@
+{
+  "id": "feature.coach-bento",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Operations-assistant bento stack: grey panels with tabbed or split media, an interleaved quote card and an indigo CTA banner.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Ordered stack of blocks."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "blocks": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "block"
+                },
+                "layout": {
+                  "enum": [
+                    "split",
+                    "tabs-bottom"
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "maxWords": 10
+                },
+                "sub": {
+                  "type": "string",
+                  "maxWords": 32
+                },
+                "art": {
+                  "type": "object",
+                  "properties": {
+                    "assetRole": {
+                      "const": "illustration.product-art"
+                    },
+                    "scene": {
+                      "enum": [
+                        "channels",
+                        "chart",
+                        "chat",
+                        "flow",
+                        "lock",
+                        "outreach",
+                        "people",
+                        "phone",
+                        "queue",
+                        "review",
+                        "shield",
+                        "test"
+                      ]
+                    },
+                    "tint": {
+                      "enum": [
+                        "brand",
+                        "green",
+                        "grey",
+                        "lavender",
+                        "peach",
+                        "pink",
+                        "yellow"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "assetRole",
+                    "scene",
+                    "tint"
+                  ],
+                  "additionalProperties": false
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "maxWords": 9
+                      },
+                      "body": {
+                        "type": "string",
+                        "maxWords": 35
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "body"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 1,
+                  "maxItems": 3
+                }
+              },
+              "required": [
+                "kind",
+                "layout",
+                "title",
+                "sub",
+                "art",
+                "items"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "quote"
+                },
+                "quote": {
+                  "type": "string",
+                  "maxWords": 60
+                },
+                "highlight": {
+                  "type": "string",
+                  "maxWords": 60
+                },
+                "name": {
+                  "type": "string",
+                  "maxWords": 3
+                },
+                "role": {
+                  "type": "string",
+                  "maxWords": 6
+                },
+                "photo": {
+                  "type": "object",
+                  "properties": {
+                    "assetRole": {
+                      "const": "photo.stock-person"
+                    },
+                    "src": {
+                      "enum": [
+                        "/assets/photos/compare-avatar-1.webp",
+                        "/assets/photos/compare-avatar-2.webp",
+                        "/assets/photos/compare-avatar-3.webp",
+                        "/assets/photos/hero-bl.webp",
+                        "/assets/photos/hero-br.webp",
+                        "/assets/photos/hero-center.webp",
+                        "/assets/photos/hero-tl.webp",
+                        "/assets/photos/hero-tr.webp",
+                        "/assets/photos/nav-feature-industries.webp",
+                        "/assets/photos/nav-feature-product.webp",
+                        "/assets/photos/playbook-avatar-c.webp",
+                        "/assets/photos/playbook-avatar-p2l.webp",
+                        "/assets/photos/playbook-avatar-p2r.webp",
+                        "/assets/photos/playbook-avatar-p4l.webp",
+                        "/assets/photos/playbook-avatar-p4r.webp",
+                        "/assets/photos/playbook-avatar-p6l.webp",
+                        "/assets/photos/playbook-avatar-p6r.webp",
+                        "/assets/photos/proof-portrait-1.webp",
+                        "/assets/photos/proof-portrait-2.webp",
+                        "/assets/photos/story-1.webp",
+                        "/assets/photos/story-2.webp",
+                        "/assets/photos/story-3.webp",
+                        "/assets/photos/story-4.webp",
+                        "/assets/photos/story-5.webp",
+                        "/assets/photos/story-6.webp",
+                        "/assets/photos/video-teaser-thumb.webp"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "assetRole",
+                    "src"
+                  ],
+                  "additionalProperties": false
+                },
+                "logo": {
+                  "type": "object",
+                  "properties": {
+                    "assetRole": {
+                      "const": "logo.placeholder"
+                    },
+                    "name": {
+                      "type": "string",
+                      "maxWords": 3
+                    },
+                    "shape": {
+                      "enum": [
+                        "arc",
+                        "bars",
+                        "circle",
+                        "diamond",
+                        "plus",
+                        "ring",
+                        "square",
+                        "triangle"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "assetRole",
+                    "name",
+                    "shape"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "kind",
+                "quote",
+                "highlight",
+                "name",
+                "role",
+                "photo",
+                "logo"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "cta"
+                },
+                "title": {
+                  "type": "string",
+                  "maxWords": 10
+                },
+                "cta": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "maxWords": 5
+                    },
+                    "href": {
+                      "type": "string",
+                      "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+                      "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+                    }
+                  },
+                  "required": [
+                    "label",
+                    "href"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "kind",
+                "title",
+                "cta"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "minItems": 2,
+        "maxItems": 7
+      }
+    },
+    "required": [
+      "blocks"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Split panels stack media above items."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.coach",
+    "src.copilot"
+  ],
+  "notes": "ia.json splits this into three sections (bento, quote card, CTA banner); the page renders them as one bento section, so one contract with typed blocks."
+}

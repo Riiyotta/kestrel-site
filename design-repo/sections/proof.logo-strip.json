@@ -1,0 +1,106 @@
+{
+  "id": "proof.logo-strip",
+  "category": "proof",
+  "version": "1.0.0",
+  "purpose": "Social-proof strip of placeholder customer logos in a bordered marquee card, optionally under a short trust line.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "bare": "Card only, directly under a hero (product/industry detail).",
+    "wall": "Wide card (product overview logo wall); paired tickers on phone.",
+    "labelled": "Display-face trust line above the card (integration library, competitor pages).",
+    "trust": "Small grey sans label above (report)."
+  },
+  "composes": [
+    "component.logo-marquee"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "type": "string",
+        "maxWords": 12
+      },
+      "logos": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "assetRole": {
+              "const": "logo.placeholder"
+            },
+            "name": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "shape": {
+              "enum": [
+                "arc",
+                "bars",
+                "circle",
+                "diamond",
+                "plus",
+                "ring",
+                "square",
+                "triangle"
+              ]
+            }
+          },
+          "required": [
+            "assetRole",
+            "name",
+            "shape"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 5,
+        "maxItems": 11
+      }
+    },
+    "required": [],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "marquee",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "swap-variant",
+      "detail": "Two opposing 20px tickers on phone for the wall/library strips; card narrows elsewhere."
+    }
+  ],
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "measuredFrom": [
+    "src.marquee",
+    "src.tickerblock",
+    "mo.marquee"
+  ],
+  "variantRules": {
+    "bare": {
+      "forbids": [
+        "label"
+      ]
+    },
+    "wall": {
+      "forbids": [
+        "label"
+      ]
+    },
+    "labelled": {
+      "requires": [
+        "label"
+      ]
+    },
+    "trust": {
+      "requires": [
+        "label"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "registryId": "component.faq-accordion",
+  "version": "1.0.0",
+  "description": "Accordion in four looks.",
+  "composes": [
+    "primitive.letter-reveal"
+  ],
+  "tokens": [
+    "{component.faq-accordion.hairline}",
+    "{component.faq-accordion.card-shadow}"
+  ],
+  "measuredFrom": [
+    "part.faq-accordion"
+  ],
+  "variants": {
+    "look": [
+      "panel",
+      "hairline",
+      "rows",
+      "cards"
+    ]
+  },
+  "motionProfiles": [
+    "accordion"
+  ]
+}

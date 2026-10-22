@@ -1,0 +1,31 @@
+{
+  "$description": "What is enforced vs convention for tokens and copy.",
+  "resolutionOrder": [
+    "foundation",
+    "theme (light)",
+    "semantic",
+    "component",
+    "responsive steps"
+  ],
+  "rawValues": "Forbidden in contracts and PageSpecs. PageSpecs carry no style fields at all: styling is owned by section contracts, which reference semantic/component tokens.",
+  "overrides": "None. There is no per-instance token-override mechanism in the PageSpec schema, so there is nothing to override or validate at the PageSpec layer.",
+  "fonts": "Only Fraunces (display), Inter (text/UI) and Rethink Sans 600 (one press-kit heading), all SIL OFL via Google Fonts. The original site's commercial faces are not licensed and must not be used, named as substitutes or requested.",
+  "copyBudgetRule": "maxWords = longest observed instance of that field in the clone's Kestrel copy + 20% headroom (at least +1 word). Observed counts and the location of each longest instance are in extraction/measured-values.json copyBudgets.",
+  "itemCountRule": "maxItems = observed maximum item count in the clone's data for that list (no headroom).",
+  "categories": [
+    "color",
+    "fontFamily",
+    "fontWeight",
+    "letterSpacing",
+    "fontSize",
+    "radius",
+    "shadow",
+    "backdropBlur",
+    "blur",
+    "gradient",
+    "breakpoint",
+    "space",
+    "size",
+    "motion"
+  ]
+}

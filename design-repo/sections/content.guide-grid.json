@@ -1,0 +1,149 @@
+{
+  "id": "content.guide-grid",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Guide card grid filtered by topic, search and sort, paged with a load-more button.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Three columns."
+  },
+  "composes": [
+    "component.guide-card",
+    "primitive.load-more-button"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "guides": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxWords": 17
+            },
+            "description": {
+              "type": "string",
+              "maxWords": 33
+            },
+            "topic": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "date": {
+              "type": "string",
+              "maxWords": 4
+            },
+            "author": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "maxWords": 3
+                },
+                "avatar": {
+                  "type": "object",
+                  "properties": {
+                    "assetRole": {
+                      "const": "photo.stock-person"
+                    },
+                    "src": {
+                      "enum": [
+                        "/assets/photos/compare-avatar-1.webp",
+                        "/assets/photos/compare-avatar-2.webp",
+                        "/assets/photos/compare-avatar-3.webp",
+                        "/assets/photos/hero-bl.webp",
+                        "/assets/photos/hero-br.webp",
+                        "/assets/photos/hero-center.webp",
+                        "/assets/photos/hero-tl.webp",
+                        "/assets/photos/hero-tr.webp",
+                        "/assets/photos/nav-feature-industries.webp",
+                        "/assets/photos/nav-feature-product.webp",
+                        "/assets/photos/playbook-avatar-c.webp",
+                        "/assets/photos/playbook-avatar-p2l.webp",
+                        "/assets/photos/playbook-avatar-p2r.webp",
+                        "/assets/photos/playbook-avatar-p4l.webp",
+                        "/assets/photos/playbook-avatar-p4r.webp",
+                        "/assets/photos/playbook-avatar-p6l.webp",
+                        "/assets/photos/playbook-avatar-p6r.webp",
+                        "/assets/photos/proof-portrait-1.webp",
+                        "/assets/photos/proof-portrait-2.webp",
+                        "/assets/photos/story-1.webp",
+                        "/assets/photos/story-2.webp",
+                        "/assets/photos/story-3.webp",
+                        "/assets/photos/story-4.webp",
+                        "/assets/photos/story-5.webp",
+                        "/assets/photos/story-6.webp",
+                        "/assets/photos/video-teaser-thumb.webp"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "assetRole",
+                    "src"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "name",
+                "avatar"
+              ],
+              "additionalProperties": false
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+              "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+            }
+          },
+          "required": [
+            "title",
+            "description",
+            "topic",
+            "date",
+            "author",
+            "href"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 10
+      },
+      "loadMoreLabel": {
+        "type": "string",
+        "maxWords": 5
+      }
+    },
+    "required": [
+      "guides",
+      "loadMoreLabel"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "md",
+      "change": "grid-collapse",
+      "detail": "Two columns."
+    },
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "One column."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.articleindex"
+  ]
+}

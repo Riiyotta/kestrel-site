@@ -1,0 +1,148 @@
+{
+  "id": "commerce.plans",
+  "category": "commerce",
+  "version": "1.0.0",
+  "purpose": "Ruled frame of three plan cards (price, CTA, best-for, feature groups) with footnotes.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Three cards."
+  },
+  "composes": [
+    "component.pricing-card",
+    "component.ruled-frame"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "plans": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "maxWords": 2
+            },
+            "price": {
+              "type": "string",
+              "pattern": "^(\\$[0-9,]+|Custom)$"
+            },
+            "per": {
+              "enum": [
+                "/mo"
+              ]
+            },
+            "note": {
+              "type": "string",
+              "maxWords": 15
+            },
+            "bestFor": {
+              "type": "string",
+              "maxWords": 15
+            },
+            "cta": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "maxWords": 5
+                },
+                "href": {
+                  "type": "string",
+                  "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+                  "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+                }
+              },
+              "required": [
+                "label",
+                "href"
+              ],
+              "additionalProperties": false
+            },
+            "groups": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "label": {
+                    "type": "string",
+                    "maxWords": 5
+                  },
+                  "rows": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "maxWords": 5
+                        },
+                        "value": {
+                          "type": "string",
+                          "maxWords": 2
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 1,
+                    "maxItems": 3
+                  }
+                },
+                "required": [
+                  "label",
+                  "rows"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "maxItems": 4
+            }
+          },
+          "required": [
+            "name",
+            "price",
+            "cta",
+            "groups"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 3
+      },
+      "footnote": {
+        "type": "string",
+        "maxWords": 17
+      }
+    },
+    "required": [
+      "plans",
+      "footnote"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Cards stack."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.pricingcard",
+    "src.pricing"
+  ],
+  "notes": "Prices are fictional Kestrel placeholders."
+}

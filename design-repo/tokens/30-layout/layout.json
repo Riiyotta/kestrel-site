@@ -1,0 +1,46 @@
+{
+  "$description": "Layout grid: 1280px container with 80px desktop gutters inside a 1440px page frame; breakpoints base <810 / md 810 / lg 1200 / xl 1440.",
+  "layout": {
+    "container": {
+      "max-width": {
+        "$value": "{size.container}",
+        "measuredFrom": [
+          "cfg.container"
+        ]
+      },
+      "gutter-desktop": {
+        "$value": "{space.gutter}",
+        "measuredFrom": [
+          "cfg.gutter"
+        ]
+      },
+      "gutter-phone-hero": {
+        "$value": "{space.gutter-phone}"
+      }
+    },
+    "page": {
+      "max-width": {
+        "$value": "{size.page}"
+      }
+    },
+    "breakpoints": {
+      "base": {
+        "$value": "{breakpoint.base}"
+      },
+      "md": {
+        "$value": "{breakpoint.md}"
+      },
+      "lg": {
+        "$value": "{breakpoint.lg}"
+      },
+      "xl": {
+        "$value": "{breakpoint.xl}"
+      }
+    },
+    "nav": {
+      "top-offset": {
+        "$value": "{space.nav-top}"
+      }
+    }
+  }
+}

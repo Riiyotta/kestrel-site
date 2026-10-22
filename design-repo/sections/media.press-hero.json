@@ -1,0 +1,42 @@
+{
+  "id": "media.press-hero",
+  "category": "media",
+  "version": "1.0.0",
+  "purpose": "Press-kit 16:9 hero: indigo field with the white Kestrel lockup.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "16:9 field."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Full width."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.presskit"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "brand.kestrel-mark",
+      "files": "Kestrel lockup"
+    }
+  ]
+}

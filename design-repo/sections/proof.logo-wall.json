@@ -1,0 +1,84 @@
+{
+  "id": "proof.logo-wall",
+  "category": "proof",
+  "version": "1.0.0",
+  "purpose": "Lead-form trust block: display heading and a viewport-wide logo strip that fades up on entry.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Heading + strip."
+  },
+  "composes": [
+    "component.logo-marquee"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "heading": {
+        "type": "string",
+        "maxWords": 12
+      },
+      "logos": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "assetRole": {
+              "const": "logo.placeholder"
+            },
+            "name": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "shape": {
+              "enum": [
+                "arc",
+                "bars",
+                "circle",
+                "diamond",
+                "plus",
+                "ring",
+                "square",
+                "triangle"
+              ]
+            }
+          },
+          "required": [
+            "assetRole",
+            "name",
+            "shape"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 5,
+        "maxItems": 17
+      }
+    },
+    "required": [
+      "heading",
+      "logos"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "logo-wall-reveal",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Strip spans viewport minus 40px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustPrecedeFooter": true
+  },
+  "measuredFrom": [
+    "src.logowall",
+    "mo.reveal06"
+  ]
+}

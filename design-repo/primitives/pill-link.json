@@ -1,0 +1,17 @@
+{
+  "registryId": "primitive.pill-link",
+  "version": "1.0.0",
+  "description": "Theme-coloured pill link ('See results' / 'See customer story').",
+  "props": {
+    "theme": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "tokens": [],
+  "measuredFrom": [
+    "part.pill-link"
+  ]
+}

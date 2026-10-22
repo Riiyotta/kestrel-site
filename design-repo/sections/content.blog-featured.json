@@ -1,0 +1,135 @@
+{
+  "id": "content.blog-featured",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Featured post with sticky cover beside the three latest posts.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Featured + three latest."
+  },
+  "composes": [
+    "component.blog-card"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "featured": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxWords": 17
+          },
+          "date": {
+            "type": "string",
+            "maxWords": 3
+          },
+          "cover": {
+            "type": "object",
+            "properties": {
+              "tone": {
+                "enum": [
+                  "indigo",
+                  "lavender",
+                  "magenta",
+                  "mint",
+                  "peach",
+                  "sun"
+                ]
+              }
+            },
+            "required": [
+              "tone"
+            ],
+            "additionalProperties": false
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "title",
+          "date",
+          "cover",
+          "href"
+        ],
+        "additionalProperties": false
+      },
+      "latest": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxWords": 17
+            },
+            "date": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "cover": {
+              "type": "object",
+              "properties": {
+                "tone": {
+                  "enum": [
+                    "indigo",
+                    "lavender",
+                    "magenta",
+                    "mint",
+                    "peach",
+                    "sun"
+                  ]
+                }
+              },
+              "required": [
+                "tone"
+              ],
+              "additionalProperties": false
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+              "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+            }
+          },
+          "required": [
+            "title",
+            "date",
+            "cover",
+            "href"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 3
+      }
+    },
+    "required": [
+      "featured",
+      "latest"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Latest list stacks under the featured card."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.blogfeatured"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "registryId": "component.section-heading",
+  "version": "1.0.0",
+  "description": "Centred or left heading + sub (h3 or band scale).",
+  "composes": [
+    "primitive.button"
+  ],
+  "tokens": [
+    "{type.display-3}",
+    "{type.band}"
+  ],
+  "measuredFrom": [
+    "part.section-heading"
+  ],
+  "variants": {
+    "size": [
+      "h3",
+      "band"
+    ],
+    "align": [
+      "center",
+      "left"
+    ]
+  }
+}

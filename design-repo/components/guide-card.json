@@ -1,0 +1,12 @@
+{
+  "registryId": "component.guide-card",
+  "version": "1.0.0",
+  "description": "Guide card (grid / featured / related).",
+  "composes": [
+    "primitive.avatar"
+  ],
+  "tokens": [],
+  "measuredFrom": [
+    "part.guide-card"
+  ]
+}

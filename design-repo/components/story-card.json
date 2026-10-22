@@ -1,0 +1,14 @@
+{
+  "registryId": "component.story-card",
+  "version": "1.0.0",
+  "description": "Story card (featured / wide / quote / related / rail).",
+  "composes": [
+    "primitive.photo",
+    "primitive.logo-placeholder",
+    "primitive.pill-link"
+  ],
+  "tokens": [],
+  "measuredFrom": [
+    "part.story-card"
+  ]
+}

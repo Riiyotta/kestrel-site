@@ -1,0 +1,20 @@
+{
+  "registryId": "component.compare-table",
+  "version": "1.0.0",
+  "description": "Comparison table: grid / matrix / pricing.",
+  "composes": [],
+  "tokens": [
+    "{component.compare-matrix.border}",
+    "{component.compare-matrix.us-column}"
+  ],
+  "measuredFrom": [
+    "part.compare-table"
+  ],
+  "variants": {
+    "variant": [
+      "grid",
+      "matrix",
+      "pricing"
+    ]
+  }
+}

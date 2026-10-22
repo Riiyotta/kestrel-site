@@ -1,0 +1,265 @@
+{
+  "$description": "Approved application of foundation tokens per component (component layer of the token resolution order). Values are references only.",
+  "component": {
+    "button": {
+      "radius": {
+        "$value": "{radius.pill}"
+      },
+      "dark-fill": {
+        "$value": "{color.ink.900}"
+      },
+      "dark-rim": {
+        "$value": "{shadow.btn-rim-dark}"
+      },
+      "dark-hover-shadow": {
+        "$value": "{shadow.btn-dark-hover}"
+      },
+      "light-fill": {
+        "$value": "{color.white}"
+      },
+      "light-rim": {
+        "$value": "{shadow.btn-rim-light}"
+      },
+      "light-hover-shadow": {
+        "$value": "{shadow.btn-light-hover}"
+      },
+      "outline-border": {
+        "$value": "{color.outline-border}"
+      },
+      "label": {
+        "$value": "{fontSize.label}"
+      },
+      "measuredFrom": [
+        "cmp.button"
+      ]
+    },
+    "announcement-pill": {
+      "radius": {
+        "$value": "{radius.announce}"
+      },
+      "border": {
+        "$value": "{color.announce-border}"
+      },
+      "glow": {
+        "$value": "{gradient.brand-3}"
+      },
+      "label": {
+        "$value": "{fontSize.announce}"
+      },
+      "measuredFrom": [
+        "cmp.pill"
+      ]
+    },
+    "nav": {
+      "glass": {
+        "$value": "{color.nav-glass}"
+      },
+      "shadow": {
+        "$value": "{shadow.nav}"
+      },
+      "blur": {
+        "$value": "{backdropBlur.nav}"
+      },
+      "radius": {
+        "$value": "{radius.nav-pill}"
+      },
+      "label": {
+        "$value": "{color.ink.nav}"
+      },
+      "measuredFrom": [
+        "cmp.nav"
+      ]
+    },
+    "logo-marquee": {
+      "fill": {
+        "$value": "{color.marquee-bg}"
+      },
+      "border": {
+        "$value": "{color.card-border}"
+      },
+      "radius": {
+        "$value": "{radius.card}"
+      },
+      "measuredFrom": [
+        "cmp.marquee"
+      ]
+    },
+    "card": {
+      "radius": {
+        "$value": "{radius.card}"
+      },
+      "border": {
+        "$value": "{color.card-border}"
+      },
+      "soft-fill": {
+        "$value": "{color.tag-bg}"
+      }
+    },
+    "faq-accordion": {
+      "panel-hover": {
+        "$value": "{color.tag-bg}"
+      },
+      "hairline": {
+        "$value": "{color.hairline}"
+      },
+      "card-border": {
+        "$value": "{color.faq.border}"
+      },
+      "card-shadow": {
+        "$value": "{shadow.faq-card}"
+      },
+      "measuredFrom": [
+        "cmp.faq"
+      ]
+    },
+    "compare-matrix": {
+      "border": {
+        "$value": "{color.matrix.border}"
+      },
+      "head": {
+        "$value": "{color.matrix.head}"
+      },
+      "us-column": {
+        "$value": "{color.matrix.us}"
+      },
+      "yes": {
+        "$value": "{color.matrix.yes}"
+      },
+      "no": {
+        "$value": "{color.matrix.no}"
+      },
+      "shadow": {
+        "$value": "{shadow.matrix}"
+      }
+    },
+    "toc": {
+      "accent": {
+        "$value": "{color.toc.accent}"
+      },
+      "past": {
+        "$value": "{color.toc.past}"
+      },
+      "upcoming": {
+        "$value": "{color.toc.upcoming}"
+      },
+      "popover-shadow": {
+        "$value": "{shadow.toc-pop}"
+      }
+    },
+    "share-rail": {
+      "fill": {
+        "$value": "{color.share.bg}"
+      },
+      "hover": {
+        "$value": "{color.share.hover}"
+      },
+      "shadow": {
+        "$value": "{shadow.share-rail}"
+      },
+      "blur": {
+        "$value": "{backdropBlur.share}"
+      }
+    },
+    "cta-chip": {
+      "label": {
+        "$value": "{color.cta-chip.label}"
+      },
+      "rule": {
+        "$value": "{color.cta-chip.rule}"
+      },
+      "shadow": {
+        "$value": "{shadow.cta-chip}"
+      }
+    },
+    "field": {
+      "fill": {
+        "$value": "{color.field.default}"
+      },
+      "border": {
+        "$value": "{color.field.border}"
+      },
+      "soft-fill": {
+        "$value": "{color.field.soft}"
+      },
+      "focus": {
+        "$value": "{color.field.focus}"
+      },
+      "focus-ring": {
+        "$value": "{shadow.field-focus}"
+      },
+      "soft-radius": {
+        "$value": "{radius.field-soft}"
+      }
+    },
+    "video-teaser": {
+      "fill": {
+        "$value": "{color.teaser-bg}"
+      },
+      "hover": {
+        "$value": "{color.teaser-card-hover}"
+      },
+      "shadow": {
+        "$value": "{shadow.teaser-card}"
+      },
+      "radius": {
+        "$value": "{radius.teaser-card}"
+      },
+      "blur": {
+        "$value": "{backdropBlur.teaser}"
+      },
+      "measuredFrom": [
+        "cmp.teaser"
+      ]
+    },
+    "footer": {
+      "rule": {
+        "$value": "{color.footer-rule}"
+      },
+      "link-radius": {
+        "$value": "{radius.footer-link}"
+      },
+      "mark-shadow": {
+        "$value": "{shadow.footer-mark}"
+      }
+    },
+    "jobs": {
+      "page": {
+        "$value": "{color.jobs.bg}"
+      },
+      "panel": {
+        "$value": "{color.jobs.panel}"
+      },
+      "muted": {
+        "$value": "{color.jobs.muted}"
+      },
+      "button-shadow": {
+        "$value": "{shadow.jobs-btn}"
+      },
+      "logo-radius": {
+        "$value": "{radius.jobs-logo}"
+      }
+    },
+    "pager": {
+      "fill": {
+        "$value": "{color.pager-bg}"
+      },
+      "dot": {
+        "$value": "{color.brand.magenta}"
+      }
+    },
+    "story-themes": {
+      "pink": {
+        "$value": "{color.tint.pink}"
+      },
+      "yellow": {
+        "$value": "{color.tint.yellow}"
+      },
+      "green": {
+        "$value": "{color.tint.green}"
+      },
+      "red": {
+        "$value": "{color.tint.red}"
+      }
+    }
+  }
+}

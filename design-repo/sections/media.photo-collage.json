@@ -1,0 +1,187 @@
+{
+  "id": "media.photo-collage",
+  "category": "media",
+  "version": "1.0.0",
+  "purpose": "One large stock photo with two overlapping smaller photos.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Three photos."
+  },
+  "composes": [
+    "primitive.photo"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "main": {
+        "type": "object",
+        "properties": {
+          "assetRole": {
+            "const": "photo.stock-person"
+          },
+          "src": {
+            "enum": [
+              "/assets/photos/compare-avatar-1.webp",
+              "/assets/photos/compare-avatar-2.webp",
+              "/assets/photos/compare-avatar-3.webp",
+              "/assets/photos/hero-bl.webp",
+              "/assets/photos/hero-br.webp",
+              "/assets/photos/hero-center.webp",
+              "/assets/photos/hero-tl.webp",
+              "/assets/photos/hero-tr.webp",
+              "/assets/photos/nav-feature-industries.webp",
+              "/assets/photos/nav-feature-product.webp",
+              "/assets/photos/playbook-avatar-c.webp",
+              "/assets/photos/playbook-avatar-p2l.webp",
+              "/assets/photos/playbook-avatar-p2r.webp",
+              "/assets/photos/playbook-avatar-p4l.webp",
+              "/assets/photos/playbook-avatar-p4r.webp",
+              "/assets/photos/playbook-avatar-p6l.webp",
+              "/assets/photos/playbook-avatar-p6r.webp",
+              "/assets/photos/proof-portrait-1.webp",
+              "/assets/photos/proof-portrait-2.webp",
+              "/assets/photos/story-1.webp",
+              "/assets/photos/story-2.webp",
+              "/assets/photos/story-3.webp",
+              "/assets/photos/story-4.webp",
+              "/assets/photos/story-5.webp",
+              "/assets/photos/story-6.webp",
+              "/assets/photos/video-teaser-thumb.webp"
+            ]
+          },
+          "alt": {
+            "type": "string",
+            "maxWords": 11
+          }
+        },
+        "required": [
+          "assetRole",
+          "src",
+          "alt"
+        ],
+        "additionalProperties": false
+      },
+      "left": {
+        "type": "object",
+        "properties": {
+          "assetRole": {
+            "const": "photo.stock-person"
+          },
+          "src": {
+            "enum": [
+              "/assets/photos/compare-avatar-1.webp",
+              "/assets/photos/compare-avatar-2.webp",
+              "/assets/photos/compare-avatar-3.webp",
+              "/assets/photos/hero-bl.webp",
+              "/assets/photos/hero-br.webp",
+              "/assets/photos/hero-center.webp",
+              "/assets/photos/hero-tl.webp",
+              "/assets/photos/hero-tr.webp",
+              "/assets/photos/nav-feature-industries.webp",
+              "/assets/photos/nav-feature-product.webp",
+              "/assets/photos/playbook-avatar-c.webp",
+              "/assets/photos/playbook-avatar-p2l.webp",
+              "/assets/photos/playbook-avatar-p2r.webp",
+              "/assets/photos/playbook-avatar-p4l.webp",
+              "/assets/photos/playbook-avatar-p4r.webp",
+              "/assets/photos/playbook-avatar-p6l.webp",
+              "/assets/photos/playbook-avatar-p6r.webp",
+              "/assets/photos/proof-portrait-1.webp",
+              "/assets/photos/proof-portrait-2.webp",
+              "/assets/photos/story-1.webp",
+              "/assets/photos/story-2.webp",
+              "/assets/photos/story-3.webp",
+              "/assets/photos/story-4.webp",
+              "/assets/photos/story-5.webp",
+              "/assets/photos/story-6.webp",
+              "/assets/photos/video-teaser-thumb.webp"
+            ]
+          },
+          "alt": {
+            "type": "string",
+            "maxWords": 11
+          }
+        },
+        "required": [
+          "assetRole",
+          "src",
+          "alt"
+        ],
+        "additionalProperties": false
+      },
+      "right": {
+        "type": "object",
+        "properties": {
+          "assetRole": {
+            "const": "photo.stock-person"
+          },
+          "src": {
+            "enum": [
+              "/assets/photos/compare-avatar-1.webp",
+              "/assets/photos/compare-avatar-2.webp",
+              "/assets/photos/compare-avatar-3.webp",
+              "/assets/photos/hero-bl.webp",
+              "/assets/photos/hero-br.webp",
+              "/assets/photos/hero-center.webp",
+              "/assets/photos/hero-tl.webp",
+              "/assets/photos/hero-tr.webp",
+              "/assets/photos/nav-feature-industries.webp",
+              "/assets/photos/nav-feature-product.webp",
+              "/assets/photos/playbook-avatar-c.webp",
+              "/assets/photos/playbook-avatar-p2l.webp",
+              "/assets/photos/playbook-avatar-p2r.webp",
+              "/assets/photos/playbook-avatar-p4l.webp",
+              "/assets/photos/playbook-avatar-p4r.webp",
+              "/assets/photos/playbook-avatar-p6l.webp",
+              "/assets/photos/playbook-avatar-p6r.webp",
+              "/assets/photos/proof-portrait-1.webp",
+              "/assets/photos/proof-portrait-2.webp",
+              "/assets/photos/story-1.webp",
+              "/assets/photos/story-2.webp",
+              "/assets/photos/story-3.webp",
+              "/assets/photos/story-4.webp",
+              "/assets/photos/story-5.webp",
+              "/assets/photos/story-6.webp",
+              "/assets/photos/video-teaser-thumb.webp"
+            ]
+          },
+          "alt": {
+            "type": "string",
+            "maxWords": 11
+          }
+        },
+        "required": [
+          "assetRole",
+          "src",
+          "alt"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "main",
+      "left",
+      "right"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Smaller overlap on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.collage"
+  ]
+}

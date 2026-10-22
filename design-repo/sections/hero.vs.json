@@ -1,0 +1,127 @@
+{
+  "id": "hero.vs",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Kestrel-versus-category opener: pink panel with logo-tile title row, subtitle, intro, bulleted differences and an inline demo form.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Full-bleed panel."
+  },
+  "composes": [
+    "component.demo-form",
+    "primitive.icon-glyph"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "them": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxWords": 3
+          },
+          "icon": {
+            "type": "object",
+            "properties": {
+              "assetRole": {
+                "const": "icon.glyph"
+              },
+              "name": {
+                "enum": [
+                  "bolt",
+                  "bubble",
+                  "channels",
+                  "check",
+                  "code",
+                  "coin",
+                  "cross",
+                  "dot",
+                  "ear",
+                  "globe",
+                  "headset",
+                  "heart",
+                  "inbox",
+                  "key",
+                  "keypad",
+                  "layers",
+                  "pen",
+                  "people",
+                  "shield",
+                  "stack",
+                  "target",
+                  "tree",
+                  "wrench"
+                ]
+              }
+            },
+            "required": [
+              "assetRole",
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "name",
+          "icon"
+        ],
+        "additionalProperties": false
+      },
+      "subtitle": {
+        "type": "string",
+        "maxWords": 12
+      },
+      "intro": {
+        "type": "string",
+        "maxWords": 104
+      },
+      "differenceLabel": {
+        "type": "string",
+        "maxWords": 12
+      },
+      "bullets": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 22
+        },
+        "minItems": 1,
+        "maxItems": 4
+      },
+      "trustedBy": {
+        "type": "string",
+        "maxWords": 9
+      }
+    },
+    "required": [
+      "them",
+      "subtitle",
+      "intro",
+      "differenceLabel",
+      "bullets",
+      "trustedBy"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Form stacks under the copy below 1200px; title words 36px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.vs"
+  ],
+  "notes": "Competitors are generic categories, never named real companies."
+}

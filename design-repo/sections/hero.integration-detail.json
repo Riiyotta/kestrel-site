@@ -1,0 +1,86 @@
+{
+  "id": "hero.integration-detail",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Integration detail header: back link, icon tile + name, one-line lede.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Header row."
+  },
+  "composes": [
+    "primitive.logo-placeholder"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "lede": {
+        "type": "string",
+        "maxWords": 17
+      },
+      "category": {
+        "type": "string",
+        "maxWords": 4
+      },
+      "logo": {
+        "type": "object",
+        "properties": {
+          "assetRole": {
+            "const": "logo.placeholder"
+          },
+          "name": {
+            "type": "string",
+            "maxWords": 3
+          },
+          "shape": {
+            "enum": [
+              "arc",
+              "bars",
+              "circle",
+              "diamond",
+              "plus",
+              "ring",
+              "square",
+              "triangle"
+            ]
+          }
+        },
+        "required": [
+          "assetRole",
+          "name",
+          "shape"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "name",
+      "lede",
+      "category",
+      "logo"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "show",
+      "detail": "Category line shown on phone only."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.detailheader"
+  ]
+}

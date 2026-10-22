@@ -1,0 +1,13 @@
+{
+  "registryId": "component.type-specimen",
+  "version": "1.0.0",
+  "description": "Press-kit type specimen row.",
+  "composes": [],
+  "tokens": [
+    "{type.family-display}",
+    "{type.family-text}"
+  ],
+  "measuredFrom": [
+    "part.type-specimen"
+  ]
+}

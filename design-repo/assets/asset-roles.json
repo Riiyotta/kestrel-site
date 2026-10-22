@@ -1,0 +1,103 @@
+{
+  "$description": "Closed assetRole vocabulary. Every media field in a section contract is an object with an assetRole const from this list; extraction/verify_all.py checks schema <-> roles <-> allowlist <-> example parity and the pinned policies below.",
+  "sourceIsRealCompany": true,
+  "globalRules": [
+    "The design system was measured from a real, live company's marketing site. Only the visual system is reproduced; every word of copy, every name, price, statistic and quote is original placeholder content for the fictional product Kestrel.",
+    "Never fabricate or reproduce real company logos, real people's photos, real customer or employee names, or the original site's proprietary copy, imagery or illustrations.",
+    "Stock people are licensed stock (Pexels License) shown beside invented names: never imply endorsement.",
+    "Files flagged replace-before-sharing (27: 10 decor + 17 icons) came from the original site and must be replaced before anything is shared.",
+    "No outbound requests: no third-party embeds, scripts, trackers or external links; forms resolve to a local success state."
+  ],
+  "generationPolicies": [
+    "licensed-stock-only",
+    "generate-generic-only",
+    "must-reuse-exact",
+    "may-generate-new",
+    "replace-before-sharing",
+    "no-live-endpoint"
+  ],
+  "pinnedPolicies": {
+    "photo.stock-person": "licensed-stock-only",
+    "logo.placeholder": "generate-generic-only",
+    "brand.kestrel-mark": "must-reuse-exact",
+    "decor.legacy-original": "replace-before-sharing",
+    "icon.legacy-original": "replace-before-sharing",
+    "embed.standin": "no-live-endpoint"
+  },
+  "roles": {
+    "photo.stock-person": {
+      "generationPolicy": "licensed-stock-only",
+      "pageSpecSettable": true,
+      "files": "public/assets/photos/*.webp (26 files)",
+      "measuredFrom": [
+        "assets.credits",
+        "assets.slots"
+      ],
+      "guidance": "Pexels stock photos under the Pexels License. They show real people next to invented Kestrel names, roles and quotes, so they must never be presented as real customers or staff and must not imply that the people shown endorse Kestrel. Reuse only the listed files; do not generate photorealistic people, and never use photos of real, identifiable customers, employees or public figures."
+    },
+    "photo.stock-abstract": {
+      "generationPolicy": "licensed-stock-only",
+      "pageSpecSettable": false,
+      "files": "nav feature-card images (Pexels)",
+      "measuredFrom": [
+        "assets.credits"
+      ],
+      "guidance": "Pexels abstract/scene stock; fixed nav artwork."
+    },
+    "logo.placeholder": {
+      "generationPolicy": "generate-generic-only",
+      "pageSpecSettable": true,
+      "measuredFrom": [
+        "assets.shapes"
+      ],
+      "guidance": "Customer and partner logos are generic shapes from the closed 8-shape set plus an invented company name. Never reproduce, trace or approximate a real company's logo or wordmark, and never use a real customer's name."
+    },
+    "brand.kestrel-mark": {
+      "generationPolicy": "must-reuse-exact",
+      "pageSpecSettable": false,
+      "files": "public/assets/presskit/*.svg",
+      "guidance": "The fictional Kestrel mark/lockup; reuse as supplied, never stretch or redraw."
+    },
+    "illustration.product-art": {
+      "generationPolicy": "may-generate-new",
+      "pageSpecSettable": true,
+      "measuredFrom": [
+        "assets.scenes",
+        "assets.tints"
+      ],
+      "guidance": "Static product illustrations chosen from the closed scene x tint sets; they stand in for the original's Rive/video tiles. New compositions may be drawn in the same flat style, but must never depict a real product UI or a real company's interface."
+    },
+    "icon.glyph": {
+      "generationPolicy": "must-reuse-exact",
+      "pageSpecSettable": true,
+      "guidance": "The clone's own generic glyph set (closed enum). No third-party icon sets or brand icons."
+    },
+    "gradient.css-art": {
+      "generationPolicy": "may-generate-new",
+      "pageSpecSettable": false,
+      "guidance": "CSS gradient art panels built from brand tokens only (tokens/00-foundation/gradient.json)."
+    },
+    "backdrop.webgl-standin": {
+      "generationPolicy": "must-reuse-exact",
+      "pageSpecSettable": false,
+      "guidance": "CSS stand-ins for the original's WebGL scenes (hero/footer stripes glow, brain glow, silk cards). They are approximations, not measured motion; do not describe them as faithful reproductions."
+    },
+    "decor.legacy-original": {
+      "generationPolicy": "replace-before-sharing",
+      "pageSpecSettable": false,
+      "files": "public/assets/decor/*.png|jpg (10 files)",
+      "guidance": "Decorative files that originate from the original site (compare glows, proof card backgrounds, stories blobs). Not licensed for redistribution: replace with original artwork before the clone or this repo is shared. Generators must never reference or reproduce them."
+    },
+    "icon.legacy-original": {
+      "generationPolicy": "replace-before-sharing",
+      "pageSpecSettable": false,
+      "files": "public/assets/icons/*.svg (17 files)",
+      "guidance": "Navigation dropdown icons that originate from the original site. Replace before sharing; never reference or reproduce in generated output."
+    },
+    "embed.standin": {
+      "generationPolicy": "no-live-endpoint",
+      "pageSpecSettable": false,
+      "guidance": "Static placeholders where the original embedded third-party widgets (scheduler, jobs board, AI-assistant iframe). Never wire a live third-party endpoint, script or iframe."
+    }
+  }
+}

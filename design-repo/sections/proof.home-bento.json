@@ -1,0 +1,121 @@
+{
+  "id": "proof.home-bento",
+  "category": "proof",
+  "version": "1.0.0",
+  "purpose": "Homepage proof: H2 + sub, bento of quote and stat cards, then a bordered logo marquee.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "home": "Six bento cards over the marquee."
+  },
+  "composes": [
+    "component.logo-marquee"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 4
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 20
+      },
+      "quotes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "quote": {
+              "type": "string",
+              "maxWords": 17
+            },
+            "name": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "role": {
+              "type": "string",
+              "maxWords": 6
+            }
+          },
+          "required": [
+            "quote"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 3
+      },
+      "stats": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string",
+              "pattern": "^[0-9.,%x+~-]+$"
+            },
+            "label": {
+              "type": "string",
+              "maxWords": 4
+            }
+          },
+          "required": [
+            "value",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "required": [
+      "title",
+      "sub",
+      "quotes",
+      "stats"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "proof-bento",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "swap-variant",
+      "detail": "Phone: slideshow of cards with dots."
+    },
+    {
+      "breakpoint": "md",
+      "change": "grid-collapse",
+      "detail": "Tablet bento + paired tickers."
+    },
+    {
+      "breakpoint": "xl",
+      "change": "show",
+      "detail": "Full bento + single marquee strip."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true
+  },
+  "measuredFrom": [
+    "src.proof",
+    "mo.reveal06",
+    "mo.proof-hover"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "decor.legacy-original",
+      "files": "public/assets/decor/proof-*.jpg (6 card backgrounds)"
+    }
+  ]
+}

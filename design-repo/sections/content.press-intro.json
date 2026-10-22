@@ -1,0 +1,48 @@
+{
+  "id": "content.press-intro",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Brand-guidelines intro: 'Brand Guidelines' H1 left, intro paragraphs right.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Doc header row."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "paragraphs": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 57
+        },
+        "minItems": 1,
+        "maxItems": 3
+      }
+    },
+    "required": [
+      "paragraphs"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Stacked."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.presskit"
+  ]
+}

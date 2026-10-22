@@ -1,0 +1,10 @@
+{
+  "registryId": "component.meta-card",
+  "version": "1.0.0",
+  "description": "Sticky integration meta card (website, category, demo link).",
+  "composes": [],
+  "tokens": [],
+  "measuredFrom": [
+    "part.meta-card"
+  ]
+}

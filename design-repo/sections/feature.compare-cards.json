@@ -1,0 +1,99 @@
+{
+  "id": "feature.compare-cards",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Homepage contrast: a scripted bot vs Kestrel on three cycling scenarios.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "home": "Two-column card pair with progress cover."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "left": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxWords": 4
+          },
+          "body": {
+            "type": "string",
+            "maxWords": 27
+          }
+        },
+        "required": [
+          "title",
+          "body"
+        ],
+        "additionalProperties": false
+      },
+      "right": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxWords": 4
+          },
+          "body": {
+            "type": "string",
+            "maxWords": 27
+          }
+        },
+        "required": [
+          "title",
+          "body"
+        ],
+        "additionalProperties": false
+      },
+      "scenarios": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 6
+        },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "required": [
+      "left",
+      "right",
+      "scenarios"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "compare-cycle",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "swap-variant",
+      "detail": "Stacked card pair + 3-dot progress below 1200px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true
+  },
+  "measuredFrom": [
+    "src.compare",
+    "mo.compare"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "decor.legacy-original",
+      "files": "public/assets/decor/compare-glow-{1,2,3}.png"
+    },
+    {
+      "assetRole": "photo.stock-person",
+      "files": "compare avatars"
+    }
+  ]
+}

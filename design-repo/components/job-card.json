@@ -1,0 +1,12 @@
+{
+  "registryId": "component.job-card",
+  "version": "1.0.0",
+  "description": "Jobs microsite role card.",
+  "composes": [
+    "primitive.logo-placeholder"
+  ],
+  "tokens": [],
+  "measuredFrom": [
+    "part.job-card"
+  ]
+}

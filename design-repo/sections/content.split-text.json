@@ -1,0 +1,55 @@
+{
+  "id": "content.split-text",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Two-column text block: heading left, paragraphs right.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "mission": "Page header with the H1.",
+    "team": "Secondary block with an H2."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 4
+      },
+      "paragraphs": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 232
+        },
+        "minItems": 1,
+        "maxItems": 4
+      }
+    },
+    "required": [
+      "title",
+      "paragraphs"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Stacked below 1200px."
+    }
+  ],
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "measuredFrom": [
+    "src.splittext"
+  ],
+  "notes": "Appears twice on the about page with different variants (mission, team); structural rules key on (section, variant)."
+}

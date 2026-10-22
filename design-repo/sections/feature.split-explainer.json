@@ -1,0 +1,122 @@
+{
+  "id": "feature.split-explainer",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Centred H2 + sub + button, then a phone-UI illustration beside large paragraphs.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "648px art + three paragraphs."
+  },
+  "composes": [
+    "primitive.illustration"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 12
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 8
+      },
+      "cta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      },
+      "art": {
+        "type": "object",
+        "properties": {
+          "assetRole": {
+            "const": "illustration.product-art"
+          },
+          "scene": {
+            "enum": [
+              "channels",
+              "chart",
+              "chat",
+              "flow",
+              "lock",
+              "outreach",
+              "people",
+              "phone",
+              "queue",
+              "review",
+              "shield",
+              "test"
+            ]
+          },
+          "tint": {
+            "enum": [
+              "brand",
+              "green",
+              "grey",
+              "lavender",
+              "peach",
+              "pink",
+              "yellow"
+            ]
+          }
+        },
+        "required": [
+          "assetRole",
+          "scene",
+          "tint"
+        ],
+        "additionalProperties": false
+      },
+      "paragraphs": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 50
+        },
+        "minItems": 1,
+        "maxItems": 3
+      }
+    },
+    "required": [
+      "title",
+      "sub",
+      "cta",
+      "art",
+      "paragraphs"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Art stacks above paragraphs."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.explainer"
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "$description": "Named spacing and width constraints declared by the clone (maxWidth -> size.*, spacing -> space.*).",
+  "space": {
+    "gutter": {
+      "$type": "dimension",
+      "$value": "80px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.spacing.gutter"
+      ]
+    },
+    "gutter-phone": {
+      "$type": "dimension",
+      "$value": "10px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.spacing.gutter-phone"
+      ]
+    },
+    "nav-top": {
+      "$type": "dimension",
+      "$value": "32px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.spacing.nav-top"
+      ]
+    }
+  },
+  "size": {
+    "container": {
+      "$type": "dimension",
+      "$value": "1280px",
+      "usage": {
+        "srcRefs": 20
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.container"
+      ]
+    },
+    "page": {
+      "$type": "dimension",
+      "$value": "1440px",
+      "usage": {
+        "srcRefs": 18
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.page"
+      ]
+    },
+    "hero-sub-xl": {
+      "$type": "dimension",
+      "$value": "1015px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.hero-sub-xl"
+      ]
+    },
+    "hero-sub-lg": {
+      "$type": "dimension",
+      "$value": "600px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.hero-sub-lg"
+      ]
+    },
+    "nav-phone": {
+      "$type": "dimension",
+      "$value": "530px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.nav-phone"
+      ]
+    },
+    "hero-sub-md": {
+      "$type": "dimension",
+      "$value": "500px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.hero-sub-md"
+      ]
+    },
+    "proof-sub": {
+      "$type": "dimension",
+      "$value": "548px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.proof-sub"
+      ]
+    },
+    "compare-head": {
+      "$type": "dimension",
+      "$value": "453px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.compare-head"
+      ]
+    },
+    "tools-body": {
+      "$type": "dimension",
+      "$value": "560px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.tools-body"
+      ]
+    },
+    "confidence-body": {
+      "$type": "dimension",
+      "$value": "510px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.confidence-body"
+      ]
+    },
+    "body-lg-narrow": {
+      "$type": "dimension",
+      "$value": "419px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.body-lg-narrow"
+      ]
+    },
+    "system": {
+      "$type": "dimension",
+      "$value": "500px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.system"
+      ]
+    },
+    "playbook-body": {
+      "$type": "dimension",
+      "$value": "435px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.playbook-body"
+      ]
+    },
+    "header-body-md": {
+      "$type": "dimension",
+      "$value": "315px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.header-body-md"
+      ]
+    },
+    "confidence-phone": {
+      "$type": "dimension",
+      "$value": "247px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.confidence-phone"
+      ]
+    },
+    "system-phone-h": {
+      "$type": "dimension",
+      "$value": "316px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.system-phone-h"
+      ]
+    },
+    "system-phone": {
+      "$type": "dimension",
+      "$value": "313px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.system-phone"
+      ]
+    },
+    "playbook-phone": {
+      "$type": "dimension",
+      "$value": "239px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.playbook-phone"
+      ]
+    },
+    "card-stack": {
+      "$type": "dimension",
+      "$value": "892px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.card-stack"
+      ]
+    },
+    "cta-heading-xl": {
+      "$type": "dimension",
+      "$value": "841px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.cta-heading-xl"
+      ]
+    },
+    "cta-heading-lg": {
+      "$type": "dimension",
+      "$value": "681px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.cta-heading-lg"
+      ]
+    },
+    "tagline-phone": {
+      "$type": "dimension",
+      "$value": "244px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.tagline-phone"
+      ]
+    },
+    "notfound-phone": {
+      "$type": "dimension",
+      "$value": "244px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.notfound-phone"
+      ]
+    },
+    "jobs-title-xl": {
+      "$type": "dimension",
+      "$value": "581px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.jobs-title-xl"
+      ]
+    },
+    "jobs-title-lg": {
+      "$type": "dimension",
+      "$value": "501px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.jobs-title-lg"
+      ]
+    },
+    "jobs-ai-head": {
+      "$type": "dimension",
+      "$value": "316px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.jobs-ai-head"
+      ]
+    },
+    "jobs-cards": {
+      "$type": "dimension",
+      "$value": "1200px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.jobs-cards"
+      ]
+    },
+    "jobs-footer": {
+      "$type": "dimension",
+      "$value": "1200px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.jobs-footer"
+      ]
+    },
+    "jobs-blurb": {
+      "$type": "dimension",
+      "$value": "320px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.jobs-blurb"
+      ]
+    },
+    "silk-title": {
+      "$type": "dimension",
+      "$value": "300px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.silk-title"
+      ]
+    },
+    "mcp": {
+      "$type": "dimension",
+      "$value": "1240px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.maxWidth.mcp"
+      ]
+    },
+    "width-press-sidebar": {
+      "$type": "dimension",
+      "$value": "18%",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.width.press-sidebar"
+      ]
+    }
+  }
+}

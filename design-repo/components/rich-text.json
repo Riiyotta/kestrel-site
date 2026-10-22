@@ -1,0 +1,21 @@
+{
+  "registryId": "component.rich-text",
+  "version": "1.0.0",
+  "description": "Typed rich-text renderer (p, h2-h4, lists, blockquote, takeaways, video) in prose / blog / article / legal / faq variants.",
+  "composes": [],
+  "tokens": [
+    "{color.text.link}"
+  ],
+  "measuredFrom": [
+    "part.rich-text"
+  ],
+  "variants": {
+    "variant": [
+      "prose",
+      "blog",
+      "article",
+      "legal",
+      "faq"
+    ]
+  }
+}

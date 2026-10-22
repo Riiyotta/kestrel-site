@@ -1,0 +1,67 @@
+{
+  "id": "feature.tools-arc",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Homepage channel coverage: an arc of five channel tiles over a decorative tree.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "home": "Five tiles in an arc."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 5
+      },
+      "body": {
+        "type": "string",
+        "maxWords": 29
+      },
+      "channels": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 2
+        },
+        "minItems": 5,
+        "maxItems": 5
+      }
+    },
+    "required": [
+      "title",
+      "body",
+      "channels"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "scroll-scrub-reveal",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Smaller tiles and shallower arc on phone."
+    },
+    {
+      "breakpoint": "md",
+      "change": "resize",
+      "detail": "118px tiles, gap 40."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true
+  },
+  "measuredFrom": [
+    "src.tools",
+    "mo.reveal04",
+    "mo.scrub"
+  ]
+}

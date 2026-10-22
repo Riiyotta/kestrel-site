@@ -1,0 +1,122 @@
+{
+  "id": "proof.case-study-card",
+  "category": "proof",
+  "version": "1.0.0",
+  "purpose": "Single customer case-study card: section header then a black-bordered card with illustration, title, paragraph and link.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "1376x400 card."
+  },
+  "composes": [
+    "primitive.illustration"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 14
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 5
+      },
+      "cardTitle": {
+        "type": "string",
+        "maxWords": 14
+      },
+      "body": {
+        "type": "string",
+        "maxWords": 64
+      },
+      "art": {
+        "type": "object",
+        "properties": {
+          "assetRole": {
+            "const": "illustration.product-art"
+          },
+          "scene": {
+            "enum": [
+              "channels",
+              "chart",
+              "chat",
+              "flow",
+              "lock",
+              "outreach",
+              "people",
+              "phone",
+              "queue",
+              "review",
+              "shield",
+              "test"
+            ]
+          },
+          "tint": {
+            "enum": [
+              "brand",
+              "green",
+              "grey",
+              "lavender",
+              "peach",
+              "pink",
+              "yellow"
+            ]
+          }
+        },
+        "required": [
+          "assetRole",
+          "scene",
+          "tint"
+        ],
+        "additionalProperties": false
+      },
+      "cta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "title",
+      "sub",
+      "cardTitle",
+      "body",
+      "art",
+      "cta"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Card stacks art above text."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.voicecmp"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "registryId": "primitive.field",
+  "version": "1.0.0",
+  "description": "Form field in three skins: demo (bordered/filled), soft (large Inter) and outline.",
+  "props": {
+    "skin": {
+      "enum": [
+        "demo",
+        "soft",
+        "outline"
+      ]
+    },
+    "type": {
+      "enum": [
+        "text",
+        "email",
+        "url",
+        "textarea",
+        "select"
+      ]
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "tokens": [
+    "{component.field.fill}",
+    "{component.field.border}",
+    "{component.field.focus}"
+  ],
+  "measuredFrom": [
+    "part.field"
+  ],
+  "states": {
+    "focus": "border/ring in the focus colour"
+  }
+}

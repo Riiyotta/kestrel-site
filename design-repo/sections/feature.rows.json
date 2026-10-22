@@ -1,0 +1,156 @@
+{
+  "id": "feature.rows",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Alternating image/text rows explaining capabilities, each answering one buyer question.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "media-472": "Three rows, 472px square art, eyebrow + H3 + grey body.",
+    "media-600": "Five rows, 600px art, H2 + body + dark button."
+  },
+  "composes": [
+    "component.feature-row"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "rows": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "eyebrow": {
+              "type": "string",
+              "maxWords": 4
+            },
+            "title": {
+              "type": "string",
+              "maxWords": 14
+            },
+            "body": {
+              "type": "string",
+              "maxWords": 52
+            },
+            "cta": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "maxWords": 5
+                },
+                "href": {
+                  "type": "string",
+                  "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+                  "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+                }
+              },
+              "required": [
+                "label",
+                "href"
+              ],
+              "additionalProperties": false
+            },
+            "art": {
+              "type": "object",
+              "properties": {
+                "assetRole": {
+                  "const": "illustration.product-art"
+                },
+                "scene": {
+                  "enum": [
+                    "channels",
+                    "chart",
+                    "chat",
+                    "flow",
+                    "lock",
+                    "outreach",
+                    "people",
+                    "phone",
+                    "queue",
+                    "review",
+                    "shield",
+                    "test"
+                  ]
+                },
+                "tint": {
+                  "enum": [
+                    "brand",
+                    "green",
+                    "grey",
+                    "lavender",
+                    "peach",
+                    "pink",
+                    "yellow"
+                  ]
+                }
+              },
+              "required": [
+                "assetRole",
+                "scene",
+                "tint"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "title",
+            "body",
+            "art"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 5
+      }
+    },
+    "required": [
+      "rows"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Rows stack art above text below 1200px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.featurerows"
+  ],
+  "variantRules": {
+    "media-472": {
+      "itemRequires": {
+        "rows": [
+          "eyebrow"
+        ]
+      },
+      "itemForbids": {
+        "rows": [
+          "cta"
+        ]
+      }
+    },
+    "media-600": {
+      "itemRequires": {
+        "rows": [
+          "cta"
+        ]
+      },
+      "itemForbids": {
+        "rows": [
+          "eyebrow"
+        ]
+      }
+    }
+  }
+}

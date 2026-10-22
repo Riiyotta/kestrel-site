@@ -1,0 +1,53 @@
+{
+  "id": "hero.doc-header",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Small document header: H1, grey lede, last-updated line.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Left-aligned."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "lede": {
+        "type": "string",
+        "maxWords": 12
+      },
+      "updated": {
+        "type": "string",
+        "maxWords": 5
+      }
+    },
+    "required": [
+      "title",
+      "lede",
+      "updated"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Smaller padding on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.faqdoc"
+  ]
+}

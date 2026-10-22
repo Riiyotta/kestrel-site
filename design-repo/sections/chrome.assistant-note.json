@@ -1,0 +1,44 @@
+{
+  "id": "chrome.assistant-note",
+  "category": "chrome",
+  "version": "1.0.0",
+  "purpose": "One visually hidden (opacity 0) line pointing screen readers and AI assistants at the plain-text llms.txt index.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Centred 16px grey line at opacity 0."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "maxWords": 35
+      }
+    },
+    "required": [
+      "text"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Wraps to three lines at 390."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.ainote"
+  ],
+  "notes": "Kestrel-authored pointer to /llms.txt. It is NOT the original site's hidden 'AI Agent Instructions' layer, which was deliberately not reproduced and has no section here."
+}

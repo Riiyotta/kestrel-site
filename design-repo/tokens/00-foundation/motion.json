@@ -1,0 +1,606 @@
+{
+  "$description": "Atomic motion values. evidenceLevel: frame-measured = fitted to Playwright frame samples of the original (raw samples sit in the cited source lines); bundle-config = read from the original's animation config and verified by frame samples; spec-sourced = taken from a spec document, not re-sampled; css-standin = the clone's own approximation of a WebGL/Rive effect, NOT a measurement. Where a spec and the measured source disagree, the measured value is used (announcement glow 5.0s not 4.5s, logo glow 45deg/s not 72deg/s, integration tiles on time loops not scroll parallax, proof cards lift 0px).",
+  "motion": {
+    "ease.nav": {
+      "kind": "cubicBezier",
+      "bezier": [
+        0.22,
+        1,
+        0.36,
+        1
+      ],
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.nav-ease"
+      ]
+    },
+    "tween.nav-fade": {
+      "kind": "tween",
+      "durationS": 0.35,
+      "easing": "ease.nav",
+      "delayS": 0.055,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.nav-fade"
+      ]
+    },
+    "tween.nav-morph": {
+      "kind": "tween",
+      "durationS": 0.33,
+      "easing": "ease.nav",
+      "delayS": 0.03,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.nav-morph"
+      ]
+    },
+    "tween.nav-close": {
+      "kind": "tween",
+      "durationS": 0.21,
+      "bezier": [
+        0.45,
+        0,
+        0.1,
+        0.9
+      ],
+      "delayS": 0.255,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.nav-close"
+      ]
+    },
+    "tween.panel-out": {
+      "kind": "tween",
+      "durationS": 0.3,
+      "easing": "ease.nav",
+      "delayS": 0.03,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.panel"
+      ]
+    },
+    "tween.panel-in": {
+      "kind": "tween",
+      "durationS": 0.29,
+      "bezier": [
+        0.44,
+        0,
+        0.56,
+        1
+      ],
+      "delayS": 0.04,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.panel"
+      ]
+    },
+    "tween.phone-open": {
+      "kind": "tween",
+      "durationS": 0.3,
+      "bezier": [
+        0.15,
+        1,
+        0.7,
+        1
+      ],
+      "delayS": 0.05,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.phone"
+      ]
+    },
+    "tween.phone-close": {
+      "kind": "tween",
+      "durationS": 0.23,
+      "bezier": [
+        0.3,
+        0.9,
+        0.6,
+        0.9
+      ],
+      "delayS": 0.045,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.phone"
+      ]
+    },
+    "tween.phone-bars": {
+      "kind": "tween",
+      "durationS": 0.27,
+      "bezier": [
+        0.2,
+        0.6,
+        0.2,
+        1
+      ],
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.phone-bars"
+      ]
+    },
+    "tween.sub-open": {
+      "kind": "tween",
+      "durationS": 0.37,
+      "bezier": [
+        0.25,
+        0.9,
+        0.3,
+        1
+      ],
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.sub"
+      ]
+    },
+    "tween.sub-close": {
+      "kind": "tween",
+      "durationS": 0.34,
+      "bezier": [
+        0.25,
+        0.8,
+        0.3,
+        1
+      ],
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.sub"
+      ]
+    },
+    "tween.hero-reveal": {
+      "kind": "tween",
+      "durationS": 1.5,
+      "bezier": [
+        0.15,
+        0.35,
+        0.25,
+        1
+      ],
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.reveal"
+      ]
+    },
+    "tween.hero-reveal-blur": {
+      "kind": "tween",
+      "durationS": 1.12,
+      "bezier": [
+        0.45,
+        0.05,
+        0.55,
+        0.9
+      ],
+      "delayS": 0.12,
+      "fromBlurPx": 5,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.reveal-blur"
+      ]
+    },
+    "spring.pill-hover": {
+      "kind": "spring",
+      "stiffness": 70,
+      "damping": 22,
+      "mass": 1,
+      "delayS": 0.045,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.pill-hover"
+      ]
+    },
+    "spring.pill-appear": {
+      "kind": "spring",
+      "stiffness": 203,
+      "damping": 47,
+      "mass": 4.1,
+      "delayS": 0.7,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.pill-appear"
+      ]
+    },
+    "loop.pill-breath": {
+      "kind": "keyframeLoop",
+      "periodS": 5.0,
+      "property": "scale",
+      "min": 0.8952,
+      "max": 1.0048,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.pill-breath"
+      ],
+      "note": "Specs said 4.5s; the frame-sampled period is 5.0s (supersedes the spec)."
+    },
+    "follow.scroll-smooth": {
+      "kind": "expFollow",
+      "timeConstantS": 0.1,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.smooth-follow"
+      ]
+    },
+    "ease.reveal": {
+      "kind": "cubicBezier",
+      "bezier": [
+        0.12,
+        0.23,
+        0.5,
+        1
+      ],
+      "evidenceLevel": "bundle-config",
+      "measuredFrom": [
+        "mo.ease-out"
+      ]
+    },
+    "tween.reveal-06": {
+      "kind": "tween",
+      "durationS": 0.6,
+      "easing": "ease.reveal",
+      "fromY": 80,
+      "fromOpacity": 0,
+      "evidenceLevel": "bundle-config",
+      "measuredFrom": [
+        "mo.reveal06"
+      ]
+    },
+    "tween.reveal-04": {
+      "kind": "tween",
+      "durationS": 0.4,
+      "easing": "ease.reveal",
+      "evidenceLevel": "bundle-config",
+      "measuredFrom": [
+        "mo.reveal04"
+      ]
+    },
+    "spring.slide": {
+      "kind": "spring",
+      "durationS": 0.6,
+      "bounce": 0,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.slide"
+      ]
+    },
+    "spring.tree": {
+      "kind": "spring",
+      "durationS": 2,
+      "bounce": 0,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.tree"
+      ]
+    },
+    "tween.compare-fade": {
+      "kind": "tween",
+      "durationS": 0.6,
+      "bezier": [
+        0.7,
+        0,
+        0.3,
+        1
+      ],
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.compare"
+      ]
+    },
+    "spring.label": {
+      "kind": "spring",
+      "durationS": 0.4,
+      "bounce": 0.2,
+      "evidenceLevel": "bundle-config",
+      "measuredFrom": [
+        "mo.label"
+      ]
+    },
+    "spring.proof-hover": {
+      "kind": "spring",
+      "durationS": 0.6,
+      "bounce": 0,
+      "scale": 1.02,
+      "liftPx": 0,
+      "evidenceLevel": "bundle-config",
+      "measuredFrom": [
+        "mo.proof-hover"
+      ],
+      "note": "Proof cards lift 0px: the measured hover is scale 1.02 only (src/components/Proof.jsx comment)."
+    },
+    "spring.story-hover": {
+      "kind": "spring",
+      "durationS": 0.45,
+      "bounce": 0.25,
+      "scale": 1.05,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.story-hover"
+      ]
+    },
+    "scrub.scroll-target": {
+      "kind": "scrub",
+      "startAt": "ref top at viewport*threshold - 50px",
+      "span": "one ref height",
+      "easing": "linear",
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.scrub"
+      ]
+    },
+    "loop.mirror": {
+      "kind": "timeLoop",
+      "repeat": "mirror",
+      "easing": "linear",
+      "clock": "page hydration (not scroll)",
+      "evidenceLevel": "bundle-config",
+      "measuredFrom": [
+        "mo.mirror"
+      ],
+      "note": "Integration tiles float on time loops (not scroll parallax as the spec claimed)."
+    },
+    "loop.timer-origin": {
+      "kind": "constant",
+      "seconds": 3.8,
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.hydration"
+      ]
+    },
+    "spring.faq-panel": {
+      "kind": "spring",
+      "durationS": 0.6,
+      "bounce": 0,
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.faq-panel"
+      ]
+    },
+    "tween.letter-reveal": {
+      "kind": "tween",
+      "durationS": 0.45,
+      "bezier": [
+        0.15,
+        0.7,
+        0.1,
+        0.95
+      ],
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.letter"
+      ]
+    },
+    "spring.band": {
+      "kind": "spring",
+      "durationS": 0.45,
+      "bounce": 0,
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.band"
+      ]
+    },
+    "spring.rows": {
+      "kind": "spring",
+      "stiffness": 400,
+      "damping": 40,
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.rows"
+      ]
+    },
+    "tween.cards-open": {
+      "kind": "tween",
+      "durationS": 0.2,
+      "easing": "easeOut",
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.cards"
+      ]
+    },
+    "tween.plus-rotate": {
+      "kind": "tween",
+      "durationS": 0.3,
+      "easing": "easeInOut",
+      "rotateDeg": 45,
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.plus"
+      ]
+    },
+    "tween.carousel-scroll": {
+      "kind": "tween",
+      "durationS": 0.39,
+      "bezier": [
+        0.7,
+        0.45,
+        0.1,
+        1
+      ],
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.carousel"
+      ]
+    },
+    "tween.rail-scroll": {
+      "kind": "tween",
+      "durationS": 0.35,
+      "bezier": [
+        0,
+        0.05,
+        0.2,
+        0.85
+      ],
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.rail"
+      ]
+    },
+    "tween.chip-fill": {
+      "kind": "tween",
+      "durationS": 0.425,
+      "bezier": [
+        0.75,
+        0,
+        0.35,
+        0.85
+      ],
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.chip"
+      ]
+    },
+    "ease.ui": {
+      "kind": "cubicBezier",
+      "bezier": [
+        0.65,
+        0,
+        0.35,
+        1
+      ],
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.ui-ease"
+      ]
+    },
+    "tween.tick-grow": {
+      "kind": "tween",
+      "durationS": 0.6,
+      "bezier": [
+        0.25,
+        0.7,
+        0.05,
+        1
+      ],
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.tick"
+      ]
+    },
+    "tween.toc-popover": {
+      "kind": "tween",
+      "durationS": 0.35,
+      "bezier": [
+        0.4,
+        0.85,
+        0.45,
+        0.8
+      ],
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.popover"
+      ]
+    },
+    "loop.marquee": {
+      "kind": "cssLoop",
+      "easing": "linear",
+      "speedsPxPerS": [
+        50,
+        50.8,
+        30
+      ],
+      "loop": "one logo stack + gap",
+      "evidenceLevel": "bundle-config",
+      "measuredFrom": [
+        "mo.marquee"
+      ],
+      "note": "50 px/s strips, 50.8 px/s on the product-detail ticker, 30 px/s on the phone/tablet paired tickers."
+    },
+    "loop.jobs-ticker": {
+      "kind": "cssLoop",
+      "easing": "linear",
+      "speedsPxPerS": [
+        38.8
+      ],
+      "evidenceLevel": "bundle-config",
+      "measuredFrom": [
+        "mo.jobs-ticker"
+      ]
+    },
+    "loop.logo-glow-rotate": {
+      "kind": "rotateLoop",
+      "degPerS": 45,
+      "periodS": 8,
+      "easing": "linear",
+      "evidenceLevel": "frame-measured",
+      "measuredFrom": [
+        "mo.logo-glow"
+      ],
+      "note": "Measured 45deg/s (8s per turn); the spec's 72deg/s does not apply to this element."
+    },
+    "loop.orbit-rotate": {
+      "kind": "rotateLoop",
+      "degPerS": 8.04,
+      "easing": "linear",
+      "alternateRings": true,
+      "evidenceLevel": "spec-sourced",
+      "measuredFrom": [
+        "mo.orbit"
+      ]
+    },
+    "css.teaser-in": {
+      "kind": "cssTween",
+      "durationS": 0.7,
+      "bezier": [
+        0.2,
+        0.8,
+        0.2,
+        1
+      ],
+      "delayS": 0.5,
+      "fromY": 16,
+      "evidenceLevel": "bundle-config",
+      "measuredFrom": [
+        "mo.teaser"
+      ]
+    },
+    "standin.hero-glow-drift": {
+      "kind": "cssStandin",
+      "loops": [
+        {
+          "name": "wash",
+          "periodS": 11,
+          "easing": "ease-in-out",
+          "alternate": true
+        },
+        {
+          "name": "stripe-comb",
+          "periodS": 9,
+          "easing": "linear"
+        }
+      ],
+      "evidenceLevel": "css-standin",
+      "measuredFrom": [
+        "mo.standin-hero"
+      ],
+      "note": "Approximates the original's WebGL scene; NOT a measured motion. Reused by the footer and the product-voice hero."
+    },
+    "standin.brain-blobs": {
+      "kind": "cssStandin",
+      "loops": [
+        {
+          "name": "blobs",
+          "periodS": 12,
+          "easing": "ease-in-out",
+          "alternate": true
+        }
+      ],
+      "evidenceLevel": "css-standin",
+      "measuredFrom": [
+        "mo.standin-brain"
+      ],
+      "note": "Approximation of a WebGL scene; not a measured curve."
+    },
+    "standin.silk-drift": {
+      "kind": "cssStandin",
+      "loops": [
+        {
+          "name": "silk",
+          "periodS": 14,
+          "easing": "ease-in-out",
+          "alternate": true
+        }
+      ],
+      "evidenceLevel": "css-standin",
+      "measuredFrom": [
+        "mo.standin-silk"
+      ],
+      "note": "Stand-in for the jobs-board WebGL silk shader."
+    }
+  }
+}

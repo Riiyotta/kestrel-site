@@ -1,0 +1,26 @@
+{
+  "registryId": "primitive.announcement-pill",
+  "version": "1.0.0",
+  "description": "Glowing announcement pill with label and arrow; brand-gradient glow appears on load then breathes on a 5.0s loop.",
+  "props": {
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  },
+  "tokens": [
+    "{component.announcement-pill.radius}",
+    "{component.announcement-pill.glow}"
+  ],
+  "measuredFrom": [
+    "part.announcement-pill"
+  ],
+  "states": {
+    "hover": "inner bg #FFF -> #1A1A1A, arrow -45deg + scale 1.4, spring k70/c22/m1"
+  },
+  "motionProfiles": [
+    "hero-home-stage"
+  ]
+}

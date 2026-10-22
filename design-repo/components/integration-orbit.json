@@ -1,0 +1,15 @@
+{
+  "registryId": "component.integration-orbit",
+  "version": "1.0.0",
+  "description": "Counter-rotating rings of integration tiles.",
+  "composes": [
+    "primitive.logo-placeholder"
+  ],
+  "tokens": [],
+  "measuredFrom": [
+    "part.integration-orbit"
+  ],
+  "motionProfiles": [
+    "orbit-loop"
+  ]
+}

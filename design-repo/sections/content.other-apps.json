@@ -1,0 +1,107 @@
+{
+  "id": "content.other-apps",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "'Other apps' grid: H2 + category, then up to four integration cards from the same category.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "2x2 grid."
+  },
+  "composes": [
+    "component.integration-card"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "maxWords": 4
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "description": {
+              "type": "string",
+              "maxWords": 24
+            },
+            "logo": {
+              "type": "object",
+              "properties": {
+                "assetRole": {
+                  "const": "logo.placeholder"
+                },
+                "name": {
+                  "type": "string",
+                  "maxWords": 3
+                },
+                "shape": {
+                  "enum": [
+                    "arc",
+                    "bars",
+                    "circle",
+                    "diamond",
+                    "plus",
+                    "ring",
+                    "square",
+                    "triangle"
+                  ]
+                }
+              },
+              "required": [
+                "assetRole",
+                "name",
+                "shape"
+              ],
+              "additionalProperties": false
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+              "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+            }
+          },
+          "required": [
+            "name",
+            "description",
+            "logo",
+            "href"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 4
+      }
+    },
+    "required": [
+      "category",
+      "items"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Single column."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.intdetail"
+  ],
+  "notes": "The live on-load fade is flagged in source but not implemented; no motion profile."
+}

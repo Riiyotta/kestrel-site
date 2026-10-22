@@ -1,0 +1,14 @@
+{
+  "registryId": "component.integration-card",
+  "version": "1.0.0",
+  "description": "Integration card: logo tile, name, description.",
+  "composes": [
+    "primitive.logo-placeholder"
+  ],
+  "tokens": [
+    "{color.surface.soft}"
+  ],
+  "measuredFrom": [
+    "part.integration-card"
+  ]
+}

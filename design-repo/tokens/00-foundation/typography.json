@@ -1,0 +1,2471 @@
+{
+  "$description": "Font families the clone actually loads (Google Fonts, all SIL OFL), weight scale, tracking overrides and the full size/line-height/letter-spacing scale. The original site's commercial display and text faces are NOT licensed for this project and must never be named, loaded or requested as substitutes.",
+  "fontFamily": {
+    "display": {
+      "$type": "fontFamily",
+      "$value": [
+        "Fraunces",
+        "serif"
+      ],
+      "measuredFrom": [
+        "html.fonts",
+        "cfg.fontFamily.display"
+      ],
+      "usage": {
+        "renderedTextNodes": 2389
+      },
+      "license": "SIL Open Font License (Google Fonts)",
+      "note": "Display/headline face, loaded at optical size 144 and weight axis 300-700."
+    },
+    "sans": {
+      "$type": "fontFamily",
+      "$value": [
+        "Inter",
+        "sans-serif"
+      ],
+      "measuredFrom": [
+        "html.fonts",
+        "cfg.fontFamily.sans"
+      ],
+      "usage": {
+        "renderedTextNodes": 20900
+      },
+      "license": "SIL Open Font License (Google Fonts)",
+      "note": "Text/UI face (weights 400/500/600/700). The config's second alias that also resolves to Inter is folded in here."
+    },
+    "accent": {
+      "$type": "fontFamily",
+      "$value": [
+        "Rethink Sans",
+        "sans-serif"
+      ],
+      "measuredFrom": [
+        "html.fonts",
+        "cfg.fontFamily.rethink"
+      ],
+      "usage": {
+        "renderedTextNodes": 2
+      },
+      "license": "SIL Open Font License (Google Fonts)",
+      "note": "Weight 600 only; one heading on the press-kit page."
+    }
+  },
+  "fontWeight": {
+    "regular": {
+      "$type": "fontWeight",
+      "$value": 400,
+      "usage": {
+        "renderedTextNodes": 6968
+      },
+      "measuredFrom": [
+        "html.fonts"
+      ]
+    },
+    "medium": {
+      "$type": "fontWeight",
+      "$value": 500,
+      "usage": {
+        "renderedTextNodes": 11034
+      },
+      "measuredFrom": [
+        "html.fonts"
+      ]
+    },
+    "semibold": {
+      "$type": "fontWeight",
+      "$value": 600,
+      "usage": {
+        "renderedTextNodes": 153
+      },
+      "measuredFrom": [
+        "html.fonts"
+      ]
+    },
+    "bold": {
+      "$type": "fontWeight",
+      "$value": 700,
+      "usage": {
+        "renderedTextNodes": 2843
+      },
+      "measuredFrom": [
+        "html.fonts"
+      ]
+    },
+    "display": {
+      "$type": "fontWeight",
+      "$value": 340,
+      "usage": {
+        "renderedTextNodes": 2293
+      },
+      "measuredFrom": [
+        "cfg.fontWeight.display-sub"
+      ],
+      "note": "Display-face weight chosen to match the stroke of the original's (unlicensed) display face; substitute-face value, not a measurement of the original."
+    }
+  },
+  "letterSpacing": {
+    "display-sub": {
+      "$type": "dimension",
+      "$value": "-0.02em",
+      "usage": {
+        "srcRefs": 149
+      },
+      "measuredFrom": [
+        "cfg.letterSpacing.display-sub"
+      ],
+      "note": "Substitute-face tracking override (not a measured value of the original): applied after the size token so the open-source display face matches measured line widths."
+    },
+    "nav-label": {
+      "$type": "dimension",
+      "$value": "-0.2px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.letterSpacing.nav-label"
+      ]
+    },
+    "announce": {
+      "$type": "dimension",
+      "$value": "0.15px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.letterSpacing.announce"
+      ]
+    },
+    "sub-md-reset": {
+      "$type": "dimension",
+      "$value": "0px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.letterSpacing.sub-md-reset"
+      ]
+    },
+    "teaser-sub": {
+      "$type": "dimension",
+      "$value": "0.13px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.letterSpacing.teaser-sub"
+      ]
+    }
+  },
+  "fontSize": {
+    "h1-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "96px",
+        "lineHeight": "96px",
+        "letterSpacing": "-3.84px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 15
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h1-xl"
+      ]
+    },
+    "h1-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "77px",
+        "lineHeight": "77px",
+        "letterSpacing": "-3.08px"
+      },
+      "usage": {
+        "srcRefs": 4,
+        "renderedSizeCount": 2
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h1-lg"
+      ]
+    },
+    "h1-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "40px",
+        "lineHeight": "40px",
+        "letterSpacing": "-1.6px"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 586
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h1-phone"
+      ]
+    },
+    "h2-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "75px",
+        "lineHeight": "72px",
+        "letterSpacing": "-3px"
+      },
+      "usage": {
+        "srcRefs": 8,
+        "renderedSizeCount": 118
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h2-xl"
+      ]
+    },
+    "h2-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "58px",
+        "lineHeight": "58px",
+        "letterSpacing": "-2.32px"
+      },
+      "usage": {
+        "srcRefs": 8,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h2-lg"
+      ]
+    },
+    "h2-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "40px",
+        "lineHeight": "40px",
+        "letterSpacing": "-1.6px"
+      },
+      "usage": {
+        "srcRefs": 9,
+        "renderedSizeCount": 586
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h2-phone"
+      ]
+    },
+    "stat": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "72px",
+        "lineHeight": "72px",
+        "letterSpacing": "-2.88px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 12
+      },
+      "measuredFrom": [
+        "cfg.fontSize.stat"
+      ]
+    },
+    "h3-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "60px",
+        "lineHeight": "60px",
+        "letterSpacing": "-2.4px"
+      },
+      "usage": {
+        "srcRefs": 11,
+        "renderedSizeCount": 222
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h3-xl"
+      ]
+    },
+    "h3-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "50px",
+        "lineHeight": "50px",
+        "letterSpacing": "-2px"
+      },
+      "usage": {
+        "srcRefs": 11,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h3-lg"
+      ]
+    },
+    "h3-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "40px",
+        "lineHeight": "36px",
+        "letterSpacing": "-1.6px"
+      },
+      "usage": {
+        "srcRefs": 10,
+        "renderedSizeCount": 586
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h3-phone"
+      ]
+    },
+    "compare-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "40px",
+        "lineHeight": "36px",
+        "letterSpacing": "-1.6px"
+      },
+      "usage": {
+        "srcRefs": 15,
+        "renderedSizeCount": 586
+      },
+      "measuredFrom": [
+        "cfg.fontSize.compare-xl"
+      ]
+    },
+    "compare-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "36px",
+        "lineHeight": "36px",
+        "letterSpacing": "-1.44px"
+      },
+      "usage": {
+        "srcRefs": 16,
+        "renderedSizeCount": 142
+      },
+      "measuredFrom": [
+        "cfg.fontSize.compare-lg"
+      ]
+    },
+    "quote": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "30px",
+        "lineHeight": "30px",
+        "letterSpacing": "-1.2px"
+      },
+      "usage": {
+        "srcRefs": 8,
+        "renderedSizeCount": 191
+      },
+      "measuredFrom": [
+        "cfg.fontSize.quote"
+      ]
+    },
+    "sub-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "letterSpacing": "-0.48px"
+      },
+      "usage": {
+        "srcRefs": 4,
+        "renderedSizeCount": 436
+      },
+      "measuredFrom": [
+        "cfg.fontSize.sub-xl"
+      ]
+    },
+    "sub-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "19px",
+        "lineHeight": "23px",
+        "letterSpacing": "-0.38px"
+      },
+      "usage": {
+        "srcRefs": 4,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.sub-lg"
+      ]
+    },
+    "sub-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "17px",
+        "letterSpacing": "-0.28px"
+      },
+      "usage": {
+        "srcRefs": 4,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.sub-phone"
+      ]
+    },
+    "body-20": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 19,
+        "renderedSizeCount": 1462
+      },
+      "measuredFrom": [
+        "cfg.fontSize.body-20"
+      ]
+    },
+    "name-20": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "20px",
+        "lineHeight": "25px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 8,
+        "renderedSizeCount": 1462
+      },
+      "measuredFrom": [
+        "cfg.fontSize.name-20"
+      ]
+    },
+    "body-18": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "23.4px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 10,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.body-18"
+      ]
+    },
+    "body-16": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 50,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.body-16"
+      ]
+    },
+    "body-14-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "18.2px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.body-14-phone"
+      ]
+    },
+    "para-14-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "19.6px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 24,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.para-14-phone"
+      ]
+    },
+    "story-13": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "18.2px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.story-13"
+      ]
+    },
+    "tag": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "18px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 11,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.tag"
+      ]
+    },
+    "announce": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "18px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.announce"
+      ]
+    },
+    "label": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "14px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 30,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.label"
+      ]
+    },
+    "chat": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "18px",
+        "letterSpacing": "-0.42px"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.chat"
+      ]
+    },
+    "chat-sys": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "letterSpacing": "-0.42px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.chat-sys"
+      ]
+    },
+    "small": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "18px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 56,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.small"
+      ]
+    },
+    "small-13": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "18px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 8,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.small-13"
+      ]
+    },
+    "small-13-tight": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "14.3px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 10,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.small-13-tight"
+      ]
+    },
+    "tile-label": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.tile-label"
+      ]
+    },
+    "tile-label-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "10px",
+        "lineHeight": "10px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 218
+      },
+      "measuredFrom": [
+        "cfg.fontSize.tile-label-phone"
+      ]
+    },
+    "eyebrow": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "10px",
+        "lineHeight": "12px",
+        "letterSpacing": "0.9px"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 218
+      },
+      "measuredFrom": [
+        "cfg.fontSize.eyebrow"
+      ]
+    },
+    "dd-title": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "15px",
+        "lineHeight": "20px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 4,
+        "renderedSizeCount": 758
+      },
+      "measuredFrom": [
+        "cfg.fontSize.dd-title"
+      ]
+    },
+    "dd-desc": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "18px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.dd-desc"
+      ]
+    },
+    "dd-feature": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "22px",
+        "lineHeight": "26px",
+        "letterSpacing": "-0.11px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 69
+      },
+      "measuredFrom": [
+        "cfg.fontSize.dd-feature"
+      ]
+    },
+    "dd-chip": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "11px",
+        "lineHeight": "11px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 228
+      },
+      "measuredFrom": [
+        "cfg.fontSize.dd-chip"
+      ]
+    },
+    "dd-link": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.dd-link"
+      ]
+    },
+    "meta": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "10px",
+        "lineHeight": "12px",
+        "letterSpacing": "-0.1px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 218
+      },
+      "measuredFrom": [
+        "cfg.fontSize.meta"
+      ]
+    },
+    "ai-note": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "19.2px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.ai-note"
+      ]
+    },
+    "menu-row": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "17px",
+        "lineHeight": "22px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 22
+      },
+      "measuredFrom": [
+        "cfg.fontSize.menu-row"
+      ]
+    },
+    "teaser": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "16.5px",
+        "letterSpacing": "-0.25px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.teaser"
+      ]
+    },
+    "teaser-close": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "22px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.teaser-close"
+      ]
+    },
+    "new-tag": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "11px",
+        "lineHeight": "11px",
+        "letterSpacing": "-0.22px"
+      },
+      "usage": {
+        "srcRefs": 4,
+        "renderedSizeCount": 228
+      },
+      "measuredFrom": [
+        "cfg.fontSize.new-tag"
+      ]
+    },
+    "name-12": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "12px",
+        "lineHeight": "12px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 6,
+        "renderedSizeCount": 468
+      },
+      "measuredFrom": [
+        "cfg.fontSize.name-12"
+      ]
+    },
+    "role-12": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "12px",
+        "lineHeight": "18px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 468
+      },
+      "measuredFrom": [
+        "cfg.fontSize.role-12"
+      ]
+    },
+    "h1-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "58px",
+        "lineHeight": "58px",
+        "letterSpacing": "-2.32px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h1-md"
+      ]
+    },
+    "sub-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "15px",
+        "lineHeight": "18px",
+        "letterSpacing": "-0.3px"
+      },
+      "usage": {
+        "srcRefs": 4,
+        "renderedSizeCount": 758
+      },
+      "measuredFrom": [
+        "cfg.fontSize.sub-md"
+      ]
+    },
+    "teaser-pill": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.teaser-pill"
+      ]
+    },
+    "quote-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "24px",
+        "lineHeight": "24px",
+        "letterSpacing": "-0.96px"
+      },
+      "usage": {
+        "srcRefs": 8,
+        "renderedSizeCount": 436
+      },
+      "measuredFrom": [
+        "cfg.fontSize.quote-phone"
+      ]
+    },
+    "h2-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "48px",
+        "lineHeight": "50px",
+        "letterSpacing": "-1.92px"
+      },
+      "usage": {
+        "srcRefs": 8,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h2-md"
+      ]
+    },
+    "h3-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "40px",
+        "lineHeight": "40px",
+        "letterSpacing": "-1.6px"
+      },
+      "usage": {
+        "srcRefs": 13,
+        "renderedSizeCount": 586
+      },
+      "measuredFrom": [
+        "cfg.fontSize.h3-md"
+      ]
+    },
+    "quote-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "26px",
+        "lineHeight": "26px",
+        "letterSpacing": "-1.04px"
+      },
+      "usage": {
+        "srcRefs": 4,
+        "renderedSizeCount": 84
+      },
+      "measuredFrom": [
+        "cfg.fontSize.quote-md"
+      ]
+    },
+    "quote-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "28px",
+        "lineHeight": "28px",
+        "letterSpacing": "-1.12px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 112
+      },
+      "measuredFrom": [
+        "cfg.fontSize.quote-lg"
+      ]
+    },
+    "stat-md-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "48px",
+        "lineHeight": "50px",
+        "letterSpacing": "-1.92px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.stat-md-sm"
+      ]
+    },
+    "stat-lg-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "58px",
+        "lineHeight": "60px",
+        "letterSpacing": "-2.32px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.stat-lg-sm"
+      ]
+    },
+    "body-16-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "20.8px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 11,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.body-16-md"
+      ]
+    },
+    "name-13": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "13px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.name-13"
+      ]
+    },
+    "name-11": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "11px",
+        "lineHeight": "14px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 228
+      },
+      "measuredFrom": [
+        "cfg.fontSize.name-11"
+      ]
+    },
+    "tile-label-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.tile-label-md"
+      ]
+    },
+    "footer-title-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "10px",
+        "lineHeight": "14px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 218
+      },
+      "measuredFrom": [
+        "cfg.fontSize.footer-title-md"
+      ]
+    },
+    "footer-title-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "14px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.footer-title-lg"
+      ]
+    },
+    "jobs-h1-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "66px",
+        "lineHeight": "69.96px",
+        "letterSpacing": "-3.6px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 1
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-h1-xl"
+      ]
+    },
+    "jobs-h1-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "46px",
+        "lineHeight": "48.76px",
+        "letterSpacing": "-0.0545em"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-h1-lg"
+      ]
+    },
+    "jobs-h1-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "54px",
+        "lineHeight": "57.24px",
+        "letterSpacing": "-0.0545em"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-h1-md"
+      ]
+    },
+    "jobs-h1-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "36px",
+        "lineHeight": "39.6px",
+        "letterSpacing": "-1.8px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 142
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-h1-phone"
+      ]
+    },
+    "jobs-h2-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "40px",
+        "lineHeight": "44px",
+        "letterSpacing": "-1.8px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 586
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-h2-xl"
+      ]
+    },
+    "jobs-h2-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "34px",
+        "lineHeight": "37.4px",
+        "letterSpacing": "-1.8px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-h2-lg"
+      ]
+    },
+    "jobs-h2": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "36px",
+        "lineHeight": "39.6px",
+        "letterSpacing": "-1.8px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 142
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-h2"
+      ]
+    },
+    "jobs-body": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "-0.32px"
+      },
+      "usage": {
+        "srcRefs": 4,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-body"
+      ]
+    },
+    "jobs-eyebrow": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "letterSpacing": "0.32px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-eyebrow"
+      ]
+    },
+    "jobs-13": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "18.2px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-13"
+      ]
+    },
+    "jobs-13-tight": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "18.2px",
+        "letterSpacing": "-0.1px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-13-tight"
+      ]
+    },
+    "jobs-14": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-14"
+      ]
+    },
+    "jobs-14-tight": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "letterSpacing": "-0.1px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-14-tight"
+      ]
+    },
+    "jobs-card-title": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "20px",
+        "letterSpacing": "-0.3px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-card-title"
+      ]
+    },
+    "jobs-silk-title": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "24px",
+        "lineHeight": "32.4px",
+        "letterSpacing": "-0.46px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 436
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-silk-title"
+      ]
+    },
+    "jobs-stat-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "56px",
+        "lineHeight": "56px",
+        "letterSpacing": "-1.68px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 137
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-stat-xl"
+      ]
+    },
+    "jobs-stat-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "34px",
+        "lineHeight": "34px",
+        "letterSpacing": "-1.02px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-stat-md"
+      ]
+    },
+    "jobs-stat-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "44px",
+        "lineHeight": "44px",
+        "letterSpacing": "-1.32px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 4
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-stat-phone"
+      ]
+    },
+    "jobs-stat-label": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "15px",
+        "lineHeight": "18px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 758
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-stat-label"
+      ]
+    },
+    "jobs-stat-desc": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "16.8px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.jobs-stat-desc"
+      ]
+    },
+    "dl-label": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.dl-label"
+      ]
+    },
+    "gradient-head": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "22px",
+        "lineHeight": "26.4px",
+        "letterSpacing": "-0.22px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 69
+      },
+      "measuredFrom": [
+        "cfg.fontSize.gradient-head"
+      ]
+    },
+    "specimen-label": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "32px",
+        "lineHeight": "32px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 360
+      },
+      "measuredFrom": [
+        "cfg.fontSize.specimen-label"
+      ]
+    },
+    "specimen-sans-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "96px",
+        "lineHeight": "100px",
+        "letterSpacing": "-3.84px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 15
+      },
+      "measuredFrom": [
+        "cfg.fontSize.specimen-sans-xl"
+      ]
+    },
+    "specimen-sans-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "58px",
+        "lineHeight": "62px",
+        "letterSpacing": "-2.32px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.specimen-sans-md"
+      ]
+    },
+    "title-32": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "32px",
+        "lineHeight": "32px",
+        "letterSpacing": "-1.28px"
+      },
+      "usage": {
+        "srcRefs": 11,
+        "renderedSizeCount": 360
+      },
+      "measuredFrom": [
+        "cfg.fontSize.title-32"
+      ]
+    },
+    "title-38": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "38px",
+        "lineHeight": "42px",
+        "letterSpacing": "-1.52px"
+      },
+      "usage": {
+        "srcRefs": 5,
+        "renderedSizeCount": 40
+      },
+      "measuredFrom": [
+        "cfg.fontSize.title-38"
+      ]
+    },
+    "title-28": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "28px",
+        "lineHeight": "34px",
+        "letterSpacing": "-0.84px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 112
+      },
+      "measuredFrom": [
+        "cfg.fontSize.title-28"
+      ]
+    },
+    "title-22": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "22px",
+        "lineHeight": "28px",
+        "letterSpacing": "-0.44px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 69
+      },
+      "measuredFrom": [
+        "cfg.fontSize.title-22"
+      ]
+    },
+    "title-24": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "letterSpacing": "-0.72px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 436
+      },
+      "measuredFrom": [
+        "cfg.fontSize.title-24"
+      ]
+    },
+    "title-20": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "-0.4px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 1462
+      },
+      "measuredFrom": [
+        "cfg.fontSize.title-20"
+      ]
+    },
+    "title-24-h4": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "24px",
+        "lineHeight": "28px",
+        "letterSpacing": "-0.48px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 436
+      },
+      "measuredFrom": [
+        "cfg.fontSize.title-24-h4"
+      ]
+    },
+    "title-24-tight": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "24px",
+        "lineHeight": "24px",
+        "letterSpacing": "-0.96px"
+      },
+      "usage": {
+        "srcRefs": 5,
+        "renderedSizeCount": 436
+      },
+      "measuredFrom": [
+        "cfg.fontSize.title-24-tight"
+      ]
+    },
+    "band-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "64px",
+        "lineHeight": "77px",
+        "letterSpacing": "-2.56px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 12
+      },
+      "measuredFrom": [
+        "cfg.fontSize.band-xl"
+      ]
+    },
+    "band-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "42px",
+        "lineHeight": "50px",
+        "letterSpacing": "-1.68px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.band-md"
+      ]
+    },
+    "band-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "32px",
+        "lineHeight": "38px",
+        "letterSpacing": "-1.28px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 360
+      },
+      "measuredFrom": [
+        "cfg.fontSize.band-phone"
+      ]
+    },
+    "quote-18": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "32.4px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.quote-18"
+      ]
+    },
+    "label-15": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "15px",
+        "lineHeight": "20px",
+        "letterSpacing": "-0.15px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 758
+      },
+      "measuredFrom": [
+        "cfg.fontSize.label-15"
+      ]
+    },
+    "body-16-loose": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "25px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.body-16-loose"
+      ]
+    },
+    "faq-q": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "-0.2px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 1462
+      },
+      "measuredFrom": [
+        "cfg.fontSize.faq-q"
+      ]
+    },
+    "faq-q-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "24px",
+        "letterSpacing": "-0.18px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.faq-q-phone"
+      ]
+    },
+    "body-17": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "17px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 22
+      },
+      "measuredFrom": [
+        "cfg.fontSize.body-17"
+      ]
+    },
+    "faq-card-q": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "26px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 84
+      },
+      "measuredFrom": [
+        "cfg.fontSize.faq-card-q"
+      ]
+    },
+    "faq-glyph": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "28px",
+        "lineHeight": "28px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 112
+      },
+      "measuredFrom": [
+        "cfg.fontSize.faq-glyph"
+      ]
+    },
+    "body-18-loose": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "34.2px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.body-18-loose"
+      ]
+    },
+    "form-title": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "24px",
+        "lineHeight": "23px",
+        "letterSpacing": "-0.48px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 436
+      },
+      "measuredFrom": [
+        "cfg.fontSize.form-title"
+      ]
+    },
+    "form-label": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "19.2px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.form-label"
+      ]
+    },
+    "field-14": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "16.8px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 4,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.field-14"
+      ]
+    },
+    "field-16": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.field-16"
+      ]
+    },
+    "input-soft": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "20.29px",
+        "lineHeight": "24.35px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.input-soft"
+      ]
+    },
+    "label-13": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "13px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.label-13"
+      ]
+    },
+    "sub-14": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "17px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.sub-14"
+      ]
+    },
+    "tab-18": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "30px",
+        "letterSpacing": "-0.36px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.tab-18"
+      ]
+    },
+    "tab-18-tight": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "23px",
+        "letterSpacing": "-0.36px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.tab-18-tight"
+      ]
+    },
+    "inter-16": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.inter-16"
+      ]
+    },
+    "toc-12": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "12px",
+        "lineHeight": "16px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 468
+      },
+      "measuredFrom": [
+        "cfg.fontSize.toc-12"
+      ]
+    },
+    "toc-13": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "19px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.toc-13"
+      ]
+    },
+    "toc-14": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "19px",
+        "letterSpacing": "-0.14px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.toc-14"
+      ]
+    },
+    "toc-15": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "15px",
+        "lineHeight": "15px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 758
+      },
+      "measuredFrom": [
+        "cfg.fontSize.toc-15"
+      ]
+    },
+    "toc-15-loose": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "15px",
+        "lineHeight": "21px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 758
+      },
+      "measuredFrom": [
+        "cfg.fontSize.toc-15-loose"
+      ]
+    },
+    "tip-12": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "12px",
+        "lineHeight": "14px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 468
+      },
+      "measuredFrom": [
+        "cfg.fontSize.tip-12"
+      ]
+    },
+    "emp-quote": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "14.4px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.emp-quote"
+      ]
+    },
+    "emp-name": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "11.79px",
+        "lineHeight": "14.74px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 88
+      },
+      "measuredFrom": [
+        "cfg.fontSize.emp-name"
+      ]
+    },
+    "split-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "77px",
+        "lineHeight": "38px",
+        "letterSpacing": "-3.08px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 2
+      },
+      "measuredFrom": [
+        "cfg.fontSize.split-xl"
+      ]
+    },
+    "split-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "96px",
+        "lineHeight": "100px",
+        "letterSpacing": "-3.84px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 15
+      },
+      "measuredFrom": [
+        "cfg.fontSize.split-lg"
+      ]
+    },
+    "split-lg-tight": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "96px",
+        "lineHeight": "38px",
+        "letterSpacing": "-3.84px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 15
+      },
+      "measuredFrom": [
+        "cfg.fontSize.split-lg-tight"
+      ]
+    },
+    "split-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "58px",
+        "lineHeight": "38px",
+        "letterSpacing": "-2.32px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.split-md"
+      ]
+    },
+    "matrix-title": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "20.8px",
+        "letterSpacing": "-0.16px"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.matrix-title"
+      ]
+    },
+    "matrix-label": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "15px",
+        "lineHeight": "21px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 758
+      },
+      "measuredFrom": [
+        "cfg.fontSize.matrix-label"
+      ]
+    },
+    "story-name-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "25px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.story-name-md"
+      ]
+    },
+    "name-11-tight": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "11px",
+        "lineHeight": "11px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 228
+      },
+      "measuredFrom": [
+        "cfg.fontSize.name-11-tight"
+      ]
+    },
+    "story-34": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "34px",
+        "lineHeight": "34px",
+        "letterSpacing": "-1.36px"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 0
+      },
+      "measuredFrom": [
+        "cfg.fontSize.story-34"
+      ]
+    },
+    "story-phone": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "30px",
+        "lineHeight": "28px",
+        "letterSpacing": "-1.2px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 191
+      },
+      "measuredFrom": [
+        "cfg.fontSize.story-phone"
+      ]
+    },
+    "blog-feature-xl": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "44px",
+        "lineHeight": "48px",
+        "letterSpacing": "-1.76px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 4
+      },
+      "measuredFrom": [
+        "cfg.fontSize.blog-feature-xl"
+      ]
+    },
+    "blog-feature-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "32px",
+        "lineHeight": "36px",
+        "letterSpacing": "-1.28px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 360
+      },
+      "measuredFrom": [
+        "cfg.fontSize.blog-feature-lg"
+      ]
+    },
+    "blog-feature-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "24px",
+        "lineHeight": "26px",
+        "letterSpacing": "-0.96px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 436
+      },
+      "measuredFrom": [
+        "cfg.fontSize.blog-feature-sm"
+      ]
+    },
+    "blog-meta": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "16px",
+        "letterSpacing": "-0.32px"
+      },
+      "usage": {
+        "srcRefs": 3,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.blog-meta"
+      ]
+    },
+    "blog-meta-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "14px",
+        "letterSpacing": "-0.28px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.blog-meta-sm"
+      ]
+    },
+    "display-20": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 1462
+      },
+      "measuredFrom": [
+        "cfg.fontSize.display-20"
+      ]
+    },
+    "display-18": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "23.4px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.display-18"
+      ]
+    },
+    "faq-doc": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "22.4px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 2,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.faq-doc"
+      ]
+    },
+    "attr-13": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "13px",
+        "lineHeight": "13px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 1233
+      },
+      "measuredFrom": [
+        "cfg.fontSize.attr-13"
+      ]
+    },
+    "social-name": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "22px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.social-name"
+      ]
+    },
+    "detail-h2": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "28px",
+        "lineHeight": "32px",
+        "letterSpacing": "-1.12px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 112
+      },
+      "measuredFrom": [
+        "cfg.fontSize.detail-h2"
+      ]
+    },
+    "pill-14": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "14px",
+        "lineHeight": "15.4px",
+        "letterSpacing": "-0.56px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 11433
+      },
+      "measuredFrom": [
+        "cfg.fontSize.pill-14"
+      ]
+    },
+    "quote-18-27": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "27px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.quote-18-27"
+      ]
+    },
+    "legal-10": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "10px",
+        "lineHeight": "14px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 218
+      },
+      "measuredFrom": [
+        "cfg.fontSize.legal-10"
+      ]
+    },
+    "name-18": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "18px",
+        "lineHeight": "25px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 306
+      },
+      "measuredFrom": [
+        "cfg.fontSize.name-18"
+      ]
+    },
+    "values-title": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "24px",
+        "lineHeight": "28.8px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 436
+      },
+      "measuredFrom": [
+        "cfg.fontSize.values-title"
+      ]
+    },
+    "values-body": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 2102
+      },
+      "measuredFrom": [
+        "cfg.fontSize.values-body"
+      ]
+    },
+    "vs-word-md": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "36px",
+        "lineHeight": "36px",
+        "letterSpacing": "-1.44px"
+      },
+      "usage": {
+        "srcRefs": 1,
+        "renderedSizeCount": 142
+      },
+      "measuredFrom": [
+        "cfg.fontSize.vs-word-md"
+      ]
+    }
+  }
+}

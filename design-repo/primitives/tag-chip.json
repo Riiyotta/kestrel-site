@@ -1,0 +1,16 @@
+{
+  "registryId": "primitive.tag-chip",
+  "version": "1.0.0",
+  "description": "Soft topic chip.",
+  "props": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "tokens": [
+    "{color.surface.chip}"
+  ],
+  "measuredFrom": [
+    "part.tag-chip"
+  ]
+}

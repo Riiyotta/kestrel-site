@@ -1,0 +1,86 @@
+{
+  "id": "media.integration-orbit",
+  "category": "media",
+  "version": "1.0.0",
+  "purpose": "Rotating glass rings of integration tiles, each linking to its detail page.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "library": "818px orbit standalone under the library hero.",
+    "product": "474px orbit beside an H2, paragraph and button."
+  },
+  "composes": [
+    "component.integration-orbit"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 10
+      },
+      "body": {
+        "type": "string",
+        "maxWords": 32
+      },
+      "cta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "orbit-loop",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "338px orbit on phone; product copy stacks."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.orbit",
+    "mo.orbit"
+  ],
+  "variantRules": {
+    "library": {
+      "forbids": [
+        "title",
+        "body",
+        "cta"
+      ]
+    },
+    "product": {
+      "requires": [
+        "title",
+        "body",
+        "cta"
+      ]
+    }
+  },
+  "notes": "Tiles come from the integration collection; generators do not author tiles."
+}

@@ -1,0 +1,480 @@
+{
+  "$description": "Rhythm and position rules a JSON Schema cannot express. Every rule id here is implemented in schema/semantic_validate.py (verify_all.py asserts the two sets are identical). recommendedAfter is derived from the real template node sequences.",
+  "rules": [
+    {
+      "id": "TEMPLATE_NODES",
+      "severity": "error",
+      "rule": "Every node must be in the declared template's node list (matched on section + variant), within its repeat limits, and every required template node must be present."
+    },
+    {
+      "id": "TEMPLATE_ORDER",
+      "severity": "error",
+      "rule": "Nodes must follow the declared template's node order."
+    },
+    {
+      "id": "ROUTE",
+      "severity": "error",
+      "rule": "The route must be one the declared template serves (not-found: any path that no other template serves)."
+    },
+    {
+      "id": "CHROME_FIRST",
+      "severity": "error",
+      "rule": "Site-layout pages start with chrome.nav; standalone pages start with their own chrome (jobs header, doc sidebar) or, for get-a-demo, the form."
+    },
+    {
+      "id": "FOOTER_POSITION",
+      "severity": "error",
+      "rule": "On site-layout pages chrome.footer is the last node, optionally followed only by chrome.video-teaser."
+    },
+    {
+      "id": "TEASER_MATCHES_ROUTE",
+      "severity": "error",
+      "rule": "chrome.video-teaser is present on site-layout routes except those matching routing.noTeaserPatterns, and absent there."
+    },
+    {
+      "id": "ONE_HERO",
+      "severity": "error",
+      "rule": "Exactly one hero.* node, except the named hero-less templates in routing.heroLessTemplates, which must have none."
+    },
+    {
+      "id": "HERO_AFTER_CHROME",
+      "severity": "error",
+      "rule": "The hero directly follows the leading chrome node (index 1)."
+    },
+    {
+      "id": "ONE_PER_PAGE",
+      "severity": "error",
+      "rule": "Sections with constraints.onePerPage appear at most once."
+    },
+    {
+      "id": "MAX_PER_PAGE",
+      "severity": "error",
+      "rule": "Sections with constraints.maxPerPage stay within it; a repeated section must use distinct variants (keyed on section + variant)."
+    },
+    {
+      "id": "NO_ADJACENT_SAME_SECTION",
+      "severity": "warn",
+      "rule": "The same section type should not sit twice in a row. Named exception: none needed by any real template; split-text and toc repeat non-adjacently."
+    },
+    {
+      "id": "HOME_ROUTE_ONLY",
+      "severity": "error",
+      "rule": "Sections with constraints.homeRouteOnly only appear on '/'."
+    },
+    {
+      "id": "MUST_FOLLOW",
+      "severity": "error",
+      "rule": "compare.vs-feature-cards must directly follow compare.matrix."
+    },
+    {
+      "id": "ROUTE_VARIANT",
+      "severity": "error",
+      "rule": "Where a template pins a section variant per route (routeVariants), the node must use that variant."
+    },
+    {
+      "id": "ROUTE_NODE_RULES",
+      "severity": "error",
+      "rule": "Optional nodes listed in routeNodeRules are present exactly on the listed routes."
+    },
+    {
+      "id": "VARIANT_RULES",
+      "severity": "error",
+      "rule": "Variant-specific required/forbidden content fields (section variantRules) hold."
+    },
+    {
+      "id": "FORMS_LOCAL_ONLY",
+      "severity": "error",
+      "rule": "Every form's submission is 'local-success-state': nothing is ever sent."
+    },
+    {
+      "id": "NO_EXTERNAL_URLS",
+      "severity": "error",
+      "rule": "No content string may contain an http(s) URL; links are internal paths or anchors only."
+    },
+    {
+      "id": "INLINE_HTML_SUBSET",
+      "severity": "error",
+      "rule": "Inline HTML in copy uses only <a href>, <strong>, <em>, <br>, and links point at internal paths."
+    },
+    {
+      "id": "LINK_TARGETS",
+      "severity": "warn",
+      "rule": "Internal links should resolve to a known route. Named exception: /glossary/<slug> intentionally renders the 404 page."
+    },
+    {
+      "id": "MAX_WORDS",
+      "severity": "error",
+      "rule": "Every text field respects its contract's maxWords budget."
+    },
+    {
+      "id": "MOTION_FALLBACK",
+      "severity": "error",
+      "rule": "Every node names a motion profile allowed by its section and the profile's const-locked reducedMotionFallback."
+    },
+    {
+      "id": "ASSET_ROLE_POLICY",
+      "severity": "error",
+      "rule": "Media objects use only pageSpecSettable roles from assets/asset-roles.json; pinned policies are intact."
+    },
+    {
+      "id": "UNIQUE_IDS",
+      "severity": "error",
+      "rule": "Node ids are unique within the page."
+    }
+  ],
+  "recommendedAfter": {
+    "chrome.assistant-note": [
+      "chrome.footer"
+    ],
+    "chrome.footer": [
+      "chrome.video-teaser"
+    ],
+    "chrome.jobs-header": [
+      "hero.jobs"
+    ],
+    "chrome.nav": [
+      "content.legal-document",
+      "content.not-found",
+      "content.split-text",
+      "form.partner",
+      "hero.article-header",
+      "hero.avatar",
+      "hero.doc-header",
+      "hero.glossary",
+      "hero.headline",
+      "hero.home",
+      "hero.index-title",
+      "hero.integration-detail",
+      "hero.post-header",
+      "hero.pricing-title",
+      "hero.product-video",
+      "hero.report",
+      "hero.split",
+      "hero.story",
+      "hero.vs"
+    ],
+    "commerce.compare-features": [
+      "content.faq-accordion"
+    ],
+    "commerce.plans": [
+      "commerce.compare-features"
+    ],
+    "compare.grid-tables": [
+      "chrome.footer"
+    ],
+    "compare.matrix": [
+      "compare.vs-feature-cards"
+    ],
+    "compare.vs-feature-cards": [
+      "proof.story-slideshow"
+    ],
+    "compare.vs-intro-cards": [
+      "compare.matrix"
+    ],
+    "content.blog-browse": [
+      "chrome.footer"
+    ],
+    "content.blog-featured": [
+      "content.blog-rail"
+    ],
+    "content.blog-grid": [
+      "chrome.footer"
+    ],
+    "content.blog-rail": [
+      "content.blog-browse"
+    ],
+    "content.faq-accordion": [
+      "chrome.footer",
+      "compare.grid-tables",
+      "content.keep-reading"
+    ],
+    "content.faq-document": [
+      "chrome.footer"
+    ],
+    "content.finding-cards": [
+      "proof.quote-panel"
+    ],
+    "content.guide-featured": [
+      "navigation.topic-bar"
+    ],
+    "content.guide-grid": [
+      "chrome.footer"
+    ],
+    "content.integration-body": [
+      "content.other-apps"
+    ],
+    "content.integration-catalog": [
+      "content.integration-setup"
+    ],
+    "content.integration-setup": [
+      "chrome.footer"
+    ],
+    "content.jobs-open-roles": [
+      "cta.jobs-report"
+    ],
+    "content.keep-reading": [
+      "navigation.toc"
+    ],
+    "content.legal-document": [
+      "chrome.footer"
+    ],
+    "content.not-found": [
+      "chrome.footer"
+    ],
+    "content.numbered-contents": [
+      "proof.story-rail"
+    ],
+    "content.open-roles": [
+      "chrome.footer"
+    ],
+    "content.other-apps": [
+      "chrome.footer"
+    ],
+    "content.post-wall": [
+      "chrome.footer"
+    ],
+    "content.press-color": [
+      "content.press-typography"
+    ],
+    "content.press-intro": [
+      "navigation.press-contents"
+    ],
+    "content.press-logo": [
+      "content.press-color"
+    ],
+    "content.prose-faq": [
+      "chrome.footer",
+      "content.blog-grid"
+    ],
+    "content.prose-tools": [
+      "feature.card-carousel",
+      "feature.coach-bento",
+      "feature.heading-band"
+    ],
+    "content.related-posts": [
+      "navigation.toc"
+    ],
+    "content.related-reading": [
+      "content.prose-faq"
+    ],
+    "content.related-stories": [
+      "chrome.footer"
+    ],
+    "content.rich-text": [
+      "content.faq-accordion",
+      "cta.post-ctas"
+    ],
+    "content.split-text": [
+      "media.photo-collage",
+      "proof.employee-quotes"
+    ],
+    "content.story-card-list": [
+      "chrome.footer"
+    ],
+    "content.story-sections": [
+      "content.related-stories"
+    ],
+    "content.term-index": [
+      "chrome.footer"
+    ],
+    "cta.article-chip": [
+      "chrome.footer"
+    ],
+    "cta.callout-row": [
+      "form.event-demo"
+    ],
+    "cta.jobs-report": [
+      "chrome.jobs-footer"
+    ],
+    "cta.post-ctas": [
+      "content.related-posts"
+    ],
+    "feature.card-carousel": [
+      "feature.rows",
+      "feature.split-explainer"
+    ],
+    "feature.coach-bento": [
+      "content.related-reading"
+    ],
+    "feature.compare-cards": [
+      "feature.tools-arc"
+    ],
+    "feature.confidence": [
+      "feature.system-find"
+    ],
+    "feature.difference-cards": [
+      "content.faq-accordion"
+    ],
+    "feature.heading-band": [
+      "feature.rows"
+    ],
+    "feature.jobs-mcp": [
+      "content.jobs-open-roles"
+    ],
+    "feature.playbook": [
+      "proof.stories-home"
+    ],
+    "feature.rows": [
+      "media.integration-orbit",
+      "proof.story-slideshow"
+    ],
+    "feature.split-explainer": [
+      "proof.case-study-card"
+    ],
+    "feature.system-find": [
+      "feature.playbook"
+    ],
+    "feature.tools-arc": [
+      "feature.confidence"
+    ],
+    "feature.values-bento": [
+      "proof.employee-testimonials"
+    ],
+    "form.demo-signup": [
+      "media.demo-art"
+    ],
+    "form.event-demo": [
+      "content.related-reading"
+    ],
+    "form.nominate": [
+      "proof.logo-wall"
+    ],
+    "form.partner": [
+      "proof.logo-wall"
+    ],
+    "hero.article-header": [
+      "navigation.toc"
+    ],
+    "hero.avatar": [
+      "media.photo-gallery"
+    ],
+    "hero.doc-header": [
+      "content.faq-document"
+    ],
+    "hero.glossary": [
+      "content.term-index"
+    ],
+    "hero.headline": [
+      "content.post-wall",
+      "content.story-card-list",
+      "form.nominate",
+      "media.integration-orbit",
+      "proof.logo-strip"
+    ],
+    "hero.home": [
+      "proof.home-bento"
+    ],
+    "hero.index-title": [
+      "content.blog-featured",
+      "content.guide-featured"
+    ],
+    "hero.integration-detail": [
+      "content.integration-body"
+    ],
+    "hero.jobs": [
+      "proof.jobs-featured-ticker"
+    ],
+    "hero.post-header": [
+      "content.rich-text"
+    ],
+    "hero.pricing-title": [
+      "commerce.plans"
+    ],
+    "hero.product-video": [
+      "content.prose-tools"
+    ],
+    "hero.report": [
+      "proof.logo-strip"
+    ],
+    "hero.split": [
+      "proof.logo-strip"
+    ],
+    "hero.story": [
+      "navigation.story-side-menu"
+    ],
+    "hero.vs": [
+      "proof.logo-strip"
+    ],
+    "media.demo-art": [
+      "chrome.assistant-note"
+    ],
+    "media.integration-orbit": [
+      "proof.logo-strip",
+      "proof.story-slideshow"
+    ],
+    "media.photo-collage": [
+      "proof.about-logos"
+    ],
+    "media.photo-gallery": [
+      "feature.values-bento"
+    ],
+    "media.press-hero": [
+      "content.press-intro"
+    ],
+    "navigation.doc-sidebar": [
+      "media.press-hero"
+    ],
+    "navigation.press-contents": [
+      "content.press-logo"
+    ],
+    "navigation.share-rail": [
+      "chrome.footer",
+      "cta.article-chip"
+    ],
+    "navigation.story-side-menu": [
+      "content.story-sections"
+    ],
+    "navigation.toc": [
+      "content.rich-text",
+      "navigation.share-rail"
+    ],
+    "navigation.topic-bar": [
+      "content.guide-grid"
+    ],
+    "proof.about-logos": [
+      "content.split-text"
+    ],
+    "proof.case-study-card": [
+      "content.related-reading"
+    ],
+    "proof.employee-quotes": [
+      "chrome.footer"
+    ],
+    "proof.employee-testimonials": [
+      "content.open-roles"
+    ],
+    "proof.home-bento": [
+      "feature.compare-cards"
+    ],
+    "proof.jobs-featured-ticker": [
+      "proof.jobs-stats"
+    ],
+    "proof.jobs-stats": [
+      "feature.jobs-mcp"
+    ],
+    "proof.logo-strip": [
+      "compare.vs-intro-cards",
+      "content.finding-cards",
+      "content.integration-catalog",
+      "content.prose-tools",
+      "feature.difference-cards"
+    ],
+    "proof.logo-wall": [
+      "chrome.footer"
+    ],
+    "proof.quote-panel": [
+      "content.numbered-contents"
+    ],
+    "proof.stories-home": [
+      "chrome.assistant-note"
+    ],
+    "proof.story-rail": [
+      "chrome.footer"
+    ],
+    "proof.story-slideshow": [
+      "content.faq-accordion",
+      "content.related-reading",
+      "cta.callout-row"
+    ]
+  }
+}

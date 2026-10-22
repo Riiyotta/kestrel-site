@@ -1,0 +1,138 @@
+{
+  "id": "feature.playbook",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Homepage audit-trail story: header over a fan of resolved-request playbook cards and a revealed tree.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "home": "Seven-card fan."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 5
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "body": {
+        "type": "string",
+        "maxWords": 22
+      },
+      "cards": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxWords": 4
+            },
+            "quote": {
+              "type": "string",
+              "maxWords": 6
+            },
+            "tone": {
+              "enum": [
+                "green",
+                "lavender",
+                "pink",
+                "yellow"
+              ]
+            },
+            "avatar": {
+              "type": "object",
+              "properties": {
+                "assetRole": {
+                  "const": "photo.stock-person"
+                },
+                "src": {
+                  "enum": [
+                    "/assets/photos/compare-avatar-1.webp",
+                    "/assets/photos/compare-avatar-2.webp",
+                    "/assets/photos/compare-avatar-3.webp",
+                    "/assets/photos/hero-bl.webp",
+                    "/assets/photos/hero-br.webp",
+                    "/assets/photos/hero-center.webp",
+                    "/assets/photos/hero-tl.webp",
+                    "/assets/photos/hero-tr.webp",
+                    "/assets/photos/nav-feature-industries.webp",
+                    "/assets/photos/nav-feature-product.webp",
+                    "/assets/photos/playbook-avatar-c.webp",
+                    "/assets/photos/playbook-avatar-p2l.webp",
+                    "/assets/photos/playbook-avatar-p2r.webp",
+                    "/assets/photos/playbook-avatar-p4l.webp",
+                    "/assets/photos/playbook-avatar-p4r.webp",
+                    "/assets/photos/playbook-avatar-p6l.webp",
+                    "/assets/photos/playbook-avatar-p6r.webp",
+                    "/assets/photos/proof-portrait-1.webp",
+                    "/assets/photos/proof-portrait-2.webp",
+                    "/assets/photos/story-1.webp",
+                    "/assets/photos/story-2.webp",
+                    "/assets/photos/story-3.webp",
+                    "/assets/photos/story-4.webp",
+                    "/assets/photos/story-5.webp",
+                    "/assets/photos/story-6.webp",
+                    "/assets/photos/video-teaser-thumb.webp"
+                  ]
+                }
+              },
+              "required": [
+                "assetRole",
+                "src"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "title",
+            "quote",
+            "tone",
+            "avatar"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 5,
+        "maxItems": 7
+      }
+    },
+    "required": [
+      "title",
+      "body",
+      "cards"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "playbook-fan",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "md",
+      "change": "resize",
+      "detail": "Five-card fan."
+    },
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Centre card unscaled with inner pair only."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true
+  },
+  "measuredFrom": [
+    "src.playbook",
+    "mo.tree"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "registryId": "component.toc",
+  "version": "1.0.0",
+  "description": "Table of contents (hover / tick / inline).",
+  "composes": [],
+  "tokens": [
+    "{component.toc.accent}"
+  ],
+  "measuredFrom": [
+    "part.toc"
+  ],
+  "variants": {
+    "variant": [
+      "hover",
+      "tick",
+      "inline"
+    ]
+  },
+  "motionProfiles": [
+    "toc-interaction"
+  ]
+}

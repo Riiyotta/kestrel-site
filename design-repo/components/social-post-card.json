@@ -1,0 +1,12 @@
+{
+  "registryId": "component.social-post-card",
+  "version": "1.0.0",
+  "description": "Social-post-style card (fictional authors).",
+  "composes": [
+    "primitive.avatar"
+  ],
+  "tokens": [],
+  "measuredFrom": [
+    "part.social-post-card"
+  ]
+}

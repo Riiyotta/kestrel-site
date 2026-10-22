@@ -1,0 +1,20 @@
+{
+  "registryId": "component.feature-row",
+  "version": "1.0.0",
+  "description": "Alternating media + text row.",
+  "composes": [
+    "primitive.illustration",
+    "primitive.button"
+  ],
+  "tokens": [],
+  "measuredFrom": [
+    "part.feature-row"
+  ],
+  "variants": {
+    "variant": [
+      "472",
+      "600",
+      "callout"
+    ]
+  }
+}

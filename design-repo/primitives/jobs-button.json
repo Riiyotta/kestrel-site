@@ -1,0 +1,23 @@
+{
+  "registryId": "primitive.jobs-button",
+  "version": "1.0.0",
+  "description": "Jobs microsite square-corner button, white variant and text link.",
+  "props": {
+    "variant": {
+      "enum": [
+        "dark",
+        "white",
+        "text"
+      ]
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "tokens": [
+    "{component.jobs.button-shadow}"
+  ],
+  "measuredFrom": [
+    "part.jobs-button"
+  ]
+}

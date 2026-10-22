@@ -1,0 +1,92 @@
+{
+  "id": "content.open-roles",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Careers open roles: heading + a static job list standing in for a third-party jobs widget.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "List."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 9
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 36
+      },
+      "jobs": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxWords": 5
+            },
+            "department": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "location": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "type": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "remote": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "title",
+            "department",
+            "location",
+            "type",
+            "remote"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 6
+      }
+    },
+    "required": [
+      "title",
+      "sub",
+      "jobs"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Rows stack meta under title."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.openroles"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "embed.standin",
+      "files": "job list in place of a live jobs-board embed"
+    }
+  ]
+}

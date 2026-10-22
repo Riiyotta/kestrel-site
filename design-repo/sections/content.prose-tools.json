@@ -1,0 +1,113 @@
+{
+  "id": "content.prose-tools",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Answer-first 'which tool fits' prose block: H2 then sub-blocks of paragraphs, bullets and H3s in a 1040px column.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "1040px prose column."
+  },
+  "composes": [
+    "component.prose-block",
+    "component.rich-text"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 16
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxWords": 12
+            },
+            "blocks": {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "const": "p"
+                      },
+                      "html": {
+                        "type": "string",
+                        "maxWords": 77
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "html"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "const": "ul"
+                      },
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "maxWords": 30
+                        },
+                        "minItems": 1,
+                        "maxItems": 6
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "items"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "minItems": 1,
+              "maxItems": 6
+            }
+          },
+          "required": [
+            "blocks"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 2
+      }
+    },
+    "required": [
+      "title",
+      "items"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Phone keeps an 80px side padding (measured quirk)."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.prose"
+  ]
+}

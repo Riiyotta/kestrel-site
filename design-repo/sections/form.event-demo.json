@@ -1,0 +1,112 @@
+{
+  "id": "form.event-demo",
+  "category": "form",
+  "version": "1.0.0",
+  "purpose": "Event invitation copy and benefit lines beside a demo form card.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Copy + form card."
+  },
+  "composes": [
+    "component.demo-form"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 11
+      },
+      "intro": {
+        "type": "string",
+        "maxWords": 29
+      },
+      "benefits": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxWords": 30
+        },
+        "minItems": 1,
+        "maxItems": 4
+      },
+      "fields": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "pattern": "^[a-z_]+$"
+            },
+            "label": {
+              "type": "string",
+              "maxWords": 4
+            },
+            "type": {
+              "enum": [
+                "text",
+                "email",
+                "url",
+                "textarea",
+                "select"
+              ]
+            },
+            "required": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "label",
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 6
+      },
+      "submitLabel": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "successMessage": {
+        "type": "string",
+        "maxWords": 33
+      },
+      "submission": {
+        "const": "local-success-state",
+        "description": "Forms never send data anywhere; submit swaps in a local success message."
+      }
+    },
+    "required": [
+      "title",
+      "intro",
+      "benefits",
+      "fields",
+      "submitLabel",
+      "successMessage",
+      "submission"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Form stacks under the copy."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.event"
+  ]
+}

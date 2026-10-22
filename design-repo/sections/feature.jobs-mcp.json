@@ -1,0 +1,75 @@
+{
+  "id": "feature.jobs-mcp",
+  "category": "feature",
+  "version": "1.0.0",
+  "purpose": "Jobs microsite assistant section: eyebrow, H2, connect button and a flow illustration (stand-in for a third-party embed).",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Centred column."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "eyebrow": {
+        "type": "string",
+        "maxWords": 9
+      },
+      "title": {
+        "type": "string",
+        "maxWords": 11
+      },
+      "cta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "eyebrow",
+      "title",
+      "cta"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Portrait 354x888 illustration on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.mcp",
+    "src.cxjobs"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "embed.standin",
+      "files": "MCP flow illustration replacing a live third-party iframe"
+    }
+  ]
+}

@@ -1,0 +1,659 @@
+{
+  "$description": "Box shadows (elevation) and blur radii in use.",
+  "shadow": {
+    "glass": {
+      "$type": "shadow",
+      "$value": "22.09px 22.09px 73.64px 0 rgba(150,150,150,.30)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.glass"
+      ]
+    },
+    "glass-rim": {
+      "$type": "shadow",
+      "$value": "22px 22px 74px rgba(150,150,150,.3), inset 0 0 0 1px rgba(255,255,255,.55)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.glass-rim"
+      ]
+    },
+    "nav": {
+      "$type": "shadow",
+      "$value": "0 10px 32px -6px rgba(120,120,120,.18), 0 1px 3px rgba(13,13,13,.06), inset 0 0 0 1px rgba(255,255,255,.7), 0 0 0 .5px rgba(13,13,13,.06)",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.nav"
+      ]
+    },
+    "hair": {
+      "$type": "shadow",
+      "$value": "0 0 0 1px rgba(0,0,0,.04)",
+      "usage": {
+        "srcRefs": 5
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.hair"
+      ]
+    },
+    "nav-indicator": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px rgba(13,13,13,.10)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.nav-indicator"
+      ]
+    },
+    "dd-icon": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px rgba(13,13,13,.04)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.dd-icon"
+      ]
+    },
+    "dd-feature-rim": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px rgba(255,255,255,.1), inset 0 1px 0 rgba(255,255,255,.16)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.dd-feature-rim"
+      ]
+    },
+    "tile": {
+      "$type": "shadow",
+      "$value": "0 1.845px 7.38px rgba(0,0,0,.15), 0 0 1.845px rgba(0,0,0,.15)",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.tile"
+      ]
+    },
+    "ticket": {
+      "$type": "shadow",
+      "$value": "0 2.275px 17.44px rgba(0,0,0,.12)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.ticket"
+      ]
+    },
+    "card-rest": {
+      "$type": "shadow",
+      "$value": "0 3px 30px rgba(0,0,0,0)",
+      "usage": {
+        "srcRefs": 3
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.card-rest"
+      ]
+    },
+    "btn-dark-rest": {
+      "$type": "shadow",
+      "$value": "0 4px 20px rgba(114,114,114,0)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.btn-dark-rest"
+      ]
+    },
+    "btn-dark-hover": {
+      "$type": "shadow",
+      "$value": "0 4px 20px rgb(114,114,114)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.btn-dark-hover"
+      ]
+    },
+    "btn-light-rest": {
+      "$type": "shadow",
+      "$value": "0 4px 20px rgba(0,0,0,0)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.btn-light-rest"
+      ]
+    },
+    "btn-light-hover": {
+      "$type": "shadow",
+      "$value": "0 4px 20px rgba(0,0,0,.2)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.btn-light-hover"
+      ]
+    },
+    "btn-rim-dark": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 2px rgba(255,255,255,.15)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.btn-rim-dark"
+      ]
+    },
+    "btn-rim-light": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 2px rgba(0,0,0,.15)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.btn-rim-light"
+      ]
+    },
+    "menu-btn-dark": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px rgba(255,255,255,.16)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.menu-btn-dark"
+      ]
+    },
+    "teaser": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px rgba(26,26,26,.08), 0 6px 30px rgba(151,151,151,.35)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.teaser"
+      ]
+    },
+    "dd-shell-glass": {
+      "$type": "shadow",
+      "$value": "22px 22px 74px rgba(150,150,150,.3), 0 12px 28px -8px rgba(0,0,0,.06), inset 0 0 0 1px rgba(255,255,255,.55)",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.dd-shell-glass"
+      ]
+    },
+    "dd-chip": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 .5px rgba(255,255,255,.28), inset 0 1px 0 rgba(255,255,255,.18)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.dd-chip"
+      ]
+    },
+    "dd-icon-hover": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px rgba(255,255,255,.12), 0 4px 10px -4px rgba(13,13,13,.18)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.dd-icon-hover"
+      ]
+    },
+    "teaser-card": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px rgba(255,255,255,.9), 0 0 0 1px rgba(26,26,26,.05), 0 6px 73px rgba(151,151,151,.3)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.teaser-card"
+      ]
+    },
+    "teaser-x": {
+      "$type": "shadow",
+      "$value": "0 0 0 1px rgba(0,0,0,.08), 0 2px 8px rgba(0,0,0,.14)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.teaser-x"
+      ]
+    },
+    "teaser-dot": {
+      "$type": "shadow",
+      "$value": "0 1px 3px rgba(0,0,0,.2)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.teaser-dot"
+      ]
+    },
+    "teaser-media": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px rgba(0,0,0,.06)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.teaser-media"
+      ]
+    },
+    "footer-mark": {
+      "$type": "shadow",
+      "$value": "0 0 0 1px #ECECEC, -6px 6px 24px rgba(255,41,229,.35), 6px -2px 24px rgba(250,203,18,.35), 0 8px 24px rgba(67,72,220,.25)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.footer-mark"
+      ]
+    },
+    "jobs-btn": {
+      "$type": "shadow",
+      "$value": "0 5px 6px rgba(0,0,0,.2)",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.jobs-btn"
+      ]
+    },
+    "silk-rim": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px rgba(255,255,255,.1)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.silk-rim"
+      ]
+    },
+    "field-focus": {
+      "$type": "shadow",
+      "$value": "0 0 0 2px rgba(0,0,255,.2)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.field-focus"
+      ]
+    },
+    "glass-form": {
+      "$type": "shadow",
+      "$value": "0 6px 73.64px 0 rgba(150,150,150,.3)",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.glass-form"
+      ]
+    },
+    "faq-card": {
+      "$type": "shadow",
+      "$value": "0 .6px .6px -1.25px rgba(0,0,0,.18), 0 2.29px 2.29px -2.5px rgba(0,0,0,.16), 0 10px 10px -3.75px rgba(0,0,0,.06)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.faq-card"
+      ]
+    },
+    "matrix": {
+      "$type": "shadow",
+      "$value": "0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.04)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.matrix"
+      ]
+    },
+    "share-rail": {
+      "$type": "shadow",
+      "$value": "0 0 0 1px rgba(0,0,0,.06), 0 8px 24px -8px rgba(0,0,0,.12)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.share-rail"
+      ]
+    },
+    "cta-chip": {
+      "$type": "shadow",
+      "$value": "0 0 0 1px #E2E2E2, 0 10px 24px -12px rgba(0,0,0,.2)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.cta-chip"
+      ]
+    },
+    "toc-pop": {
+      "$type": "shadow",
+      "$value": "0 2px 6px -2px rgba(0,0,0,.08), 0 16px 36px -12px rgba(0,0,0,.22)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.toc-pop"
+      ]
+    },
+    "ring-hairline": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px #E8E8E8",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.ring-hairline"
+      ]
+    },
+    "side-menu": {
+      "$type": "shadow",
+      "$value": "0 4px 80.2px rgba(0,0,0,.1)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.side-menu"
+      ]
+    },
+    "int-tile": {
+      "$type": "shadow",
+      "$value": "0 2.17px 8.68px rgba(0,0,0,.15), 0 0 2.17px rgba(0,0,0,.15)",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.int-tile"
+      ]
+    },
+    "ui-shot": {
+      "$type": "shadow",
+      "$value": "18px 18px 60px rgba(151,151,151,.2)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.ui-shot"
+      ]
+    },
+    "read-card": {
+      "$type": "shadow",
+      "$value": "0 30px 60px -30px rgba(20,14,50,.45)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.read-card"
+      ]
+    },
+    "social": {
+      "$type": "shadow",
+      "$value": "0 2px 12px rgba(0,0,0,.08)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.social"
+      ]
+    },
+    "orbit-tile-sm": {
+      "$type": "shadow",
+      "$value": "0 1.02px 9.44px rgba(0,0,0,.15), 0 0 2.36px rgba(0,0,0,.15)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.orbit-tile-sm"
+      ]
+    },
+    "orbit-tile": {
+      "$type": "shadow",
+      "$value": "0 1.76px 16.29px rgba(0,0,0,.15), 0 0 4.07px rgba(0,0,0,.15)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.orbit-tile"
+      ]
+    },
+    "video-frame": {
+      "$type": "shadow",
+      "$value": "0 4px 24px rgba(0,0,0,.12)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.video-frame"
+      ]
+    },
+    "video-bar": {
+      "$type": "shadow",
+      "$value": "0 2px 12px rgba(0,0,0,.2)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.boxShadow.video-bar"
+      ]
+    }
+  },
+  "backdropBlur": {
+    "scrim": {
+      "$type": "dimension",
+      "$value": "2px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.scrim"
+      ]
+    },
+    "glow": {
+      "$type": "dimension",
+      "$value": "5px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.glow"
+      ]
+    },
+    "tag": {
+      "$type": "dimension",
+      "$value": "10px",
+      "usage": {
+        "srcRefs": 9
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.tag"
+      ]
+    },
+    "nav": {
+      "$type": "dimension",
+      "$value": "16px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.nav"
+      ]
+    },
+    "nav-open": {
+      "$type": "dimension",
+      "$value": "15px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.nav-open"
+      ]
+    },
+    "ticket": {
+      "$type": "dimension",
+      "$value": "20px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.ticket"
+      ]
+    },
+    "teaser": {
+      "$type": "dimension",
+      "$value": "40px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.teaser"
+      ]
+    },
+    "share": {
+      "$type": "dimension",
+      "$value": "12px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.share"
+      ]
+    },
+    "side-menu": {
+      "$type": "dimension",
+      "$value": "6.15px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.side-menu"
+      ]
+    },
+    "quote-card": {
+      "$type": "dimension",
+      "$value": "39.6px",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.quote-card"
+      ]
+    },
+    "orbit": {
+      "$type": "dimension",
+      "$value": "64px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.orbit"
+      ]
+    },
+    "demo-quote": {
+      "$type": "dimension",
+      "$value": "30px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.demo-quote"
+      ]
+    },
+    "video-bar": {
+      "$type": "dimension",
+      "$value": "8px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.video-bar"
+      ]
+    },
+    "values": {
+      "$type": "dimension",
+      "$value": "12.8px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backdropBlur.values"
+      ]
+    }
+  },
+  "blur": {
+    "tag": {
+      "$type": "dimension",
+      "$value": "10px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.blur.tag"
+      ]
+    },
+    "glow": {
+      "$type": "dimension",
+      "$value": "12px",
+      "usage": {
+        "srcRefs": 3
+      },
+      "measuredFrom": [
+        "cfg.blur.glow"
+      ]
+    },
+    "glow-lg": {
+      "$type": "dimension",
+      "$value": "24px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.blur.glow-lg"
+      ]
+    },
+    "reveal": {
+      "$type": "dimension",
+      "$value": "5px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.blur.reveal"
+      ]
+    },
+    "orbit-sm": {
+      "$type": "dimension",
+      "$value": "64px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.blur.orbit-sm"
+      ]
+    },
+    "orbit": {
+      "$type": "dimension",
+      "$value": "111px",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.blur.orbit"
+      ]
+    }
+  }
+}

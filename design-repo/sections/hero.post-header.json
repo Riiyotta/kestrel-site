@@ -1,0 +1,114 @@
+{
+  "id": "hero.post-header",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Blog post header: back link, centred H1 and author/date/read-time byline.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Centred at lg+, left-aligned below."
+  },
+  "composes": [
+    "primitive.avatar"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 17
+      },
+      "author": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxWords": 3
+          },
+          "avatar": {
+            "type": "object",
+            "properties": {
+              "assetRole": {
+                "const": "photo.stock-person"
+              },
+              "src": {
+                "enum": [
+                  "/assets/photos/compare-avatar-1.webp",
+                  "/assets/photos/compare-avatar-2.webp",
+                  "/assets/photos/compare-avatar-3.webp",
+                  "/assets/photos/hero-bl.webp",
+                  "/assets/photos/hero-br.webp",
+                  "/assets/photos/hero-center.webp",
+                  "/assets/photos/hero-tl.webp",
+                  "/assets/photos/hero-tr.webp",
+                  "/assets/photos/nav-feature-industries.webp",
+                  "/assets/photos/nav-feature-product.webp",
+                  "/assets/photos/playbook-avatar-c.webp",
+                  "/assets/photos/playbook-avatar-p2l.webp",
+                  "/assets/photos/playbook-avatar-p2r.webp",
+                  "/assets/photos/playbook-avatar-p4l.webp",
+                  "/assets/photos/playbook-avatar-p4r.webp",
+                  "/assets/photos/playbook-avatar-p6l.webp",
+                  "/assets/photos/playbook-avatar-p6r.webp",
+                  "/assets/photos/proof-portrait-1.webp",
+                  "/assets/photos/proof-portrait-2.webp",
+                  "/assets/photos/story-1.webp",
+                  "/assets/photos/story-2.webp",
+                  "/assets/photos/story-3.webp",
+                  "/assets/photos/story-4.webp",
+                  "/assets/photos/story-5.webp",
+                  "/assets/photos/story-6.webp",
+                  "/assets/photos/video-teaser-thumb.webp"
+                ]
+              }
+            },
+            "required": [
+              "assetRole",
+              "src"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "name",
+          "avatar"
+        ],
+        "additionalProperties": false
+      },
+      "date": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "readingMinutes": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 60
+      }
+    },
+    "required": [
+      "title",
+      "author",
+      "date",
+      "readingMinutes"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Left-aligned title and byline below 810px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.blogpost"
+  ]
+}

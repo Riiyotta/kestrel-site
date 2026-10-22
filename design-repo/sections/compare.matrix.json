@@ -1,0 +1,72 @@
+{
+  "id": "compare.matrix",
+  "category": "compare",
+  "version": "1.0.0",
+  "purpose": "Us-vs-them matrix: centred title + sub, bordered card with tinted Kestrel column and check/minus marks.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Matrix card."
+  },
+  "composes": [
+    "component.compare-table"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "sub": {
+        "type": "string",
+        "maxWords": 6
+      },
+      "rows": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "maxWords": 8
+            },
+            "us": {
+              "type": "boolean"
+            },
+            "them": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "label",
+            "us",
+            "them"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 13
+      }
+    },
+    "required": [
+      "sub",
+      "rows"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "One card per row on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.comparetable"
+  ]
+}

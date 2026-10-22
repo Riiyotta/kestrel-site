@@ -1,0 +1,12 @@
+{
+  "registryId": "component.cta-chip",
+  "version": "1.0.0",
+  "description": "Sticky CTA chip.",
+  "composes": [],
+  "tokens": [
+    "{component.cta-chip.shadow}"
+  ],
+  "measuredFrom": [
+    "part.cta-chip"
+  ]
+}

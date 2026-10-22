@@ -1,0 +1,218 @@
+{
+  "$description": "Motion profiles: the closed set a PageSpec node may name in motion.profile. Each profile lists the atomic values it uses (tokens/00-foundation/motion.json) and a const-locked reducedMotionFallback that matches the clone's prefers-reduced-motion handling.",
+  "reducedMotionFallbacks": {
+    "none": "Nothing to reduce.",
+    "settled-final-state": "Reveals and scrubs render their end state immediately.",
+    "static-rest-frame": "Loops and slideshows stop on their rest frame.",
+    "instant-state-change": "State changes (open/close, select, hover) apply without a tween."
+  },
+  "profiles": {
+    "none": {
+      "description": "No motion; the section renders statically.",
+      "uses": [],
+      "reducedMotionFallback": "none"
+    },
+    "nav-chrome": {
+      "description": "Desktop mega-dropdown fade/morph/crossfade and phone sheet open/close.",
+      "uses": [
+        "tween.nav-fade",
+        "tween.nav-morph",
+        "tween.nav-close",
+        "tween.panel-out",
+        "tween.panel-in",
+        "tween.phone-open",
+        "tween.phone-close",
+        "tween.phone-bars",
+        "tween.sub-open",
+        "tween.sub-close"
+      ],
+      "reducedMotionFallback": "instant-state-change"
+    },
+    "hero-home-stage": {
+      "description": "Scroll-scaled centre photo with ~100ms follow, reversible satellite reveals, announcement-pill appear + 5.0s breathing glow, WebGL stand-in drift.",
+      "uses": [
+        "follow.scroll-smooth",
+        "tween.hero-reveal",
+        "tween.hero-reveal-blur",
+        "spring.pill-appear",
+        "loop.pill-breath",
+        "spring.pill-hover",
+        "standin.hero-glow-drift"
+      ],
+      "reducedMotionFallback": "settled-final-state"
+    },
+    "reveal-fade-up": {
+      "description": "Once-only fade-up (opacity 0, y 80 -> settled) when the block enters the viewport.",
+      "uses": [
+        "tween.reveal-06"
+      ],
+      "reducedMotionFallback": "settled-final-state"
+    },
+    "proof-bento": {
+      "description": "Bento card reveal with per-card delays, wide-card hover scale 1.02 (no lift), marquee strip, phone slideshow.",
+      "uses": [
+        "tween.reveal-06",
+        "spring.proof-hover",
+        "loop.marquee",
+        "spring.slide"
+      ],
+      "reducedMotionFallback": "settled-final-state"
+    },
+    "compare-cycle": {
+      "description": "24s three-scenario card cycle on a page timer.",
+      "uses": [
+        "tween.compare-fade",
+        "spring.label",
+        "loop.timer-origin"
+      ],
+      "reducedMotionFallback": "static-rest-frame",
+      "measuredFrom": [
+        "rm.css"
+      ]
+    },
+    "scroll-scrub-reveal": {
+      "description": "Replaying tile reveal and scroll-scrubbed mask over the decorative tree/line.",
+      "uses": [
+        "tween.reveal-04",
+        "scrub.scroll-target"
+      ],
+      "reducedMotionFallback": "settled-final-state"
+    },
+    "confidence-stage": {
+      "description": "Scrubbed centre line and tags, 45deg/s logo glow rotation, WebGL stand-in drift.",
+      "uses": [
+        "scrub.scroll-target",
+        "loop.logo-glow-rotate",
+        "standin.brain-blobs"
+      ],
+      "reducedMotionFallback": "settled-final-state"
+    },
+    "tile-time-loops": {
+      "description": "Integration tiles float on mirrored time loops started at page hydration.",
+      "uses": [
+        "loop.mirror",
+        "loop.timer-origin"
+      ],
+      "reducedMotionFallback": "static-rest-frame",
+      "measuredFrom": [
+        "rm.integrations"
+      ]
+    },
+    "playbook-fan": {
+      "description": "Card fan-in (replaying) and spring mask reveal of the bottom tree.",
+      "uses": [
+        "tween.reveal-06",
+        "spring.tree",
+        "standin.hero-glow-drift"
+      ],
+      "reducedMotionFallback": "settled-final-state"
+    },
+    "slideshow-autoplay": {
+      "description": "5s autoplay slideshow (spring .6 / bounce 0), dots, card hover scale.",
+      "uses": [
+        "spring.slide",
+        "spring.story-hover"
+      ],
+      "reducedMotionFallback": "static-rest-frame"
+    },
+    "marquee": {
+      "description": "Linear infinite logo ticker.",
+      "uses": [
+        "loop.marquee"
+      ],
+      "reducedMotionFallback": "static-rest-frame",
+      "measuredFrom": [
+        "rm.css"
+      ]
+    },
+    "logo-wall-reveal": {
+      "description": "Fade-up reveal of the strip, then the marquee loop.",
+      "uses": [
+        "tween.reveal-06",
+        "loop.marquee"
+      ],
+      "reducedMotionFallback": "settled-final-state"
+    },
+    "orbit-loop": {
+      "description": "Counter-rotating orbit rings of integration tiles.",
+      "uses": [
+        "loop.orbit-rotate"
+      ],
+      "reducedMotionFallback": "static-rest-frame",
+      "measuredFrom": [
+        "rm.orbit"
+      ]
+    },
+    "accordion": {
+      "description": "Accordion open/close (look-specific spring or tween) and the panel title letter reveal.",
+      "uses": [
+        "spring.faq-panel",
+        "spring.rows",
+        "tween.cards-open",
+        "tween.plus-rotate",
+        "tween.letter-reveal",
+        "spring.band"
+      ],
+      "reducedMotionFallback": "instant-state-change",
+      "measuredFrom": [
+        "rm.faq"
+      ]
+    },
+    "carousel-arrows": {
+      "description": "Arrow-driven horizontal scroll tween.",
+      "uses": [
+        "tween.carousel-scroll",
+        "tween.rail-scroll"
+      ],
+      "reducedMotionFallback": "instant-state-change"
+    },
+    "filter-chips": {
+      "description": "Chip selection fill transition.",
+      "uses": [
+        "tween.chip-fill",
+        "ease.ui"
+      ],
+      "reducedMotionFallback": "instant-state-change"
+    },
+    "toc-interaction": {
+      "description": "TOC hover expansion, tick growth and popover.",
+      "uses": [
+        "tween.tick-grow",
+        "tween.toc-popover",
+        "ease.ui"
+      ],
+      "reducedMotionFallback": "instant-state-change"
+    },
+    "teaser-entrance": {
+      "description": "Floating teaser entrance; disabled under reduced motion.",
+      "uses": [
+        "css.teaser-in"
+      ],
+      "reducedMotionFallback": "none",
+      "measuredFrom": [
+        "rm.teaser"
+      ]
+    },
+    "glow-standin": {
+      "description": "WebGL stand-in drift only (approximation, not measured).",
+      "uses": [
+        "standin.hero-glow-drift"
+      ],
+      "reducedMotionFallback": "static-rest-frame",
+      "measuredFrom": [
+        "rm.css"
+      ]
+    },
+    "jobs-ticker": {
+      "description": "Featured-role card ticker at 38.8 px/s with silk stand-in drift.",
+      "uses": [
+        "loop.jobs-ticker",
+        "standin.silk-drift"
+      ],
+      "reducedMotionFallback": "static-rest-frame",
+      "measuredFrom": [
+        "rm.css"
+      ]
+    }
+  }
+}

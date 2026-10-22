@@ -1,0 +1,12 @@
+{
+  "registryId": "component.pricing-card",
+  "version": "1.0.0",
+  "description": "Plan card: name, price, CTA, best-for and feature groups.",
+  "composes": [
+    "primitive.button"
+  ],
+  "tokens": [],
+  "measuredFrom": [
+    "part.pricing-card"
+  ]
+}

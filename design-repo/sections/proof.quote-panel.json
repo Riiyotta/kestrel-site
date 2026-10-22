@@ -1,0 +1,54 @@
+{
+  "id": "proof.quote-panel",
+  "category": "proof",
+  "version": "1.0.0",
+  "purpose": "Full-bleed gradient panel with one large pull quote.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Report pull quote."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "quote": {
+        "type": "string",
+        "maxWords": 20
+      },
+      "attribution": {
+        "type": "string",
+        "maxWords": 10
+      }
+    },
+    "required": [
+      "quote",
+      "attribution"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Quote steps down to phone size."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.quotepanel"
+  ],
+  "fixedAssets": [
+    {
+      "assetRole": "gradient.css-art",
+      "files": "report mesh"
+    }
+  ]
+}

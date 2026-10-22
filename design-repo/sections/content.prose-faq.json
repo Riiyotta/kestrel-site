@@ -1,0 +1,69 @@
+{
+  "id": "content.prose-faq",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Static, always-open FAQ list: H2 then question H3 / answer paragraph pairs.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Never collapses."
+  },
+  "composes": [
+    "component.prose-block"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 16
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "maxWords": 15
+            },
+            "a": {
+              "type": "string",
+              "maxWords": 59
+            }
+          },
+          "required": [
+            "q",
+            "a"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 8
+      }
+    },
+    "required": [
+      "title",
+      "items"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "60px 20px padding on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.prose"
+  ]
+}

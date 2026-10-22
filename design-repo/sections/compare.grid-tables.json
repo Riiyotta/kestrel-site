@@ -1,0 +1,105 @@
+{
+  "id": "compare.grid-tables",
+  "category": "compare",
+  "version": "1.0.0",
+  "purpose": "One comparison table per competitor category under a section heading, with a sticky blurred header.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Stacked tables."
+  },
+  "composes": [
+    "component.compare-table"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 15
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 36
+      },
+      "tables": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "against": {
+              "type": "string",
+              "maxWords": 9
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+              "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+            },
+            "rows": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "label": {
+                    "type": "string",
+                    "maxWords": 4
+                  },
+                  "us": {
+                    "type": "string",
+                    "maxWords": 17
+                  },
+                  "them": {
+                    "type": "string",
+                    "maxWords": 17
+                  }
+                },
+                "required": [
+                  "label",
+                  "us",
+                  "them"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 2,
+              "maxItems": 7
+            }
+          },
+          "required": [
+            "against",
+            "href",
+            "rows"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 6
+      }
+    },
+    "required": [
+      "title",
+      "sub",
+      "tables"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "scroll-horizontal",
+      "detail": "Tables scroll horizontally on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.comparetable"
+  ],
+  "notes": "Competitors are generic categories; never name real vendors."
+}

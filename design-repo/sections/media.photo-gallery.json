@@ -1,0 +1,105 @@
+{
+  "id": "media.photo-gallery",
+  "category": "media",
+  "version": "1.0.0",
+  "purpose": "Section heading + six-photo gallery of stock workplace photos.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Six photos."
+  },
+  "composes": [
+    "primitive.photo"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 9
+      },
+      "sub": {
+        "type": "string",
+        "maxWords": 36
+      },
+      "photos": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "assetRole": {
+              "const": "photo.stock-person"
+            },
+            "src": {
+              "enum": [
+                "/assets/photos/compare-avatar-1.webp",
+                "/assets/photos/compare-avatar-2.webp",
+                "/assets/photos/compare-avatar-3.webp",
+                "/assets/photos/hero-bl.webp",
+                "/assets/photos/hero-br.webp",
+                "/assets/photos/hero-center.webp",
+                "/assets/photos/hero-tl.webp",
+                "/assets/photos/hero-tr.webp",
+                "/assets/photos/nav-feature-industries.webp",
+                "/assets/photos/nav-feature-product.webp",
+                "/assets/photos/playbook-avatar-c.webp",
+                "/assets/photos/playbook-avatar-p2l.webp",
+                "/assets/photos/playbook-avatar-p2r.webp",
+                "/assets/photos/playbook-avatar-p4l.webp",
+                "/assets/photos/playbook-avatar-p4r.webp",
+                "/assets/photos/playbook-avatar-p6l.webp",
+                "/assets/photos/playbook-avatar-p6r.webp",
+                "/assets/photos/proof-portrait-1.webp",
+                "/assets/photos/proof-portrait-2.webp",
+                "/assets/photos/story-1.webp",
+                "/assets/photos/story-2.webp",
+                "/assets/photos/story-3.webp",
+                "/assets/photos/story-4.webp",
+                "/assets/photos/story-5.webp",
+                "/assets/photos/story-6.webp",
+                "/assets/photos/video-teaser-thumb.webp"
+              ]
+            },
+            "alt": {
+              "type": "string",
+              "maxWords": 11
+            }
+          },
+          "required": [
+            "assetRole",
+            "src",
+            "alt"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 6
+      }
+    },
+    "required": [
+      "title",
+      "sub",
+      "photos"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "reveal-fade-up",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "grid-collapse",
+      "detail": "Two columns."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.gallery"
+  ]
+}

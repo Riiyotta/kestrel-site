@@ -1,0 +1,14 @@
+{
+  "registryId": "primitive.load-more-button",
+  "version": "1.0.0",
+  "description": "Bordered load-more button that pages a local list.",
+  "props": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "tokens": [],
+  "measuredFrom": [
+    "part.load-more-button"
+  ]
+}

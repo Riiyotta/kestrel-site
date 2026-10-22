@@ -1,0 +1,17 @@
+{
+  "registryId": "primitive.letter-reveal",
+  "version": "1.0.0",
+  "description": "Per-letter heading reveal (once, 450ms).",
+  "props": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "tokens": [],
+  "measuredFrom": [
+    "part.letter-reveal"
+  ],
+  "motionProfiles": [
+    "accordion"
+  ]
+}

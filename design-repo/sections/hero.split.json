@@ -1,0 +1,120 @@
+{
+  "id": "hero.split",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Product/industry detail opener: answer-first H1 and lede beside a square product illustration.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "product": "Text column + 542px art (product pages).",
+    "industry": "Adds a reviewed-by byline and self-serve line (industry pages)."
+  },
+  "composes": [
+    "primitive.button",
+    "primitive.illustration"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 15
+      },
+      "lede": {
+        "type": "string",
+        "maxWords": 36
+      },
+      "intro": {
+        "type": "string",
+        "maxWords": 114
+      },
+      "byline": {
+        "type": "string",
+        "maxWords": 10
+      },
+      "selfServe": {
+        "type": "string",
+        "maxWords": 17
+      },
+      "art": {
+        "type": "object",
+        "properties": {
+          "assetRole": {
+            "const": "illustration.product-art"
+          },
+          "scene": {
+            "enum": [
+              "channels",
+              "chart",
+              "chat",
+              "flow",
+              "lock",
+              "outreach",
+              "people",
+              "phone",
+              "queue",
+              "review",
+              "shield",
+              "test"
+            ]
+          },
+          "tint": {
+            "enum": [
+              "brand",
+              "green",
+              "grey",
+              "lavender",
+              "peach",
+              "pink",
+              "yellow"
+            ]
+          }
+        },
+        "required": [
+          "assetRole",
+          "scene",
+          "tint"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "title",
+      "lede",
+      "art"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Art stacks under the text below 1200px; 455px at tablet, 350px phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.splithero"
+  ],
+  "variantRules": {
+    "industry": {
+      "requires": [
+        "byline",
+        "selfServe"
+      ]
+    },
+    "product": {
+      "forbids": [
+        "byline"
+      ]
+    }
+  },
+  "notes": "The original's Rive/video media tile is replaced by a static illustration panel (stand-in)."
+}

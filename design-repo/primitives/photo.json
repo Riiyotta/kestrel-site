@@ -1,0 +1,19 @@
+{
+  "registryId": "primitive.photo",
+  "version": "1.0.0",
+  "description": "Stock-photo slot with a tint-gradient loading backdrop and object-fit cover.",
+  "props": {
+    "src": {
+      "type": "string"
+    },
+    "alt": {
+      "type": "string"
+    }
+  },
+  "tokens": [
+    "{shape.photo}"
+  ],
+  "measuredFrom": [
+    "part.photo"
+  ]
+}

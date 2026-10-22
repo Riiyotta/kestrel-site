@@ -1,0 +1,23 @@
+{
+  "registryId": "component.card-carousel",
+  "version": "1.0.0",
+  "description": "Snap carousel / rail with arrow controls.",
+  "composes": [],
+  "tokens": [],
+  "measuredFrom": [
+    "part.card-carousel"
+  ],
+  "variants": {
+    "variant": [
+      "snap",
+      "rail"
+    ],
+    "card": [
+      "square",
+      "rectangle"
+    ]
+  },
+  "motionProfiles": [
+    "carousel-arrows"
+  ]
+}

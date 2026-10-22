@@ -1,0 +1,18 @@
+{
+  "registryId": "component.video-frame",
+  "version": "1.0.0",
+  "description": "Bordered video frame with a custom control bar over a static poster.",
+  "composes": [
+    "primitive.illustration"
+  ],
+  "tokens": [],
+  "measuredFrom": [
+    "part.video-frame"
+  ],
+  "variants": {
+    "variant": [
+      "coach",
+      "voice"
+    ]
+  }
+}

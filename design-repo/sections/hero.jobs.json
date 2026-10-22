@@ -1,0 +1,75 @@
+{
+  "id": "hero.jobs",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Jobs microsite opener: eyebrow, Inter headline, short description and a browse-roles button.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Square-corner microsite style."
+  },
+  "composes": [
+    "primitive.jobs-button"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "eyebrow": {
+        "type": "string",
+        "maxWords": 9
+      },
+      "title": {
+        "type": "string",
+        "maxWords": 11
+      },
+      "body": {
+        "type": "string",
+        "maxWords": 51
+      },
+      "cta": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxWords": 5
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+            "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "eyebrow",
+      "title",
+      "body",
+      "cta"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Text column stacks; H1 36px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.cxjobs"
+  ]
+}

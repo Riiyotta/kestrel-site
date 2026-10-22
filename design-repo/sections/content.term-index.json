@@ -1,0 +1,82 @@
+{
+  "id": "content.term-index",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "A-Z glossary index: letter heading, hairline and three-column term links per letter.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Letter groups."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "groups": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "letter": {
+              "type": "string",
+              "pattern": "^[A-Z]$"
+            },
+            "terms": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "label": {
+                    "type": "string",
+                    "maxWords": 5
+                  },
+                  "slug": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9-]+$"
+                  }
+                },
+                "required": [
+                  "label",
+                  "slug"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "maxItems": 8
+            }
+          },
+          "required": [
+            "letter",
+            "terms"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 26
+      }
+    },
+    "required": [
+      "groups"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "grid-collapse",
+      "detail": "One column of terms."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.termindex"
+  ],
+  "notes": "Term links go to /glossary/<slug>, which intentionally renders the 404 page: term pages were deliberately not built (no term template)."
+}

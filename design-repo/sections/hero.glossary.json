@@ -1,0 +1,53 @@
+{
+  "id": "hero.glossary",
+  "category": "hero",
+  "version": "1.0.0",
+  "purpose": "Glossary opener on a warm band: eyebrow, H1, intro.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Split row at lg+."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "eyebrow": {
+        "type": "string",
+        "maxWords": 2
+      },
+      "title": {
+        "type": "string",
+        "maxWords": 5
+      },
+      "intro": {
+        "type": "string",
+        "maxWords": 46
+      }
+    },
+    "required": [
+      "eyebrow",
+      "title",
+      "intro"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Stacked below 1200px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.glossary"
+  ]
+}

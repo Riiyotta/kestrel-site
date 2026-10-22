@@ -1,0 +1,116 @@
+{
+  "id": "content.related-stories",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "'Read other stories': section heading + up to three related story cards.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Three cards at lg, two at md, one on phone."
+  },
+  "composes": [
+    "component.story-card"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "maxWords": 4
+      },
+      "stories": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxWords": 16
+            },
+            "theme": {
+              "enum": [
+                "green",
+                "neutral",
+                "pink",
+                "red",
+                "yellow"
+              ]
+            },
+            "logo": {
+              "type": "object",
+              "properties": {
+                "assetRole": {
+                  "const": "logo.placeholder"
+                },
+                "name": {
+                  "type": "string",
+                  "maxWords": 3
+                },
+                "shape": {
+                  "enum": [
+                    "arc",
+                    "bars",
+                    "circle",
+                    "diamond",
+                    "plus",
+                    "ring",
+                    "square",
+                    "triangle"
+                  ]
+                }
+              },
+              "required": [
+                "assetRole",
+                "name",
+                "shape"
+              ],
+              "additionalProperties": false
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9._~/?#=&%-]*|#[A-Za-z0-9_-]*)$",
+              "description": "Internal path or in-page anchor only. External URLs are not allowed: the build makes no outbound links or requests."
+            }
+          },
+          "required": [
+            "title",
+            "theme",
+            "logo",
+            "href"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 3
+      }
+    },
+    "required": [
+      "title",
+      "stories"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "md",
+      "change": "hide",
+      "detail": "Third card hidden below 1200px."
+    },
+    {
+      "breakpoint": "base",
+      "change": "hide",
+      "detail": "Second card hidden below 810px."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.storycard"
+  ]
+}

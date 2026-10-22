@@ -1,0 +1,81 @@
+{
+  "id": "content.integration-body",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Integration detail body: overview / what it is / how to integrate blocks beside a sticky meta card.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Main column + meta card."
+  },
+  "composes": [
+    "component.meta-card"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "sections": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "heading": {
+              "type": "string",
+              "maxWords": 4
+            },
+            "level": {
+              "enum": [
+                "h2",
+                "h3"
+              ]
+            },
+            "text": {
+              "type": "string",
+              "maxWords": 120
+            }
+          },
+          "required": [
+            "heading",
+            "level",
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 1,
+        "maxItems": 3
+      },
+      "website": {
+        "type": "string",
+        "maxWords": 3
+      },
+      "category": {
+        "type": "string",
+        "maxWords": 4
+      }
+    },
+    "required": [
+      "sections",
+      "website",
+      "category"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "lg",
+      "change": "show",
+      "detail": "Meta card shown at 1200px and up only."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.intdetail"
+  ]
+}

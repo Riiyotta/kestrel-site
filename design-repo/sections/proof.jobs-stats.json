@@ -1,0 +1,67 @@
+{
+  "id": "proof.jobs-stats",
+  "category": "proof",
+  "version": "1.0.0",
+  "purpose": "Jobs microsite stats row.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "standard": "Three stats."
+  },
+  "composes": [],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "stats": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string",
+              "pattern": "^[0-9.,%x+~]+$"
+            },
+            "label": {
+              "type": "string",
+              "maxWords": 3
+            },
+            "desc": {
+              "type": "string",
+              "maxWords": 8
+            }
+          },
+          "required": [
+            "value",
+            "label",
+            "desc"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "required": [
+      "stats"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "stack",
+      "detail": "Stats stack on phone."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.stats"
+  ]
+}

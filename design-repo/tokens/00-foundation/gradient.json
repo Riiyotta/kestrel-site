@@ -1,0 +1,235 @@
+{
+  "$description": "Gradient fills in use. Several are CSS stand-ins for raster art or WebGL scenes of the original (see asset role gradient.css-art and backdrop.webgl-standin); they are the clone's own drawings, not measurements.",
+  "gradient": {
+    "brand-4": {
+      "$type": "gradient",
+      "$value": "linear-gradient(90deg, #4348DC 13.0965%, #FF29E5 36.5006%, #EA4921 63.971%, #FACB12 85.1738%)",
+      "usage": {
+        "srcRefs": 3
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.brand-4"
+      ]
+    },
+    "brand-3": {
+      "$type": "gradient",
+      "$value": "linear-gradient(90deg, #FF29E5 13.0965%, #FACB12 50.2575%, #4348DC 85.1738%)",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.brand-3"
+      ]
+    },
+    "brand-ring": {
+      "$type": "gradient",
+      "$value": "linear-gradient(90deg, #FF29E5 0%, #FACB12 50%, #4348DC 100%)",
+      "usage": {
+        "srcRefs": 3
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.brand-ring"
+      ]
+    },
+    "brand-ring-glow": {
+      "$type": "gradient",
+      "$value": "linear-gradient(90deg, rgba(255,41,229,.28) 0%, rgba(250,203,18,.28) 50%, rgba(67,72,220,.28) 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.brand-ring-glow"
+      ]
+    },
+    "progress": {
+      "$type": "gradient",
+      "$value": "linear-gradient(90deg, #FF29E5 24%, #FACB12 65%, #4348DC 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.progress"
+      ]
+    },
+    "nav-sheen": {
+      "$type": "gradient",
+      "$value": "linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.12) 46%, rgba(255,255,255,0) 60%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.nav-sheen"
+      ]
+    },
+    "dd-fade-navy": {
+      "$type": "gradient",
+      "$value": "linear-gradient(180deg, rgba(20,22,90,0) 35%, rgba(20,22,90,.55) 72%, rgba(14,15,60,.85) 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.dd-fade-navy"
+      ]
+    },
+    "dd-fade-black": {
+      "$type": "gradient",
+      "$value": "linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 72%, rgba(0,0,0,.78) 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.dd-fade-black"
+      ]
+    },
+    "menu-fade": {
+      "$type": "gradient",
+      "$value": "linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.menu-fade"
+      ]
+    },
+    "frame-mask": {
+      "$type": "gradient",
+      "$value": "linear-gradient(119deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.1) 100%)",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.frame-mask"
+      ]
+    },
+    "tools-fade": {
+      "$type": "gradient",
+      "$value": "linear-gradient(180deg, rgba(242,242,242,.5) 0%, rgba(255,255,255,0) 40%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.tools-fade"
+      ]
+    },
+    "white-fade": {
+      "$type": "gradient",
+      "$value": "linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 25%, #fff 50%, #fff 75%, rgba(171,171,171,0) 100%)",
+      "usage": {
+        "srcRefs": 4
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.white-fade"
+      ]
+    },
+    "brain-fade": {
+      "$type": "gradient",
+      "$value": "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.9) 11.71%, #fff 51.38%, rgba(255,255,255,.9) 85.58%, rgba(171,171,171,0) 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.brain-fade"
+      ]
+    },
+    "ticket": {
+      "$type": "gradient",
+      "$value": "linear-gradient(116deg, rgba(239,239,239,.6) 0%, rgba(255,255,255,.08) 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.ticket"
+      ]
+    },
+    "plans-glow": {
+      "$type": "gradient",
+      "$value": "radial-gradient(90% 130% at 50% 0, rgba(67,72,220,.10) 0%, rgba(223,38,254,.07) 45%, rgba(250,203,18,.05) 72%, rgba(255,255,255,0) 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.plans-glow"
+      ]
+    },
+    "toc-backdrop": {
+      "$type": "gradient",
+      "$value": "linear-gradient(to right, rgba(255,255,255,.97) 0%, rgba(255,255,255,.95) 42%, rgba(255,255,255,0) 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.toc-backdrop"
+      ]
+    },
+    "progress-rail": {
+      "$type": "gradient",
+      "$value": "linear-gradient(180deg, #FF29E5 0%, #FACB12 51.92%, #4348DC 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.progress-rail"
+      ]
+    },
+    "report-mesh": {
+      "$type": "gradient",
+      "$value": "radial-gradient(55% 95% at 0% 20%, #E8A33D 0%, rgba(232,163,61,0) 70%), radial-gradient(50% 85% at 50% 15%, #E04BD6 0%, rgba(224,75,214,0) 72%), radial-gradient(60% 110% at 100% 90%, #6F6FE6 0%, rgba(111,111,230,0) 75%), linear-gradient(90deg, #F07A3C 0%, #E04BD6 55%, #6F6FE6 100%)",
+      "usage": {
+        "srcRefs": 3
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.report-mesh"
+      ]
+    },
+    "report-number": {
+      "$type": "gradient",
+      "$value": "linear-gradient(90deg, #E8A33D 0%, #E04BD6 55%, #6F6FE6 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.report-number"
+      ]
+    },
+    "int-fade": {
+      "$type": "gradient",
+      "$value": "linear-gradient(270deg, transparent 3%, #000 15%, #000 85.04%, transparent 98%)",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.int-fade"
+      ]
+    },
+    "demo-art": {
+      "$type": "gradient",
+      "$value": "linear-gradient(90deg, rgba(255,255,255,0) 47.6%, rgba(255,255,255,.55) 47.7%, rgba(255,255,255,0) 49%), linear-gradient(180deg, rgba(255,255,255,0) 40.6%, rgba(255,255,255,.45) 40.7%, rgba(255,255,255,0) 42%, rgba(255,255,255,0) 81.4%, rgba(255,255,255,.6) 81.5%, rgba(255,255,255,0) 83%), radial-gradient(55% 40% at 30% 30%, rgba(255,41,229,.95) 0%, rgba(255,41,229,0) 75%), radial-gradient(45% 45% at 75% 25%, rgba(255,41,229,.9) 0%, rgba(255,41,229,0) 75%), radial-gradient(45% 40% at 100% 70%, rgba(67,72,220,.95) 0%, rgba(67,72,220,0) 80%), radial-gradient(35% 30% at 0% 85%, rgba(250,203,18,.7) 0%, rgba(250,203,18,0) 80%), linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%)",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.demo-art"
+      ]
+    },
+    "about-fade": {
+      "$type": "gradient",
+      "$value": "linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%)",
+      "usage": {
+        "srcRefs": 1
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.about-fade"
+      ]
+    },
+    "careers-glow": {
+      "$type": "gradient",
+      "$value": "linear-gradient(90deg, rgba(255,255,255,0) 0 calc(25% - 1px), rgba(231,244,232,.9) calc(25% - 1px) 25%, rgba(255,255,255,0) 25% calc(75% - 1px), rgba(231,244,232,.9) calc(75% - 1px) 75%, rgba(255,255,255,0) 75%), radial-gradient(42% 46% at 50% 45%, rgba(200,233,203,.95) 0%, rgba(231,244,232,.7) 45%, rgba(255,255,255,0) 100%)",
+      "usage": {
+        "srcRefs": 2
+      },
+      "measuredFrom": [
+        "cfg.backgroundImage.careers-glow"
+      ]
+    }
+  }
+}

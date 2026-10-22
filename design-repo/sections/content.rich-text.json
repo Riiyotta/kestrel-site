@@ -1,0 +1,262 @@
+{
+  "id": "content.rich-text",
+  "category": "content",
+  "version": "1.0.0",
+  "purpose": "Long-form body copy for posts and guides, rendered from typed rich-text blocks.",
+  "evidenceLevel": "measured",
+  "variants": {
+    "blog": "900px column, 20/26 text, h2 38/42, embedded video.",
+    "article": "800px column, h2 28/34, key-takeaways box."
+  },
+  "composes": [
+    "component.rich-text"
+  ],
+  "contentModel": {
+    "type": "object",
+    "properties": {
+      "blocks": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "p"
+                },
+                "html": {
+                  "type": "string",
+                  "maxWords": 58
+                }
+              },
+              "required": [
+                "type",
+                "html"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "h2"
+                },
+                "text": {
+                  "type": "string",
+                  "maxWords": 6
+                }
+              },
+              "required": [
+                "type",
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "h3"
+                },
+                "text": {
+                  "type": "string",
+                  "maxWords": 4
+                }
+              },
+              "required": [
+                "type",
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "ul"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "maxWords": 16
+                  },
+                  "minItems": 1,
+                  "maxItems": 4
+                }
+              },
+              "required": [
+                "type",
+                "items"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "ol"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "maxWords": 16
+                  },
+                  "minItems": 1,
+                  "maxItems": 4
+                }
+              },
+              "required": [
+                "type",
+                "items"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "blockquote"
+                },
+                "html": {
+                  "type": "string",
+                  "maxWords": 26
+                },
+                "cite": {
+                  "type": "string",
+                  "maxWords": 8
+                }
+              },
+              "required": [
+                "type",
+                "html"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "takeaways"
+                },
+                "title": {
+                  "type": "string",
+                  "maxWords": 3
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "maxWords": 22
+                  },
+                  "minItems": 1,
+                  "maxItems": 3
+                }
+              },
+              "required": [
+                "type",
+                "items"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "video"
+                },
+                "poster": {
+                  "type": "object",
+                  "properties": {
+                    "assetRole": {
+                      "const": "photo.stock-person"
+                    },
+                    "src": {
+                      "enum": [
+                        "/assets/photos/compare-avatar-1.webp",
+                        "/assets/photos/compare-avatar-2.webp",
+                        "/assets/photos/compare-avatar-3.webp",
+                        "/assets/photos/hero-bl.webp",
+                        "/assets/photos/hero-br.webp",
+                        "/assets/photos/hero-center.webp",
+                        "/assets/photos/hero-tl.webp",
+                        "/assets/photos/hero-tr.webp",
+                        "/assets/photos/nav-feature-industries.webp",
+                        "/assets/photos/nav-feature-product.webp",
+                        "/assets/photos/playbook-avatar-c.webp",
+                        "/assets/photos/playbook-avatar-p2l.webp",
+                        "/assets/photos/playbook-avatar-p2r.webp",
+                        "/assets/photos/playbook-avatar-p4l.webp",
+                        "/assets/photos/playbook-avatar-p4r.webp",
+                        "/assets/photos/playbook-avatar-p6l.webp",
+                        "/assets/photos/playbook-avatar-p6r.webp",
+                        "/assets/photos/proof-portrait-1.webp",
+                        "/assets/photos/proof-portrait-2.webp",
+                        "/assets/photos/story-1.webp",
+                        "/assets/photos/story-2.webp",
+                        "/assets/photos/story-3.webp",
+                        "/assets/photos/story-4.webp",
+                        "/assets/photos/story-5.webp",
+                        "/assets/photos/story-6.webp",
+                        "/assets/photos/video-teaser-thumb.webp"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "assetRole",
+                    "src"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "type",
+                "poster"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 15
+      }
+    },
+    "required": [
+      "blocks"
+    ],
+    "additionalProperties": false
+  },
+  "motion": {
+    "allowedProfiles": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true
+  },
+  "responsive": [
+    {
+      "breakpoint": "base",
+      "change": "resize",
+      "detail": "Type steps down (article h2 24/30, h3 20/26)."
+    }
+  ],
+  "constraints": {
+    "onePerPage": true
+  },
+  "measuredFrom": [
+    "src.richtext"
+  ],
+  "variantRules": {
+    "blog": {
+      "forbidsBlockTypes": [
+        "takeaways"
+      ]
+    },
+    "article": {
+      "forbidsBlockTypes": [
+        "video",
+        "h3"
+      ]
+    }
+  }
+}

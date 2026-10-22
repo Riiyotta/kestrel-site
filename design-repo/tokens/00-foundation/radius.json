@@ -1,0 +1,368 @@
+{
+  "$description": "Corner radii in use (rendered = computed border-top-left-radius occurrences in the crawl).",
+  "radius": {
+    "pill": {
+      "$type": "dimension",
+      "$value": "9999px",
+      "usage": {
+        "srcRefs": 23,
+        "rendered": 3920
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.pill"
+      ]
+    },
+    "nav-pill": {
+      "$type": "dimension",
+      "$value": "999px",
+      "usage": {
+        "srcRefs": 23,
+        "rendered": 1157
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.nav-pill"
+      ]
+    },
+    "announce": {
+      "$type": "dimension",
+      "$value": "100px",
+      "usage": {
+        "srcRefs": 7,
+        "rendered": 318
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.announce"
+      ]
+    },
+    "hero-tag": {
+      "$type": "dimension",
+      "$value": "50px",
+      "usage": {
+        "srcRefs": 13,
+        "rendered": 246
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.hero-tag"
+      ]
+    },
+    "chip-round": {
+      "$type": "dimension",
+      "$value": "38px",
+      "usage": {
+        "srcRefs": 3,
+        "rendered": 23
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.chip-round"
+      ]
+    },
+    "logo-tile": {
+      "$type": "dimension",
+      "$value": "32px",
+      "usage": {
+        "srcRefs": 3,
+        "rendered": 138
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.logo-tile"
+      ]
+    },
+    "icon-tile": {
+      "$type": "dimension",
+      "$value": "28px",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 7
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.icon-tile"
+      ]
+    },
+    "icon-tile-inner": {
+      "$type": "dimension",
+      "$value": "24px",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 108
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.icon-tile-inner"
+      ]
+    },
+    "photo-frame": {
+      "$type": "dimension",
+      "$value": "26px",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 136
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.photo-frame"
+      ]
+    },
+    "photo": {
+      "$type": "dimension",
+      "$value": "24px",
+      "usage": {
+        "srcRefs": 9,
+        "rendered": 108
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.photo"
+      ]
+    },
+    "nav-phone": {
+      "$type": "dimension",
+      "$value": "26px",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 136
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.nav-phone"
+      ]
+    },
+    "nav-phone-open": {
+      "$type": "dimension",
+      "$value": "22px",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 39
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.nav-phone-open"
+      ]
+    },
+    "glass": {
+      "$type": "dimension",
+      "$value": "20px",
+      "usage": {
+        "srcRefs": 13,
+        "rendered": 511
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.glass"
+      ]
+    },
+    "footer-mark": {
+      "$type": "dimension",
+      "$value": "18px",
+      "usage": {
+        "srcRefs": 5,
+        "rendered": 89
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.footer-mark"
+      ]
+    },
+    "card": {
+      "$type": "dimension",
+      "$value": "16px",
+      "usage": {
+        "srcRefs": 50,
+        "rendered": 911
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.card"
+      ]
+    },
+    "brain-outer": {
+      "$type": "dimension",
+      "$value": "15px",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 76
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.brain-outer"
+      ]
+    },
+    "inner": {
+      "$type": "dimension",
+      "$value": "14px",
+      "usage": {
+        "srcRefs": 6,
+        "rendered": 373
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.inner"
+      ]
+    },
+    "playbook": {
+      "$type": "dimension",
+      "$value": "12px",
+      "usage": {
+        "srcRefs": 12,
+        "rendered": 254
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.playbook"
+      ]
+    },
+    "tile": {
+      "$type": "dimension",
+      "$value": "10px",
+      "usage": {
+        "srcRefs": 9,
+        "rendered": 664
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.tile"
+      ]
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "8px",
+      "usage": {
+        "srcRefs": 32,
+        "rendered": 1009
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.sm"
+      ]
+    },
+    "brain-chip": {
+      "$type": "dimension",
+      "$value": "5px",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 5
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.brain-chip"
+      ]
+    },
+    "footer-link": {
+      "$type": "dimension",
+      "$value": "31.5px",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 6834
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.footer-link"
+      ]
+    },
+    "teaser-card": {
+      "$type": "dimension",
+      "$value": "22px",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 39
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.teaser-card"
+      ]
+    },
+    "logo-tile-phone": {
+      "$type": "dimension",
+      "$value": "26.09px",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.logo-tile-phone"
+      ]
+    },
+    "dot-progress": {
+      "$type": "dimension",
+      "$value": "128px",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 1
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.dot-progress"
+      ]
+    },
+    "jobs-logo": {
+      "$type": "dimension",
+      "$value": "4px",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 448
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.jobs-logo"
+      ]
+    },
+    "xs": {
+      "$type": "dimension",
+      "$value": "4px",
+      "usage": {
+        "srcRefs": 8,
+        "rendered": 448
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.xs"
+      ]
+    },
+    "photo-sm": {
+      "$type": "dimension",
+      "$value": "6px",
+      "usage": {
+        "srcRefs": 5,
+        "rendered": 219
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.photo-sm"
+      ]
+    },
+    "emp-text": {
+      "$type": "dimension",
+      "$value": "9.43px",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 44
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.emp-text"
+      ]
+    },
+    "field-soft": {
+      "$type": "dimension",
+      "$value": "14.49px",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 8
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.field-soft"
+      ]
+    },
+    "avatar-sm": {
+      "$type": "dimension",
+      "$value": "7px",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 20
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.avatar-sm"
+      ]
+    },
+    "int-tile": {
+      "$type": "dimension",
+      "$value": "9.4px",
+      "usage": {
+        "srcRefs": 2,
+        "rendered": 18
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.int-tile"
+      ]
+    },
+    "demo-avatar": {
+      "$type": "dimension",
+      "$value": "6.51px",
+      "usage": {
+        "srcRefs": 1,
+        "rendered": 2
+      },
+      "measuredFrom": [
+        "cfg.borderRadius.demo-avatar"
+      ]
+    }
+  }
+}
