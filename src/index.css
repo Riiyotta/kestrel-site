@@ -1,0 +1,440 @@
+/* Framer metric-matched fallbacks (CLONE_SPEC §1) – keep layout stable before web fonts load. */
+@font-face {
+  font-family: 'PP Cirka Regular Placeholder';
+  src: local('Arial');
+  ascent-override: 70.41%;
+  descent-override: 22%;
+  line-gap-override: 8.8%;
+  size-adjust: 90.9%;
+}
+@font-face {
+  font-family: 'ABC Ginto Regular Placeholder';
+  src: local('Arial');
+  ascent-override: 95.18%;
+  descent-override: 27.19%;
+  line-gap-override: 0%;
+  size-adjust: 102.97%;
+}
+@font-face {
+  font-family: 'ABC Ginto Medium Placeholder';
+  src: local('Arial');
+  ascent-override: 91.99%;
+  descent-override: 26.28%;
+  line-gap-override: 0%;
+  size-adjust: 106.54%;
+}
+@font-face {
+  font-family: 'ABC Ginto Bold Placeholder';
+  src: local('Arial');
+  ascent-override: 88.44%;
+  descent-override: 25.27%;
+  line-gap-override: 0%;
+  size-adjust: 110.81%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    margin: 0;
+    background-color: theme('colors.white');
+    color: theme('colors.ink.DEFAULT');
+    font-family: theme('fontFamily.sans');
+    overflow-x: clip;
+  }
+  h1, h2, h3, h4, p {
+    margin: 0;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  img,
+  svg,
+  video {
+    display: block;
+  }
+
+  /* Lenis recommended base styles */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  /* Display face = Fraunces substitute for PP Cirka: pin optical size to the high-contrast
+     display master at every size (keeps width ratio to Cirka constant) and use wght 340,
+     which matches Cirka Regular's stroke weight. */
+  .font-display {
+    font-variation-settings: 'opsz' 144;
+    font-weight: theme('fontWeight.display-sub');
+  }
+
+  /* Glass panel (§0 / §14): CTA + footer glass, dropdown-style surfaces.
+     bg white .3, 22px soft shadow, 1px inset white rim .55, 10px backdrop blur. */
+  .glass-panel {
+    background-color: theme('colors.glass-30');
+    box-shadow: theme('boxShadow.glass-rim');
+    -webkit-backdrop-filter: blur(theme('backdropBlur.tag'));
+    backdrop-filter: blur(theme('backdropBlur.tag'));
+    border-radius: theme('borderRadius.glass');
+  }
+
+  /* Brand gradients (§0). */
+  .brand-gradient {
+    background-image: theme('backgroundImage.brand-4');
+  }
+  .brand-gradient-3 {
+    background-image: theme('backgroundImage.brand-3');
+  }
+  .brand-gradient-ring {
+    background-image: theme('backgroundImage.brand-ring');
+  }
+
+  /* Photo "Border" frame (§0): sits 2px outside the photo, radius +2, white rim
+     masked from top-left (60%) to bottom-right (10%). Set border width per use. */
+  .photo-frame {
+    position: absolute;
+    inset: -2px;
+    border-style: solid;
+    border-color: theme('colors.white');
+    border-radius: theme('borderRadius.photo-frame');
+    -webkit-mask-image: theme('backgroundImage.frame-mask');
+    mask-image: theme('backgroundImage.frame-mask');
+    pointer-events: none;
+  }
+  /* Satellite photos: the live "Border" layer is the same box as the photo (radius 24, 4px rim drawn
+     inside), not 2px outside like Photo-Center's. */
+  .photo-frame--flush {
+    inset: 0;
+    border-radius: theme('borderRadius.photo');
+  }
+
+  /* Hero WebGL (Unicorn Studio scene) static stand-in (§6, ASSET_MANIFEST non-file effects):
+     soft pastel vertical stripes in brand colours, masked #000 66% -> transparent 84%.
+     The extra top fade mimics the stripes' soft tops in recon/1440-00 and 1440-01. */
+  .hero-glow-placeholder {
+    -webkit-mask-image: linear-gradient(180deg, #000 66%, transparent 84%);
+    mask-image: linear-gradient(180deg, #000 66%, transparent 84%);
+  }
+  .hero-glow-placeholder__colour {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+      90deg,
+      transparent 14%,
+      theme('colors.brand.magenta') 26%,
+      theme('colors.brand.magenta') 34%,
+      theme('colors.brand.indigo') 48%,
+      theme('colors.brand.sun') 62%,
+      theme('colors.brand.sun') 76%,
+      transparent 88%
+    );
+    -webkit-mask-image: linear-gradient(180deg, transparent 4%, #000 34%);
+    mask-image: linear-gradient(180deg, transparent 4%, #000 34%);
+    filter: blur(18px);
+    opacity: 0.85;
+  }
+  .hero-glow-placeholder__stripes {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0px,
+      rgba(255, 255, 255, 0) 34px,
+      rgba(255, 255, 255, 0.7) 52px,
+      rgba(255, 255, 255, 0) 68px
+    );
+    filter: blur(6px);
+  }
+}
+
+/* =====================================================================================
+   SECTIONS 3–10 (Proof → Footer). Appended block – nothing above is modified.
+   ===================================================================================== */
+@layer utilities {
+  /* Edge masks (Tailwind v3 has no mask utilities). */
+  .mask-marquee {
+    /* §7 logo strip */
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 17%, #000 83%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 17%, #000 83%, transparent 100%);
+  }
+  .mask-stories {
+    /* §13 carousel-mask */
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 9.67%, #000 90%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 9.67%, #000 90%, transparent 100%);
+  }
+
+  /* §9/§10 white "MASK" layer that slides down over gradient line art to reveal it
+     (gradientTree (MASK) / gradientLine mask): white, top edge feathered transparent 0% -> #000 2.35%. */
+  .reveal-mask {
+    background-color: theme('colors.white');
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 2.35%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 2.35%);
+    pointer-events: none;
+  }
+
+  /* SVG <stop> colours from the brand tokens (no raw hex in JSX). */
+  .stop-indigo { stop-color: theme('colors.brand.indigo'); }
+  .stop-magenta { stop-color: theme('colors.brand.magenta'); }
+  .stop-ember { stop-color: theme('colors.brand.ember'); }
+  .stop-sun { stop-color: theme('colors.brand.sun'); }
+  .stop-gray { stop-color: theme('colors.line-gray'); }
+
+  /* §10 brain WebGL (Unicorn scene z0rAh02cpnLCJ6UNJJfn) static stand-in: soft sun / magenta / indigo
+     blobs broken by a soft white grid (~147px cells, sampled from recon/1440-06-brain-tags.png; override --brain-cell), radial mask #000 77.54% -> transparent. */
+  .brain-glow-placeholder {
+    overflow: hidden;
+    -webkit-mask-image: radial-gradient(50% 50% at 50% 50%, #000 77.54%, transparent 100%);
+    mask-image: radial-gradient(50% 50% at 50% 50%, #000 77.54%, transparent 100%);
+  }
+  .brain-glow-placeholder__blobs {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(24% 34% at 30% 52%, theme('colors.brand.sun') 0%, transparent 72%),
+      radial-gradient(22% 36% at 50% 36%, theme('colors.brand.magenta') 0%, transparent 72%),
+      radial-gradient(24% 36% at 65% 62%, theme('colors.brand.indigo') 0%, transparent 72%);
+    filter: blur(24px);
+  }
+  .brain-glow-placeholder__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, transparent 0px, transparent calc(var(--brain-cell, 147px) - 3px), rgba(255, 255, 255, 0.85) var(--brain-cell, 147px), transparent calc(var(--brain-cell, 147px) + 5px)),
+      repeating-linear-gradient(0deg, transparent 0px, transparent calc(var(--brain-cell, 147px) - 3px), rgba(255, 255, 255, 0.85) var(--brain-cell, 147px), transparent calc(var(--brain-cell, 147px) + 5px));
+    filter: blur(2px);
+  }
+
+  /* §12 Bottom-tree WebGL (same scene as the hero) – reuses .hero-glow-placeholder__colour/__stripes
+     children with this section's own mask: #000 70% -> transparent 98%. */
+  .bottomtree-glow-placeholder {
+    -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 98%);
+    mask-image: linear-gradient(180deg, #000 70%, transparent 98%);
+  }
+}
+
+/* SECTIONS 3–10 – pixel-audit additions. Framer draws these rules/borders with ::after overlays that take no
+   layout space; inset shadows reproduce that (a real border would push content by 1px). */
+@layer utilities {
+  .rule-b { box-shadow: inset 0 -1px 0 theme('colors.footer-rule'); }
+  .rule-t { box-shadow: inset 0 1px 0 theme('colors.footer-rule'); }
+  .rule-t-legal { box-shadow: inset 0 1px 0 theme('colors.legal-rule'); }
+}
+
+/* =====================================================================================
+   motion: nav/hero (animation pass – appended block; values measured on the live site)
+   ===================================================================================== */
+/* Floating video teaser entrance (live .lvc stylesheet): .7s cubic-bezier(.2,.8,.2,1), .5s delay, fill both. */
+@keyframes lvcIn {
+  0% { opacity: 0; transform: translateY(16px); }
+}
+@keyframes lvcInM {
+  0% { opacity: 0; transform: translate(-50%, 12px); }
+}
+.teaser-in {
+  animation: lvcIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.5s both;
+}
+@media (max-width: 809.98px) {
+  .teaser-in { animation-name: lvcInM; }
+}
+
+/* Hero WebGL stand-in drift. The live Unicorn scene keeps its vertical pastel stripes in place while their
+   soft tops undulate and individual stripes brighten/dim slowly (frames 2s apart at 1440). Approximated with
+   two cheap compositor-only loops: the colour wash breathes vertically/horizontally, the white stripe comb
+   slides one 68px period sideways (seamless). Scoped to the hero (.hero-glow-drift) – the bottom-tree reuse of
+   the same placeholder is not affected. */
+@keyframes heroGlowWash {
+  0% { transform: translate3d(0, 0, 0) scale(1, 1); }
+  50% { transform: translate3d(-1.2%, 1.5%, 0) scale(1.03, 0.985); }
+  100% { transform: translate3d(0.8%, -1%, 0) scale(0.99, 1.02); }
+}
+@keyframes heroGlowComb {
+  to { transform: translate3d(68px, 0, 0); }
+}
+.hero-glow-drift .hero-glow-placeholder__colour {
+  animation: heroGlowWash 11s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.hero-glow-drift .hero-glow-placeholder__stripes {
+  inset: 0 -68px 0 -68px;
+  animation: heroGlowComb 9s linear infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .teaser-in,
+  .hero-glow-drift .hero-glow-placeholder__colour,
+  .hero-glow-drift .hero-glow-placeholder__stripes {
+    animation: none !important;
+  }
+}
+/* end motion: nav/hero */
+
+/* =====================================================================================
+   motion: sections 3–10 (animation pass – appended block; values measured on the live site)
+   ===================================================================================== */
+/* §7 logo marquee (Framer Ticker): linear, infinite, one Logo-Stack + 96px gap per loop (--marquee-loop);
+   duration = loop / speed, set inline (50px/s xl strip, 30px/s tickers). */
+@keyframes marqueeLeft {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(calc(-1 * var(--marquee-loop)), 0, 0); }
+}
+@keyframes marqueeRight {
+  from { transform: translate3d(calc(-1 * var(--marquee-loop)), 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+.marquee-left { animation: marqueeLeft linear infinite; will-change: transform; }
+.marquee-right { animation: marqueeRight linear infinite; will-change: transform; }
+/* §10 brain WebGL stand-in drift (Unicorn scene z0rAh02cpnLCJ6UNJJfn can't be read): the colour blobs breathe and
+   wander slowly under the static grid. Compositor-only; approximation, not a measured curve. */
+@keyframes brainBlobs {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(2%, -1.5%, 0) scale(1.04); }
+  100% { transform: translate3d(-1.5%, 1%, 0) scale(0.98); }
+}
+.brain-glow-drift .brain-glow-placeholder__blobs {
+  animation: brainBlobs 12s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-left,
+  .marquee-right,
+  .brain-glow-drift .brain-glow-placeholder__blobs {
+    animation: none !important;
+  }
+}
+/* end motion: sections 3–10 */
+
+/* =====================================================================================
+   pages: standalone (SPEC_PAGES_C T4 /cx-jobs, T5 /press-kit). Appended block – nothing above is modified.
+   ===================================================================================== */
+@layer utilities {
+  /* T4 J2 SilkJobCard: CSS stand-in for the live WebGL "silk" shader (not DOM-measurable). Glossy folds in the card
+     hue over #0B0B0F: a bright lower-right bloom, two diagonal fold bands with a thin white sheen, a soft top-left
+     glow. The fold layer drifts slowly (silkDrift); hue via the .silk-<hue> classes (brand tokens). */
+  .silk-card {
+    background-color: theme('colors.jobs.silk-base');
+    background-image:
+      radial-gradient(90% 55% at 88% 82%, var(--silk-strong) 0%, transparent 62%),
+      linear-gradient(152deg, transparent 34%, var(--silk-mid) 44%, transparent 50%, rgba(255, 255, 255, 0.16) 51.5%, transparent 53%, var(--silk-soft) 61%, transparent 72%),
+      radial-gradient(70% 45% at 8% 18%, var(--silk-soft) 0%, transparent 70%);
+    background-size: 100% 100%, 240% 240%, 100% 100%;
+    background-position: 0 0, 30% 40%, 0 0;
+  }
+  .silk-magenta {
+    --silk-strong: theme('colors.brand.magenta / 85%');
+    --silk-mid: theme('colors.brand.magenta / 55%');
+    --silk-soft: theme('colors.brand.magenta / 25%');
+  }
+  .silk-indigo {
+    --silk-strong: theme('colors.brand.indigo / 90%');
+    --silk-mid: theme('colors.brand.indigo / 60%');
+    --silk-soft: theme('colors.brand.indigo / 30%');
+  }
+  .silk-ember {
+    --silk-strong: theme('colors.brand.ember / 90%');
+    --silk-mid: theme('colors.brand.ember / 60%');
+    --silk-soft: theme('colors.brand.ember / 30%');
+  }
+  .silk-sun {
+    --silk-strong: theme('colors.brand.sun / 80%');
+    --silk-mid: theme('colors.brand.sun / 50%');
+    --silk-soft: theme('colors.brand.sun / 22%');
+  }
+
+  /* T4 J4 MCP stand-in: chip shadow + SVG mask stops. */
+  .mcp-chip {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.08)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.05));
+  }
+  .stop-mask-on { stop-color: theme('colors.white'); }
+  .stop-mask-off { stop-color: theme('colors.black'); }
+
+  /* T5 gradient palette tiles (live: blurred brand-colour streak JPGs). Recreated with brand-token gradients, a streak
+     comb mask and blur. */
+  .gradient-art::before {
+    content: '';
+    position: absolute;
+    inset: 12% 22%;
+    filter: blur(6px);
+    -webkit-mask-image: repeating-linear-gradient(var(--streak-angle, 115deg), #000 0 7px, rgba(0, 0, 0, 0.25) 10px, #000 14px);
+    mask-image: repeating-linear-gradient(var(--streak-angle, 115deg), #000 0 7px, rgba(0, 0, 0, 0.25) 10px, #000 14px);
+  }
+  .gradient-art-1::before {
+    background-image: radial-gradient(45% 60% at 35% 55%, theme('colors.brand.indigo / 80%'), transparent 70%),
+      radial-gradient(40% 55% at 58% 45%, theme('colors.brand.magenta / 85%'), transparent 70%),
+      radial-gradient(35% 50% at 70% 30%, theme('colors.brand.sun / 85%'), transparent 70%);
+    transform: rotate(-18deg);
+  }
+  .gradient-art-2::before {
+    --streak-angle: 90deg;
+    background-image: radial-gradient(30% 55% at 32% 50%, theme('colors.brand.magenta'), transparent 72%),
+      radial-gradient(28% 45% at 50% 58%, theme('colors.brand.indigo / 85%'), transparent 72%),
+      radial-gradient(26% 55% at 68% 45%, theme('colors.brand.sun'), transparent 72%);
+  }
+  .gradient-art-3::before {
+    --streak-angle: 0deg;
+    background-image: radial-gradient(34% 60% at 30% 45%, theme('colors.brand.sun'), transparent 72%),
+      radial-gradient(24% 40% at 50% 60%, theme('colors.brand.indigo / 80%'), transparent 72%),
+      radial-gradient(34% 60% at 70% 40%, theme('colors.tag-meta.green / 85%'), transparent 72%);
+  }
+  .gradient-art-4::before {
+    --streak-angle: 90deg;
+    inset: 8% 28%;
+    background-image: radial-gradient(50% 60% at 50% 50%, theme('colors.tag-meta.green'), transparent 75%);
+    filter: blur(10px);
+  }
+}
+
+/* motion: pages standalone. Silk fold drift is an approximation (shader timing not measurable). MCP chip columns
+   scroll one set (--mcp-loop) per loop. Both off under prefers-reduced-motion; the jobs ticker reuses .marquee-left. */
+@keyframes silkDrift {
+  0% { background-position: 0 0, 20% 30%, 0 0; }
+  100% { background-position: 0 0, 70% 65%, 0 0; }
+}
+.silk-card {
+  animation: silkDrift 14s ease-in-out infinite alternate;
+}
+@keyframes mcpScroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, calc(-1 * var(--mcp-loop)), 0); }
+}
+.mcp-scroll {
+  animation: mcpScroll linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .silk-card,
+  .mcp-scroll {
+    animation: none !important;
+  }
+}
+/* end pages: standalone */

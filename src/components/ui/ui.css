@@ -1,0 +1,427 @@
+/* =====================================================================================
+   Shared page primitives – descendant styles that utilities can't express (rich text, markers, pseudo rules).
+   Imported by src/components/ui/RichText.jsx (and other ui primitives). All values via theme() tokens from
+   tailwind.config.cjs ("pages: shared primitives" block). Breakpoints: md 810, lg 1200, xl 1440 (Framer).
+   ===================================================================================== */
+
+/* ---------- RichText base (all variants) ---------- */
+.rt {
+  font-feature-settings: "blwf", "cv03", "cv04", "cv09", "cv11";
+  overflow-wrap: break-word;
+}
+.rt strong,
+.rt b {
+  font-weight: 700; /* live synthesises bold from Ginto Regular; Inter 700 is the substitute */
+}
+.rt em,
+.rt i {
+  font-style: italic;
+}
+.rt a {
+  color: theme('colors.brand.indigo');
+  text-decoration: none;
+}
+/* A/C: hover #5F63D9, instant (no transition measured) */
+.rt a:hover {
+  color: theme('colors.link.hover');
+}
+.rt ul,
+.rt ol {
+  margin-bottom: 0;
+}
+.rt img,
+.rt video {
+  width: 100%;
+  height: auto;
+  border-radius: theme('borderRadius.sm'); /* B R.3 radius 8 */
+  overflow: clip;
+}
+.rt figure {
+  margin: 0;
+}
+/* B R.3: no caption on any sampled page – spec fallback 14/18 #666, mt 12 (unmeasured) */
+.rt figcaption {
+  margin-top: 12px;
+  font-size: theme('fontSize.small.0');
+  line-height: theme('fontSize.small.1.lineHeight');
+  color: theme('colors.muted.DEFAULT');
+}
+.rt h2,
+.rt h3,
+.rt h4 {
+  color: theme('colors.ink.DEFAULT');
+  font-weight: 400;
+}
+
+/* Key takeaways box (B R.5) – available in every variant, designed for "article". */
+.rt .rt-takeaways-head {
+  margin-top: 40px;
+  padding: 16px 24px;
+  border: 1px solid theme('colors.track');
+  border-bottom-color: theme('colors.chip-soft.hover');
+  border-radius: 14px 14px 0 0;
+  font-weight: 500;
+  font-size: theme('fontSize.label-15.0');
+  line-height: theme('fontSize.label-15.1.lineHeight');
+  letter-spacing: theme('fontSize.label-15.1.letterSpacing');
+  color: theme('colors.ink.DEFAULT');
+}
+.rt .rt-takeaways-list {
+  margin-top: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 24px 20px;
+  border: 1px solid theme('colors.track');
+  border-top: 0;
+  border-radius: 0 0 14px 14px;
+  list-style: none;
+}
+.rt .rt-takeaways-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: theme('fontSize.body-16-loose.0');
+  line-height: theme('fontSize.body-16-loose.1.lineHeight');
+  color: theme('colors.body-75');
+}
+.rt .rt-takeaways-list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 9px;
+  background: theme('colors.takeaway-dot');
+}
+
+/* Table (B R.4: not on any sampled page; spec says style from the T8 matrix tokens) */
+.rt table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid theme('colors.matrix.border');
+  font-size: theme('fontSize.para-14-phone.0');
+  line-height: theme('fontSize.para-14-phone.1.lineHeight');
+}
+.rt th {
+  background: theme('colors.matrix.head');
+  color: theme('colors.matrix.text');
+  font-weight: 500;
+  text-align: left;
+  padding: 18px 16px;
+  border-bottom: 1px solid theme('colors.matrix.border');
+}
+.rt td {
+  color: theme('colors.matrix.value');
+  padding: 18px 16px;
+  border-bottom: 1px solid theme('colors.matrix.row');
+}
+
+/* ---------- variant "prose" (SPEC_PAGES_A P1 "Tools Section") ---------- */
+.rt--prose {
+  color: theme('colors.muted.3');
+  font-size: 16px;
+  line-height: 20.8px;
+}
+.rt--prose > * + * {
+  margin-top: 20px; /* every block gap = 20 at every width */
+}
+.rt--prose ul,
+.rt--prose ol {
+  list-style-position: outside;
+  padding-left: 1.238em; /* li text starts 24.76px in at 20px text (22 @18, 20 @16) */
+}
+.rt--prose ul {
+  list-style-type: disc;
+}
+.rt--prose ol {
+  list-style-type: decimal;
+}
+.rt--prose li::marker {
+  color: theme('colors.muted.3');
+}
+.rt--prose h3,
+.rt--prose h4 {
+  font-size: theme('fontSize.title-32.0');
+  line-height: theme('fontSize.title-32.1.lineHeight');
+  letter-spacing: theme('fontSize.title-32.1.letterSpacing');
+}
+.rt--prose h2 {
+  font-family: theme('fontFamily.display');
+  font-variation-settings: 'opsz' 144;
+  font-weight: theme('fontWeight.display-sub');
+  font-size: theme('fontSize.h2-phone.0');
+  line-height: theme('fontSize.h2-phone.1.lineHeight');
+  letter-spacing: theme('letterSpacing.display-sub');
+}
+.rt--prose blockquote {
+  margin: 0;
+}
+@media (min-width: 810px) {
+  .rt--prose {
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+  .rt--prose h2 {
+    font-size: theme('fontSize.h2-md.0');
+    line-height: theme('fontSize.h2-md.1.lineHeight');
+  }
+}
+@media (min-width: 1200px) {
+  .rt--prose h2 {
+    font-size: theme('fontSize.h2-lg.0');
+    line-height: theme('fontSize.h2-lg.1.lineHeight');
+  }
+}
+@media (min-width: 1440px) {
+  .rt--prose {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .rt--prose h2 {
+    font-size: theme('fontSize.h2-xl.0');
+    line-height: theme('fontSize.h2-xl.1.lineHeight');
+  }
+}
+
+/* ---------- variants "blog" + "article" (SPEC_PAGES_B §R) ---------- */
+.rt--blog,
+.rt--article {
+  color: theme('colors.body-75');
+  font-size: 16px;
+  line-height: 20.8px;
+}
+.rt--blog > * + *,
+.rt--article > * + * {
+  margin-top: 20px;
+}
+.rt--blog > * + :is(h2, h3, h4),
+.rt--article > * + :is(h2, h3, h4) {
+  margin-top: 40px;
+}
+.rt--blog > p + :is(ul, ol),
+.rt--article > p + :is(ul, ol) {
+  margin-top: 38px; /* R.1: lists following a paragraph */
+}
+.rt--blog > * + :is(figure, video, .rt-media),
+.rt--article > * + :is(figure, video, .rt-media) {
+  margin-top: 32px; /* B T4 body column gap 32 (blog video block); article value not measured */
+}
+.rt--blog :is(ul, ol):not(.rt-takeaways-list),
+.rt--article :is(ul, ol):not(.rt-takeaways-list) {
+  list-style: none;
+  padding-left: 0;
+}
+.rt--blog :is(ul, ol):not(.rt-takeaways-list) > li,
+.rt--article :is(ul, ol):not(.rt-takeaways-list) > li {
+  position: relative;
+  padding-left: 24.76px;
+}
+.rt--blog ul:not(.rt-takeaways-list) > li::before,
+.rt--article ul:not(.rt-takeaways-list) > li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 11.67px;
+  color: theme('colors.body-75');
+}
+.rt--blog ol > li::before,
+.rt--article ol > li::before {
+  content: counter(list-item) '.';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16.8px;
+  white-space: nowrap;
+  color: theme('colors.body-75');
+}
+/* R.2 blockquote: pl 21, 1px #DDD rule (radius 1), quote text 18/32.4 #666, attribution = 2nd p mt 20 */
+.rt--blog blockquote,
+.rt--article blockquote {
+  position: relative;
+  margin: 20px 0 0;
+  padding-left: 21px;
+}
+.rt--blog blockquote::before,
+.rt--article blockquote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  border-radius: 1px;
+  background: theme('colors.quote-rule');
+}
+.rt--blog blockquote p,
+.rt--article blockquote p {
+  font-size: theme('fontSize.quote-18.0');
+  line-height: theme('fontSize.quote-18.1.lineHeight');
+  color: theme('colors.muted.DEFAULT');
+}
+.rt--blog blockquote p + p,
+.rt--article blockquote p + p {
+  margin-top: 20px;
+}
+/* blog headings: 38/42 + 32/32 at every width; h4 interpolated (unmeasured) */
+.rt--blog h2 {
+  font-size: theme('fontSize.title-38.0');
+  line-height: theme('fontSize.title-38.1.lineHeight');
+  letter-spacing: theme('fontSize.title-38.1.letterSpacing');
+}
+.rt--blog h3 {
+  font-size: theme('fontSize.title-32.0');
+  line-height: theme('fontSize.title-32.1.lineHeight');
+  letter-spacing: theme('fontSize.title-32.1.letterSpacing');
+}
+.rt--blog h4 {
+  font-size: theme('fontSize.title-24-h4.0');
+  line-height: theme('fontSize.title-24-h4.1.lineHeight');
+  letter-spacing: theme('fontSize.title-24-h4.1.letterSpacing');
+}
+/* article headings: 24/30 + 20/26 <810, 28/34 + 22/28 above */
+.rt--article h2 {
+  font-size: theme('fontSize.title-24.0');
+  line-height: theme('fontSize.title-24.1.lineHeight');
+  letter-spacing: theme('fontSize.title-24.1.letterSpacing');
+}
+.rt--article :is(h3, h4) {
+  font-size: theme('fontSize.title-20.0');
+  line-height: theme('fontSize.title-20.1.lineHeight');
+  letter-spacing: theme('fontSize.title-20.1.letterSpacing');
+}
+@media (min-width: 810px) {
+  .rt--blog,
+  .rt--article {
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+  .rt--article h2 {
+    font-size: theme('fontSize.title-28.0');
+    line-height: theme('fontSize.title-28.1.lineHeight');
+    letter-spacing: theme('fontSize.title-28.1.letterSpacing');
+  }
+  .rt--article :is(h3, h4) {
+    font-size: theme('fontSize.title-22.0');
+    line-height: theme('fontSize.title-22.1.lineHeight');
+    letter-spacing: theme('fontSize.title-22.1.letterSpacing');
+  }
+}
+@media (min-width: 1440px) {
+  .rt--blog,
+  .rt--article {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+/* ---------- variant "legal" (SPEC_PAGES_C T3) ---------- */
+.rt--legal {
+  color: theme('colors.ink.DEFAULT');
+  font-size: 16px;
+  line-height: 20.8px;
+  white-space: pre-wrap;
+}
+.rt--legal > * + * {
+  margin-top: 20px; /* paragraph -> paragraph (same section) */
+}
+.rt--legal > :is(h2, h3, h4) + * {
+  margin-top: 24px; /* heading -> its body */
+}
+.rt--legal > * + :is(h2, h3, h4) {
+  margin-top: 24px; /* section -> next heading: 24 <1200 (spec recommends 24; terms used 100), 72 >=1200 */
+}
+.rt--legal :is(h2, h3, h4) {
+  font-family: theme('fontFamily.display');
+  font-variation-settings: 'opsz' 144;
+  font-weight: theme('fontWeight.display-sub');
+  white-space: normal;
+  font-size: theme('fontSize.compare-lg.0');
+  line-height: theme('fontSize.compare-lg.1.lineHeight');
+  letter-spacing: theme('letterSpacing.display-sub');
+}
+/* live: mailto links inherit the paragraph (#000, no underline) inside <strong> */
+.rt--legal a,
+.rt--legal a:hover {
+  color: inherit;
+  font-weight: 700;
+}
+.rt--legal ul,
+.rt--legal ol {
+  list-style: none;
+  padding-left: 0;
+}
+.rt--legal ul > li::before {
+  content: '- ';
+}
+.rt--legal ol > li::before {
+  content: counter(list-item) '. ';
+}
+@media (min-width: 810px) {
+  .rt--legal {
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+}
+@media (min-width: 1200px) {
+  .rt--legal > * + :is(h2, h3, h4) {
+    margin-top: 72px;
+  }
+}
+@media (min-width: 1440px) {
+  .rt--legal {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .rt--legal :is(h2, h3, h4) {
+    font-size: theme('fontSize.compare-xl.0');
+    line-height: theme('fontSize.compare-xl.1.lineHeight');
+  }
+}
+
+/* ---------- inline links inside short answer/body strings (FAQ answers, cards) ---------- */
+.ui-inline a {
+  color: theme('colors.brand.indigo');
+  text-decoration: none;
+}
+.ui-inline a:hover {
+  color: theme('colors.link.hover');
+}
+.ui-inline strong {
+  font-weight: 700;
+}
+
+/* ---------- scrollers without scrollbars (chips rows, carousels) ---------- */
+.ui-noscrollbar {
+  scrollbar-width: none;
+}
+.ui-noscrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- CardCarousel track: right-edge fade only (A T2.3) ---------- */
+.mask-carousel {
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 15%, #000 85%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 0%, #000 15%, #000 85%, transparent 100%);
+}
+
+/* ---------- Field skins (C Field / A P5): selects + placeholders ---------- */
+.ui-field-control::placeholder,
+.ui-field-native::placeholder {
+  color: var(--ph, theme('colors.silver'));
+  opacity: 1;
+}
+.ui-field-control:focus {
+  outline: none;
+}
+.ui-field-control--native-focus:focus-visible {
+  outline: auto 1px; /* A T6: bordered field keeps the browser focus ring on top of the custom one */
+}
+select.ui-field-control:invalid,
+select.ui-field-native:invalid {
+  color: theme('colors.silver'); /* A T6: select text #999 until an option is chosen */
+}
+select:is(.ui-field-control, .ui-field-native) option {
+  color: theme('colors.ink.DEFAULT');
+}

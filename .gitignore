@@ -1,0 +1,12 @@
+# dependencies and build output
+node_modules/
+dist/
+*.local
+.DS_Store
+
+# Local-only reference material from the original site: not needed to run the
+# clone and not ours to redistribute. Kept on disk, never committed.
+Lorikeet _ AI customer concierge with a 30-day free trial.html
+Lorikeet _ AI customer concierge with a 30-day free trial_files/
+recon/
+.playwright-mcp/

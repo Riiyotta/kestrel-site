@@ -1,0 +1,1403 @@
+{
+  "$comment": "Hand-edited source of truth. IA.md and matrix.csv are generated from this file by build.mjs; validate.mjs checks it. Derived from src/App.jsx + src/routes/*.jsx + src/pages/** + src/components/** + src/data/*.js first, then CLONE_SPEC.md and SPEC_PAGES_A/B/C.md for templates not yet built. Route counts for data-driven detail templates equal the number of entries in this clone's data files, not the live site's counts. The dev-only /__primitives showcase (src/pages/__Primitives.jsx) is dev tooling and is excluded from routes and templates.",
+  "meta": {
+    "title": "Kestrel marketing site: information architecture",
+    "source": "LORIKEET clone (React 18 + Vite + Tailwind v3) of a marketing site, placeholder content for the fictional product Kestrel; codebase at /Users/riyaghosh/V3/LORIKEET, specs CLONE_SPEC.md + SPEC_PAGES_A/B/C.md",
+    "status": "partly planned: 24 templates are built and routed (AEO detail was routed by the product group during this pass); 6 templates (product overview/coach/voice, competitor detail, about, careers) come from the specs and have no page or route in src/routes/product.jsx yet",
+    "productionApproved": false,
+    "generatedBy": "ia-builder skill, measured from the codebase on 2026-10-22",
+    "totalRoutes": 71,
+    "totalTemplates": 30
+  },
+  "categories": {
+    "CHROME": "Page-level frame around the template body: global nav, footer, floating video teaser, microsite header/footer, hidden assistant note.",
+    "HERO": "The page-opening block: headline, sub, actions and any hero art.",
+    "PROOF": "Social proof: logo tickers and walls, testimonial and story slideshows, employee quotes, pull quotes, stats.",
+    "FEATURE": "Product or company explanation modules: feature rows, bento panels, carousels of capabilities, value cards.",
+    "CONTENT": "The substantive body of a route: rich text, card lists and grids, FAQ blocks, documents.",
+    "COMPARE": "Kestrel-versus-category comparison tables and intro cards.",
+    "COMMERCE": "Pricing plans and plan comparison.",
+    "FORM": "Lead capture: demo, partner and nomination forms.",
+    "NAVIGATION": "In-page wayfinding: tables of contents, scroll-spy menus, share rails, filter/topic bars, doc sidebars.",
+    "CTA": "Calls to action that sit inside the body: callout rows, CTA cards, banners, sticky chips.",
+    "MEDIA": "Media-led blocks whose content is an illustration, photo set or video rather than text."
+  },
+  "sections": {
+    "chrome.nav": {
+      "category": "CHROME",
+      "description": "Global fixed glass-pill navigation (CLONE_SPEC section 4): brand mark, Product / Industries / Resources mega-dropdowns, Log in and Start free trial actions; phone pill menu below 810px.",
+      "scope": "Every template rendered inside SiteLayout; absent on the jobs board, press kit, get-a-demo and llms.txt.",
+      "implementedBy": "src/components/Nav.jsx (via src/layouts/SiteLayout.jsx)"
+    },
+    "chrome.footer": {
+      "category": "CHROME",
+      "description": "Footer V5 (CLONE_SPEC section 14): CTA glass card with announcement pill, link card, wordmark and bottom bar over Unicorn stripes; only the CTA heading copy changes between pages.",
+      "scope": "Every template rendered inside SiteLayout; absent on the jobs board, press kit, get-a-demo and llms.txt.",
+      "implementedBy": "src/components/Footer.jsx (via src/layouts/SiteLayout.jsx)"
+    },
+    "chrome.video-teaser": {
+      "category": "CHROME",
+      "description": "Floating bottom-corner video teaser card (.lvc), shown by SiteLayout unless the path matches its NO_TEASER list.",
+      "scope": "SiteLayout templates except every product, industry, pricing and integrations page, and article detail (which uses the sticky CTA chip instead).",
+      "implementedBy": "src/components/VideoTeaser.jsx (via src/layouts/SiteLayout.jsx)"
+    },
+    "chrome.assistant-note": {
+      "category": "CHROME",
+      "description": "Single centred AI-assistant note line (CLONE_SPEC 13b): Inter 16 #828282 at opacity 0, present in the DOM for screen readers and LLM crawlers.",
+      "scope": "Homepage and get-a-demo only.",
+      "implementedBy": "src/components/Stories.jsx > AssistantNote"
+    },
+    "chrome.jobs-header": {
+      "category": "CHROME",
+      "description": "Jobs-board microsite's own fixed header bar (SPEC_PAGES_C J0), replacing the global nav; Inter, square corners, #EEEEEE page.",
+      "scope": "Jobs board only.",
+      "implementedBy": "src/components/cxjobs/JobsHeader.jsx"
+    },
+    "chrome.jobs-footer": {
+      "category": "CHROME",
+      "description": "Jobs-board microsite's own link-column footer (SPEC_PAGES_C J7), replacing Footer V5.",
+      "scope": "Jobs board only.",
+      "implementedBy": "src/components/cxjobs/JobsFooter.jsx"
+    },
+    "hero.home": {
+      "category": "HERO",
+      "description": "Homepage hero (CLONE_SPEC section 6): announcement pill, H1 + sub, dark/light CTA pair, scroll-scaled photo collage over the Unicorn WebGL background.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Hero.jsx"
+    },
+    "hero.headline": {
+      "category": "HERO",
+      "description": "Simple centred hero: H1 on the 96/77/58/40 scale + optional sub + optional action row, no pill or photo stage. Per-page props change sub colour/size and gap; competitors index and /product/voice place it over the homepage Unicorn-stripes background.",
+      "scope": "Product overview, coach and voice landings, integrations library, story index, thoughts index, competitors index and nominate.",
+      "implementedBy": "src/components/ui/HeroHeadline.jsx"
+    },
+    "hero.split": {
+      "category": "HERO",
+      "description": "AEO split hero (SPEC_PAGES_A T1.1): text column (H1, paragraph, optional intro, dark/light buttons, industry byline and self-serve line) beside a 542px square media tile (video or Rive placeholder).",
+      "scope": "AEO detail pages (product capability and industry pages).",
+      "implementedBy": "src/components/product/SplitHero.jsx"
+    },
+    "hero.pricing-title": {
+      "category": "HERO",
+      "description": "Pricing title row (SPEC_PAGES_A T5.1): left H1 'Pricing' on the H2 scale with a 517px statement paragraph to the right, stacked below 1200px.",
+      "scope": "Pricing only.",
+      "implementedBy": "src/pages/Pricing.jsx (inline hero)"
+    },
+    "hero.integration-detail": {
+      "category": "HERO",
+      "description": "Integration detail header (SPEC_PAGES_A T4): Back link to the library, 52px icon tile + Cirka 60 H1, grey lede, phone-only category line.",
+      "scope": "Integration detail pages.",
+      "implementedBy": "src/components/commerce/DetailHeader.jsx"
+    },
+    "hero.story": {
+      "category": "HERO",
+      "description": "Customer-story hero (SPEC_PAGES_B T2) in two data-selected variants: big pull-quote, or split image + title.",
+      "scope": "Customer story detail pages.",
+      "implementedBy": "src/components/content/StoryHero.jsx"
+    },
+    "hero.blog-title": {
+      "category": "HERO",
+      "description": "Blog index title block (SPEC_PAGES_B T3 IndexTitle): left-aligned H1 + lede, no eyebrow or search.",
+      "scope": "Blog index only.",
+      "implementedBy": "src/pages/content/BlogIndex.jsx (inline header)"
+    },
+    "hero.post-header": {
+      "category": "HERO",
+      "description": "Blog post header (SPEC_PAGES_B T4 PostHeader, centred): back link, H1, byline, optional 900px hero image slot.",
+      "scope": "Blog post pages.",
+      "implementedBy": "src/pages/content/BlogPost.jsx (inline header)"
+    },
+    "hero.article-intro": {
+      "category": "HERO",
+      "description": "Article index intro row (SPEC_PAGES_B T5): uppercase eyebrow, H1, lede, and a pill search input on the right.",
+      "scope": "Article index only.",
+      "implementedBy": "src/pages/content/ArticleIndex.jsx (inline intro) + src/components/ui/SearchInput.jsx"
+    },
+    "hero.article-header": {
+      "category": "HERO",
+      "description": "Article header (SPEC_PAGES_B T6, left-aligned variant of PostHeader): breadcrumb, topic chip, H1, description, author byline with 'Updated' date, 800px wide.",
+      "scope": "Article detail pages.",
+      "implementedBy": "src/pages/content/ArticleDetail.jsx (inline header)"
+    },
+    "hero.vs": {
+      "category": "HERO",
+      "description": "Competitor 'Us vs Them' hero (SPEC_PAGES_B T8 VsHero): full-bleed pink panel, logo-tile title row, subtitle, intro copy with bulleted differences, and a DemoForm card on the right.",
+      "scope": "Competitor detail pages (planned)."
+    },
+    "hero.report": {
+      "category": "HERO",
+      "description": "Report hero (SPEC_PAGES_B T9 R2 Hero): gradient art panel with H1, lede, 'read the report' card and a what-you'll-learn grid.",
+      "scope": "Report landing only.",
+      "implementedBy": "src/components/content/Report.jsx > ReportHero"
+    },
+    "hero.glossary": {
+      "category": "HERO",
+      "description": "Glossary split hero on a warm off-white band (SPEC_PAGES_B T11): eyebrow, H1, intro paragraph.",
+      "scope": "Glossary only.",
+      "implementedBy": "src/pages/content/Glossary.jsx (inline glossary-hero)"
+    },
+    "hero.doc-header": {
+      "category": "HERO",
+      "description": "Small left-aligned document header (SPEC_PAGES_B T12 DocHeader): Cirka 40 H1, grey lede, 'last updated' line.",
+      "scope": "FAQ document only.",
+      "implementedBy": "src/components/content/FaqDocument.jsx > DocHeader"
+    },
+    "hero.avatar": {
+      "category": "HERO",
+      "description": "Careers avatar hero (SPEC_PAGES_C C1): ten floating avatar photos around a two-line H1 and one xl 'see open roles' button.",
+      "scope": "Careers only (planned)."
+    },
+    "hero.jobs": {
+      "category": "HERO",
+      "description": "Jobs-board hero (SPEC_PAGES_C J1): eyebrow, Inter headline and a 'browse roles' jobs button, in the microsite's own square-corner style.",
+      "scope": "Jobs board only.",
+      "implementedBy": "src/pages/CxJobs.jsx (inline hero) + src/components/cxjobs/JobsButton.jsx"
+    },
+    "proof.home-bento": {
+      "category": "PROOF",
+      "description": "Homepage Proof section (CLONE_SPEC section 7): bento of quote and stat cards above the bordered logo marquee card.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Proof.jsx (variant=home)"
+    },
+    "proof.stories-home": {
+      "category": "PROOF",
+      "description": "Homepage customer-stories carousel (CLONE_SPEC section 13) with the pink-dot pager.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Stories.jsx (card=home)"
+    },
+    "proof.logo-ticker": {
+      "category": "PROOF",
+      "description": "Bordered logo-marquee card with no heading of its own, directly under a hero (SPEC_PAGES_A T1.2 / T2 /product; SPEC_PAGES_B T7 hero strip).",
+      "scope": "AEO detail pages, product overview and competitors index.",
+      "implementedBy": "src/components/ui/LogoMarquee.jsx"
+    },
+    "proof.logo-ticker-labelled": {
+      "category": "PROOF",
+      "description": "Short centred 'trusted by' label line above a logo-marquee strip (label typography varies: Cirka 30 on coach/voice/integrations, Cirka 18 on competitor detail, grey Ginto 14 on the report). Integrations shows two opposing tickers on phones.",
+      "scope": "Coach and voice landings, integrations library, competitor detail and report landing.",
+      "implementedBy": "src/components/ui/LogoMarquee.jsx (with page-level label)"
+    },
+    "proof.logo-wall": {
+      "category": "PROOF",
+      "description": "LogoWall (SPEC_PAGES_C F3): Cirka 30 heading, viewport-wide strip, fade-up reveal on entering view.",
+      "scope": "Partner and nominate lead-form pages.",
+      "implementedBy": "src/components/ui/LogoWall.jsx"
+    },
+    "proof.about-logos": {
+      "category": "PROOF",
+      "description": "About-page logo block (SPEC_PAGES_C A3): heading only on a white-to-#F9F9F9 fade, then one bordered single-row strip at every width, no reveal.",
+      "scope": "About only (planned page; component exists).",
+      "implementedBy": "src/components/Proof.jsx (variant=logos)"
+    },
+    "proof.stories-wide": {
+      "category": "PROOF",
+      "description": "Wide story slideshow (SPEC_PAGES_A T1.6): 956x393 photo + tinted quote panel card, pink or peach tint, 'See customer story' pill; one static card below 1200px. Optional per page.",
+      "scope": "AEO detail pages that carry stories (ai-agents, financial-services, healthcare).",
+      "implementedBy": "src/components/Stories.jsx (card=wide)"
+    },
+    "proof.stories-split": {
+      "category": "PROOF",
+      "description": "Split-card testimonial slideshow: 456px image + tinted quote panel per slide (peach / pink / green), Cirka 60 heading + sub, pager pill; becomes a 315px column card slider below 1200px. Same Framer card on /product ('who runs on Kestrel') and competitor detail ('customers love us').",
+      "scope": "Product overview and competitor detail.",
+      "implementedBy": "src/components/Stories.jsx (card=split / card=testimonial)"
+    },
+    "proof.coach-quote-card": {
+      "category": "PROOF",
+      "description": "Coach QuoteCard (SPEC_PAGES_A T2.7 block 2): 335px photo + grey glass text card with a long Cirka quote, highlighted <mark> span, name and role.",
+      "scope": "Coach landing only (planned)."
+    },
+    "proof.case-study-card": {
+      "category": "PROOF",
+      "description": "Voice case-study card (SPEC_PAGES_A T2.9): section header, then a black-bordered 1376x400 card with co-branded photo, H3, paragraph and link.",
+      "scope": "Voice landing only (planned)."
+    },
+    "proof.quote-panel": {
+      "category": "PROOF",
+      "description": "Report pull-quote panel (SPEC_PAGES_B T9 R2 Pull Quote): full-bleed gradient panel with one large quote, sharing art and radius with the report hero.",
+      "scope": "Report landing only.",
+      "implementedBy": "src/components/content/Report.jsx > QuotePanel"
+    },
+    "proof.story-rail": {
+      "category": "PROOF",
+      "description": "Report customer rail (SPEC_PAGES_B T9 R2 Customers): H2 + right-aligned sub + horizontal rail of themed story cards.",
+      "scope": "Report landing only.",
+      "implementedBy": "src/components/content/Report.jsx > StoryRail"
+    },
+    "proof.employee-quotes": {
+      "category": "PROOF",
+      "description": "About-page employee quote cards (SPEC_PAGES_C A5): two horizontal EmployeeCards in one row, no heading.",
+      "scope": "About only (planned page; card component exists).",
+      "implementedBy": "src/components/ui/EmployeeCard.jsx (layout=horizontal)"
+    },
+    "proof.employee-testimonials": {
+      "category": "PROOF",
+      "description": "Careers testimonials (SPEC_PAGES_C C4): SectionHeading + eight EmployeeCards in a two-column grid; below 810px a Stories employee carousel replaces the grid.",
+      "scope": "Careers only (planned page; card and carousel components exist).",
+      "implementedBy": "src/components/ui/EmployeeCard.jsx + src/components/Stories.jsx (card=employee)"
+    },
+    "proof.jobs-featured-ticker": {
+      "category": "PROOF",
+      "description": "Jobs-board featured-roles ticker (SPEC_PAGES_C J2): marquee of silk-gradient job cards.",
+      "scope": "Jobs board only.",
+      "implementedBy": "src/components/cxjobs/SilkJobCard.jsx (marquee composed in src/pages/CxJobs.jsx > FeaturedTicker)"
+    },
+    "proof.jobs-stats": {
+      "category": "PROOF",
+      "description": "Jobs-board brand banner stats row (SPEC_PAGES_C J3).",
+      "scope": "Jobs board only.",
+      "implementedBy": "src/components/cxjobs/StatsRow.jsx"
+    },
+    "feature.compare-cards": {
+      "category": "FEATURE",
+      "description": "Homepage Compare cards (CLONE_SPEC section 8): Card-01/02 inside the Gradient Flow section with a time-based loop.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Compare.jsx"
+    },
+    "feature.tools-arc": {
+      "category": "FEATURE",
+      "description": "Homepage 'your tools' icon arc over the gradient tree (CLONE_SPEC section 9).",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Tools.jsx"
+    },
+    "feature.confidence": {
+      "category": "FEATURE",
+      "description": "Homepage logo-icon glow, 'Confidence' header and brain tags over Unicorn (CLONE_SPEC section 10).",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Confidence.jsx"
+    },
+    "feature.system-find": {
+      "category": "FEATURE",
+      "description": "Homepage system-find block: integration icons joined by connector lines (CLONE_SPEC section 11).",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Integrations.jsx"
+    },
+    "feature.playbook": {
+      "category": "FEATURE",
+      "description": "Homepage playbook header, bottom tree and playbook card fan (CLONE_SPEC section 12).",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Playbook.jsx"
+    },
+    "feature.heading-band": {
+      "category": "FEATURE",
+      "description": "Centred Ginto 64/77 H2 band introducing the feature rows (SPEC_PAGES_A T1.4).",
+      "scope": "AEO detail pages.",
+      "implementedBy": "src/components/ui/SectionHeading.jsx (variant=band)"
+    },
+    "feature.rows-472": {
+      "category": "FEATURE",
+      "description": "Three alternating image/text rows with 472px square media, eyebrow, H3 and grey body (SPEC_PAGES_A T1.5).",
+      "scope": "AEO detail pages.",
+      "implementedBy": "src/components/ui/FeatureRows.jsx (variant=472)"
+    },
+    "feature.rows-600": {
+      "category": "FEATURE",
+      "description": "Five alternating 600px-square image + text rows, each with H2 38/42, body and a dark button (SPEC_PAGES_A T2.4).",
+      "scope": "Product overview only (planned page; component exists).",
+      "implementedBy": "src/components/ui/FeatureRows.jsx (variant=600)"
+    },
+    "feature.card-carousel": {
+      "category": "FEATURE",
+      "description": "Snap card carousel with heading + sub, right-edge fade and black round arrows (SPEC_PAGES_A T2.3): square channel cards on /product, rectangle principle cards on /voice.",
+      "scope": "Product overview and voice landing (planned pages; component exists).",
+      "implementedBy": "src/components/ui/CardCarousel.jsx (variant=snap)"
+    },
+    "feature.coach-bento": {
+      "category": "FEATURE",
+      "description": "Coach bento stack (SPEC_PAGES_A T2.7): repeated header + grey BentoPanel blocks (tabs-bottom, split media + stacked tab items, analytics), interleaved with the quote card and CTA banner.",
+      "scope": "Coach landing only (planned)."
+    },
+    "feature.split-explainer": {
+      "category": "FEATURE",
+      "description": "Voice split explainer (SPEC_PAGES_A T2.8): centred H2 + sub + button, then a 648px phone-UI image beside three large paragraphs.",
+      "scope": "Voice landing only (planned)."
+    },
+    "feature.difference-cards": {
+      "category": "FEATURE",
+      "description": "Competitors-index 'difference' grid (SPEC_PAGES_B T7 Section 2): SectionHeading + 3x2 grey cards with black glyph, Cirka title and short body.",
+      "scope": "Competitors index only.",
+      "implementedBy": "src/components/company/FeatureCardGrid.jsx"
+    },
+    "feature.values-bento": {
+      "category": "FEATURE",
+      "description": "Careers values bento (SPEC_PAGES_C C3): SectionHeading + 2 + 3 value cards.",
+      "scope": "Careers only (planned)."
+    },
+    "feature.jobs-mcp": {
+      "category": "FEATURE",
+      "description": "Jobs-board AI-assistant section (SPEC_PAGES_C J4): eyebrow, H2, connect button and an MCP flow illustration standing in for the live third-party iframe.",
+      "scope": "Jobs board only.",
+      "implementedBy": "src/components/cxjobs/McpFlowIllustration.jsx (section composed in src/pages/CxJobs.jsx)"
+    },
+    "content.prose-tools": {
+      "category": "CONTENT",
+      "description": "ProseSection 'Tools Section' (SPEC_PAGES_A P1 / T1.3): H2 + rich prose with bullets and links + H3 sub-blocks, 1040px column.",
+      "scope": "AEO detail pages and the product overview, coach and voice landings.",
+      "implementedBy": "src/components/ui/ProseSection.jsx (RichText variant=prose)"
+    },
+    "content.related-reading": {
+      "category": "CONTENT",
+      "description": "Related reading (SPEC_PAGES_A T1.8): ProseSection with an H3 and a bulleted link list, no H2. Absent on the industry pages.",
+      "scope": "AEO detail product pages and the product overview, coach and voice landings.",
+      "implementedBy": "src/components/ui/ProseSection.jsx (related variant)"
+    },
+    "content.prose-faq": {
+      "category": "CONTENT",
+      "description": "Static FAQ list (SPEC_PAGES_A T1.9): ProseSection H2 + question H3 / answer paragraph pairs, never collapses.",
+      "scope": "AEO detail pages and the product overview, coach and voice landings.",
+      "implementedBy": "src/components/ui/ProseSection.jsx (faq padding variant)"
+    },
+    "content.blog-grid": {
+      "category": "CONTENT",
+      "description": "Product BlogGrid (SPEC_PAGES_A T2.6): top rule, left H2, three blog cards and a centred 'view all' light button.",
+      "scope": "Product overview only (planned)."
+    },
+    "content.integration-catalog": {
+      "category": "CONTENT",
+      "description": "Filterable integration catalogue (SPEC_PAGES_A T3.3): sticky sidebar category filter beside category blocks of IntegrationCards.",
+      "scope": "Integrations library only.",
+      "implementedBy": "src/components/commerce/IntegrationCatalog.jsx (+ ui/FilterChips variant=sidebar, ui/IntegrationCard)"
+    },
+    "content.integration-setup": {
+      "category": "CONTENT",
+      "description": "Integrations setup steps + static FAQ (SPEC_PAGES_A T3.4): full-width prose variant with numbered H3 steps, support paragraphs and a short Q/A list.",
+      "scope": "Integrations library only.",
+      "implementedBy": "src/components/commerce/SetupSection.jsx"
+    },
+    "content.integration-body": {
+      "category": "CONTENT",
+      "description": "Integration detail body (SPEC_PAGES_A T4): overview / what it is / how to integrate blocks beside a sticky MetaCard (website, category, Get a demo).",
+      "scope": "Integration detail pages.",
+      "implementedBy": "src/pages/IntegrationDetail.jsx (inline body) + src/components/commerce/MetaCard.jsx"
+    },
+    "content.other-apps": {
+      "category": "CONTENT",
+      "description": "'Other apps' grid (SPEC_PAGES_A T4): H2 + category H3, then up to four IntegrationCards from the same category; fades in on load.",
+      "scope": "Integration detail pages.",
+      "implementedBy": "src/components/ui/IntegrationCard.jsx (grid in src/pages/IntegrationDetail.jsx)"
+    },
+    "content.story-card-list": {
+      "category": "CONTENT",
+      "description": "Customer-story index body (SPEC_PAGES_B T1): themed category filter chips over a list of featured, wide and quote StoryCards.",
+      "scope": "Story index only.",
+      "implementedBy": "src/components/content/StoryCard.jsx + src/components/ui/FilterChips.jsx (variant=story)"
+    },
+    "content.story-sections": {
+      "category": "CONTENT",
+      "description": "Story body chapters (SPEC_PAGES_B T2 Content-Section): up to five chapters, each with a heading, paragraphs and a per-chapter media slot (image, illustration, image + quote card, big quote, or none).",
+      "scope": "Customer story detail pages.",
+      "implementedBy": "src/components/content/StorySection.jsx"
+    },
+    "content.related-stories": {
+      "category": "CONTENT",
+      "description": "'Read other stories' (SPEC_PAGES_B T2): SectionHeading + up to three related story cards.",
+      "scope": "Customer story detail pages.",
+      "implementedBy": "src/components/content/StoryCard.jsx > RelatedStoryCard (+ ui/SectionHeading)"
+    },
+    "content.blog-featured": {
+      "category": "CONTENT",
+      "description": "Blog featured post with sticky image beside the three latest posts (SPEC_PAGES_B T3).",
+      "scope": "Blog index only.",
+      "implementedBy": "src/components/content/BlogFeatured.jsx"
+    },
+    "content.blog-rail": {
+      "category": "CONTENT",
+      "description": "Tinted 'Podcasts' rail of BlogCards with ring arrows in the header (SPEC_PAGES_B T3 CardRail).",
+      "scope": "Blog index only.",
+      "implementedBy": "src/components/ui/CardCarousel.jsx (variant=rail) + src/components/content/BlogCard.jsx"
+    },
+    "content.blog-browse": {
+      "category": "CONTENT",
+      "description": "'Browse all' block (SPEC_PAGES_B T3): ring filter tabs synced to ?selected-category, then a three-column BlogCard grid.",
+      "scope": "Blog index only.",
+      "implementedBy": "src/components/ui/FilterChips.jsx (variant=tabs) + src/components/content/BlogCard.jsx"
+    },
+    "content.rich-text-blog": {
+      "category": "CONTENT",
+      "description": "Blog post body (SPEC_PAGES_B section R 'blog'): 900px RichText with 20/26 text, h2 38/42, bullet markers, blockquote rule, embedded video.",
+      "scope": "Blog post pages.",
+      "implementedBy": "src/components/ui/RichText.jsx (variant=blog)"
+    },
+    "content.related-posts": {
+      "category": "CONTENT",
+      "description": "Related posts under a blog post (SPEC_PAGES_B T4): H2 + two 588px BlogCards.",
+      "scope": "Blog post pages.",
+      "implementedBy": "src/components/content/BlogCard.jsx (grid in src/pages/content/BlogPost.jsx)"
+    },
+    "content.guide-featured": {
+      "category": "CONTENT",
+      "description": "Featured guide card on the article index (SPEC_PAGES_B T5 GuideFeatured).",
+      "scope": "Article index only.",
+      "implementedBy": "src/components/content/GuideCard.jsx > GuideFeatured"
+    },
+    "content.guide-grid": {
+      "category": "CONTENT",
+      "description": "Guide card grid filtered by topic, search and sort, paged with a Load more button (SPEC_PAGES_B T5).",
+      "scope": "Article index only.",
+      "implementedBy": "src/components/content/GuideCard.jsx > GuideCard + src/components/ui/LoadMoreButton.jsx"
+    },
+    "content.rich-text-article": {
+      "category": "CONTENT",
+      "description": "Article body (SPEC_PAGES_B section R 'article'): 800px RichText with h2 28/34, key-takeaways box, blockquote and ordered/unordered lists.",
+      "scope": "Article detail pages.",
+      "implementedBy": "src/components/ui/RichText.jsx (variant=article)"
+    },
+    "content.keep-reading": {
+      "category": "CONTENT",
+      "description": "'Keep reading' row of three related guide cards (SPEC_PAGES_B T6).",
+      "scope": "Article detail pages.",
+      "implementedBy": "src/components/content/GuideCard.jsx > RelatedGuideCard"
+    },
+    "content.faq-accordion-panel": {
+      "category": "CONTENT",
+      "description": "Pricing FAQ accordion (SPEC_PAGES_A T5.4): white rows turning #F7F7F7 on hover/open, Cirka 30 questions, rotating chevron, sticky LetterReveal title column.",
+      "scope": "Pricing only.",
+      "implementedBy": "src/components/ui/FaqAccordion.jsx (look=panel)"
+    },
+    "content.faq-accordion-hairline": {
+      "category": "CONTENT",
+      "description": "In-article FAQ (SPEC_PAGES_B R.6): hairline-separated Ginto 20 questions with a rotating grey plus, first item open, instant answer.",
+      "scope": "Article detail pages.",
+      "implementedBy": "src/components/ui/FaqAccordion.jsx (look=hairline)"
+    },
+    "content.faq-accordion-rows": {
+      "category": "CONTENT",
+      "description": "'Questions to ask' accordion (SPEC_PAGES_B T7): centred Cirka 60 title, white rows with caret, spring open.",
+      "scope": "Competitors index only.",
+      "implementedBy": "src/components/ui/FaqAccordion.jsx (look=rows)"
+    },
+    "content.faq-accordion-cards": {
+      "category": "CONTENT",
+      "description": "Competitor FAQ cards (SPEC_PAGES_B T8 FaqCards): Cirka 60 H2, 900px stack of bordered shadowed white cards with +/- toggles, all closed by default.",
+      "scope": "Competitor detail pages (planned page; component exists).",
+      "implementedBy": "src/components/ui/FaqAccordion.jsx (look=cards)"
+    },
+    "content.finding-cards": {
+      "category": "CONTENT",
+      "description": "Report findings (SPEC_PAGES_B T9 R2 Findings): H2 + three stat cards with mini charts.",
+      "scope": "Report landing only.",
+      "implementedBy": "src/components/content/Report.jsx > FindingCards"
+    },
+    "content.numbered-contents": {
+      "category": "CONTENT",
+      "description": "Report 'what's inside' (SPEC_PAGES_B T9): H2, lede and medium CTA beside a numbered contents list.",
+      "scope": "Report landing only.",
+      "implementedBy": "src/components/content/Report.jsx > NumberedContents"
+    },
+    "content.post-wall": {
+      "category": "CONTENT",
+      "description": "Three-column masonry wall of social-post cards (SPEC_PAGES_B T10 PostWall + SocialPostCard); two columns at tablet, one on phone.",
+      "scope": "Thoughts index only.",
+      "implementedBy": "src/components/content/PostWall.jsx"
+    },
+    "content.term-index": {
+      "category": "CONTENT",
+      "description": "Glossary A-Z term index (SPEC_PAGES_B T11): letter heading + hairline + three-column term links per letter group; links point at /glossary/<slug>, which has no route yet.",
+      "scope": "Glossary only.",
+      "implementedBy": "src/components/content/TermIndex.jsx"
+    },
+    "content.faq-document": {
+      "category": "CONTENT",
+      "description": "Static FAQ document (SPEC_PAGES_B T12): topic sections of always-visible Q&As rendered as rich text, with an (empty on live) sticky index column.",
+      "scope": "FAQ document only.",
+      "implementedBy": "src/components/content/FaqDocument.jsx"
+    },
+    "content.split-text": {
+      "category": "CONTENT",
+      "description": "Two-column text block (SPEC_PAGES_C A1 / A4): heading left, rich-text paragraphs right, stacked below 1200px. Used twice on /about: mission header (H1) and team block (H2).",
+      "scope": "About only (planned page; component exists).",
+      "implementedBy": "src/components/ui/SplitText.jsx"
+    },
+    "content.open-roles": {
+      "category": "CONTENT",
+      "description": "Careers open roles (SPEC_PAGES_C C5): SectionHeading + third-party jobs-list widget placeholder.",
+      "scope": "Careers only (planned)."
+    },
+    "content.legal-document": {
+      "category": "CONTENT",
+      "description": "Legal document (SPEC_PAGES_C T3): centred H1, then a 920px RichText legal column of Cirka H4 sections and pre-wrap paragraphs.",
+      "scope": "Privacy policy and terms of service.",
+      "implementedBy": "src/pages/company/LegalPage.jsx + src/components/ui/RichText.jsx (variant=legal)"
+    },
+    "content.jobs-open-roles": {
+      "category": "CONTENT",
+      "description": "Jobs-board open roles (SPEC_PAGES_C J5): H2 + 'see all' text link + JobCard grid.",
+      "scope": "Jobs board only.",
+      "implementedBy": "src/components/cxjobs/JobCard.jsx (grid in src/pages/CxJobs.jsx)"
+    },
+    "content.press-intro": {
+      "category": "CONTENT",
+      "description": "Press-kit intro doc section: 'Brand Guidelines' H1 left, three intro paragraphs right.",
+      "scope": "Press kit only.",
+      "implementedBy": "src/components/presskit/DocSection.jsx (id=intro, DocHeaderRow)"
+    },
+    "content.press-logo": {
+      "category": "CONTENT",
+      "description": "Press-kit '01 Logo' section: light and dark lockup previews and a 2x2 icon grid, each with JPG/PNG/SVG/EPS download tiles.",
+      "scope": "Press kit only.",
+      "implementedBy": "src/components/presskit/AssetPreview.jsx + DownloadTile.jsx (in DocSection id=logo)"
+    },
+    "content.press-color": {
+      "category": "CONTENT",
+      "description": "Press-kit '02 Color' section: primary palette swatches, black/white secondary circles, 2x2 gradient palette.",
+      "scope": "Press kit only.",
+      "implementedBy": "src/components/presskit/ColorSwatch.jsx (in DocSection id=color)"
+    },
+    "content.press-typography": {
+      "category": "CONTENT",
+      "description": "Press-kit '03 Typography' section: two paragraphs, serif and sans specimen rows, licence footnote.",
+      "scope": "Press kit only.",
+      "implementedBy": "src/components/presskit/TypeSpecimen.jsx (in DocSection id=typography)"
+    },
+    "content.not-found": {
+      "category": "CONTENT",
+      "description": "404 content block (SPEC_PAGES_C T6): centred H2 'page doesn't exist', hero-scale sub and a dark 'back home' button.",
+      "scope": "The catch-all not-found route; detail templates also render it for unknown slugs.",
+      "implementedBy": "src/pages/NotFound.jsx"
+    },
+    "content.llms-txt": {
+      "category": "CONTENT",
+      "description": "Plain-text markdown llms.txt (H1 brand, summary, link lists) served as a static file; /llms-txt redirects to it.",
+      "scope": "The llms-txt redirect and the llms.txt file.",
+      "implementedBy": "public/llms.txt + src/pages/LlmsTxtRedirect.jsx"
+    },
+    "compare.grid-tables": {
+      "category": "COMPARE",
+      "description": "Competitors-index comparison tables (SPEC_PAGES_B T7): SectionHeading then one 'grid' CompareTable per competitor category, sticky blurred header; each table links to its /competitors/<slug> detail page.",
+      "scope": "Competitors index only.",
+      "implementedBy": "src/components/ui/CompareTable.jsx (variant=grid)"
+    },
+    "compare.vs-intro-cards": {
+      "category": "COMPARE",
+      "description": "Two 'What is X?' intro cards with logo tiles (SPEC_PAGES_B T8 VsIntroCards).",
+      "scope": "Competitor detail pages (planned)."
+    },
+    "compare.matrix": {
+      "category": "COMPARE",
+      "description": "Us-vs-Them matrix table (SPEC_PAGES_B T8): centred title row + sub, bordered card with tinted 'us' column, check / minus icons; one card per row on phones.",
+      "scope": "Competitor detail pages (planned page; component exists).",
+      "implementedBy": "src/components/ui/CompareTable.jsx (variant=matrix)"
+    },
+    "compare.vs-feature-cards": {
+      "category": "COMPARE",
+      "description": "Row of three grey feature cards with an indigo 48px icon tile under the matrix (SPEC_PAGES_B T8 FeatureCard, indigo-tile skin). FeatureCardGrid only implements the black-glyph skin so far.",
+      "scope": "Competitor detail pages (planned)."
+    },
+    "commerce.plans": {
+      "category": "COMMERCE",
+      "description": "Ruled frame with three PricingCards (price, CTA, best-for, feature groups) and footnotes (SPEC_PAGES_A T5.2).",
+      "scope": "Pricing only.",
+      "implementedBy": "src/components/ui/RuledFrame.jsx (PlansRow, Footnotes) + src/components/ui/PricingCard.jsx"
+    },
+    "commerce.compare-features": {
+      "category": "COMMERCE",
+      "description": "Plan compare table (SPEC_PAGES_A T5.3): sticky header with plan CTAs, accordion bands, horizontal scroll with sticky first column below 1200px.",
+      "scope": "Pricing only.",
+      "implementedBy": "src/components/ui/CompareTable.jsx (variant=pricing)"
+    },
+    "form.demo-signup": {
+      "category": "FORM",
+      "description": "Get-a-demo form column (SPEC_PAGES_A T6): back link, DemoForm without card, light 'free trial' button and legal links; on submit a scheduler placeholder replaces the form.",
+      "scope": "Get-a-demo only.",
+      "implementedBy": "src/components/ui/DemoForm.jsx + src/components/commerce/SchedulerPlaceholder.jsx (in src/pages/GetADemo.jsx)"
+    },
+    "form.event-demo": {
+      "category": "FORM",
+      "description": "Healthcare event block (SPEC_PAGES_A T1.7b): event copy and benefit lines beside a DemoForm card with first/last name row. Optional; healthcare only.",
+      "scope": "AEO detail healthcare page only.",
+      "implementedBy": "src/components/product/EventBlock.jsx"
+    },
+    "form.partner": {
+      "category": "FORM",
+      "description": "Partner hero + form (SPEC_PAGES_C F1a): two-column hero text beside a glass form card with outline fields and an outline submit button over a streak backdrop.",
+      "scope": "Partner only.",
+      "implementedBy": "src/pages/company/PartnerPage.jsx + src/components/ui/Field.jsx (skin=outline) + src/components/company/StreakBackdrop.jsx"
+    },
+    "form.nominate": {
+      "category": "FORM",
+      "description": "Nominate form (SPEC_PAGES_C F2): wide labelled form with soft fields, file drop zone and full-width block submit.",
+      "scope": "Nominate only.",
+      "implementedBy": "src/components/ui/Field.jsx (skin=soft, FileDropZone, SubmitButton variant=block)"
+    },
+    "navigation.story-side-menu": {
+      "category": "NAVIGATION",
+      "description": "Sticky story side menu (SPEC_PAGES_B T2): facts list + chapter scroll-spy links, desktop only.",
+      "scope": "Customer story detail pages.",
+      "implementedBy": "src/components/content/StorySideMenu.jsx"
+    },
+    "navigation.hover-toc": {
+      "category": "NAVIGATION",
+      "description": "Fixed left table of contents that expands labels on hover (SPEC_PAGES_B T4 HoverTOC), at 1200px and up.",
+      "scope": "Blog post pages.",
+      "implementedBy": "src/components/ui/Toc.jsx > HoverToc"
+    },
+    "navigation.tick-toc": {
+      "category": "NAVIGATION",
+      "description": "Fixed left tick rail TOC with hover popover showing minute and summary (SPEC_PAGES_B T6 TickTOC), at 1200px and up.",
+      "scope": "Article detail pages.",
+      "implementedBy": "src/components/ui/Toc.jsx > TickToc"
+    },
+    "navigation.inline-toc": {
+      "category": "NAVIGATION",
+      "description": "'In this guide' <details> TOC above the article body, below 1200px only (SPEC_PAGES_B T6).",
+      "scope": "Article detail pages.",
+      "implementedBy": "src/components/ui/Toc.jsx > InlineToc"
+    },
+    "navigation.share-rail": {
+      "category": "NAVIGATION",
+      "description": "Fixed right share rail (SPEC_PAGES_B T4/T6): copy link, two share links, divider, four 'summarise with an assistant' links with tooltips.",
+      "scope": "Blog post and article detail pages.",
+      "implementedBy": "src/components/ui/ShareRail.jsx"
+    },
+    "navigation.topic-bar": {
+      "category": "NAVIGATION",
+      "description": "Sticky topic bar on the article index (SPEC_PAGES_B T5): dark-active topic chips with counts synced to ?topic, plus a sort select.",
+      "scope": "Article index only.",
+      "implementedBy": "src/components/content/TopicBar.jsx"
+    },
+    "navigation.doc-sidebar": {
+      "category": "NAVIGATION",
+      "description": "Press-kit sticky left sidebar (SPEC_PAGES_C T5), standing in for the global nav: logo link, 'Contents' anchor list, Home link; a top block on phones.",
+      "scope": "Press kit only.",
+      "implementedBy": "src/components/presskit/DocSidebar.jsx"
+    },
+    "navigation.press-contents": {
+      "category": "NAVIGATION",
+      "description": "Press-kit 'Contents' doc section: two-column row with Contents heading and three anchor rows.",
+      "scope": "Press kit only.",
+      "implementedBy": "src/components/presskit/DocSection.jsx (contents section in src/pages/PressKit.jsx)"
+    },
+    "cta.callout-row": {
+      "category": "CTA",
+      "description": "Single image-left callout row with H3, body and a dark lg button (SPEC_PAGES_A T1.7).",
+      "scope": "AEO detail pages.",
+      "implementedBy": "src/components/ui/FeatureRows.jsx (variant=callout)"
+    },
+    "media.integration-orbit": {
+      "category": "MEDIA",
+      "description": "Integration orbit (SPEC_PAGES_A T2.5): rotating glass rings of integration tiles linking to detail pages. On /product a 474px orbit sits beside an H2, paragraph and arrow button; on /integrations the 818px orbit sits under the hero.",
+      "scope": "Product overview and integrations library.",
+      "implementedBy": "src/components/commerce/IntegrationOrbit.jsx"
+    },
+    "cta.coach-banner": {
+      "category": "CTA",
+      "description": "Indigo CTA banner (SPEC_PAGES_A T2.7 block 4): Cirka 60 white H3 top-left, dark 'see demo' button bottom-right.",
+      "scope": "Coach landing only (planned)."
+    },
+    "cta.post-ctas": {
+      "category": "CTA",
+      "description": "Two CTA cards after a blog post (SPEC_PAGES_B T4 PostCTAs): free-trial card and book-a-call card with pill email field.",
+      "scope": "Blog post pages.",
+      "implementedBy": "src/components/content/PostCTAs.jsx"
+    },
+    "cta.article-chip": {
+      "category": "CTA",
+      "description": "Sticky bottom CTA chip (SPEC_PAGES_B T6 ArticleCtaChip): tag, label, trailing trial link; shows after 300px, hides at the footer. Replaces the video teaser on articles.",
+      "scope": "Article detail pages.",
+      "implementedBy": "src/components/ui/CtaChip.jsx"
+    },
+    "cta.jobs-report": {
+      "category": "CTA",
+      "description": "Jobs-board report CTA (SPEC_PAGES_C J6): split card with eyebrow, H2, copy and 'get the template' jobs button.",
+      "scope": "Jobs board only.",
+      "implementedBy": "src/pages/CxJobs.jsx (inline report-cta) + src/components/cxjobs/JobsButton.jsx"
+    },
+    "media.video-frame": {
+      "category": "MEDIA",
+      "description": "Product video player (SPEC_PAGES_A VideoFrame): bordered rounded video with custom control bar; 1200px on coach, full-width autoplay-muted on voice. Placeholder video/poster.",
+      "scope": "Coach and voice landings (planned)."
+    },
+    "media.photo-collage": {
+      "category": "MEDIA",
+      "description": "About photo collage (SPEC_PAGES_C A2): one large photo with two overlapping small photos.",
+      "scope": "About only (planned)."
+    },
+    "media.photo-gallery": {
+      "category": "MEDIA",
+      "description": "Careers photo gallery (SPEC_PAGES_C C2): SectionHeading + six-photo gallery.",
+      "scope": "Careers only (planned)."
+    },
+    "media.demo-art": {
+      "category": "MEDIA",
+      "description": "Get-a-demo art column (SPEC_PAGES_A T6 DemoArt): gradient art panel with a customer quote card.",
+      "scope": "Get-a-demo only.",
+      "implementedBy": "src/components/commerce/DemoArt.jsx"
+    },
+    "media.press-hero": {
+      "category": "MEDIA",
+      "description": "Press-kit 16:9 hero: indigo field with a white Kestrel lockup.",
+      "scope": "Press kit only.",
+      "implementedBy": "src/components/presskit/KestrelLockup.jsx (in src/pages/PressKit.jsx)"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Homepage",
+      "spec": "CLONE_SPEC.md",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "hero.home",
+        "proof.home-bento",
+        "feature.compare-cards",
+        "feature.tools-arc",
+        "feature.confidence",
+        "feature.system-find",
+        "feature.playbook",
+        "proof.stories-home",
+        "chrome.assistant-note",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.aeo-detail",
+      "name": "AEO detail",
+      "spec": "SPEC_PAGES_A T1",
+      "build": "built and routed (src/pages/product/AeoDetail.jsx, src/routes/product.jsx); the product template group is still in progress",
+      "dataSource": "src/data/productPages.js (aeoProductSlugs, aeoIndustrySlugs) + src/data/industryPages.js",
+      "routeCount": 10,
+      "routes": [
+        "/product/ai-agents",
+        "/product/guardrails",
+        "/product/how-it-works",
+        "/product/outbound",
+        "/product/quality-assurance",
+        "/product/simulations",
+        "/product/trust",
+        "/industry/financial-services",
+        "/industry/healthcare",
+        "/industry/insurance"
+      ],
+      "chrome": "full-no-teaser",
+      "notes": "Optional sections: proof.stories-wide only on ai-agents, financial-services, healthcare; form.event-demo only on healthcare; content.related-reading absent on the three industry pages.",
+      "sections": [
+        "chrome.nav",
+        "hero.split",
+        "proof.logo-ticker",
+        "content.prose-tools",
+        "feature.heading-band",
+        "feature.rows-472",
+        "proof.stories-wide",
+        "cta.callout-row",
+        "form.event-demo",
+        "content.related-reading",
+        "content.prose-faq",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.product-overview",
+      "name": "Product landing: overview",
+      "spec": "SPEC_PAGES_A T2 (/product)",
+      "build": "planned",
+      "routeCount": 1,
+      "routes": [
+        "/product"
+      ],
+      "chrome": "full-no-teaser",
+      "sections": [
+        "chrome.nav",
+        "hero.headline",
+        "proof.logo-ticker",
+        "content.prose-tools",
+        "feature.card-carousel",
+        "feature.rows-600",
+        "media.integration-orbit",
+        "proof.stories-split",
+        "content.related-reading",
+        "content.prose-faq",
+        "content.blog-grid",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.product-coach",
+      "name": "Product landing: coach",
+      "spec": "SPEC_PAGES_A T2 (/product/coach)",
+      "build": "planned",
+      "routeCount": 1,
+      "routes": [
+        "/product/coach"
+      ],
+      "chrome": "full-no-teaser",
+      "sections": [
+        "chrome.nav",
+        "hero.headline",
+        "media.video-frame",
+        "proof.logo-ticker-labelled",
+        "content.prose-tools",
+        "feature.coach-bento",
+        "proof.coach-quote-card",
+        "cta.coach-banner",
+        "content.related-reading",
+        "content.prose-faq",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.product-voice",
+      "name": "Product landing: voice",
+      "spec": "SPEC_PAGES_A T2 (/product/voice)",
+      "build": "planned",
+      "routeCount": 1,
+      "routes": [
+        "/product/voice"
+      ],
+      "chrome": "full-no-teaser",
+      "sections": [
+        "chrome.nav",
+        "hero.headline",
+        "media.video-frame",
+        "proof.logo-ticker-labelled",
+        "content.prose-tools",
+        "feature.card-carousel",
+        "feature.split-explainer",
+        "proof.case-study-card",
+        "content.related-reading",
+        "content.prose-faq",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.integrations-library",
+      "name": "Integrations library",
+      "spec": "SPEC_PAGES_A T3",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/integrations"
+      ],
+      "chrome": "full-no-teaser",
+      "sections": [
+        "chrome.nav",
+        "hero.headline",
+        "media.integration-orbit",
+        "proof.logo-ticker-labelled",
+        "content.integration-catalog",
+        "content.integration-setup",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.integration-detail",
+      "name": "Integration detail",
+      "spec": "SPEC_PAGES_A T4",
+      "build": "built",
+      "dataSource": "src/data/integrations.js (entries with a `detail` block)",
+      "routeCount": 2,
+      "routePattern": "/integrations/:slug",
+      "routes": [
+        "/integrations/api",
+        "/integrations/mcp"
+      ],
+      "chrome": "full-no-teaser",
+      "notes": "Only integrations with a `detail` block get a page; other catalogue cards link to '#'. The live site sampled /integrations/lorikeet-api and /integrations/mcp.",
+      "sections": [
+        "chrome.nav",
+        "hero.integration-detail",
+        "content.integration-body",
+        "content.other-apps",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.pricing",
+      "name": "Pricing",
+      "spec": "SPEC_PAGES_A T5",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/pricing"
+      ],
+      "chrome": "full-no-teaser",
+      "sections": [
+        "chrome.nav",
+        "hero.pricing-title",
+        "commerce.plans",
+        "commerce.compare-features",
+        "content.faq-accordion-panel",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.get-a-demo",
+      "name": "Get a demo",
+      "spec": "SPEC_PAGES_A T6",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/get-a-demo"
+      ],
+      "chrome": "none",
+      "sections": [
+        "form.demo-signup",
+        "media.demo-art",
+        "chrome.assistant-note"
+      ]
+    },
+    {
+      "id": "template.story-index",
+      "name": "Customer story index",
+      "spec": "SPEC_PAGES_B T1",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/customer-stories"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "hero.headline",
+        "content.story-card-list",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.story-detail",
+      "name": "Customer story detail",
+      "spec": "SPEC_PAGES_B T2",
+      "build": "built",
+      "dataSource": "src/data/stories.js `stories`",
+      "routeCount": 8,
+      "routePattern": "/customer-stories/:slug",
+      "routes": [
+        "/customer-stories/ledgerly-handles-tax-season",
+        "/customer-stories/brindle-health-after-hours",
+        "/customer-stories/voltway-outage-updates",
+        "/customer-stories/stackhouse-onboarding-workflows",
+        "/customer-stories/coinwell-card-disputes",
+        "/customer-stories/mendwell-billing-clarity",
+        "/customer-stories/halden-power-moving-home",
+        "/customer-stories/patchwork-admin-requests"
+      ],
+      "chrome": "full",
+      "notes": "Route count = entries in stories.js; the live site has more stories. Quote-only index cards (storyQuotes) have no detail page.",
+      "sections": [
+        "chrome.nav",
+        "hero.story",
+        "navigation.story-side-menu",
+        "content.story-sections",
+        "content.related-stories",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.blog-index",
+      "name": "Blog index",
+      "spec": "SPEC_PAGES_B T3",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/blog"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "hero.blog-title",
+        "content.blog-featured",
+        "content.blog-rail",
+        "content.blog-browse",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.blog-post",
+      "name": "Blog post",
+      "spec": "SPEC_PAGES_B T4",
+      "build": "built",
+      "dataSource": "src/data/blog.js `blogPosts`",
+      "routeCount": 8,
+      "routePattern": "/blog/:slug",
+      "routes": [
+        "/blog/introducing-kestrel-workflows-studio",
+        "/blog/five-lessons-from-a-year-of-ai-escalations",
+        "/blog/kestrel-opens-london-office",
+        "/blog/what-good-cx-looks-like-in-regulated-industries",
+        "/blog/roost-podcast-ep-12-quality-at-scale",
+        "/blog/roost-podcast-ep-11-first-90-days",
+        "/blog/roost-podcast-ep-10-voice-support",
+        "/blog/roost-podcast-ep-09-support-metrics"
+      ],
+      "chrome": "full",
+      "notes": "Route count = entries in blog.js; the live blog grid showed about 85 posts.",
+      "sections": [
+        "chrome.nav",
+        "hero.post-header",
+        "content.rich-text-blog",
+        "cta.post-ctas",
+        "content.related-posts",
+        "navigation.hover-toc",
+        "navigation.share-rail",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.article-index",
+      "name": "Article index",
+      "spec": "SPEC_PAGES_B T5",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/articles"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "hero.article-intro",
+        "content.guide-featured",
+        "navigation.topic-bar",
+        "content.guide-grid",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.article-detail",
+      "name": "Article detail",
+      "spec": "SPEC_PAGES_B T6",
+      "build": "built",
+      "dataSource": "src/data/articles.js `articles`",
+      "routeCount": 11,
+      "routePattern": "/articles/:slug",
+      "routes": [
+        "/articles/support-metrics-that-matter",
+        "/articles/what-is-a-good-nps",
+        "/articles/first-response-time-explained",
+        "/articles/measuring-customer-effort",
+        "/articles/csat-survey-design",
+        "/articles/ai-agent-guardrails",
+        "/articles/ai-support-first-90-days",
+        "/articles/reducing-ticket-backlog",
+        "/articles/support-team-scheduling",
+        "/articles/writing-help-centre-articles",
+        "/articles/escalation-paths"
+      ],
+      "chrome": "full-no-teaser",
+      "notes": "Route count = entries in articles.js; the live site has more guides. The sticky CTA chip replaces the video teaser.",
+      "sections": [
+        "chrome.nav",
+        "hero.article-header",
+        "navigation.inline-toc",
+        "content.rich-text-article",
+        "content.faq-accordion-hairline",
+        "content.keep-reading",
+        "navigation.tick-toc",
+        "navigation.share-rail",
+        "cta.article-chip",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.competitor-index",
+      "name": "Competitors index",
+      "spec": "SPEC_PAGES_B T7",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/competitors"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "hero.headline",
+        "proof.logo-ticker",
+        "feature.difference-cards",
+        "content.faq-accordion-rows",
+        "compare.grid-tables",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.competitor-detail",
+      "name": "Competitor detail",
+      "spec": "SPEC_PAGES_B T8",
+      "build": "planned: no page or route yet (/competitors/:slug currently falls through to the 404)",
+      "dataSource": "src/data/competitors.js `competitorIndex.tables[].slug`",
+      "routeCount": 6,
+      "routePattern": "/competitors/:slug",
+      "routes": [
+        "/competitors/kestrel-vs-legacy-chatbots",
+        "/competitors/kestrel-vs-helpdesk-add-ons",
+        "/competitors/kestrel-vs-build-your-own",
+        "/competitors/kestrel-vs-outsourced-bpo",
+        "/competitors/kestrel-vs-phone-trees",
+        "/competitors/kestrel-vs-single-channel-assistants"
+      ],
+      "chrome": "full",
+      "notes": "Route count = comparison slugs in competitors.js (generic categories); the live site compares named competitors and has more pages.",
+      "sections": [
+        "chrome.nav",
+        "hero.vs",
+        "proof.logo-ticker-labelled",
+        "compare.vs-intro-cards",
+        "compare.matrix",
+        "compare.vs-feature-cards",
+        "proof.stories-split",
+        "content.faq-accordion-cards",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.report-landing",
+      "name": "Report landing",
+      "spec": "SPEC_PAGES_B T9",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/content/the-handoff-gap"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "hero.report",
+        "proof.logo-ticker-labelled",
+        "content.finding-cards",
+        "proof.quote-panel",
+        "content.numbered-contents",
+        "proof.story-rail",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.thoughts-index",
+      "name": "Thoughts on CX",
+      "spec": "SPEC_PAGES_B T10",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/thoughts-on-cx"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "hero.headline",
+        "content.post-wall",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.glossary",
+      "name": "Glossary",
+      "spec": "SPEC_PAGES_B T11",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/glossary"
+      ],
+      "chrome": "full",
+      "notes": "The 41 term links (src/data/glossary.js) point at /glossary/<slug>, which has no route and renders the 404; term detail pages are outside the spec, so no template is counted for them.",
+      "sections": [
+        "chrome.nav",
+        "hero.glossary",
+        "content.term-index",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.faq",
+      "name": "FAQ document",
+      "spec": "SPEC_PAGES_B T12",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/faq"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "hero.doc-header",
+        "content.faq-document",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.company-about",
+      "name": "Company: about",
+      "spec": "SPEC_PAGES_C T1 (/about)",
+      "build": "planned",
+      "routeCount": 1,
+      "routes": [
+        "/about"
+      ],
+      "chrome": "full",
+      "notes": "content.split-text is listed once but renders twice on the page: A1 mission header (H1) at the top and A4 team block (H2) between proof.about-logos and proof.employee-quotes. It is listed once so the reuse counts stay per-template.",
+      "sections": [
+        "chrome.nav",
+        "content.split-text",
+        "media.photo-collage",
+        "proof.about-logos",
+        "proof.employee-quotes",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.company-careers",
+      "name": "Company: careers",
+      "spec": "SPEC_PAGES_C T1 (/careers)",
+      "build": "planned",
+      "routeCount": 1,
+      "routes": [
+        "/careers"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "hero.avatar",
+        "media.photo-gallery",
+        "feature.values-bento",
+        "proof.employee-testimonials",
+        "content.open-roles",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.lead-form-partner",
+      "name": "Lead form: partner",
+      "spec": "SPEC_PAGES_C T2 (/partner)",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/partner"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "form.partner",
+        "proof.logo-wall",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.lead-form-nominate",
+      "name": "Lead form: nominate",
+      "spec": "SPEC_PAGES_C T2 (/nominate)",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/nominate"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "hero.headline",
+        "form.nominate",
+        "proof.logo-wall",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.legal",
+      "name": "Legal",
+      "spec": "SPEC_PAGES_C T3",
+      "build": "built",
+      "dataSource": "src/data/legal.js `legalPages`",
+      "routeCount": 2,
+      "routes": [
+        "/privacy-policy",
+        "/terms-of-service"
+      ],
+      "chrome": "full",
+      "sections": [
+        "chrome.nav",
+        "content.legal-document",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.cx-jobs",
+      "name": "Jobs board microsite",
+      "spec": "SPEC_PAGES_C T4",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/cx-jobs"
+      ],
+      "chrome": "own",
+      "sections": [
+        "chrome.jobs-header",
+        "hero.jobs",
+        "proof.jobs-featured-ticker",
+        "proof.jobs-stats",
+        "feature.jobs-mcp",
+        "content.jobs-open-roles",
+        "cta.jobs-report",
+        "chrome.jobs-footer"
+      ]
+    },
+    {
+      "id": "template.press-kit",
+      "name": "Press kit",
+      "spec": "SPEC_PAGES_C T5",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "/press-kit"
+      ],
+      "chrome": "none",
+      "sections": [
+        "navigation.doc-sidebar",
+        "media.press-hero",
+        "content.press-intro",
+        "navigation.press-contents",
+        "content.press-logo",
+        "content.press-color",
+        "content.press-typography"
+      ]
+    },
+    {
+      "id": "template.not-found",
+      "name": "404 not found",
+      "spec": "SPEC_PAGES_C T6",
+      "build": "built",
+      "routeCount": 1,
+      "routes": [
+        "*"
+      ],
+      "chrome": "full",
+      "notes": "Catch-all counted as one nominal route. Detail templates (stories, blog, articles, integrations) also render NotFound for unknown slugs.",
+      "sections": [
+        "chrome.nav",
+        "content.not-found",
+        "chrome.footer",
+        "chrome.video-teaser"
+      ]
+    },
+    {
+      "id": "template.llms-txt",
+      "name": "llms.txt",
+      "spec": "SPEC_PAGES_C template map (llms.txt)",
+      "build": "built",
+      "routeCount": 2,
+      "routes": [
+        "/llms-txt",
+        "/llms.txt"
+      ],
+      "chrome": "none",
+      "notes": "/llms-txt is a client-side redirect (LlmsTxtRedirect.jsx; 308 on live) to the static public/llms.txt.",
+      "sections": [
+        "content.llms-txt"
+      ]
+    }
+  ]
+}

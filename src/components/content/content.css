@@ -1,0 +1,98 @@
+/* =====================================================================================
+   Content templates (SPEC_PAGES_B T1–T6, T9–T12) – descendant / computed styles utilities can't express.
+   All colours via theme() tokens (tailwind.config.cjs "pages: content" + shared blocks).
+   ===================================================================================== */
+
+/* ---- §1.1 story themes as CSS vars (light / dark) for the hover spring below ---- */
+.story-theme-pink { --th-light: theme('colors.tint.pink'); --th-dark: theme('colors.tag-text.pink'); }
+.story-theme-yellow { --th-light: theme('colors.tint.yellow'); --th-dark: theme('colors.tag-text.yellow'); }
+.story-theme-red { --th-light: theme('colors.tint.red'); --th-dark: theme('colors.tag-text.red'); }
+.story-theme-green { --th-light: theme('colors.tint.green'); --th-dark: theme('colors.tag-text.green'); }
+
+/* §1.3 PillLinkButton inversion + §1.4 card lift, both driven by one spring progress --hp (0 rest -> 1 hover) set
+   by framer-motion on the card. The spring may overshoot slightly (measured: ~rgb(57,0,49) at 312ms), so the
+   colour mix is clamped and the shadow alpha follows the raw value (.2 -> ~.204 overshoot, as measured). */
+.story-btn-inner {
+  background-color: color-mix(in srgb, var(--th-dark) clamp(0%, calc(var(--hp, 0) * 100%), 100%), var(--th-light));
+  color: color-mix(in srgb, var(--th-light) clamp(0%, calc(var(--hp, 0) * 100%), 100%), var(--th-dark));
+}
+.story-lift {
+  box-shadow: 1px 3px 30px rgba(0, 0, 0, calc(var(--hp, 0) * 0.2));
+}
+
+/* ---- T2 illustration connectors: mask-faded curves ---- */
+.int-connector {
+  -webkit-mask-image: theme('backgroundImage.int-fade');
+  mask-image: theme('backgroundImage.int-fade');
+}
+
+/* ---- T9 chart colours for the conic donut (inline style uses these vars) ---- */
+.report-chart {
+  --c-mag: theme('colors.report.magenta');
+  --c-lil: theme('colors.report.lilac');
+}
+.report-number {
+  background-image: theme('backgroundImage.report-number');
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---- T12 FAQ answers: RichText variant "faq" (14/22.4 #737373, li pl 17.3 with "•" marker, bold = Inter 700,
+   links #737373 – underlined here: live links are indistinguishable from text, spec suggests underlining) ---- */
+.rt--faq {
+  font-size: theme('fontSize.faq-doc.0');
+  line-height: theme('fontSize.faq-doc.1.lineHeight');
+  color: theme('colors.muted.7');
+}
+.rt--faq > * + * {
+  margin-top: 12px;
+}
+.rt--faq a {
+  color: theme('colors.muted.7');
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.rt--faq a:hover {
+  color: theme('colors.ink.DEFAULT');
+}
+.rt--faq ul,
+.rt--faq ol {
+  list-style: none;
+  padding-left: 0;
+}
+.rt--faq li {
+  position: relative;
+  padding-left: 17.3px;
+}
+.rt--faq ul > li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: theme('colors.muted.7');
+}
+
+/* ---- T10 "show more" clamp: ~9 lines (189px) ---- */
+.social-clamp {
+  max-height: 189px;
+  overflow: hidden;
+}
+
+/* ---- T6: the article CtaChip replaces the global VideoTeaser (B T6: `.lvc` absent on articles). SiteLayout is not
+   ours to edit, so ArticleDetail flags <html data-hide-teaser> while mounted. ---- */
+html[data-hide-teaser] [data-motion='video-teaser'] {
+  display: none;
+}
+
+/* Wide story card: the lift sits on the whole card on phone (Featured-Mobile) and on the two panels from 810. */
+@media (max-width: 809.98px) {
+  .story-lift-phone {
+    box-shadow: 1px 3px 30px rgba(0, 0, 0, calc(var(--hp, 0) * 0.2));
+  }
+}
+@media (min-width: 810px) {
+  .story-lift-panel {
+    box-shadow: 1px 3px 30px rgba(0, 0, 0, calc(var(--hp, 0) * 0.2));
+  }
+}

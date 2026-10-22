@@ -1,0 +1,20 @@
+# Kestrel
+
+> Kestrel is a fictional AI customer-support platform used as placeholder content for a design-faithful site rebuild. It resolves support tickets end to end, hands off to people when it should, and keeps a full record of what it did and why.
+
+This file follows the llms.txt format: a short summary, then links to the pages most useful to a language model. All content is placeholder copy.
+
+## Pages
+
+- [Home](/): what Kestrel does, how it compares, the tools and integrations it uses, and customer stories
+- [Press kit](/press-kit): brand guidelines with logo files, colour palette and typefaces
+- [Kestrel Jobs](/cx-jobs): a board of customer-support roles at teams that work with AI
+
+## Assets
+
+- [Lockup (SVG)](/assets/presskit/kestrel-lockup.svg): primary mark and wordmark
+- [Mark (SVG)](/assets/presskit/kestrel-mark.svg): standalone mark
+
+## Optional
+
+- [llms.txt](/llms.txt): this file (also reachable from /llms-txt)
