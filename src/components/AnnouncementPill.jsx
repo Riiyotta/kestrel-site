@@ -110,8 +110,9 @@ export default function AnnouncementPill({ children, href = '#' }) {
             transition={BREATH}
           />
         </motion.span>
-        {/* outer: live computed border-radius is 0 (square blur box); only the inner pill is rounded (100px) */}
-        <span className="relative flex h-[54px] items-center px-3 py-1.5 backdrop-blur-tag">
+        {/* outer: live computes border-radius 0 here, but the backdrop blur then renders as a visible hard-edged
+            rectangle over the glow, so it takes the same pill radius as the inner pill (100px) */}
+        <span className="relative flex h-[54px] items-center rounded-announce px-3 py-1.5 backdrop-blur-tag">
           {/* inner – 1px #E6E6E6 border is a Framer ::after overlay on the live site (takes no layout space) */}
           <motion.span
             variants={inner}
