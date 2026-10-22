@@ -1,7 +1,7 @@
 # Kestrel marketing site: information architecture
 
 Source: LORIKEET clone (React 18 + Vite + Tailwind v3) of a marketing site, placeholder content for the fictional product Kestrel; codebase at /Users/riyaghosh/V3/LORIKEET, specs CLONE_SPEC.md + SPEC_PAGES_A/B/C.md
-Status: **partly planned: 24 templates are built and routed (AEO detail was routed by the product group during this pass); 6 templates (product overview/coach/voice, competitor detail, about, careers) come from the specs and have no page or route in src/routes/product.jsx yet** · production approved: **false**
+Status: **built: all 30 templates are implemented and routed; section ids are linked to their components via implementedBy** · production approved: **false**
 71 routes · 30 templates · 120 unique sections
 
 > Generated from `ia.json` by `build.mjs`. Edit the JSON, not this file.
@@ -93,16 +93,16 @@ component library or stays local to its page.
 | `navigation.hover-toc` | NAVIGATION | 1 | 8 | `src/components/ui/Toc.jsx > HoverToc` | Blog post pages. |
 | `cta.post-ctas` | CTA | 1 | 8 | `src/components/content/PostCTAs.jsx` | Blog post pages. |
 | `proof.stories-split` | PROOF | 2 | 7 | `src/components/Stories.jsx (card=split / card=testimonial)` | Product overview and competitor detail. |
-| `hero.vs` | HERO | 1 | 6 | _not yet built_ | Competitor detail pages (planned). |
-| `content.faq-accordion-cards` | CONTENT | 1 | 6 | `src/components/ui/FaqAccordion.jsx (look=cards)` | Competitor detail pages (planned page; component exists). |
-| `compare.vs-intro-cards` | COMPARE | 1 | 6 | _not yet built_ | Competitor detail pages (planned). |
-| `compare.matrix` | COMPARE | 1 | 6 | `src/components/ui/CompareTable.jsx (variant=matrix)` | Competitor detail pages (planned page; component exists). |
-| `compare.vs-feature-cards` | COMPARE | 1 | 6 | _not yet built_ | Competitor detail pages (planned). |
+| `hero.vs` | HERO | 1 | 6 | `src/components/company/Vs.jsx > VsHero` | Competitor detail pages. |
+| `content.faq-accordion-cards` | CONTENT | 1 | 6 | `src/components/ui/FaqAccordion.jsx (look=cards)` | Competitor detail pages. |
+| `compare.vs-intro-cards` | COMPARE | 1 | 6 | `src/components/company/Vs.jsx > VsIntroCards` | Competitor detail pages. |
+| `compare.matrix` | COMPARE | 1 | 6 | `src/components/ui/CompareTable.jsx (variant=matrix)` | Competitor detail pages. |
+| `compare.vs-feature-cards` | COMPARE | 1 | 6 | `src/components/company/Vs.jsx > VsFeatureCards` | Competitor detail pages. |
 | `chrome.assistant-note` | CHROME | 2 | 2 | `src/components/Stories.jsx > AssistantNote` | Homepage and get-a-demo only. |
 | `proof.logo-wall` | PROOF | 2 | 2 | `src/components/ui/LogoWall.jsx` | Partner and nominate lead-form pages. |
-| `feature.card-carousel` | FEATURE | 2 | 2 | `src/components/ui/CardCarousel.jsx (variant=snap)` | Product overview and voice landing (planned pages; component exists). |
+| `feature.card-carousel` | FEATURE | 2 | 2 | `src/components/ui/CardCarousel.jsx (variant=snap)` | Product overview and voice landing (; component exists). |
 | `media.integration-orbit` | MEDIA | 2 | 2 | `src/components/commerce/IntegrationOrbit.jsx` | Product overview and integrations library. |
-| `media.video-frame` | MEDIA | 2 | 2 | _not yet built_ | Coach and voice landings (planned). |
+| `media.video-frame` | MEDIA | 2 | 2 | `src/components/product/VideoFrame.jsx` | Coach and voice landings. |
 | `hero.integration-detail` | HERO | 1 | 2 | `src/components/commerce/DetailHeader.jsx` | Integration detail pages. |
 | `content.integration-body` | CONTENT | 1 | 2 | `src/pages/IntegrationDetail.jsx (inline body) + src/components/commerce/MetaCard.jsx` | Integration detail pages. |
 | `content.other-apps` | CONTENT | 1 | 2 | `src/components/ui/IntegrationCard.jsx (grid in src/pages/IntegrationDetail.jsx)` | Integration detail pages. |
@@ -117,17 +117,17 @@ component library or stays local to its page.
 | `hero.report` | HERO | 1 | 1 | `src/components/content/Report.jsx > ReportHero` | Report landing only. |
 | `hero.glossary` | HERO | 1 | 1 | `src/pages/content/Glossary.jsx (inline glossary-hero)` | Glossary only. |
 | `hero.doc-header` | HERO | 1 | 1 | `src/components/content/FaqDocument.jsx > DocHeader` | FAQ document only. |
-| `hero.avatar` | HERO | 1 | 1 | _not yet built_ | Careers only (planned). |
+| `hero.avatar` | HERO | 1 | 1 | `src/components/company/AvatarHero.jsx` | Careers only. |
 | `hero.jobs` | HERO | 1 | 1 | `src/pages/CxJobs.jsx (inline hero) + src/components/cxjobs/JobsButton.jsx` | Jobs board only. |
 | `proof.home-bento` | PROOF | 1 | 1 | `src/components/Proof.jsx (variant=home)` | Homepage only. |
 | `proof.stories-home` | PROOF | 1 | 1 | `src/components/Stories.jsx (card=home)` | Homepage only. |
-| `proof.about-logos` | PROOF | 1 | 1 | `src/components/Proof.jsx (variant=logos)` | About only (planned page; component exists). |
-| `proof.coach-quote-card` | PROOF | 1 | 1 | _not yet built_ | Coach landing only (planned). |
-| `proof.case-study-card` | PROOF | 1 | 1 | _not yet built_ | Voice landing only (planned). |
+| `proof.about-logos` | PROOF | 1 | 1 | `src/components/Proof.jsx (variant=logos)` | About only. |
+| `proof.coach-quote-card` | PROOF | 1 | 1 | `src/components/product/Coach.jsx > QuoteCard` | Coach landing only. |
+| `proof.case-study-card` | PROOF | 1 | 1 | `src/components/product/Voice.jsx > CaseStudyCard` | Voice landing only. |
 | `proof.quote-panel` | PROOF | 1 | 1 | `src/components/content/Report.jsx > QuotePanel` | Report landing only. |
 | `proof.story-rail` | PROOF | 1 | 1 | `src/components/content/Report.jsx > StoryRail` | Report landing only. |
-| `proof.employee-quotes` | PROOF | 1 | 1 | `src/components/ui/EmployeeCard.jsx (layout=horizontal)` | About only (planned page; card component exists). |
-| `proof.employee-testimonials` | PROOF | 1 | 1 | `src/components/ui/EmployeeCard.jsx + src/components/Stories.jsx (card=employee)` | Careers only (planned page; card and carousel components exist). |
+| `proof.employee-quotes` | PROOF | 1 | 1 | `src/components/ui/EmployeeCard.jsx (layout=horizontal)` | About only (; card component exists). |
+| `proof.employee-testimonials` | PROOF | 1 | 1 | `src/components/ui/EmployeeCard.jsx + src/components/Stories.jsx (card=employee)` | Careers only (; card and carousel components exist). |
 | `proof.jobs-featured-ticker` | PROOF | 1 | 1 | `src/components/cxjobs/SilkJobCard.jsx (marquee composed in src/pages/CxJobs.jsx > FeaturedTicker)` | Jobs board only. |
 | `proof.jobs-stats` | PROOF | 1 | 1 | `src/components/cxjobs/StatsRow.jsx` | Jobs board only. |
 | `feature.compare-cards` | FEATURE | 1 | 1 | `src/components/Compare.jsx` | Homepage only. |
@@ -135,13 +135,13 @@ component library or stays local to its page.
 | `feature.confidence` | FEATURE | 1 | 1 | `src/components/Confidence.jsx` | Homepage only. |
 | `feature.system-find` | FEATURE | 1 | 1 | `src/components/Integrations.jsx` | Homepage only. |
 | `feature.playbook` | FEATURE | 1 | 1 | `src/components/Playbook.jsx` | Homepage only. |
-| `feature.rows-600` | FEATURE | 1 | 1 | `src/components/ui/FeatureRows.jsx (variant=600)` | Product overview only (planned page; component exists). |
-| `feature.coach-bento` | FEATURE | 1 | 1 | _not yet built_ | Coach landing only (planned). |
-| `feature.split-explainer` | FEATURE | 1 | 1 | _not yet built_ | Voice landing only (planned). |
+| `feature.rows-600` | FEATURE | 1 | 1 | `src/components/ui/FeatureRows.jsx (variant=600)` | Product overview only. |
+| `feature.coach-bento` | FEATURE | 1 | 1 | `src/components/product/Coach.jsx > BentoBlock` | Coach landing only. |
+| `feature.split-explainer` | FEATURE | 1 | 1 | `src/components/product/Voice.jsx > SplitExplainer` | Voice landing only. |
 | `feature.difference-cards` | FEATURE | 1 | 1 | `src/components/company/FeatureCardGrid.jsx` | Competitors index only. |
-| `feature.values-bento` | FEATURE | 1 | 1 | _not yet built_ | Careers only (planned). |
+| `feature.values-bento` | FEATURE | 1 | 1 | `src/components/company/ValuesBento.jsx` | Careers only. |
 | `feature.jobs-mcp` | FEATURE | 1 | 1 | `src/components/cxjobs/McpFlowIllustration.jsx (section composed in src/pages/CxJobs.jsx)` | Jobs board only. |
-| `content.blog-grid` | CONTENT | 1 | 1 | _not yet built_ | Product overview only (planned). |
+| `content.blog-grid` | CONTENT | 1 | 1 | `src/components/product/ProductSections.jsx > BlogGrid` | Product overview only. |
 | `content.integration-catalog` | CONTENT | 1 | 1 | `src/components/commerce/IntegrationCatalog.jsx (+ ui/FilterChips variant=sidebar, ui/IntegrationCard)` | Integrations library only. |
 | `content.integration-setup` | CONTENT | 1 | 1 | `src/components/commerce/SetupSection.jsx` | Integrations library only. |
 | `content.story-card-list` | CONTENT | 1 | 1 | `src/components/content/StoryCard.jsx + src/components/ui/FilterChips.jsx (variant=story)` | Story index only. |
@@ -157,8 +157,8 @@ component library or stays local to its page.
 | `content.post-wall` | CONTENT | 1 | 1 | `src/components/content/PostWall.jsx` | Thoughts index only. |
 | `content.term-index` | CONTENT | 1 | 1 | `src/components/content/TermIndex.jsx` | Glossary only. |
 | `content.faq-document` | CONTENT | 1 | 1 | `src/components/content/FaqDocument.jsx` | FAQ document only. |
-| `content.split-text` | CONTENT | 1 | 1 | `src/components/ui/SplitText.jsx` | About only (planned page; component exists). |
-| `content.open-roles` | CONTENT | 1 | 1 | _not yet built_ | Careers only (planned). |
+| `content.split-text` | CONTENT | 1 | 1 | `src/components/ui/SplitText.jsx` | About only. |
+| `content.open-roles` | CONTENT | 1 | 1 | `src/components/company/OpenRoles.jsx` | Careers only. |
 | `content.jobs-open-roles` | CONTENT | 1 | 1 | `src/components/cxjobs/JobCard.jsx (grid in src/pages/CxJobs.jsx)` | Jobs board only. |
 | `content.press-intro` | CONTENT | 1 | 1 | `src/components/presskit/DocSection.jsx (id=intro, DocHeaderRow)` | Press kit only. |
 | `content.press-logo` | CONTENT | 1 | 1 | `src/components/presskit/AssetPreview.jsx + DownloadTile.jsx (in DocSection id=logo)` | Press kit only. |
@@ -174,10 +174,10 @@ component library or stays local to its page.
 | `navigation.topic-bar` | NAVIGATION | 1 | 1 | `src/components/content/TopicBar.jsx` | Article index only. |
 | `navigation.doc-sidebar` | NAVIGATION | 1 | 1 | `src/components/presskit/DocSidebar.jsx` | Press kit only. |
 | `navigation.press-contents` | NAVIGATION | 1 | 1 | `src/components/presskit/DocSection.jsx (contents section in src/pages/PressKit.jsx)` | Press kit only. |
-| `cta.coach-banner` | CTA | 1 | 1 | _not yet built_ | Coach landing only (planned). |
+| `cta.coach-banner` | CTA | 1 | 1 | `src/components/product/Coach.jsx > CtaBanner` | Coach landing only. |
 | `cta.jobs-report` | CTA | 1 | 1 | `src/pages/CxJobs.jsx (inline report-cta) + src/components/cxjobs/JobsButton.jsx` | Jobs board only. |
-| `media.photo-collage` | MEDIA | 1 | 1 | _not yet built_ | About only (planned). |
-| `media.photo-gallery` | MEDIA | 1 | 1 | _not yet built_ | Careers only (planned). |
+| `media.photo-collage` | MEDIA | 1 | 1 | `src/components/company/PhotoCollage.jsx` | About only. |
+| `media.photo-gallery` | MEDIA | 1 | 1 | `src/components/company/PhotoGallery.jsx` | Careers only. |
 | `media.demo-art` | MEDIA | 1 | 1 | `src/components/commerce/DemoArt.jsx` | Get-a-demo only. |
 | `media.press-hero` | MEDIA | 1 | 1 | `src/components/presskit/KestrelLockup.jsx (in src/pages/PressKit.jsx)` | Press kit only. |
 
@@ -186,8 +186,6 @@ component library or stays local to its page.
 **104 single-use sections** appear in exactly one template. Building these
 as "reusable" components up front would be speculative — keep them page-local
 until a second caller actually appears.
-
-**15 sections have no `implementedBy` yet** — not necessarily missing, just not linked to a component in this pass: `hero.vs`, `compare.vs-intro-cards`, `compare.vs-feature-cards`, `media.video-frame`, `hero.avatar`, `proof.coach-quote-card`, `proof.case-study-card`, `feature.coach-bento`, `feature.split-explainer`, `feature.values-bento`, `content.blog-grid`, `content.open-roles`, `cta.coach-banner`, `media.photo-collage`, `media.photo-gallery`.
 
 ## Templates
 
@@ -693,7 +691,7 @@ _The page-opening block: headline, sub, actions and any hero art._
 
 **`hero.vs`** — Competitor 'Us vs Them' hero (SPEC_PAGES_B T8 VsHero): full-bleed pink panel, logo-tile title row, subtitle, intro copy with bulleted differences, and a DemoForm card on the right.
 
-· Competitor detail pages (planned). · appears on 6 routes
+· Competitor detail pages. · appears on 6 routes · implemented by `src/components/company/Vs.jsx > VsHero`
 
 **`hero.report`** — Report hero (SPEC_PAGES_B T9 R2 Hero): gradient art panel with H1, lede, 'read the report' card and a what-you'll-learn grid.
 
@@ -709,7 +707,7 @@ _The page-opening block: headline, sub, actions and any hero art._
 
 **`hero.avatar`** — Careers avatar hero (SPEC_PAGES_C C1): ten floating avatar photos around a two-line H1 and one xl 'see open roles' button.
 
-· Careers only (planned). · appears on 1 routes
+· Careers only. · appears on 1 routes · implemented by `src/components/company/AvatarHero.jsx`
 
 **`hero.jobs`** — Jobs-board hero (SPEC_PAGES_C J1): eyebrow, Inter headline and a 'browse roles' jobs button, in the microsite's own square-corner style.
 
@@ -741,7 +739,7 @@ _Social proof: logo tickers and walls, testimonial and story slideshows, employe
 
 **`proof.about-logos`** — About-page logo block (SPEC_PAGES_C A3): heading only on a white-to-#F9F9F9 fade, then one bordered single-row strip at every width, no reveal.
 
-· About only (planned page; component exists). · appears on 1 routes · implemented by `src/components/Proof.jsx (variant=logos)`
+· About only. · appears on 1 routes · implemented by `src/components/Proof.jsx (variant=logos)`
 
 **`proof.stories-wide`** — Wide story slideshow (SPEC_PAGES_A T1.6): 956x393 photo + tinted quote panel card, pink or peach tint, 'See customer story' pill; one static card below 1200px. Optional per page.
 
@@ -753,11 +751,11 @@ _Social proof: logo tickers and walls, testimonial and story slideshows, employe
 
 **`proof.coach-quote-card`** — Coach QuoteCard (SPEC_PAGES_A T2.7 block 2): 335px photo + grey glass text card with a long Cirka quote, highlighted <mark> span, name and role.
 
-· Coach landing only (planned). · appears on 1 routes
+· Coach landing only. · appears on 1 routes · implemented by `src/components/product/Coach.jsx > QuoteCard`
 
 **`proof.case-study-card`** — Voice case-study card (SPEC_PAGES_A T2.9): section header, then a black-bordered 1376x400 card with co-branded photo, H3, paragraph and link.
 
-· Voice landing only (planned). · appears on 1 routes
+· Voice landing only. · appears on 1 routes · implemented by `src/components/product/Voice.jsx > CaseStudyCard`
 
 **`proof.quote-panel`** — Report pull-quote panel (SPEC_PAGES_B T9 R2 Pull Quote): full-bleed gradient panel with one large quote, sharing art and radius with the report hero.
 
@@ -769,11 +767,11 @@ _Social proof: logo tickers and walls, testimonial and story slideshows, employe
 
 **`proof.employee-quotes`** — About-page employee quote cards (SPEC_PAGES_C A5): two horizontal EmployeeCards in one row, no heading.
 
-· About only (planned page; card component exists). · appears on 1 routes · implemented by `src/components/ui/EmployeeCard.jsx (layout=horizontal)`
+· About only (; card component exists). · appears on 1 routes · implemented by `src/components/ui/EmployeeCard.jsx (layout=horizontal)`
 
 **`proof.employee-testimonials`** — Careers testimonials (SPEC_PAGES_C C4): SectionHeading + eight EmployeeCards in a two-column grid; below 810px a Stories employee carousel replaces the grid.
 
-· Careers only (planned page; card and carousel components exist). · appears on 1 routes · implemented by `src/components/ui/EmployeeCard.jsx + src/components/Stories.jsx (card=employee)`
+· Careers only (; card and carousel components exist). · appears on 1 routes · implemented by `src/components/ui/EmployeeCard.jsx + src/components/Stories.jsx (card=employee)`
 
 **`proof.jobs-featured-ticker`** — Jobs-board featured-roles ticker (SPEC_PAGES_C J2): marquee of silk-gradient job cards.
 
@@ -817,19 +815,19 @@ _Product or company explanation modules: feature rows, bento panels, carousels o
 
 **`feature.rows-600`** — Five alternating 600px-square image + text rows, each with H2 38/42, body and a dark button (SPEC_PAGES_A T2.4).
 
-· Product overview only (planned page; component exists). · appears on 1 routes · implemented by `src/components/ui/FeatureRows.jsx (variant=600)`
+· Product overview only. · appears on 1 routes · implemented by `src/components/ui/FeatureRows.jsx (variant=600)`
 
 **`feature.card-carousel`** — Snap card carousel with heading + sub, right-edge fade and black round arrows (SPEC_PAGES_A T2.3): square channel cards on /product, rectangle principle cards on /voice.
 
-· Product overview and voice landing (planned pages; component exists). · appears on 2 routes · implemented by `src/components/ui/CardCarousel.jsx (variant=snap)`
+· Product overview and voice landing (; component exists). · appears on 2 routes · implemented by `src/components/ui/CardCarousel.jsx (variant=snap)`
 
 **`feature.coach-bento`** — Coach bento stack (SPEC_PAGES_A T2.7): repeated header + grey BentoPanel blocks (tabs-bottom, split media + stacked tab items, analytics), interleaved with the quote card and CTA banner.
 
-· Coach landing only (planned). · appears on 1 routes
+· Coach landing only. · appears on 1 routes · implemented by `src/components/product/Coach.jsx > BentoBlock`
 
 **`feature.split-explainer`** — Voice split explainer (SPEC_PAGES_A T2.8): centred H2 + sub + button, then a 648px phone-UI image beside three large paragraphs.
 
-· Voice landing only (planned). · appears on 1 routes
+· Voice landing only. · appears on 1 routes · implemented by `src/components/product/Voice.jsx > SplitExplainer`
 
 **`feature.difference-cards`** — Competitors-index 'difference' grid (SPEC_PAGES_B T7 Section 2): SectionHeading + 3x2 grey cards with black glyph, Cirka title and short body.
 
@@ -837,7 +835,7 @@ _Product or company explanation modules: feature rows, bento panels, carousels o
 
 **`feature.values-bento`** — Careers values bento (SPEC_PAGES_C C3): SectionHeading + 2 + 3 value cards.
 
-· Careers only (planned). · appears on 1 routes
+· Careers only. · appears on 1 routes · implemented by `src/components/company/ValuesBento.jsx`
 
 **`feature.jobs-mcp`** — Jobs-board AI-assistant section (SPEC_PAGES_C J4): eyebrow, H2, connect button and an MCP flow illustration standing in for the live third-party iframe.
 
@@ -861,7 +859,7 @@ _The substantive body of a route: rich text, card lists and grids, FAQ blocks, d
 
 **`content.blog-grid`** — Product BlogGrid (SPEC_PAGES_A T2.6): top rule, left H2, three blog cards and a centred 'view all' light button.
 
-· Product overview only (planned). · appears on 1 routes
+· Product overview only. · appears on 1 routes · implemented by `src/components/product/ProductSections.jsx > BlogGrid`
 
 **`content.integration-catalog`** — Filterable integration catalogue (SPEC_PAGES_A T3.3): sticky sidebar category filter beside category blocks of IntegrationCards.
 
@@ -941,7 +939,7 @@ _The substantive body of a route: rich text, card lists and grids, FAQ blocks, d
 
 **`content.faq-accordion-cards`** — Competitor FAQ cards (SPEC_PAGES_B T8 FaqCards): Cirka 60 H2, 900px stack of bordered shadowed white cards with +/- toggles, all closed by default.
 
-· Competitor detail pages (planned page; component exists). · appears on 6 routes · implemented by `src/components/ui/FaqAccordion.jsx (look=cards)`
+· Competitor detail pages. · appears on 6 routes · implemented by `src/components/ui/FaqAccordion.jsx (look=cards)`
 
 **`content.finding-cards`** — Report findings (SPEC_PAGES_B T9 R2 Findings): H2 + three stat cards with mini charts.
 
@@ -965,11 +963,11 @@ _The substantive body of a route: rich text, card lists and grids, FAQ blocks, d
 
 **`content.split-text`** — Two-column text block (SPEC_PAGES_C A1 / A4): heading left, rich-text paragraphs right, stacked below 1200px. Used twice on /about: mission header (H1) and team block (H2).
 
-· About only (planned page; component exists). · appears on 1 routes · implemented by `src/components/ui/SplitText.jsx`
+· About only. · appears on 1 routes · implemented by `src/components/ui/SplitText.jsx`
 
 **`content.open-roles`** — Careers open roles (SPEC_PAGES_C C5): SectionHeading + third-party jobs-list widget placeholder.
 
-· Careers only (planned). · appears on 1 routes
+· Careers only. · appears on 1 routes · implemented by `src/components/company/OpenRoles.jsx`
 
 **`content.legal-document`** — Legal document (SPEC_PAGES_C T3): centred H1, then a 920px RichText legal column of Cirka H4 sections and pre-wrap paragraphs.
 
@@ -1013,15 +1011,15 @@ _Kestrel-versus-category comparison tables and intro cards._
 
 **`compare.vs-intro-cards`** — Two 'What is X?' intro cards with logo tiles (SPEC_PAGES_B T8 VsIntroCards).
 
-· Competitor detail pages (planned). · appears on 6 routes
+· Competitor detail pages. · appears on 6 routes · implemented by `src/components/company/Vs.jsx > VsIntroCards`
 
 **`compare.matrix`** — Us-vs-Them matrix table (SPEC_PAGES_B T8): centred title row + sub, bordered card with tinted 'us' column, check / minus icons; one card per row on phones.
 
-· Competitor detail pages (planned page; component exists). · appears on 6 routes · implemented by `src/components/ui/CompareTable.jsx (variant=matrix)`
+· Competitor detail pages. · appears on 6 routes · implemented by `src/components/ui/CompareTable.jsx (variant=matrix)`
 
 **`compare.vs-feature-cards`** — Row of three grey feature cards with an indigo 48px icon tile under the matrix (SPEC_PAGES_B T8 FeatureCard, indigo-tile skin). FeatureCardGrid only implements the black-glyph skin so far.
 
-· Competitor detail pages (planned). · appears on 6 routes
+· Competitor detail pages. · appears on 6 routes · implemented by `src/components/company/Vs.jsx > VsFeatureCards`
 
 ### COMMERCE
 
@@ -1101,7 +1099,7 @@ _Calls to action that sit inside the body: callout rows, CTA cards, banners, sti
 
 **`cta.coach-banner`** — Indigo CTA banner (SPEC_PAGES_A T2.7 block 4): Cirka 60 white H3 top-left, dark 'see demo' button bottom-right.
 
-· Coach landing only (planned). · appears on 1 routes
+· Coach landing only. · appears on 1 routes · implemented by `src/components/product/Coach.jsx > CtaBanner`
 
 **`cta.post-ctas`** — Two CTA cards after a blog post (SPEC_PAGES_B T4 PostCTAs): free-trial card and book-a-call card with pill email field.
 
@@ -1125,15 +1123,15 @@ _Media-led blocks whose content is an illustration, photo set or video rather th
 
 **`media.video-frame`** — Product video player (SPEC_PAGES_A VideoFrame): bordered rounded video with custom control bar; 1200px on coach, full-width autoplay-muted on voice. Placeholder video/poster.
 
-· Coach and voice landings (planned). · appears on 2 routes
+· Coach and voice landings. · appears on 2 routes · implemented by `src/components/product/VideoFrame.jsx`
 
 **`media.photo-collage`** — About photo collage (SPEC_PAGES_C A2): one large photo with two overlapping small photos.
 
-· About only (planned). · appears on 1 routes
+· About only. · appears on 1 routes · implemented by `src/components/company/PhotoCollage.jsx`
 
 **`media.photo-gallery`** — Careers photo gallery (SPEC_PAGES_C C2): SectionHeading + six-photo gallery.
 
-· Careers only (planned). · appears on 1 routes
+· Careers only. · appears on 1 routes · implemented by `src/components/company/PhotoGallery.jsx`
 
 **`media.demo-art`** — Get-a-demo art column (SPEC_PAGES_A T6 DemoArt): gradient art panel with a customer quote card.
 

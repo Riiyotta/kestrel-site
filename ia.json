@@ -3,7 +3,7 @@
   "meta": {
     "title": "Kestrel marketing site: information architecture",
     "source": "LORIKEET clone (React 18 + Vite + Tailwind v3) of a marketing site, placeholder content for the fictional product Kestrel; codebase at /Users/riyaghosh/V3/LORIKEET, specs CLONE_SPEC.md + SPEC_PAGES_A/B/C.md",
-    "status": "partly planned: 24 templates are built and routed (AEO detail was routed by the product group during this pass); 6 templates (product overview/coach/voice, competitor detail, about, careers) come from the specs and have no page or route in src/routes/product.jsx yet",
+    "status": "built: all 30 templates are implemented and routed; section ids are linked to their components via implementedBy",
     "productionApproved": false,
     "generatedBy": "ia-builder skill, measured from the codebase on 2026-10-22",
     "totalRoutes": 71,
@@ -122,7 +122,8 @@
     "hero.vs": {
       "category": "HERO",
       "description": "Competitor 'Us vs Them' hero (SPEC_PAGES_B T8 VsHero): full-bleed pink panel, logo-tile title row, subtitle, intro copy with bulleted differences, and a DemoForm card on the right.",
-      "scope": "Competitor detail pages (planned)."
+      "scope": "Competitor detail pages.",
+      "implementedBy": "src/components/company/Vs.jsx > VsHero"
     },
     "hero.report": {
       "category": "HERO",
@@ -145,7 +146,8 @@
     "hero.avatar": {
       "category": "HERO",
       "description": "Careers avatar hero (SPEC_PAGES_C C1): ten floating avatar photos around a two-line H1 and one xl 'see open roles' button.",
-      "scope": "Careers only (planned)."
+      "scope": "Careers only.",
+      "implementedBy": "src/components/company/AvatarHero.jsx"
     },
     "hero.jobs": {
       "category": "HERO",
@@ -186,7 +188,7 @@
     "proof.about-logos": {
       "category": "PROOF",
       "description": "About-page logo block (SPEC_PAGES_C A3): heading only on a white-to-#F9F9F9 fade, then one bordered single-row strip at every width, no reveal.",
-      "scope": "About only (planned page; component exists).",
+      "scope": "About only.",
       "implementedBy": "src/components/Proof.jsx (variant=logos)"
     },
     "proof.stories-wide": {
@@ -204,12 +206,14 @@
     "proof.coach-quote-card": {
       "category": "PROOF",
       "description": "Coach QuoteCard (SPEC_PAGES_A T2.7 block 2): 335px photo + grey glass text card with a long Cirka quote, highlighted <mark> span, name and role.",
-      "scope": "Coach landing only (planned)."
+      "scope": "Coach landing only.",
+      "implementedBy": "src/components/product/Coach.jsx > QuoteCard"
     },
     "proof.case-study-card": {
       "category": "PROOF",
       "description": "Voice case-study card (SPEC_PAGES_A T2.9): section header, then a black-bordered 1376x400 card with co-branded photo, H3, paragraph and link.",
-      "scope": "Voice landing only (planned)."
+      "scope": "Voice landing only.",
+      "implementedBy": "src/components/product/Voice.jsx > CaseStudyCard"
     },
     "proof.quote-panel": {
       "category": "PROOF",
@@ -226,13 +230,13 @@
     "proof.employee-quotes": {
       "category": "PROOF",
       "description": "About-page employee quote cards (SPEC_PAGES_C A5): two horizontal EmployeeCards in one row, no heading.",
-      "scope": "About only (planned page; card component exists).",
+      "scope": "About only (; card component exists).",
       "implementedBy": "src/components/ui/EmployeeCard.jsx (layout=horizontal)"
     },
     "proof.employee-testimonials": {
       "category": "PROOF",
       "description": "Careers testimonials (SPEC_PAGES_C C4): SectionHeading + eight EmployeeCards in a two-column grid; below 810px a Stories employee carousel replaces the grid.",
-      "scope": "Careers only (planned page; card and carousel components exist).",
+      "scope": "Careers only (; card and carousel components exist).",
       "implementedBy": "src/components/ui/EmployeeCard.jsx + src/components/Stories.jsx (card=employee)"
     },
     "proof.jobs-featured-ticker": {
@@ -292,24 +296,26 @@
     "feature.rows-600": {
       "category": "FEATURE",
       "description": "Five alternating 600px-square image + text rows, each with H2 38/42, body and a dark button (SPEC_PAGES_A T2.4).",
-      "scope": "Product overview only (planned page; component exists).",
+      "scope": "Product overview only.",
       "implementedBy": "src/components/ui/FeatureRows.jsx (variant=600)"
     },
     "feature.card-carousel": {
       "category": "FEATURE",
       "description": "Snap card carousel with heading + sub, right-edge fade and black round arrows (SPEC_PAGES_A T2.3): square channel cards on /product, rectangle principle cards on /voice.",
-      "scope": "Product overview and voice landing (planned pages; component exists).",
+      "scope": "Product overview and voice landing (; component exists).",
       "implementedBy": "src/components/ui/CardCarousel.jsx (variant=snap)"
     },
     "feature.coach-bento": {
       "category": "FEATURE",
       "description": "Coach bento stack (SPEC_PAGES_A T2.7): repeated header + grey BentoPanel blocks (tabs-bottom, split media + stacked tab items, analytics), interleaved with the quote card and CTA banner.",
-      "scope": "Coach landing only (planned)."
+      "scope": "Coach landing only.",
+      "implementedBy": "src/components/product/Coach.jsx > BentoBlock"
     },
     "feature.split-explainer": {
       "category": "FEATURE",
       "description": "Voice split explainer (SPEC_PAGES_A T2.8): centred H2 + sub + button, then a 648px phone-UI image beside three large paragraphs.",
-      "scope": "Voice landing only (planned)."
+      "scope": "Voice landing only.",
+      "implementedBy": "src/components/product/Voice.jsx > SplitExplainer"
     },
     "feature.difference-cards": {
       "category": "FEATURE",
@@ -320,7 +326,8 @@
     "feature.values-bento": {
       "category": "FEATURE",
       "description": "Careers values bento (SPEC_PAGES_C C3): SectionHeading + 2 + 3 value cards.",
-      "scope": "Careers only (planned)."
+      "scope": "Careers only.",
+      "implementedBy": "src/components/company/ValuesBento.jsx"
     },
     "feature.jobs-mcp": {
       "category": "FEATURE",
@@ -349,7 +356,8 @@
     "content.blog-grid": {
       "category": "CONTENT",
       "description": "Product BlogGrid (SPEC_PAGES_A T2.6): top rule, left H2, three blog cards and a centred 'view all' light button.",
-      "scope": "Product overview only (planned)."
+      "scope": "Product overview only.",
+      "implementedBy": "src/components/product/ProductSections.jsx > BlogGrid"
     },
     "content.integration-catalog": {
       "category": "CONTENT",
@@ -468,7 +476,7 @@
     "content.faq-accordion-cards": {
       "category": "CONTENT",
       "description": "Competitor FAQ cards (SPEC_PAGES_B T8 FaqCards): Cirka 60 H2, 900px stack of bordered shadowed white cards with +/- toggles, all closed by default.",
-      "scope": "Competitor detail pages (planned page; component exists).",
+      "scope": "Competitor detail pages.",
       "implementedBy": "src/components/ui/FaqAccordion.jsx (look=cards)"
     },
     "content.finding-cards": {
@@ -504,13 +512,14 @@
     "content.split-text": {
       "category": "CONTENT",
       "description": "Two-column text block (SPEC_PAGES_C A1 / A4): heading left, rich-text paragraphs right, stacked below 1200px. Used twice on /about: mission header (H1) and team block (H2).",
-      "scope": "About only (planned page; component exists).",
+      "scope": "About only.",
       "implementedBy": "src/components/ui/SplitText.jsx"
     },
     "content.open-roles": {
       "category": "CONTENT",
       "description": "Careers open roles (SPEC_PAGES_C C5): SectionHeading + third-party jobs-list widget placeholder.",
-      "scope": "Careers only (planned)."
+      "scope": "Careers only.",
+      "implementedBy": "src/components/company/OpenRoles.jsx"
     },
     "content.legal-document": {
       "category": "CONTENT",
@@ -569,18 +578,20 @@
     "compare.vs-intro-cards": {
       "category": "COMPARE",
       "description": "Two 'What is X?' intro cards with logo tiles (SPEC_PAGES_B T8 VsIntroCards).",
-      "scope": "Competitor detail pages (planned)."
+      "scope": "Competitor detail pages.",
+      "implementedBy": "src/components/company/Vs.jsx > VsIntroCards"
     },
     "compare.matrix": {
       "category": "COMPARE",
       "description": "Us-vs-Them matrix table (SPEC_PAGES_B T8): centred title row + sub, bordered card with tinted 'us' column, check / minus icons; one card per row on phones.",
-      "scope": "Competitor detail pages (planned page; component exists).",
+      "scope": "Competitor detail pages.",
       "implementedBy": "src/components/ui/CompareTable.jsx (variant=matrix)"
     },
     "compare.vs-feature-cards": {
       "category": "COMPARE",
       "description": "Row of three grey feature cards with an indigo 48px icon tile under the matrix (SPEC_PAGES_B T8 FeatureCard, indigo-tile skin). FeatureCardGrid only implements the black-glyph skin so far.",
-      "scope": "Competitor detail pages (planned)."
+      "scope": "Competitor detail pages.",
+      "implementedBy": "src/components/company/Vs.jsx > VsFeatureCards"
     },
     "commerce.plans": {
       "category": "COMMERCE",
@@ -681,7 +692,8 @@
     "cta.coach-banner": {
       "category": "CTA",
       "description": "Indigo CTA banner (SPEC_PAGES_A T2.7 block 4): Cirka 60 white H3 top-left, dark 'see demo' button bottom-right.",
-      "scope": "Coach landing only (planned)."
+      "scope": "Coach landing only.",
+      "implementedBy": "src/components/product/Coach.jsx > CtaBanner"
     },
     "cta.post-ctas": {
       "category": "CTA",
@@ -704,17 +716,20 @@
     "media.video-frame": {
       "category": "MEDIA",
       "description": "Product video player (SPEC_PAGES_A VideoFrame): bordered rounded video with custom control bar; 1200px on coach, full-width autoplay-muted on voice. Placeholder video/poster.",
-      "scope": "Coach and voice landings (planned)."
+      "scope": "Coach and voice landings.",
+      "implementedBy": "src/components/product/VideoFrame.jsx"
     },
     "media.photo-collage": {
       "category": "MEDIA",
       "description": "About photo collage (SPEC_PAGES_C A2): one large photo with two overlapping small photos.",
-      "scope": "About only (planned)."
+      "scope": "About only.",
+      "implementedBy": "src/components/company/PhotoCollage.jsx"
     },
     "media.photo-gallery": {
       "category": "MEDIA",
       "description": "Careers photo gallery (SPEC_PAGES_C C2): SectionHeading + six-photo gallery.",
-      "scope": "Careers only (planned)."
+      "scope": "Careers only.",
+      "implementedBy": "src/components/company/PhotoGallery.jsx"
     },
     "media.demo-art": {
       "category": "MEDIA",
@@ -795,7 +810,7 @@
       "id": "template.product-overview",
       "name": "Product landing: overview",
       "spec": "SPEC_PAGES_A T2 (/product)",
-      "build": "planned",
+      "build": "built: src/pages/product/ProductHome.jsx, routed in src/routes/product.jsx",
       "routeCount": 1,
       "routes": [
         "/product"
@@ -820,7 +835,7 @@
       "id": "template.product-coach",
       "name": "Product landing: coach",
       "spec": "SPEC_PAGES_A T2 (/product/coach)",
-      "build": "planned",
+      "build": "built: src/pages/product/Copilot.jsx, routed in src/routes/product.jsx",
       "routeCount": 1,
       "routes": [
         "/product/coach"
@@ -838,13 +853,14 @@
         "content.related-reading",
         "content.prose-faq",
         "chrome.footer"
-      ]
+      ],
+      "notes": "Section ids stay granular for reuse counting, but the page groups them: the hero renders headline, video frame and labelled ticker as one block, and the bento renders blocks, quote card and CTA banner as one block (design-repo/extraction/measured-values.json, corrections)."
     },
     {
       "id": "template.product-voice",
       "name": "Product landing: voice",
       "spec": "SPEC_PAGES_A T2 (/product/voice)",
-      "build": "planned",
+      "build": "built: src/pages/product/Voice.jsx, routed in src/routes/product.jsx",
       "routeCount": 1,
       "routes": [
         "/product/voice"
@@ -862,7 +878,8 @@
         "content.related-reading",
         "content.prose-faq",
         "chrome.footer"
-      ]
+      ],
+      "notes": "Section ids stay granular for reuse counting; on the page the hero block contains the video frame and the labelled ticker."
     },
     {
       "id": "template.integrations-library",
@@ -1122,7 +1139,7 @@
       "id": "template.competitor-detail",
       "name": "Competitor detail",
       "spec": "SPEC_PAGES_B T8",
-      "build": "planned: no page or route yet (/competitors/:slug currently falls through to the 404)",
+      "build": "built: src/pages/product/CompetitorDetail.jsx, routed in src/routes/product.jsx",
       "dataSource": "src/data/competitors.js `competitorIndex.tables[].slug`",
       "routeCount": 6,
       "routePattern": "/competitors/:slug",
@@ -1230,7 +1247,7 @@
       "id": "template.company-about",
       "name": "Company: about",
       "spec": "SPEC_PAGES_C T1 (/about)",
-      "build": "planned",
+      "build": "built: src/pages/company/About.jsx, routed in src/routes/product.jsx",
       "routeCount": 1,
       "routes": [
         "/about"
@@ -1251,7 +1268,7 @@
       "id": "template.company-careers",
       "name": "Company: careers",
       "spec": "SPEC_PAGES_C T1 (/careers)",
-      "build": "planned",
+      "build": "built: src/pages/company/Careers.jsx, routed in src/routes/product.jsx",
       "routeCount": 1,
       "routes": [
         "/careers"
@@ -1394,7 +1411,7 @@
         "/llms.txt"
       ],
       "chrome": "none",
-      "notes": "/llms-txt is a client-side redirect (LlmsTxtRedirect.jsx; 308 on live) to the static public/llms.txt.",
+      "notes": "/llms-txt is a client-side redirect (LlmsTxtRedirect.jsx; 308 on live) to the static public/llms.txt. The design-repo classifies both URLs as non-page routes rather than a template; they are kept here so route totals reconcile.",
       "sections": [
         "content.llms-txt"
       ]
