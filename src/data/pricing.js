@@ -2,7 +2,9 @@
 //   plans          -> PricingCard props (T5.2 P6)
 //   compareColumns -> CompareColumn[] (columns[0] = label column), compareGroups -> CompareGroup[] (T5.3)
 //   faq            -> FaqItem[] (T5.4 P7, 9 items)
-// Copy is original placeholder text for the fictional "Kestrel"; plan names and prices are invented.
+// Copy is original placeholder text for the fictional "Kestrel". Kestrel's own model: a monthly subscription that
+// includes a pool of resolved conversations, a flat overage rate past the pool, and voice billed per connected
+// minute. Plan names, prices and tier boundaries are invented.
 
 /** @typedef {import('./types.js').CompareColumn} CompareColumn */
 /** @typedef {import('./types.js').CompareGroup} CompareGroup */
@@ -12,67 +14,67 @@ export const pricingPage = {
   title: 'Pricing',
   // ≈372 chars, 7 lines in 517 @1440
   statement:
-    'You pay for outcomes, not seats. Every plan is an annual platform fee plus a small rate for each ticket Kestrel fully resolves: Essentials starts at $1,800 a month and Growth at $4,600 a month, billed yearly. Hand-offs to a person and tickets Kestrel cannot close are never charged, and each plan opens with a 30-day free trial so you can judge the numbers first.',
-  footnote: '*Based on a 3 minute average call, a scoping session confirms final rates.',
-  machineLink: { label: 'Read these rates as a plain-text pricing file', href: '/pricing.md' },
+    'Kestrel is a monthly subscription with a pool of resolved conversations built in. Hover is $690 a month for 1,000 resolutions, Soar is $3,250 a month for 6,000. Past the pool, each extra resolution is one flat rate and voice is billed per connected minute. Hand-offs and unresolved cases never count, and every plan begins with a free 14-day pilot on your tickets.',
+  footnote: '*Voice minutes run from pickup to hang-up and are rounded up once per call.',
+  machineLink: { label: 'Download this price list as a plain-text file', href: '/pricing.md' },
 }
 
 export const plans = [
   {
-    name: 'Essentials',
-    price: '$1,800',
+    name: 'Hover',
+    price: '$690',
     per: '/mo',
-    note: 'Billed yearly, in USD',
-    cta: { label: 'Start free trial', href: '#' },
-    bestFor: 'Best for young teams handling fewer than 5,000 tickets each month.',
+    note: 'Billed monthly, in USD',
+    cta: { label: 'Start free pilot', href: '#' },
+    bestFor: 'Best for small teams resolving up to 2,500 conversations a month.',
     groups: [
-      { label: 'Sorting', rows: [{ label: 'Routing and intent tagging', value: '$0.25' }] },
+      { label: 'In your monthly pool', rows: [{ label: 'Resolved conversations', value: '1,000' }] },
       {
-        label: 'Resolution',
+        label: 'Past the pool',
         rows: [
-          { label: 'Chat, email and SMS (both ways)', value: '$0.85' },
-          { label: 'Voice, inbound or outbound*', value: '$1.35' },
+          { label: 'Each extra text resolution', value: '$0.62' },
+          { label: 'Voice, per connected minute*', value: '$0.11' },
         ],
       },
-      { label: 'Review', rows: [{ label: 'Automated quality review', value: '$0.25' }] },
+      { label: 'Never billed', rows: [{ label: 'Hand-offs and unresolved cases', value: 'Free' }] },
     ],
   },
   {
-    name: 'Growth',
-    price: '$4,600',
+    name: 'Soar',
+    price: '$3,250',
     per: '/mo',
-    note: 'Billed yearly, in USD',
+    note: 'Billed monthly, in USD',
     cta: { label: 'Get a demo', href: '/get-a-demo' },
-    bestFor: 'Best for scaling teams handling 5,000 to 20,000 tickets every month.',
+    bestFor: 'Best for busy teams resolving 2,500 to 12,000 conversations a month.',
     groups: [
-      { label: 'Sorting', rows: [{ label: 'Routing and intent tagging', value: '$0.22' }] },
+      { label: 'In your monthly pool', rows: [{ label: 'Resolved conversations', value: '6,000' }] },
       {
-        label: 'Resolution',
+        label: 'Past the pool',
         rows: [
-          { label: 'Chat, email and SMS (both ways)', value: '$0.78' },
-          { label: 'Voice, inbound or outbound*', value: '$1.10' },
+          { label: 'Each extra text resolution', value: '$0.48' },
+          { label: 'Voice, per connected minute*', value: '$0.08' },
         ],
       },
-      { label: 'Review', rows: [{ label: 'Automated quality review', value: '$0.22' }] },
+      { label: 'Never billed', rows: [{ label: 'Hand-offs and unresolved cases', value: 'Free' }] },
     ],
   },
   {
-    name: 'Tailored',
+    name: 'Aerie',
     price: 'Custom',
     per: '',
-    note: 'Billed yearly, in USD',
+    note: 'Annual agreement, in USD',
     cta: { label: 'Get a demo', href: '/get-a-demo' },
-    bestFor: 'Best for large operations above 20K tickets a month or with bespoke needs.',
+    bestFor: 'Best for multi-brand groups above 12,000 a month or with strict hosting.',
     groups: [
-      { label: 'Sorting', rows: [{ label: 'Routing and intent tagging', value: 'Custom' }] },
+      { label: 'In your monthly pool', rows: [{ label: 'Resolved conversations', value: 'Custom' }] },
       {
-        label: 'Resolution',
+        label: 'Past the pool',
         rows: [
-          { label: 'Chat, email and SMS (both ways)', value: 'Custom' },
-          { label: 'Voice, inbound or outbound*', value: 'Custom' },
+          { label: 'Each extra text resolution', value: 'Custom' },
+          { label: 'Voice, per connected minute*', value: 'Custom' },
         ],
       },
-      { label: 'Review', rows: [{ label: 'Automated quality review', value: 'Custom' }] },
+      { label: 'Never billed', rows: [{ label: 'Hand-offs and unresolved cases', value: 'Free' }] },
     ],
   },
 ]
@@ -80,25 +82,25 @@ export const plans = [
 /** @type {CompareColumn[]} */
 export const compareColumns = [
   { key: 'feature', label: 'Compare features' },
-  { key: 'essentials', label: 'Essentials', price: '$1,800', per: '/mo', cta: { label: 'Start free trial', href: '#' } },
-  { key: 'growth', label: 'Growth', price: '$4,600', per: '/mo', cta: { label: 'Get a demo', href: '/get-a-demo' } },
-  { key: 'tailored', label: 'Tailored', price: 'Custom', cta: { label: 'Get a demo', href: '/get-a-demo' } },
+  { key: 'hover', label: 'Hover', price: '$690', per: '/mo', cta: { label: 'Start free pilot', href: '#' } },
+  { key: 'soar', label: 'Soar', price: '$3,250', per: '/mo', cta: { label: 'Get a demo', href: '/get-a-demo' } },
+  { key: 'aerie', label: 'Aerie', price: 'Custom', cta: { label: 'Get a demo', href: '/get-a-demo' } },
 ]
 
 /** @type {CompareGroup[]} 7 bands, the first starts open (T5.3). */
 export const compareGroups = [
   {
-    label: 'Platform and support',
+    label: 'Subscription and launch help',
     open: true,
     rows: [
-      { label: 'Platform access', values: ['Included', 'Included', { text: '$70K platform fee', align: 'right' }] },
+      { label: 'Monthly pool', values: ['1,000', '6,000', { text: 'Sized to volume', align: 'right' }] },
       {
-        label: 'Embedded support team',
+        label: 'Launch help',
         href: '#',
         values: [
-          { text: 'Core support package', value: 'Included' },
-          { text: 'Extended support package', value: 'Included' },
-          { text: 'Dedicated support package', value: '$20K+', note: 'Scoped to your systems, workflows and rollout' },
+          { text: 'Two guided setup calls', value: 'Included' },
+          { text: 'Named launch engineer', value: 'Included' },
+          { text: 'Dedicated launch squad', value: 'From $9K', note: 'One-off fee, set by systems and channel count' },
         ],
       },
     ],
@@ -109,7 +111,7 @@ export const compareGroups = [
       { label: 'Chat, email and SMS', values: [true, true, true] },
       { label: 'Voice', values: [true, true, true] },
       { label: 'Helpdesk connectors', values: ['Included', 'Included', 'Included'] },
-      { label: 'Custom API actions', values: ['Up to 10', 'Up to 40', 'Unlimited'] },
+      { label: 'Custom API actions', values: ['Up to 15', 'Up to 60', 'Unlimited'] },
     ],
   },
   {
@@ -123,15 +125,15 @@ export const compareGroups = [
   {
     label: 'Testing and review',
     rows: [
-      { label: 'Replay past tickets', values: [true, true, true] },
-      { label: 'Synthetic scenario runs', values: ['Monthly cap', 'Higher cap', 'Unlimited'] },
+      { label: 'Sandbox replays', values: ['500 a month', '4,000 a month', 'Unlimited'] },
+      { label: 'Reviewer approval mode', values: [true, true, true] },
       { label: 'Automated quality scoring', values: [true, true, true] },
     ],
   },
   {
     label: 'Security and privacy',
     rows: [
-      { label: 'Single sign-on', values: [true, true, true] },
+      { label: 'Single sign-on', values: [false, true, true] },
       { label: 'Data redaction', values: [true, true, true] },
       { label: 'Audit log export', values: [false, true, true] },
     ],
@@ -139,15 +141,15 @@ export const compareGroups = [
   {
     label: 'Data location',
     rows: [
-      { label: 'Regional hosting', values: ['US', 'US or EU', 'Your choice'] },
+      { label: 'Regional hosting', values: ['EU', 'EU or US', 'Your choice'] },
       { label: 'Retention controls', values: [true, true, true] },
     ],
   },
   {
     label: 'Contract terms',
     rows: [
-      { label: 'Billing cycle', values: ['Yearly', 'Yearly', 'Yearly'] },
-      { label: 'Custom terms', values: [false, false, true] },
+      { label: 'Billing cycle', values: ['Monthly', 'Monthly', 'Annual'] },
+      { label: 'Unused pool rolls over', values: [false, true, true] },
     ],
   },
 ]
@@ -155,39 +157,39 @@ export const compareGroups = [
 /** @type {FaqItem[]} 9 items (both live screenshots show 9; the spec text says 10), questions ≈18–90 chars, answers ≈120–400 chars. */
 export const faq = [
   {
-    q: 'How do I buy Kestrel?',
-    a: 'Start a 30-day free trial or <a href="/get-a-demo">book a demo</a>. After the trial we agree an annual plan together, sign a single order form and keep your trial setup, so nothing has to be rebuilt.',
+    q: 'What is a resolution?',
+    a: 'A conversation counts once the customer’s request is complete and they have not come back about it within 72 hours. If they return, or the case is handed to a person, it comes off your pool automatically.',
   },
   {
-    q: 'What does Kestrel cost each month?',
-    a: 'Essentials is $1,800 a month and Growth is $4,600 a month, both billed yearly, plus a per-ticket rate for resolved work. Tailored plans are priced after a short scoping call.',
+    q: 'What happens when we use up the pool?',
+    a: 'Nothing stops. Each extra text resolution is billed at your plan’s flat rate, and we email you when you pass 80% of the pool so you can move up a plan if that works out cheaper.',
   },
   {
-    q: 'How does Kestrel keep data secure?',
-    a: 'Records are encrypted on the wire and on disk, only named staff can reach production, and every action Kestrel takes leaves an audit entry. Independent audit reports are available under NDA on request.',
+    q: 'How is a voice minute measured?',
+    a: 'From the moment Kestrel picks up to the moment either side hangs up, rounded up to the next whole minute once per call. Time on hold in your own queue after a transfer is never counted.',
   },
   {
-    q: 'How is Kestrel set up?',
-    a: 'Your team describes how support works in plain language, Kestrel turns that into workflows, and you test them on replayed tickets before anything reaches a customer.',
+    q: 'Do sandbox replays count toward the pool?',
+    a: 'No. Replays, test runs and anything Kestrel does during the free 14-day pilot sit outside the pool, so you can test as much as you like before and after launch.',
   },
   {
-    q: 'Which tools does Kestrel connect to?',
-    a: 'Common helpdesks, CRMs, billing systems and phone platforms are covered by built-in connectors. Anything else with an API or webhooks can be added as a custom action. See the <a href="/integrations">integration library</a>.',
+    q: 'Can we change plans partway through?',
+    a: 'Yes. Moving up takes effect the same day and the new pool is prorated. Moving down applies from your next billing month, so you never lose conversations you already paid for.',
   },
   {
-    q: 'Does Kestrel replace our helpdesk or sit inside it?',
-    a: 'It sits inside it. Kestrel works in the queue your team already uses, so agents see the same tickets, tags and history they always have.',
+    q: 'Do unused conversations roll over?',
+    a: 'On Soar and Aerie, up to half of an unused pool carries into the following month. On Hover the pool resets each month, which keeps the entry price low.',
   },
   {
-    q: 'What return should we expect from Kestrel?',
-    a: 'Most teams measure it as cost per resolved ticket against their current blended cost. Because you only pay for resolutions, the comparison is direct, and the trial gives you real numbers before you commit.',
+    q: 'Are there setup or onboarding fees?',
+    a: 'Not on Hover or Soar: guided setup calls and a named launch engineer are part of the subscription. Aerie customers can add a dedicated launch squad for complex rollouts, quoted once up front.',
   },
   {
-    q: 'Is there a lower-cost option for a small clinic that needs a signed data agreement?',
-    a: 'Essentials covers small teams, and a signed data processing agreement is included on every plan at no extra charge.',
+    q: 'Is there a cheaper way in for a nonprofit or a team with only a few hundred requests?',
+    a: 'Yes. Registered nonprofits get 25% off Hover, and teams under 300 conversations a month can ask about a starter pool. Both include the same security terms as every other plan.',
   },
   {
-    q: 'How long do you keep conversation records, and can we change that?',
-    a: 'Retention is a workspace setting you choose, from 30 days to indefinitely. Records can be exported through the API at any time, and a closed account is purged on a timeline shown in your audit log.',
+    q: 'How do we pay, which currencies can we use, and can we pay quarterly?',
+    a: 'By card or bank transfer, invoiced in USD by default. EUR and GBP invoicing is available on Soar and Aerie, and annual Aerie agreements can be paid quarterly.',
   },
 ]

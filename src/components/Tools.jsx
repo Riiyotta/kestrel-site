@@ -21,8 +21,8 @@ import { REVEAL_04, useReducedMotion, useScrollTrigger, useScrubProgress } from 
 //                    (1440: scrollY 3057 -> 3846 = 789px; 1000: 3391 -> 4065 = 674px; 390: 2469 -> 2836 = 367px).
 
 const COPY = {
-  h3: 'Any channel. Your call.',
-  body: 'Kestrel answers wherever your customers reach out, then works inside the systems you already run to close every request properly.',
+  h3: 'Five channels, one agent.',
+  body: 'A caller, a texter and an emailer get the same answer from the same playbook, with the same audit trail sitting behind each one.',
 }
 
 /* ---------- channel glyphs (generic UI icons, own drawings; 58x48 box) ---------- */

@@ -13,7 +13,7 @@ import { STORY_CATEGORIES, storyIndex } from '../../data/stories.js'
 
 const COPY = {
   title: 'Our customers',
-  sub: 'Kestrel is trusted by ambitious teams in complex and regulated industries.',
+  sub: 'Lenders, clinics, utilities and software firms run their queues on Kestrel.',
 }
 
 export default function StoryIndex() {

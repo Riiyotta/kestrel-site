@@ -17,9 +17,9 @@ import { mirrorLoop, sinceHydration, useReducedMotion } from '../lib/motion.js'
 // tile sits at the live layout top before hydration and then tracks live's phase.
 
 const COPY = {
-  h2: 'Kestrel uses your own tools to settle issues from start to end',
+  h2: 'Kestrel acts in the systems you already run, with your permissions',
   // ~530 chars (live 568 in Ginto; Inter sets wider): 9 lines @lg (500px, 16/22.4), 8 @md (14/19.6), 12 @phone (313px)
-  sub: 'Kestrel runs inside the platforms your team already relies on, from help desk and CRM to billing, order management and identity systems, and settles requests by taking real actions through your own APIs. There is nothing to migrate and no new inbox to learn: your existing workflows, permissions and audit trails stay exactly where they are. Every plan includes hands-on onboarding, and you can replay Kestrel against thousands of real past tickets to see how it would have handled each one before a single customer ever meets it.',
+  sub: 'Kestrel connects through accounts you create and permissions you approve, one system at a time: helpdesk and CRM first, then billing, orders, scheduling and identity. Each action has its own allow-list and limit, and anything above it waits for a person to approve in team chat. Your agents keep their queues, views and macros, and every step Kestrel takes is written to the same ticket they already read. Before an intent goes live it runs in shadow mode, drafting replies as internal notes your own team marks right or wrong.',
 }
 
 // Third-party integration logos (group (b)) -> generic monochrome shapes, 39x39 (phone 28x28).

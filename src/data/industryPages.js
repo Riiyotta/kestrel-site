@@ -11,7 +11,7 @@ const ul = (...items) => ({ type: 'ul', items })
 const a = (href, label) => `<a href="${href}">${label}</a>`
 const cs = (slug) => `/customer-stories/${slug}`
 const CALLOUT_CTA = { label: 'Book a demo', href: '/get-a-demo' }
-const SELF_SERVE = { link: 'Start a free trial', rest: 'and build your first playbook today, no sales call required.', href: '/pricing' }
+const SELF_SERVE = { link: 'Start a free pilot', rest: 'and build your first playbook today, no sales call required.', href: '/pricing' }
 
 // A T1.2 healthcare ticker: different logo set, same geometry (11 placeholder marks, h 21–30).
 const HEALTH_LOGOS = [
@@ -49,7 +49,7 @@ export const industryPages = [
             p('<strong>Kestrel</strong> works with consumer lenders, card issuers, payment firms and tax software companies, where a careless answer can become a complaint or a breach. Results customers have shared:'),
             ul(
               `<strong>Coinwell</strong> (cards): most statement and dispute queries settled without a person, with disclosures logged. ${a(cs('coinwell-card-disputes'), 'Read the story')}`,
-              `<strong>Ledgerly</strong> (tax software): filing-week peaks absorbed without temporary hires. ${a(cs('ledgerly-handles-tax-season'), 'Read the story')}`,
+              `<strong>Ledgerly</strong> (tax software): missing documents chased automatically before deadlines. ${a(cs('ledgerly-handles-tax-season'), 'Read the story')}`,
             ),
             p('<strong>What else firms evaluate:</strong>'),
             ul(
@@ -95,7 +95,7 @@ export const industryPages = [
       },
     ],
     stories: {
-      title: 'Which finance teams already run Kestrel?',
+      title: 'Lenders and card teams on Kestrel',
       tint: 'pink',
       items: [
         {
@@ -177,7 +177,7 @@ export const industryPages = [
     logos: HEALTH_LOGOS,
     hero: {
       title: 'Patient support that answers admin questions and leaves care to clinicians',
-      lede: 'Kestrel handles bookings, billing and prescription status for clinics and telehealth providers, and passes anything clinical to your care team with full context.',
+      lede: 'Kestrel handles bookings, billing and prescription status for clinics and telehealth providers, and leaves anything clinical to your nurses and doctors.',
       intro: `Most patient messages are about logistics: moving an appointment, understanding a bill, checking a refill. Kestrel resolves those directly from your scheduling, billing and pharmacy systems, any hour of the day. Safeguards watch for symptoms, urgency and distress, and route those conversations to a nurse or the right emergency guidance immediately. Patient data stays in your chosen region. Brindle Health now covers nights and weekends this way (${a(cs('brindle-health-after-hours'), 'read the Brindle story')}).`,
       byline: 'Reviewed by the Kestrel healthcare solutions team',
       selfServe: SELF_SERVE,
@@ -237,7 +237,7 @@ export const industryPages = [
       },
     ],
     stories: {
-      title: 'Which care teams already run Kestrel?',
+      title: 'Clinics and care teams on Kestrel',
       tint: 'peach',
       items: [
         {

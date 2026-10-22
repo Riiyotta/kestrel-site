@@ -20,33 +20,33 @@ import { COMPARE_FADE, LABEL_SPRING, sinceHydration } from '../lib/motion.js'
 
 const COPY = {
   left: {
-    h2: 'Basic bots chat',
-    body: 'They can quote the help centre but not fix the problem. When a case turns tricky, they loop, deflect or vanish.',
+    h2: 'Scripts run out',
+    body: 'A scripted bot knows the article, not the account. Once a case needs a lookup or a change, it sends people away.',
   },
   right: {
-    h2: 'Kestrel resolves',
-    body: 'Kestrel follows your procedures, acts inside your own systems and owns complex requests without bluffing.',
+    h2: 'Kestrel finishes',
+    body: 'Kestrel checks the record, takes the allowed action and confirms what changed, or says plainly who will.',
   },
-  phoneBody: 'Scripted bots repeat the help centre. Kestrel follows your procedures and resolves the request end to end.',
+  phoneBody: 'A scripted bot points to an article. Kestrel checks the account, makes the change and confirms it in chat.',
 }
 
 const SCENARIOS = [
   {
-    label: 'Move a clinic booking',
-    ask: 'Can I move my physio session to Friday?',
-    reply: 'To change a booking, please send us an email or call during office hours.',
+    label: 'Replace a lost card',
+    ask: 'I lost my card on the bus. New one?',
+    reply: 'For card problems, please visit our help centre or call in business hours.',
     system: 'The customer ended this chat early',
   },
   {
-    label: 'Delay a prescription delivery',
-    ask: 'I need to delay my prescription delivery.',
-    reply: 'To update a delivery, please email our team or call the support line on weekdays.',
+    label: 'Split a large energy bill',
+    ask: 'Can I pay this bill in three parts?',
+    reply: 'For payment plans, please email our billing team or call the help line on weekdays.',
     system: 'The customer ended this chat early',
   },
   {
-    label: 'Switch a hotel room type',
-    ask: 'Can I upgrade my Friday room to a suite?',
-    reply: 'Room changes are handled by reservations. Please contact the front desk to ask.',
+    label: 'Fix a delivery address',
+    ask: 'My parcel still shows my old address.',
+    reply: 'Address changes are handled in your account. Please open Profile to update it.',
     system: 'The customer ended this chat early',
   },
 ]

@@ -13,7 +13,7 @@ export const faqDoc = {
     {
       title: 'Getting started',
       items: [
-        { q: 'What is Kestrel?', a: [p('Kestrel is an AI customer concierge for support teams in complex and regulated industries. It answers questions, takes actions in your systems and hands over to your team with full context when a human is needed.')] },
+        { q: 'What is Kestrel?', a: [p('Kestrel is an AI resolution agent for banks, insurers and clinics: it closes customer cases end to end and keeps a reviewable record of every step. It answers questions, takes actions in your systems and hands over to your team with the whole history when a human is needed.')] },
         { q: 'How long does setup take?', a: [p('Most teams connect their helpdesk and knowledge base in an afternoon and launch their first workflows within two weeks. Larger rollouts with custom integrations usually take four to six weeks.')] },
         { q: 'Do I need engineers to get started?', a: [p('No. Workflows are written in plain language by your support team. Engineering help is only needed for custom actions against internal systems.')] },
       ],
@@ -61,8 +61,8 @@ export const faqDoc = {
     {
       title: 'Pricing',
       items: [
-        { q: 'How is Kestrel priced?', a: [p('Pricing is based on resolved conversations, so you pay for outcomes rather than seats. See the <a href="/pricing">pricing page</a> for current plans.')] },
-        { q: 'Is there a free trial?', a: [p('Yes. Every plan starts with a 30-day trial with full functionality.')] },
+        { q: 'How is Kestrel priced?', a: [p('Each plan is a monthly subscription with a pool of resolved conversations, so you pay for outcomes rather than seats. See the <a href="/pricing">pricing page</a> for current plans.')] },
+        { q: 'Is there a free pilot?', a: [p('Yes. Every plan starts with a free 14-day pilot: Kestrel works a slice of your real queue while your team approves each reply.')] },
         { q: 'Do unresolved conversations count?', a: [p('No. Conversations handed to your team without a resolution are not billed.')] },
       ],
     },

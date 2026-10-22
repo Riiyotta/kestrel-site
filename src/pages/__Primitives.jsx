@@ -170,49 +170,49 @@ const INTEGRATIONS = [
 
 const PLANS = [
   {
-    name: 'Starter',
-    price: '$400',
+    name: 'Hover',
+    price: '$690',
     note: 'Billed monthly',
-    cta: { label: 'Start free trial' },
+    cta: { label: 'Start free pilot' },
     bestFor: 'Small teams trying AI support on one channel for the first time.',
     groups: [
-      { label: 'Chat', rows: [{ label: 'Per resolved conversation', value: '$0.90' }, { label: 'Included conversations', value: '400' }] },
-      { label: 'Email', rows: [{ label: 'Per resolved ticket', value: '$1.10' }] },
-      { label: 'Voice', rows: [{ label: 'Per resolved call', value: '$1.60' }] },
+      { label: 'Chat', rows: [{ label: 'Each extra resolution', value: '$0.62' }, { label: 'Included conversations', value: '1,000' }] },
+      { label: 'Email', rows: [{ label: 'Each extra resolution', value: '$0.62' }] },
+      { label: 'Voice', rows: [{ label: 'Per connected minute', value: '$0.11' }] },
     ],
   },
   {
-    name: 'Growth',
-    price: '$1,200',
+    name: 'Soar',
+    price: '$3,250',
     note: 'Billed monthly',
     cta: { label: 'Talk to sales' },
     bestFor: 'Growing teams running several channels with shared workflows.',
     groups: [
-      { label: 'Chat', rows: [{ label: 'Per resolved conversation', value: '$0.80' }, { label: 'Included conversations', value: '1,500' }] },
-      { label: 'Email', rows: [{ label: 'Per resolved ticket', value: '$0.95' }] },
-      { label: 'Voice', rows: [{ label: 'Per resolved call', value: '$1.40' }] },
+      { label: 'Chat', rows: [{ label: 'Each extra resolution', value: '$0.48' }, { label: 'Included conversations', value: '6,000' }] },
+      { label: 'Email', rows: [{ label: 'Each extra resolution', value: '$0.48' }] },
+      { label: 'Voice', rows: [{ label: 'Per connected minute', value: '$0.08' }] },
     ],
   },
   {
-    name: 'Scale',
+    name: 'Aerie',
     price: 'Custom',
     per: '',
     note: 'Annual agreement',
     cta: { label: 'Book a demo' },
     bestFor: 'Large support organisations with strict review and security needs.',
     groups: [
-      { label: 'Chat', rows: [{ label: 'Per resolved conversation', value: 'Custom' }] },
-      { label: 'Email', rows: [{ label: 'Per resolved ticket', value: 'Custom' }] },
-      { label: 'Voice', rows: [{ label: 'Per resolved call', value: 'Custom' }] },
+      { label: 'Chat', rows: [{ label: 'Each extra resolution', value: 'Custom' }] },
+      { label: 'Email', rows: [{ label: 'Each extra resolution', value: 'Custom' }] },
+      { label: 'Voice', rows: [{ label: 'Per connected minute', value: 'Custom' }] },
     ],
   },
 ]
 
 const PRICING_COLUMNS = [
   { key: 'feature', label: 'Compare features' },
-  { key: 'starter', label: 'Starter', price: '$400', per: '/mo', cta: { label: 'Start free trial' } },
-  { key: 'growth', label: 'Growth', price: '$1,200', per: '/mo', cta: { label: 'Talk to sales' } },
-  { key: 'scale', label: 'Scale', price: 'Custom', cta: { label: 'Book a demo' } },
+  { key: 'hover', label: 'Hover', price: '$690', per: '/mo', cta: { label: 'Start free pilot' } },
+  { key: 'soar', label: 'Soar', price: '$3,250', per: '/mo', cta: { label: 'Talk to sales' } },
+  { key: 'aerie', label: 'Aerie', price: 'Custom', cta: { label: 'Book a demo' } },
 ]
 const PRICING_GROUPS = [
   {
@@ -220,7 +220,7 @@ const PRICING_GROUPS = [
     rows: [
       { label: 'Chat', values: [true, true, true] },
       { label: 'Email', values: ['Included', 'Included', 'Included'] },
-      { label: 'Voice', values: [false, { text: '$1.40', note: 'per resolved call', align: 'right' }, { text: 'Custom', align: 'right' }] },
+      { label: 'Voice', values: [false, { text: '$0.08', note: 'per connected minute', align: 'right' }, { text: 'Custom', align: 'right' }] },
     ],
   },
   {
@@ -292,7 +292,7 @@ const TOPICS = [
   { id: 'teams', label: 'Teams', count: 11 },
   { id: 'tools', label: 'Tools', count: 11 },
 ]
-const SIDEBAR = ['Ticketing system', 'Telephony', 'Knowledge base', 'Tools and actions'].map((l) => ({ id: l, label: l }))
+const SIDEBAR = ['Helpdesk queues', 'Phone lines', 'Knowledge sources', 'Actions and data'].map((l) => ({ id: l, label: l }))
 
 const EMPLOYEES = [
   {

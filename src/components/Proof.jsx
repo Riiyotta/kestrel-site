@@ -32,8 +32,8 @@ import { useSlideshow, wrap } from '../lib/useSlideshow.js'
 const BG = '/assets/decor' // ASSET_MANIFEST group (a): soft blur-field card backgrounds (copied from _files)
 
 const COPY = {
-  h2: 'Outcomes, not hype.',
-  sub: 'Where other tools hand customers off, Kestrel steps in and settles high-stakes issues with care.',
+  h2: 'Counted, not claimed.',
+  sub: 'Each figure here comes from a live customer queue, measured over a full quarter after launch.',
 }
 
 // Placeholder photo fills (content photos -> tint gradient blocks of the same geometry).
@@ -67,7 +67,7 @@ const CARDS = {
     bg: `${BG}/proof-wide-1.jpg`,
     photo: PHOTO_A,
     img: PORTRAIT_1,
-    quote: '“We ran four vendors head to head and Kestrel came out ahead on every score.”',
+    quote: '“Our agents stopped dreading Mondays. The weekend backlog is gone by nine.”',
     name: 'Dana Whitfield',
     role: 'Member Care Lead',
     logo: { name: 'Quillfin', shape: 'diamond' },
@@ -75,21 +75,21 @@ const CARDS = {
   stat1: {
     kind: 'stat',
     bg: `${BG}/proof-stat-1.jpg`,
-    value: '92%',
-    label: 'Shorter wait times',
+    value: '41%',
+    label: 'Fewer repeat contacts',
     logo: { name: 'Corvane', shape: 'plus', w: 114 },
   },
   quote: {
     kind: 'quote',
     bg: `${BG}/proof-quote-1.jpg`,
-    quote: '“We can now grow our support volume without growing the size of our team.”',
+    quote: '“Refund requests used to wait two days. Now most of them close before lunch.”',
     logo: { name: 'Brightpaw', shape: 'arc', w: 122 },
   },
   stat2: {
     kind: 'stat',
     bg: `${BG}/proof-stat-2.jpg`,
-    value: '64%',
-    label: 'Lift in renewals',
+    value: '23%',
+    label: 'Drop in chargebacks',
     logo: { name: 'Mossgate', shape: 'square', w: 110 },
   },
   wide2: {
@@ -98,7 +98,7 @@ const CARDS = {
     photo: PHOTO_B,
     img: PORTRAIT_2,
     quote:
-      '“Our market moves fast, so having Kestrel support our growth while also lifting the customer experience is simply non-negotiable.”',
+      '“Night shifts used to mean a skeleton crew and an apology. Now the overnight queue is cleared before the first person logs in.”',
     name: 'Owen Castellano',
     role: 'Head of Support',
     logo: { name: 'Harbourline', shape: 'bars' },
@@ -106,8 +106,8 @@ const CARDS = {
   stat3: {
     kind: 'stat',
     bg: `${BG}/proof-stat-3.jpg`,
-    value: '98%',
-    label: 'Answer accuracy',
+    value: '72%',
+    label: 'Cases closed overnight',
     logo: { name: 'Tidewell', shape: 'ring', w: 106 },
   },
 }

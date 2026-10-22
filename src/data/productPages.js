@@ -29,7 +29,7 @@ export const WIDE_STORIES = [
     href: cs('coinwell-card-disputes'),
   },
   {
-    quote: '“Kestrel took the repetitive half of tax season off our desks, so the specialists finally had time for the hard returns.”',
+    quote: '“Kestrel took document chasing off our accountants’ desks, so they finally had time in March for the hard returns.”',
     name: 'Jonah Pereira',
     role: 'Head of Support, Ledgerly',
     img: '/assets/photos/story-4.webp',
@@ -60,20 +60,20 @@ const productPages = [
     slug: 'ai-agents',
     docTitle: 'Kestrel Agent | AI agents that finish the job',
     hero: {
-      title: 'An AI support agent that finishes what customers came to do',
-      lede: 'Kestrel Agent reads the account, follows your playbooks and makes the change your customer asked for, in chat, email, voice or text, then logs every step it took.',
-      intro: `Most support bots stop at an answer. Kestrel Agent keeps going: it checks identity, looks up the order, booking or policy in question, applies the rule your team wrote, and updates the system of record before it replies. When a case needs judgement it hands over with a short summary, so nobody starts again. At Coinwell, the agent now settles three in four statement queries on its own, and response times on the remaining cases fell by half (${a(cs('coinwell-card-disputes'), 'read the Coinwell story')}).`,
+      title: 'Hand the routine half of your support queue to an AI agent',
+      lede: 'Kestrel Agent is the teammate who takes the Monday-morning pile: password resets, refunds within policy, delivery changes and statement questions, at any hour and in any channel.',
+      intro: `Think about the cases your best agent could close with their eyes shut. They know the policy, they know which screen to open, and the only thing slowing them down is the queue in front of them. Kestrel Agent is trained on those same procedures, written down as playbooks by your own team, and it works through them around the clock. Your people keep the escalations, the complaints and the judgement calls. Coinwell handed over three in four statement queries this way and halved waiting times for everything else (${a(cs('coinwell-card-disputes'), 'read the Coinwell story')}).`,
       art: { scene: 'chat', tint: 'pink' },
     },
     tools: {
-      title: 'Which AI agents can change an account, not just explain it?',
+      title: 'Which kinds of support automation can complete a refund on their own?',
       items: [
         {
           blocks: [
             p('<strong>Kestrel</strong> is designed for support where a reply is only useful if something actually changes: a refund issued, a card frozen, an address updated. Results our customers have shared:'),
             ul(
               `<strong>Coinwell</strong> (consumer cards): three in four statement and dispute queries resolved without a person. ${a(cs('coinwell-card-disputes'), 'Read the story')}`,
-              `<strong>Ledgerly</strong> (tax software): the agent handled the bulk of filing-week volume while specialists took complex returns. ${a(cs('ledgerly-handles-tax-season'), 'Read the story')}`,
+              `<strong>Ledgerly</strong> (tax software): the agent chased missing documents by text and email while accountants reviewed returns. ${a(cs('ledgerly-handles-tax-season'), 'Read the story')}`,
               `<strong>Stackhouse</strong> (B2B software): onboarding questions answered inside the product, with set-up tasks completed for the admin. ${a(cs('stackhouse-onboarding-workflows'), 'Read the story')}`,
             ),
             p('<strong>Other options teams weigh up:</strong>'),
@@ -121,7 +121,7 @@ const productPages = [
         art: { scene: 'review', tint: 'green' },
       },
     ],
-    stories: { title: 'Which teams already run Kestrel Agent?', tint: 'pink', items: WIDE_STORIES },
+    stories: { title: 'Results from teams running the agent', tint: 'pink', items: WIDE_STORIES },
     callout: {
       title: 'Can one agent cover every channel you support?',
       body: 'Yes. The same playbooks run in web chat, email, voice, text and messaging apps, and the agent remembers the customer when they switch from one to another, so context never has to be repeated twice.',
@@ -129,7 +129,7 @@ const productPages = [
       art: { scene: 'channels', tint: 'lavender' },
     },
     related: {
-      title: 'What should you read before choosing an agent?',
+      title: 'Further reading for teams choosing an AI agent',
       links: [
         a('/articles/ai-agent-guardrails', 'Setting guardrails for an AI agent you can defend'),
         a('/articles/ai-support-first-90-days', 'The first ninety days with an AI support agent'),
@@ -158,7 +158,7 @@ const productPages = [
           a: 'It stops and hands over. The person who picks up the case sees a summary of the request, the data already checked and the steps already taken, so the customer is never asked to repeat themselves and the agent never improvises outside a playbook.',
         },
         {
-          q: 'How long does it take to go live with real customers?',
+          q: 'When can real customers start talking to the agent?',
           a: 'Most teams launch a first set of simple playbooks within two weeks and add integrated workflows over the following month. A Kestrel engineer works alongside your team through launch and stays involved afterwards.',
         },
         {
@@ -178,7 +178,7 @@ const productPages = [
     slug: 'guardrails',
     docTitle: 'Kestrel Safeguards | Runtime checks for AI support',
     hero: {
-      title: 'Safeguards that check every reply before it is sent',
+      title: 'Safeguards that hold the agent to your written policy',
       lede: 'Policy checks, approval steps and data rules run on every turn of every conversation, so the agent stays inside the lines your compliance team drew.',
       intro: `Safeguards sit between the agent and the customer. Before a reply goes out, Kestrel checks it against your rules: required disclosures, banned promises, tone, personal data and the limits on each action. A refund above a threshold waits for a person; a message that mentions a medical symptom goes to a clinician. Every check is logged with its result, so audits rely on records rather than memory (${a('/product/trust', 'see how data is handled')}).`,
       art: { scene: 'shield', tint: 'lavender' },
@@ -245,7 +245,7 @@ const productPages = [
       art: { scene: 'chat', tint: 'lavender' },
     },
     related: {
-      title: 'Where can I learn more about safe AI support?',
+      title: 'Further reading on keeping AI support safe',
       links: [
         a('/articles/ai-agent-guardrails', 'Setting guardrails for an AI agent you can defend'),
         a('/blog/what-good-cx-looks-like-in-regulated-industries', 'What good service looks like in regulated industries'),
@@ -291,7 +291,7 @@ const productPages = [
     hero: {
       title: 'How Kestrel turns your procedures into resolved cases',
       lede: 'Connect your tools, describe each process as a playbook, rehearse it with test runs, then launch and review. Kestrel engineers stay with you at every stage, not just the kickoff.',
-      selfServe: { link: 'Start a free trial', rest: 'to build your first playbook today, no sales call needed.', href: '/pricing' },
+      selfServe: { link: 'Start a free pilot', rest: 'to build your first playbook today, no sales call needed.', href: '/pricing' },
       art: { scene: 'flow', tint: 'yellow' },
     },
     tools: {
@@ -356,7 +356,7 @@ const productPages = [
       art: { scene: 'people', tint: 'peach' },
     },
     related: {
-      title: 'What should I read before planning a launch?',
+      title: 'Further reading for planning your first launch',
       links: [
         a('/articles/ai-support-first-90-days', 'The first ninety days with an AI support agent'),
         a('/blog/introducing-kestrel-workflows-studio', 'Introducing Workflows Studio for support operations'),
@@ -385,7 +385,7 @@ const productPages = [
         },
         {
           q: 'Can we try Kestrel before talking to anyone?',
-          a: `Yes. A ${a('/pricing', 'free trial')} lets you connect a sandbox, write a playbook and run tests on your own, then bring your team in when you are ready.`,
+          a: `Yes. The ${a('/pricing', 'free 14-day pilot')} lets you connect a sandbox, write a playbook and run tests on your own, then bring your team in when you are ready.`,
         },
         {
           q: 'What does the Kestrel engineer do week to week?',
@@ -467,7 +467,7 @@ const productPages = [
       art: { scene: 'phone', tint: 'yellow' },
     },
     related: {
-      title: 'What should I read about proactive support?',
+      title: 'Further reading on proactive customer contact',
       links: [
         a('/articles/reducing-ticket-backlog', 'Clearing a ticket backlog before you automate it'),
         a('/articles/measuring-customer-effort', 'Measuring customer effort, and lowering it on purpose'),
@@ -513,7 +513,7 @@ const productPages = [
     hero: {
       title: 'A review queue that grades every single conversation',
       lede: 'Kestrel scores each conversation, human or AI, against your own rubric, then groups the misses by cause so leads fix the playbook instead of chasing tickets.',
-      intro: `Sampling a few percent of tickets tells you how a lucky handful went. The review queue reads all of them. Each conversation is scored for accuracy, policy, tone and outcome; anything below your bar is queued with the reason and a suggested fix. Over a week, the queue shows which playbook steps cause the most trouble, which help articles mislead, and where people step in most often. Stackhouse uses it to run a thirty-minute weekly review (${a(cs('stackhouse-onboarding-workflows'), 'read the Stackhouse story')}).`,
+      intro: `Reading a small random slice of tickets tells you how a lucky handful went. The review queue reads all of them. Each conversation is scored for accuracy, policy, tone and outcome; anything below your bar is queued with the reason and a suggested fix. Over a week, the queue shows which playbook steps cause the most trouble, which help articles mislead, and where people step in most often. Stackhouse uses it to run a thirty-minute weekly review (${a(cs('stackhouse-onboarding-workflows'), 'read the Stackhouse story')}).`,
       art: { scene: 'review', tint: 'green' },
     },
     tools: {
@@ -545,7 +545,7 @@ const productPages = [
               '<strong>Consistency:</strong> Kestrel: one rubric applied the same way each time. Manual sampling: varies by reviewer. Surveys: varies by mood.',
               '<strong>Action:</strong> Kestrel: suggested fix, tested before release. Manual sampling: coaching notes. Surveys: a trend line.',
             ),
-            p(`Further reading: ${a('/articles/support-metrics-that-matter', 'support metrics that matter')}, ${a('/product/simulations', 'test runs')} and ${a('/product/guardrails', 'safeguards')}.`),
+            p(`Further reading: ${a('/articles/support-metrics-that-matter', 'support metrics worth tracking')}, ${a('/product/simulations', 'test runs')} and ${a('/product/guardrails', 'safeguards')}.`),
           ],
         },
       ],
@@ -578,7 +578,7 @@ const productPages = [
       art: { scene: 'people', tint: 'pink' },
     },
     related: {
-      title: 'Where can I read more about support quality?',
+      title: 'Further reading on measuring support quality',
       links: [
         a('/articles/csat-survey-design', 'Designing CSAT surveys that people actually answer'),
         a('/articles/what-is-a-good-nps', 'What counts as a good NPS score for a support team'),
@@ -689,7 +689,7 @@ const productPages = [
       art: { scene: 'phone', tint: 'lavender' },
     },
     related: {
-      title: 'What should I read about testing AI agents?',
+      title: 'Further reading on testing an AI agent',
       links: [
         a('/articles/ai-agent-guardrails', 'Setting guardrails for an AI agent you can defend'),
         a('/blog/introducing-kestrel-workflows-studio', 'Introducing Workflows Studio for support operations'),
@@ -721,8 +721,8 @@ const productPages = [
           a: 'Pass rates per scenario, score changes against the live version, every failed conversation with the reason, and the actions the agent attempted. Reports are kept with each released version.',
         },
         {
-          q: 'Are test runs included in the free trial?',
-          a: `Yes, with a smaller monthly allowance. Limits for each plan are listed on the ${a('/pricing', 'pricing page')}.`,
+          q: 'Are test runs included in the free pilot?',
+          a: `Yes, and they never count toward your pool. Replay limits for each plan are on the ${a('/pricing', 'pricing page')}.`,
         },
       ],
     },
@@ -762,7 +762,7 @@ const productPages = [
           blocks: [
             ul(
               '<strong>Hosting:</strong> dedicated regions in Europe, the UK, North America and Asia-Pacific; data stays where you choose.',
-              '<strong>Encryption:</strong> TLS in transit and AES-256 at rest, with customer-managed keys on enterprise plans.',
+              '<strong>Encryption:</strong> every connection and every stored record is encrypted, with your own keys available on enterprise plans.',
               '<strong>Model training:</strong> customer conversations are never used to train shared models.',
               '<strong>Access:</strong> single sign-on, role-based permissions and time-limited support access that you approve.',
               '<strong>Audit:</strong> annual independent audits, regular penetration tests and a full action log per conversation.',
@@ -801,7 +801,7 @@ const productPages = [
       art: { scene: 'queue', tint: 'peach' },
     },
     related: {
-      title: 'Where can I read more about security and data?',
+      title: 'Further reading on security and customer data',
       links: [
         a('/articles/ai-agent-guardrails', 'Setting guardrails for an AI agent you can defend'),
         a('/blog/what-good-cx-looks-like-in-regulated-industries', 'What good service looks like in regulated industries'),
@@ -830,7 +830,7 @@ const productPages = [
         },
         {
           q: 'Do you sign data processing and business associate agreements?',
-          a: 'Yes. Our standard data processing agreement is available up front, and we sign business associate agreements for healthcare customers that need them.',
+          a: 'Yes. Our standard data processing agreement is available up front, and healthcare customers who need a business associate agreement can have one included in their contract.',
         },
         {
           q: 'How do we report a security concern?',

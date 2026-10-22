@@ -29,8 +29,8 @@ import { useReducedMotion, useScrubProgress, useViewport } from '../lib/motion.j
 //                                         it rotates (likely the shared 72deg/s loop).
 
 const COPY = {
-  h3: ['Made to finish it.', 'Wise enough to hand it over.'], // 2nd clause wraps at 390 (3 lines) like live
-  body: 'Kestrel never guesses. When a request falls outside its remit, it hands over to your team with full context so nobody starts again.',
+  h3: ['Finishes what it starts.', 'Knows who to call when it can’t.'], // 2nd clause wraps at 390 (3 lines) like live
+  body: 'Every playbook has two endings: the case is closed, or a named person picks it up with a note of what was checked and why.',
 }
 
 /* ---------- capability tags ---------- */

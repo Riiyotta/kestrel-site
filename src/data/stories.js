@@ -22,14 +22,14 @@ export const stories = [
     category: 'finance',
     layout: 'featured',
     imageSide: 'right',
-    cardTitle: 'How Ledgerly handles four times the tax-season volume with the same team',
+    cardTitle: 'How Ledgerly chases missing tax documents so its accountants do not have to',
     person: { name: 'Nadia Okonkwo', role: 'Head of Support Operations' },
     logo: { name: 'Ledgerly', shape: 'bars' },
     cardImage: '/assets/photos/story-2.webp',
     hero: {
       variant: 'quote',
       quote:
-        'Kestrel turned our busiest weeks into ordinary ones. It answers the tricky account questions with the same care our best people would, it knows when to hand over, and our customers get a clear answer in minutes instead of waiting a day. Our team finally has time to work on the cases that really need a human.',
+        'Our accountants used to spend March on the phone asking for receipts. Now Kestrel does the asking, checks what comes back against each client’s list, and only books a call when something is genuinely unclear. The accountants spend the month doing accounting, and our clients say the reminders feel helpful rather than nagging.',
     },
     facts: { company: 'Ledgerly', industry: 'Finance', size: 'Scale-up' },
     sections: [
@@ -38,8 +38,8 @@ export const stories = [
         navLabel: 'The challenge',
         heading: 'The challenge',
         body: [
-          'Ledgerly helps freelancers and small businesses keep their books tidy across several countries. Every spring, tax deadlines pushed ticket volume to roughly four times its normal level, and most of those conversations were not simple. Customers wanted to know why a transaction had been categorised a certain way, how a currency conversion was calculated, or what a specific form field meant for their situation.',
-          'The support team had a thorough help centre, but customers rarely found the right article under pressure. Response times stretched from minutes to most of a day, and the team spent each season hiring temporary staff who needed weeks of training before they could answer anything beyond the basics.',
+          'Ledgerly prepares annual returns for around eleven thousand sole traders and small partnerships. The work itself was predictable; the bottleneck was paperwork. Each return needed a dozen or more documents, from mileage logs to pension statements, and in a typical year a third of clients were still missing at least one item a fortnight before the filing deadline.',
+          'Chasing fell to the accountants themselves. They sent reminder emails by hand, rang clients who did not reply, and opened every upload to check it was the right year and the right form. Senior staff estimated that close to a quarter of their March hours went on collecting documents rather than reviewing them.',
         ],
         media: { type: 'image', src: '/assets/photos/hero-center.webp', alt: 'Support specialist on a call at her desk' },
       },
@@ -48,17 +48,17 @@ export const stories = [
         navLabel: 'The solution',
         heading: 'The solution',
         body: [
-          'Ledgerly connected Kestrel to its helpdesk and knowledge base in a single afternoon. Rather than scripting every answer, the team wrote short workflows for the processes that mattered most: explaining categorisation rules, walking customers through exports, and checking refund eligibility against account history.',
-          'Within the first week Kestrel was resolving the bulk of routine tax questions end to end. When a conversation needed judgement, it passed the case to a specialist with a summary of what had already been tried, so nobody had to start again.',
+          'Ledgerly gave Kestrel read access to each client’s document checklist and write access to its reminder schedule. The team wrote three playbooks: ask for a missing item by text or email in the client’s preferred channel, check each upload for the right tax year and form type, and offer a call slot with the assigned accountant when a client is stuck.',
+          'The playbooks ran in shadow mode for two weeks in January, with accountants approving each outgoing message. By February they were live, and anything Kestrel could not classify, such as a handwritten letter, went to a person with a note on what was expected.',
         ],
         media: {
           type: 'imageStat',
-          text: '80% faster first replies. A calmer tax season.',
+          text: 'Complete files a week earlier. Quieter Marches.',
           rows: [
             ['', 'Before', 'After'],
-            ['First reply', '~6 hrs', '< 5 min'],
-            ['Coverage', 'Office hours', '24/7'],
-            ['Seasonal hires', '10', '0'],
+            ['Files complete by D-14', '67%', '91%'],
+            ['Reminders sent by', 'Accountants', 'Kestrel'],
+            ['Chasing calls / week', '~340', '~40'],
           ],
         },
       },
@@ -67,7 +67,7 @@ export const stories = [
         navLabel: 'The result',
         heading: 'The result',
         body: [
-          'First-reply times dropped from hours to minutes during the busiest month of the year, and the team handled the spike without a single temporary hire. Specialists now spend their time on complex cases and on improving the workflows Kestrel follows, which in turn lifts the quality of every automated answer.',
+          'Nine in ten client files were complete two weeks before the deadline, up from two in three the year before. Accountants made a fraction of the chasing calls they used to and spent the recovered hours on review, and Ledgerly filed its whole book of returns without paying for weekend overtime.',
         ],
       },
     ],
@@ -190,14 +190,14 @@ export const stories = [
     category: 'saas',
     layout: 'wide',
     imageSide: 'left',
-    cardTitle: 'How Stackhouse lets its product team build support workflows themselves',
+    cardTitle: 'How Stackhouse turns support conversations into a weekly product fix list',
     person: { name: 'Ines Moreau', role: 'Head of Product' },
     logo: { name: 'Stackhouse', shape: 'square' },
     cardImage: '/assets/photos/story-3.webp',
     hero: {
       variant: 'split',
       quote:
-        'Our product managers write the workflows for the features they ship. Support stops being a separate translation step and becomes part of how we launch.',
+        'Every Monday our product managers get the five things customers found most confusing last week, with real quotes attached. Half our small fixes start there.',
       image: '/assets/photos/proof-portrait-2.webp',
     },
     facts: { company: 'Stackhouse', industry: 'Complex SaaS', size: 'Scale-up' },
@@ -207,7 +207,7 @@ export const stories = [
         navLabel: 'The challenge',
         heading: 'The challenge',
         body: [
-          'Stackhouse ships new features every week. Each release created a wave of how-to questions, and the support team was always a few days behind the product, learning each change after customers had already found it.',
+          'Stackhouse ships every week, and support always saw confusion first. But that knowledge reached the product team as anecdotes, weeks late and rarely with numbers attached, so the same screens kept generating the same tickets.',
         ],
       },
       {
@@ -215,8 +215,8 @@ export const stories = [
         navLabel: 'The solution',
         heading: 'The solution',
         body: [
-          'With Kestrel, the product managers who design a feature also write the workflow that supports it. Workflows are plain-language instructions with a few connected actions, so no engineering time is needed. Each one is tested against past conversations before it goes live.',
-          'Support leads review every new workflow, but they no longer have to author them from scratch, which removed the bottleneck entirely.',
+          'Kestrel now tags every conversation with the feature involved and the step where the customer got stuck. A Monday digest groups those tags, ranks them by volume and links the underlying transcripts, so a product manager can read ten real examples in five minutes.',
+          'When a fix ships, the matching playbook is retired, which keeps the agent’s instructions short and current.',
         ],
         media: { type: 'image', src: '/assets/photos/hero-center.webp', alt: 'Team member working on a laptop' },
       },
@@ -225,7 +225,7 @@ export const stories = [
         navLabel: 'The result',
         heading: 'The result',
         body: [
-          'New features now launch with support coverage on day one. Ticket volume after releases dropped by roughly a third, and the support team has moved into a quality role, reviewing conversations and improving guidance.',
+          'Over two quarters, questions about the ten most confusing screens fell by about half. Support leads now sit in product reviews with data rather than stories, and several fixes shipped within a week of first appearing.',
         ],
       },
     ],
@@ -437,7 +437,7 @@ export const storyQuotes = [
     category: 'finance',
     layout: 'quote',
     quote:
-      '“We expected Kestrel to deflect simple questions. We did not expect it to handle our most detailed account queries with more patience than any script we ever wrote.”',
+      '“We thought of Kestrel as a support tool. It turned out the most valuable thing it did was follow up, politely and relentlessly, on every missing receipt we used to chase by hand.”',
     person: { name: 'Nadia Okonkwo', role: 'Head of Support Operations, Ledgerly' },
   },
   {
@@ -446,7 +446,7 @@ export const storyQuotes = [
     category: 'saas',
     layout: 'quote',
     quote:
-      '“Launch day used to mean a flooded inbox. Now our support coverage ships with the feature, and customers barely notice there was ever a learning curve.”',
+      '“The weekly digest is the first thing our product review opens now. It is the closest thing we have to sitting next to customers while they use the product.”',
     person: { name: 'Ines Moreau', role: 'Head of Product, Stackhouse' },
   },
 ]

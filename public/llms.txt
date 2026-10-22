@@ -1,6 +1,6 @@
 # Kestrel
 
-> Kestrel is a fictional AI customer-support platform used as placeholder content for a design-faithful site rebuild. It resolves support tickets end to end, hands off to people when it should, and keeps a full record of what it did and why.
+> Kestrel is a fictional AI resolution agent for banks, insurers and clinics, used as placeholder content for a design-faithful site rebuild. It closes customer cases end to end, hands off to people when it should, and keeps a reviewable record of every step.
 
 This file follows the llms.txt format: a short summary, then links to the pages most useful to a language model. All content is placeholder copy.
 

@@ -28,7 +28,7 @@ export const logoWallLogos = [
 ]
 
 // ~43 chars, 1 line at 1440, 2 lines in 262 at 390
-export const logoWallHeading = 'Trusted by CX teams who sweat every detail…'
+export const logoWallHeading = 'Picked by support teams who care about the small stuff…'
 
 export const partnerPage = {
   docTitle: 'Partner with Kestrel | Kestrel',

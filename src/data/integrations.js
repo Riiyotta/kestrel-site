@@ -19,56 +19,56 @@
 export const integrationsPage = {
   title: 'Integration Library',
   // ≈200 chars, 3 lines in 793 @1440
-  sub: 'Kestrel runs inside the helpdesk you already use and acts through your own systems, so there is nothing to move. Ready-made connectors cover the major helpdesks, CRMs, phone platforms and more.',
+  sub: 'Kestrel joins your stack through scoped connections you approve: it reads from the tools that hold customer context and writes back only where you allow it. Pick a category below to see what plugs in.',
   cta: { label: 'Browse every Kestrel integration →', href: '#catalog' },
-  tickerHeading: 'Relied on by support leaders in finance, health and other demanding fields',
+  tickerHeading: 'Connected today at lenders, clinics, utilities and software companies',
   setup: {
     title: 'What setup really looks like',
     intro:
-      'Plenty of AI support tools promise a one-click install and then send a long scoping form. Here is the actual order of work, step by step.',
+      'Connecting Kestrel is mostly approvals and a few working sessions, not code. This is the order we follow with every new team, with rough timings.',
     steps: [
       {
-        title: '1. Connect the ticket queue',
-        text: 'Point Kestrel at your helpdesk, or use the chat widget if you do not have one. Most teams connect with an admin approval flow and need no engineering time. Kestrel works in the same queue as your agents.',
+        title: '1. Map one queue (day one)',
+        text: 'Pick a single queue or brand to start with. Kestrel reads the last ninety days of its tickets, groups them by intent and shows which intents are frequent and rule-bound enough to be worth handing over first.',
       },
       {
-        title: '2. Connect the systems it acts on',
-        text: 'Kestrel reads and writes through your APIs, webhooks and MCP servers, and you set read-only or write access for each one inside the app.',
+        title: '2. Grant scoped access',
+        text: 'Each system gets its own service account and an allow-list of actions. An admin approves every action, and all of them start in dry-run until you say otherwise.',
       },
       {
-        title: '3. Teach it how your team works',
-        text: 'Help articles, procedures, policies and tone guides, written in plain language. Kestrel drafts the workflows and changes go live without an engineering ticket.',
+        title: '3. Write the playbooks together',
+        text: 'Your launch engineer pairs with a senior agent for a two-hour session per intent, turning how your best people already work into numbered steps with clear exit points.',
       },
       {
-        title: '4. Test before customers see it',
-        text: 'Replay past tickets and synthetic scenarios in bulk and review projected resolution quality before launch.',
+        title: '4. Run in shadow mode',
+        text: 'Kestrel drafts replies on live tickets as internal notes. Agents mark each draft right or wrong, building a per-intent accuracy score.',
       },
       {
-        title: '5. Launch one topic at a time',
-        text: 'Switch on the topics where the evidence is strong and keep the rest with your team.',
+        title: '5. Promote intent by intent',
+        text: 'When an intent holds your approval bar for a full week, promote it to live replies.',
       },
     ],
     support: [
-      'You will not do this alone. Every plan includes embedded support, starting with a guided onboarding session, and larger plans add a deployment team that configures connectors and workflows alongside yours.',
-      'The first live ticket can arrive within hours, with an average under a month, and where you land depends on your systems rather than on a sales promise. One lending team went live in four weeks from zero automation and handled 15,000 conversations in its first month, and a childcare provider moved its parent phone line from a 12% to a 100% answer rate in the first full month it was live, without adding a single person to the team.',
+      'A named launch engineer joins your team chat on day one and stays through the first ninety days, joining weekly reviews of shadow drafts. On Aerie, a launch squad also builds custom actions and sits in on change reviews.',
+      'Most teams promote their first intent in week two or three of shadow mode; a core system with no API is what usually stretches that. Two illustrative examples from our own customers: Mendwell Clinics kept billing questions in shadow for ten days, promoted them once agents approved nineteen drafts in twenty, and now answers them around the clock, and Voltway Energy had outage-status calls live three weeks after kickoff, in time for the first winter storm.',
     ],
     faqTitle: 'Common questions',
     faq: [
       {
-        q: 'How long does it take to integrate Kestrel?',
+        q: 'When does Kestrel take its first live conversation?',
         blocks: [
           {
             type: 'p',
-            html: 'The first live ticket can arrive within hours, with an average under a month. The range depends on which systems Kestrel needs to read from and act in: a helpdesk connector plus a handful of API actions is a far smaller job than an older system with no API. Most teams connect through an admin approval flow without engineering help, every plan includes embedded support, and you test on replayed tickets and synthetic scenarios, reviewing projected quality topic by topic, before anything goes live. One lending team launched in four weeks from a standing start and handled 15,000 conversations in its first month, and a childcare provider lifted its phone answer rate from 12% to 100% within a month.',
+            html: 'Usually in the second or third week, once the first intent has cleared your approval bar in shadow mode. What moves that date is less the helpdesk than the systems behind it: a billing tool with a clean API can be connected in a morning, while a core platform reachable only through batch files takes longer. Every plan includes a named launch engineer, and nothing goes live until your agents have approved enough shadow drafts to trust it. For example, Mendwell Clinics went live on billing questions after ten days in shadow, and Voltway Energy took outage-status calls three weeks after kickoff.',
           },
         ],
       },
       {
-        q: 'Does Kestrel work with my helpdesk?',
+        q: 'Which helpdesks and phone systems can it join?',
         blocks: [
           {
             type: 'p',
-            html: 'Very likely, in one of three ways. Built-in connectors cover the major helpdesks, CRMs, shared inboxes and team chat tools. Any other helpdesk that sends webhooks connects through Flexible Ticketing, set up with our team. And if you do not run a helpdesk at all, use the chat widget or the SDK. For voice, anything that can forward a call works, including cloud contact centres, call routers and voice clouds. The only real blocker is a system with neither an API nor webhooks, and even then our team can usually suggest a route.',
+            html: 'If your helpdesk has a ready-made connector, an admin approves it in a few clicks. If not, Kestrel can work any queue that exposes a REST API or sends events, which our team wires up as part of the pilot through Open Queue. Teams with no helpdesk at all can run Kestrel Chat on its own. On the phone side, Kestrel takes calls by SIP transfer or plain call forwarding from most contact-centre platforms. What it cannot join is a system that offers neither an API nor events, and for those we usually suggest a nightly file sync as a stopgap.',
           },
         ],
       },
@@ -79,7 +79,7 @@ export const integrationsPage = {
             type: 'p',
             html: '<strong>Yes, at any time.</strong> Every conversation, decision log and review score is available through the API or as a nightly CSV drop to your own storage bucket. Retention is a setting you control per workspace, from 30 days to indefinitely, and closing an account triggers a purge you can watch complete in the audit log.',
           },
-          { type: 'p', html: 'These commitments are written into our standard customer agreement.' },
+          { type: 'p', html: 'Our data processing agreement sets out the same terms in writing.' },
         ],
       },
     ],
@@ -89,66 +89,66 @@ export const integrationsPage = {
 /** @type {Integration[]} */
 export const integrations = [
   // Ticketing
-  { slug: 'helpdesk', name: 'Helpdesk', logo: { shape: 'square' }, description: 'Resolve conversations inside your helpdesk while keeping history and outcomes in one place.' },
-  { slug: 'crm', name: 'CRM', logo: { shape: 'circle' }, description: 'Run support workflows inside your CRM for consistent, traceable outcomes, with customer records kept in step automatically.' },
-  { slug: 'ticket-desk', name: 'Ticket Desk', logo: { shape: 'triangle' }, description: 'Turn incoming tickets into finished work: sorted, acted on and closed.' },
-  { slug: 'messaging-desk', name: 'Messaging Desk', logo: { shape: 'triangle' }, description: 'Handle live customer conversations in your messaging desk with AI-led resolution.' },
-  { slug: 'shared-inbox', name: 'Shared Inbox', logo: { shape: 'square' }, description: 'Answer shared inbox threads with AI resolution and clean hand-offs to your team.' },
-  { slug: 'sales-crm', name: 'Sales CRM', logo: { shape: 'plus' }, description: 'Keep customer context and follow-ups in sync across support and sales.' },
-  { slug: 'team-chat', name: 'Team Chat', logo: { shape: 'bars' }, description: 'Handle internal requests and support workflows right in team chat, with AI help and alerts sent to the right channel.' },
-  { slug: 'support-inbox', name: 'Support Inbox', logo: { shape: 'diamond' }, description: 'Resolve support inbox conversations with AI while keeping your team’s personal tone.' },
-  { slug: 'sdk', name: 'Kestrel SDK', logo: { shape: 'arc' }, description: 'Embed Kestrel in your product, pass it context and get back answers that are ready to act on.' },
-  { slug: 'chat', name: 'Kestrel Chat', logo: { shape: 'arc' }, description: 'Put AI agents straight on your website without needing a helpdesk.' },
-  { slug: 'care-desk', name: 'Care Desk', logo: { shape: 'circle' }, description: 'Resolve care desk conversations with AI while your team keeps working where it already does.' },
-  { slug: 'crm-messaging', name: 'CRM Messaging', logo: { shape: 'circle' }, description: 'Pass chat conversations to live agents in CRM Messaging with the whole conversation attached for context.' },
-  { slug: 'flexible-ticketing', name: 'Flexible Ticketing', logo: { shape: 'arc' }, description: 'Connect a helpdesk without a built-in connector, as long as it can send webhooks.' },
+  { slug: 'helpdesk', name: 'Helpdesk', logo: { shape: 'square' }, description: 'Kestrel picks up tickets in your helpdesk queue and writes its replies and notes straight back.' },
+  { slug: 'crm', name: 'CRM', logo: { shape: 'circle' }, description: 'Read account history and update fields in your CRM, with every change stamped against the case that caused it.' },
+  { slug: 'ticket-desk', name: 'Ticket Desk', logo: { shape: 'triangle' }, description: 'Tag, prioritise and close tickets using the views your team set up.' },
+  { slug: 'messaging-desk', name: 'Messaging Desk', logo: { shape: 'triangle' }, description: 'Answer in-app and web messages in real time, then pass threads on intact.' },
+  { slug: 'shared-inbox', name: 'Shared Inbox', logo: { shape: 'square' }, description: 'Work email threads in a shared inbox and assign the tricky ones to a named owner.' },
+  { slug: 'sales-crm', name: 'Sales CRM', logo: { shape: 'plus' }, description: 'Log support outcomes on the deal so account managers see them first.' },
+  { slug: 'team-chat', name: 'Team Chat', logo: { shape: 'bars' }, description: 'Ask Kestrel questions from team chat, approve flagged actions there, and get an alert when an intent dips in accuracy.' },
+  { slug: 'support-inbox', name: 'Support Inbox', logo: { shape: 'diamond' }, description: 'Reply from your support inbox in each agent’s own signature and saved snippets.' },
+  { slug: 'sdk', name: 'Kestrel SDK', logo: { shape: 'arc' }, description: 'Call Kestrel from your own app with the user’s context and render its reply in your UI.' },
+  { slug: 'chat', name: 'Kestrel Chat', logo: { shape: 'arc' }, description: 'A drop-in chat widget for teams that do not run a helpdesk at all.' },
+  { slug: 'care-desk', name: 'Care Desk', logo: { shape: 'circle' }, description: 'Work patient and member cases in your care desk, keeping consent notes on every record.' },
+  { slug: 'crm-messaging', name: 'CRM Messaging', logo: { shape: 'circle' }, description: 'Transfer a live chat to a CRM Messaging agent with Kestrel’s summary pinned to the top of the thread.' },
+  { slug: 'open-queue', name: 'Open Queue', logo: { shape: 'arc' }, description: 'Point Kestrel at any queue that exposes a REST API or emits events, set up during your pilot.' },
   // Telephony
   {
     slug: 'api',
     name: 'Kestrel API',
     logo: { shape: 'arc' },
-    description: 'Start a Kestrel voice conversation before the live call is routed to Kestrel',
+    description: 'Hand Kestrel the caller’s details by API a moment before the call itself arrives',
     website: { label: 'kestrel.example', href: '#' },
     detail: {
-      lede: 'Start a Kestrel voice conversation before the live call is routed to Kestrel',
-      category: 'Telephony',
+      lede: 'Hand Kestrel the caller’s details by API a moment before the call itself arrives',
+      category: 'Phone lines',
       sections: [
         {
           heading: 'Overview',
           as: 'h2',
-          text: 'The voice calls API lets your phone system open a Kestrel conversation before it forwards the live call. Kestrel can then begin the call already knowing who is on the line, their account details or their latest activity, so workflows can tailor the conversation from the very first second.',
+          text: 'Most phone systems know more about a caller than the audio carries: the number they dialled from, the menu option they chose, the account they verified. The Kestrel API takes that context as a short JSON message and pairs it with the call that follows, so the first thing Kestrel says can already fit the caller.',
         },
         {
           heading: 'What it is',
           as: 'h3',
-          text: 'The API route gives you the most control over voice because you can enrich each call with live data before the AI picks up. That makes it possible to route priority callers differently, load order or account context ahead of time, and spare customers from repeating themselves, while raising first-call resolution on complex requests. The agent already knows who is calling and why, so fewer calls need a second attempt, fewer callers have to explain their problem twice, and your team spends less time on calls that could have been settled the first time round.',
+          text: 'It is a small REST endpoint, separate from call routing itself. You post a call reference plus whatever fields you trust, such as a verified customer ID, an open case number or a risk flag, and Kestrel holds them for up to two minutes waiting for the matching call. Fields you mark as verified skip Kestrel’s own identity questions, and fields you mark as hints only steer which playbook it opens. If no call arrives, the message expires quietly, and if a call arrives with no message, Kestrel simply starts from scratch the way it would on any forwarded line.',
         },
         {
           heading: 'How to integrate',
           as: 'h3',
-          text: 'Your team uses Kestrel voice API credentials to send a server-to-server request from your phone system, or from middleware, when a call comes in. That request creates a conversation in Kestrel and can carry the customer identifiers and context you want used for routing and workflows. Once the conversation exists, your voice provider forwards the live call to your assigned Kestrel number. Your team completes the setup in its own voice and application layers, and Kestrel supplies the endpoints, guidance and end-to-end checks.',
+          text: 'Create an API key in the Kestrel app and scope it to voice. In your contact-centre flow, add a step that posts the call reference and fields at the moment the call is answered by your menu, then transfer the call to your Kestrel number with the same reference in a SIP header. A test console in the app shows each message, whether it matched a call and which fields were used, so you can check the whole path on a test line before switching real traffic over.',
         },
       ],
     },
   },
-  { slug: 'voice-cloud', name: 'Voice Cloud', logo: { shape: 'ring' }, description: 'Send SMS updates and handle voice conversations at scale' },
-  { slug: 'contact-center', name: 'Contact Center', logo: { shape: 'circle' }, description: 'Add conversational ability as an audio connector' },
-  { slug: 'call-router', name: 'Call Router', logo: { shape: 'square' }, description: 'Forward routed calls to Kestrel so your AI agent can answer and resolve them.' },
+  { slug: 'voice-cloud', name: 'Voice Cloud', logo: { shape: 'ring' }, description: 'Use your own numbers for calls and text follow-ups' },
+  { slug: 'contact-center', name: 'Contact Center', logo: { shape: 'circle' }, description: 'Stream calls to Kestrel from your existing flows' },
+  { slug: 'call-router', name: 'Call Router', logo: { shape: 'square' }, description: 'Send any menu branch to Kestrel and take it back if the caller asks for a person.' },
   // Knowledge base
-  { slug: 'wiki', name: 'Wiki', logo: { shape: 'plus' }, description: 'Use documented knowledge and procedures from your team wiki.' },
-  { slug: 'knowledge-vault', name: 'Knowledge Vault', logo: { shape: 'ring' }, description: 'Connect your knowledge vault so Kestrel can use your verified company answers.' },
-  { slug: 'docs-suite', name: 'Docs Suite', logo: { shape: 'square' }, description: 'Connect your docs suite so Kestrel can read documents, sheets and slide decks.' },
-  { slug: 'notes-workspace', name: 'Notes Workspace', logo: { shape: 'square' }, description: 'Connect your notes workspace so Kestrel can reach your knowledge base.' },
+  { slug: 'wiki', name: 'Wiki', logo: { shape: 'plus' }, description: 'Pull policy pages from your wiki and cite the page in each answer.' },
+  { slug: 'knowledge-vault', name: 'Knowledge Vault', logo: { shape: 'ring' }, description: 'Answer from approved cards only, and flag any card that is past its review date.' },
+  { slug: 'docs-suite', name: 'Docs Suite', logo: { shape: 'square' }, description: 'Read rate tables and policy documents from shared folders you choose.' },
+  { slug: 'notes-workspace', name: 'Notes Workspace', logo: { shape: 'square' }, description: 'Sync team pages so Kestrel sees edits the moment they are saved.' },
   // Tools and actions
   {
     slug: 'mcp',
     name: 'MCP',
     logo: { shape: 'bars' },
-    description: 'Extend agent abilities with your own tools and data sources',
+    description: 'Give Kestrel the tools an MCP server exposes, one approval at a time',
     website: { label: 'modelcontextprotocol.io', href: '#' },
     detail: {
-      lede: 'Extend agent abilities with your own tools and data sources',
-      category: 'Tools and actions',
+      lede: 'Give Kestrel the tools an MCP server exposes, one approval at a time',
+      category: 'Actions and data',
       sections: [
         {
           heading: 'Overview',
@@ -168,9 +168,9 @@ export const integrations = [
       ],
     },
   },
-  { slug: 'billing', name: 'Billing', logo: { shape: 'square' }, description: 'Take payments and update customer records in real time.' },
-  { slug: 'storefront', name: 'Storefront', logo: { shape: 'triangle' }, description: 'Sync orders and customer details to power commerce support.' },
-  { slug: 'email-delivery', name: 'Email Delivery', logo: { shape: 'diamond' }, description: 'Send transactional emails and track engagement automatically.' },
+  { slug: 'billing', name: 'Billing', logo: { shape: 'square' }, description: 'Check invoices, issue credits and set up payment plans.' },
+  { slug: 'storefront', name: 'Storefront', logo: { shape: 'triangle' }, description: 'Look up orders, change delivery slots and start returns.' },
+  { slug: 'email-delivery', name: 'Email Delivery', logo: { shape: 'diamond' }, description: 'Send receipts and confirmations once a case is closed.' },
 ]
 
 const bySlug = Object.fromEntries(integrations.map((i) => [i.slug, i]))
@@ -178,37 +178,37 @@ const bySlug = Object.fromEntries(integrations.map((i) => [i.slug, i]))
 export const categories = [
   {
     id: 'ticketing',
-    label: 'Ticketing system',
+    label: 'Helpdesk queues',
     description: [
-      'Browse connectors for your helpdesk, knowledge base, phone platform and internal tools. If your helpdesk is not listed, Flexible Ticketing connects any system that can send webhooks.',
+      'Kestrel works tickets where your team already works them. No connector for your queue yet? Open Queue covers anything with a REST API or an event stream, and we set it up with you.',
     ],
     items: [
       'helpdesk', 'crm', 'ticket-desk', 'messaging-desk', 'shared-inbox', 'sales-crm', 'team-chat',
-      'support-inbox', 'sdk', 'chat', 'care-desk', 'crm-messaging', 'flexible-ticketing',
+      'support-inbox', 'sdk', 'chat', 'care-desk', 'crm-messaging', 'open-queue',
     ],
   },
   {
     id: 'telephony',
-    label: 'Telephony',
+    label: 'Phone lines',
     description: [
-      'Any phone platform that supports call forwarding works, including cloud contact centres, call routers, voice clouds, the Kestrel SDK and the Kestrel API.',
+      'Calls reach Kestrel by SIP transfer or plain forwarding, so your numbers, menus and recordings stay where they are today and you can pull a line back at any time.',
     ],
     items: ['api', 'voice-cloud', 'sdk', 'contact-center', 'call-router'],
   },
   {
     id: 'knowledge',
-    label: 'Knowledge base',
+    label: 'Knowledge sources',
     description: [
-      'Give Kestrel access to your internal knowledge. Kestrel also works with your existing helpdesk to read and reply to tickets, and you can switch each source on or off, or between read-only and write access, in the app.',
+      'Kestrel answers from sources you list, cites the page it used in every reply, and tells you when two sources disagree, so stale or conflicting guidance gets fixed at the source rather than repeated to customers.',
     ],
     items: ['wiki', 'knowledge-vault', 'docs-suite', 'notes-workspace'],
   },
   {
     id: 'tools',
-    label: 'Tools and actions',
+    label: 'Actions and data',
     description: [
-      'Kestrel uses tools to reach your external systems so that it can personalise each answer it gives while it works through and resolves customer requests.',
-      'Tools connect Kestrel to your other systems, and workflows use them to read data or take action. You can set them up as APIs, webhooks or connections to MCP servers, and mock tools let you build and test workflows before the real system is wired in. A shared library of ready-made connectors and operators also covers everyday jobs inside your workflows, such as comparing two dates, checking a time window or doing simple arithmetic on order values and account balances.',
+      'Actions are what turn an answer into a finished case: a refund issued, a slot moved, an address changed, each one logged against the conversation that asked for it.',
+      'Every action has an owner, an allow-list of fields it may change and an optional limit, such as refunds under a set amount or no more than one address change a month. Actions above a limit pause for a person to approve in team chat. While a system is still being connected, a stand-in action returns sample data so playbooks can be written and checked in parallel, and a short list of built-in helpers handles chores like working out business days, converting currencies or rounding amounts to your billing rules.',
     ],
     items: ['mcp', 'billing', 'storefront', 'email-delivery', 'sales-crm', 'team-chat'],
   },

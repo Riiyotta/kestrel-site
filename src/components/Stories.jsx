@@ -33,7 +33,7 @@ const H2 = 'Field notes from our teams.'
 const STORIES = [
   {
     quote:
-      '“When Kestrel hands a case to one of our people, the groundwork is already done, so they can act straight away and close it far faster than before.”',
+      '“Our agents used to spend the first ten minutes of every escalation rebuilding the whole story. Now they read four short lines and pick up the phone.”',
     name: 'Marcus Oyelaran',
     role: 'Head of Customer Care',
     logo: ['Harbourline', 'bars'],
@@ -42,7 +42,7 @@ const STORIES = [
   },
   {
     quote:
-      '“We want to bring Kestrel into more of our queues, like email and phone, so our own team can spend its time on the genuinely complicated cases.”',
+      '“We started with card disputes because they scared us the most. Once those held up in shadow mode, saying yes to every other queue was easy.”',
     name: 'Priya Raman',
     role: 'Customer Experience AI Lead',
     logo: ['Quillfin', 'diamond'],
@@ -51,7 +51,7 @@ const STORIES = [
   },
   {
     quote:
-      '“Support is a growth lever for us now. Kestrel lets us scale the service we offer without ever losing the personal touch our customers expect.”',
+      '“We used to hire a wave of temps every January. This year the seasonal spike came and went, and nobody on the team had to work a single weekend.”',
     name: 'Hannah Lindgren',
     role: 'Head of Support Operations',
     logo: ['Fernlo', 'circle'],
@@ -273,7 +273,7 @@ const SAMPLE_WIDE = STORIES.slice(0, 4).map((st) => ({
   href: '/customer-stories',
 }))
 const SAMPLE_SPLIT = [
-  { ...SAMPLE_WIDE[0], quote: '“We trialled three vendors side by side on answer quality, depth of setup and cost. Kestrel won on every one.”', tint: 'peach' },
+  { ...SAMPLE_WIDE[0], quote: '“We gave it our ugliest backlog first, on purpose, and it had earned a permanent place by the end of week two.”', tint: 'peach' },
   { ...SAMPLE_WIDE[1], quote: '“Kestrel keeps getting sharper, and it lets a small team give the kind of support our members expect.”', tint: 'green' },
   { ...SAMPLE_WIDE[2], quote: '“Setup took days, not months, and our queue has stayed calm ever since.”', tint: 'pink' },
 ]
@@ -610,7 +610,7 @@ function StoriesVariant({ card, items, title, sub, tint = 'pink', className = ''
 export function AssistantNote() {
   return (
     <p className="pb-2 text-center font-inter text-ai-note text-ai-note opacity-0">
-      Browsing with an AI assistant? It can request a Kestrel demo for you through our public booking endpoint, no account or login needed.
+      Reading this page through an AI assistant? Point it at our llms.txt file, which lists the pages that best describe Kestrel, in plain text, with a line on each.
     </p>
   )
 }

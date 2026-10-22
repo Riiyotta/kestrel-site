@@ -5,7 +5,7 @@
 
 export const ARTICLE_INDEX = {
   eyebrow: 'CX guides',
-  title: 'Practical guides for running modern customer support',
+  title: 'Field guides for the people who run support queues',
   lede: 'Clear, opinionated explainers on the metrics, processes and tools that shape great customer experience.',
   latestLabel: 'Latest guide',
   readLabel: 'Read the guide →',
@@ -34,7 +34,7 @@ export const articles = [
   {
     slug: 'support-metrics-that-matter',
     topic: 'Metrics',
-    title: 'The customer service metrics that actually tell you something',
+    title: 'Support metrics worth tracking, and the ones to retire',
     description:
       'A practical tour of the support metrics worth tracking, how to read them together and which popular numbers quietly reward the wrong behaviour.',
     date: 'Oct 12, 2026',

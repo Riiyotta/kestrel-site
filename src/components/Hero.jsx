@@ -26,17 +26,17 @@ import {
 const COPY = {
   // lengths tuned so Inter lands on the live label widths (announcement 198.5, tags 159.5/183.2/204/135/179.1)
   announcement: 'Kestrel Voice 2.0 is live',
-  h1: ['The AI resolution specialist', 'for regulated businesses'],
+  h1: ['Customer cases, closed by AI', 'with every step on record'],
   // 1440 + phone (~220 chars); the 1200–1439 variant is shorter (~191 chars) to land 3 lines in 600px (§15).
-  sub: 'Banks, insurers and clinics rely on Kestrel to settle customer issues from first message to final fix across voice, SMS, chat, email and WhatsApp, with the audit trails and controls your risk team needs to sign off fast.',
+  sub: "Kestrel picks up a customer's case, checks it against your written policies, takes the needed action in your own systems and notes down every step, so your team reviews finished outcomes instead of retyping answers.",
   subLg:
-    'Banks, insurers and clinics rely on Kestrel to settle customer issues from first message to final fix over voice, SMS, chat, email and WhatsApp, with controls your risk team will sign off on.',
+    "Kestrel picks up a customer's case, checks it against your policies, takes the needed action in your own systems and notes every step, so your team reviews outcomes instead of retyping.",
   primary: 'Get a demo',
   secondary: 'Start free trial',
-  reassurance: 'Free for 30 days. No card required. Most teams go live in under two weeks, too.',
+  reassurance: 'Free 14-day pilot on your own tickets. No card needed and no contract to sign.',
   tags: {
-    center: 'Delivery rescheduled',
-    tl: 'Repeat prescription sent',
+    center: 'Claim photos received',
+    tl: 'Address change confirmed',
     tr: 'Mortgage payment paused',
     bl: 'Late fee refunded',
     br: 'Statement copy emailed',

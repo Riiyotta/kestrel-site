@@ -12,8 +12,8 @@ import { KestrelMark } from './Logo.jsx'
 // Link hover (colour -> #1A1A1A + underline) is a static CSS state.
 
 const COPY = {
-  cta: ['Hard cases are our home turf', 'Try Kestrel free for a full 30 days.'],
-  tagline: ['The AI resolution specialist', 'for regulated, high-stakes teams'], // 3 lines @390, 2 lines md+ (live)
+  cta: ['Bring us the queue you dread', 'Run a free 14-day pilot of Kestrel.'],
+  tagline: ['Careful automation for teams', 'where mistakes are costly'], // 3 lines @390, 2 lines md+ (live)
   announcement: 'Meet Kestrel for agents', // label ~200px like live (pill 280 vs 277)
   askAi: 'Ask AI about Kestrel',
   copyright: '© 2026 Kestrel. All rights reserved.',

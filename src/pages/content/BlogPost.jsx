@@ -18,7 +18,7 @@ import { getBlogPost } from '../../data/blog.js'
 //   BlogCard 588 / 464 / stacked 342, gap 24). HoverToc (h2 + h3) and ShareRail are fixed and ≥1200 only.
 
 const CTAS = {
-  trial: { title: 'Try Kestrel free for 30 days', body: 'Connect your helpdesk and see Kestrel resolve real conversations in an afternoon.', cta: 'Start free trial', href: '#' },
+  trial: { title: 'Pilot Kestrel free for 14 days', body: 'Kestrel works a slice of your real queue for two weeks while your team approves replies.', cta: 'Start free trial', href: '#' },
   call: { title: 'Book a call', body: 'See how Kestrel fits your support team.', cta: 'Submit' },
 }
 

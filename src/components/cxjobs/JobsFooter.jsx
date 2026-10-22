@@ -13,7 +13,7 @@ export default function JobsFooter({ columns, className = '' }) {
           <div className="flex flex-col gap-4">
             <Logo href="/cx-jobs" />
             <p className="max-w-jobs-blurb text-jobs-14-tight text-jobs-muted">
-              Kestrel Jobs is a free board from Kestrel, the AI support platform for teams with complex, regulated work.
+              Kestrel Jobs is a free board from Kestrel, the AI resolution agent for banks, insurers and clinics.
             </p>
           </div>
           <div className="flex flex-col gap-7 md:flex-row md:justify-between lg:justify-start lg:gap-16">

@@ -207,7 +207,7 @@ export const blogPosts = [
   },
   {
     slug: 'roost-podcast-ep-09-support-metrics',
-    title: 'The Roost, episode 9: the support metrics that actually matter',
+    title: 'The Roost, episode 9: which support numbers deserve a dashboard',
     date: 'August 4',
     readingMinutes: 40,
     category: 'podcast',

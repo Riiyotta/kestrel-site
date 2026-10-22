@@ -22,7 +22,7 @@ export const report = {
       'Which escalation rules cut repeat contacts without adding queue time',
     ],
   },
-  trustLabel: 'Trusted by support leaders in finance, health and complex software',
+  trustLabel: 'In use at lenders, clinics, energy suppliers and software firms',
   findings: {
     title: 'The handoff, not the AI, decides how it ends.',
     items: [
@@ -57,7 +57,7 @@ export const report = {
     items: [
       { slug: 'coinwell-card-disputes', theme: 'pink', logo: { name: 'Coinwell', shape: 'circle' }, title: 'How Coinwell resolves card disputes in minutes', company: 'Coinwell', photo: '/assets/photos/story-5.webp' },
       { slug: 'brindle-health-after-hours', theme: 'red', logo: { name: 'Brindle', shape: 'plus' }, title: 'How Brindle Health answers patients after hours', company: 'Brindle Health', photo: '/assets/photos/story-1.webp' },
-      { slug: 'ledgerly-handles-tax-season', theme: 'pink', logo: { name: 'Ledgerly', shape: 'bars' }, title: 'How Ledgerly handles four times the tax-season volume', company: 'Ledgerly', photo: '/assets/photos/story-2.webp' },
+      { slug: 'ledgerly-handles-tax-season', theme: 'pink', logo: { name: 'Ledgerly', shape: 'bars' }, title: 'How Ledgerly chases missing tax documents automatically', company: 'Ledgerly', photo: '/assets/photos/story-2.webp' },
     ],
   },
 }

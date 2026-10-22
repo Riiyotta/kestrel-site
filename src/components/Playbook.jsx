@@ -25,8 +25,8 @@ import { REVEAL_06, TREE_SPRING, useScrollTrigger, useViewport } from '../lib/mo
 //                  viewport - 150px (1440: scrollY 6125, 1000: ~6250, 390: ~4470).
 
 const COPY = {
-  h3: ['Learns your process.', 'Follows it exactly.'],
-  body: 'From a two-step address change to a thirty-step claims flow, Kestrel runs it to the letter.',
+  h3: ['Your steps, in order.', 'Every single time.'],
+  body: 'Kestrel logs which step it took, what it checked and why, so any case can be replayed later.',
 }
 
 /* ---------- ticket cards ---------- */
@@ -48,10 +48,10 @@ const CARDS = [
   { id: 'p6l', dx: -363, s: 0.6, z: 'z-[1]', from: [0.7, 360, -20], delay: 300, tone: 'yellow', title: 'SMS Request Resolved', quote: '“I can’t make my flight”', meta: 'Imran Qureshi — 8:05 AM, 12 Feb 2026' },
   { id: 'p4l', dx: -269, s: 0.7, z: 'z-[2]', from: [0.7, 260, -40], delay: 200, tone: 'green', title: 'Voice Request Resolved', quote: '“My parcel went missing”', meta: 'Lena Vogt — 4:18 PM, 2 Mar 2026' },
   { id: 'p2l', dx: -159, s: 0.8, z: 'z-[3]', from: [0.7, 160, -60], delay: 100, tone: 'pink', title: 'Chat Request Resolved', quote: '“Pause my membership”', meta: 'Tomas Reyes — 7:52 PM, 9 Mar 2026', phone: { dx: -94.5, s: 0.8, from: [0.7, 90, 0] } },
-  { id: 'c', dx: 0, s: 1, z: 'z-[4]', from: [1.4, 0, -80], delay: 0, tone: 'lavender', title: 'Voice Request Resolved', quote: '“Late checkout, please”', meta: 'Ana Ruiz — 10:42 AM, 14 Mar 2026', phone: { dx: 0, s: 1, from: [1.1, 0, -40] } },
-  { id: 'p2r', dx: 159, s: 0.8, z: 'z-[3]', from: [0.7, -160, -60], delay: 100, tone: 'yellow', title: 'Email Request Resolved', quote: '“Reschedule my visit”', meta: 'Grace Okafor — 1:30 PM, 6 Mar 2026', phone: { dx: 94.5, s: 0.8, from: [0.7, -90, 0] } },
-  { id: 'p4r', dx: 269, s: 0.7, z: 'z-[2]', from: [0.7, -260, -40], delay: 200, tone: 'lavender', title: 'Chat Request Resolved', quote: '“Refund a double charge”', meta: 'Mei Tanaka — 11:09 AM, 4 Mar 2026' },
-  { id: 'p6r', dx: 363, s: 0.6, z: 'z-[1]', from: [0.7, -360, -20], delay: 300, tone: 'pink', title: 'Email Request Resolved', quote: '“Can I check in early?”', meta: 'Felix Brandt — 6:44 AM, 1 Mar 2026' },
+  { id: 'c', dx: 0, s: 1, z: 'z-[4]', from: [1.4, 0, -80], delay: 0, tone: 'lavender', title: 'Voice Request Resolved', quote: '“Freeze my card, please”', meta: 'Ana Ruiz — 10:42 AM, 14 Mar 2026', phone: { dx: 0, s: 1, from: [1.1, 0, -40] } },
+  { id: 'p2r', dx: 159, s: 0.8, z: 'z-[3]', from: [0.7, -160, -60], delay: 100, tone: 'yellow', title: 'Email Request Resolved', quote: '“Update my next of kin”', meta: 'Grace Okafor — 1:30 PM, 6 Mar 2026', phone: { dx: 94.5, s: 0.8, from: [0.7, -90, 0] } },
+  { id: 'p4r', dx: 269, s: 0.7, z: 'z-[2]', from: [0.7, -260, -40], delay: 200, tone: 'lavender', title: 'Chat Request Resolved', quote: '“Switch to paper-free bills”', meta: 'Mei Tanaka — 11:09 AM, 4 Mar 2026' },
+  { id: 'p6r', dx: 363, s: 0.6, z: 'z-[1]', from: [0.7, -360, -20], delay: 300, tone: 'pink', title: 'Email Request Resolved', quote: '“Add a second driver”', meta: 'Felix Brandt — 6:44 AM, 1 Mar 2026' },
 ]
 
 function SearchGlyph() {

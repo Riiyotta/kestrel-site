@@ -1,4 +1,5 @@
 import Button from '../Button.jsx'
+import PlaceholderLogo from '../PlaceholderLogo.jsx'
 import ProductArt from './ProductArt.jsx'
 import { BODY_SCALE, CIRKA, H2_SCALE, H3_SCALE } from '../ui/type.js'
 
@@ -16,12 +17,10 @@ import { BODY_SCALE, CIRKA, H2_SCALE, H3_SCALE } from '../ui/type.js'
 // QuoteCard: padding-top 50, row gap 16: photo 335² r16 + text card (flex 1, 849 @1440) #F2F2F2 r16 p24, backdrop
 //   blur 39.6 (reused token): quote h5 Cirka 30/30 −1.2 with an inline <mark> bg #D7D5F1; footer row: name Ginto
 //   Medium 20/25 #1C1C1C + role Ginto 20/26 #1C1C1C, customer logo 128x36 right. Phone stacked, photo 350², quote
-//   24/24.
+//   24/24. Tablet (not measured): side by side from 810 (photo 335²), bento columns 3-up from 810.
 // CtaBanner: 1200x205, bg #4348DC, radius 16, padding 24: H3 Cirka 60/60 −2.4 #FFF top-left, Button dark lg
 //   bottom-right. Phone 350x159, H3 40/36.
 // Motion: none measured (live bento videos play in view; static posters here).
-import PlaceholderLogo from '../PlaceholderLogo.jsx'
-
 function Item({ item }) {
   return (
     <div className="flex flex-col gap-[25px] p-8">
@@ -60,7 +59,7 @@ export function BentoBlock({ block }) {
       ) : (
         <div className="flex flex-col overflow-clip rounded-photo bg-panel">
           {media}
-          <div className="grid grid-cols-1 lg:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-3">
             {block.items.map((it, i) => (
               <Item key={i} item={it} />
             ))}
@@ -73,8 +72,8 @@ export function BentoBlock({ block }) {
 
 export function QuoteCard({ quote }) {
   return (
-    <figure data-ui="quote-card" className="flex flex-col gap-4 pt-[50px] lg:flex-row">
-      <div className="aspect-square w-full shrink-0 overflow-hidden rounded-card bg-gradient-to-br from-tint-lavender via-card-gray to-tint-yellow lg:w-[335px]">
+    <figure data-ui="quote-card" className="flex flex-col gap-4 pt-[50px] md:flex-row">
+      <div className="aspect-square w-full shrink-0 overflow-hidden rounded-card bg-gradient-to-br from-tint-lavender via-card-gray to-tint-yellow md:h-[335px] md:w-[335px]">
         {quote.img ? <img src={quote.img} alt="" loading="lazy" decoding="async" className="h-full w-full object-cover" /> : null}
       </div>
       <div className="flex flex-1 flex-col justify-between gap-8 rounded-card bg-panel p-6 backdrop-blur-quote-card">

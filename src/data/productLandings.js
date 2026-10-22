@@ -12,11 +12,11 @@ const DEMO = { label: 'Book a demo', href: '/get-a-demo' }
 export const productHome = {
   docTitle: 'Kestrel platform | AI customer support that does the work',
   hero: {
-    title: 'One support platform for the cases that actually matter',
-    sub: 'Kestrel is an AI customer support platform for companies whose customers need more than an article link. Its agent works cases end to end across chat, email, voice, text and messaging apps, using playbooks your operations team writes in plain language and connectors into the systems you already run. Copilot helps that team build and improve playbooks, test runs rehearse every change before release, the review queue grades every conversation, and safeguards check each reply before it is sent. Pricing is per resolved case, with a free trial to start.',
+    title: 'Give your support team its evenings back',
+    sub: 'Most support queues are full of cases a trained person could close in two minutes, if only they had time to get to them: a refund that fits the policy, a delivery to rebook, a bill that needs explaining. Kestrel takes that work off the queue. Your operations team writes down how each kind of case should be handled, Kestrel connects to the tools those steps need, and an AI agent works the cases at any hour while your people take the conversations that need judgement, warmth or a decision. Every change is rehearsed before release, every conversation is graded afterwards, and you only pay when a case is resolved.',
   },
   tools: {
-    title: 'Which support platforms can handle complex, regulated cases?',
+    title: 'What should a support platform be judged on?',
     items: [
       {
         blocks: [
@@ -35,7 +35,7 @@ export const productHome = {
         ],
       },
       {
-        title: 'What does each kind of platform include?',
+        title: 'Side by side: what each approach ships with',
         blocks: [
           ul(
             '<strong>Customer-facing agent:</strong> Kestrel: Agent across five channels. Helpdesk add-ons: chat and email assistants. In-house builds: whatever you build.',
@@ -135,22 +135,22 @@ export const productHome = {
       art: { scene: 'review', tint: 'green' },
     },
     {
-      title: 'Safeguards that check each reply before it is sent',
+      title: 'Safeguards that hold the agent to your written policy',
       body: 'Required wording, banned promises, data rules and action limits run on every turn. Sensitive actions can wait for approval, and every check is logged for audit.',
       cta: { label: 'See safeguards', href: '/product/guardrails' },
       art: { scene: 'shield', tint: 'peach' },
     },
   ],
   orbit: {
-    title: 'Works with the tools your team already runs',
+    title: 'Connects to the systems your cases live in',
     body: 'Connect helpdesks, billing, order and scheduling systems, CRMs and your own APIs. Each connector has scoped permissions, so the agent only does what a playbook allows.',
     cta: { label: 'Browse the connector library', href: '/integrations' },
   },
   stories: {
-    title: 'Who runs their support on Kestrel?',
+    title: 'Teams that switched, in their own words',
     items: [
       {
-        quote: '“We compared four platforms on real tickets from our queue. Kestrel was the only one that finished the job without help.”',
+        quote: '“Our onboarding queue used to need three people every Monday. Now one person reviews what the agent did over the weekend.”',
         name: 'Selin Kaya',
         role: 'VP Customer Operations, Stackhouse',
         img: '/assets/photos/story-1.webp',
@@ -173,7 +173,7 @@ export const productHome = {
     ],
   },
   related: {
-    title: 'What should I read before choosing a support platform?',
+    title: 'Further reading for teams comparing platforms',
     links: [
       a('/articles/support-metrics-that-matter', 'Support metrics worth tracking once an agent goes live'),
       a('/articles/ai-support-first-90-days', 'The first ninety days with an AI support agent'),
@@ -183,11 +183,11 @@ export const productHome = {
     ],
   },
   faq: {
-    title: 'The Kestrel platform: frequently asked questions',
+    title: 'Questions buyers ask about the Kestrel platform',
     items: [
       {
-        q: 'What is Kestrel, in one paragraph?',
-        a: 'Kestrel is an AI customer support platform. Its agent resolves cases across chat, email, voice, text and messaging apps by following playbooks and acting in your systems. Copilot, test runs, the review queue and safeguards help your team keep it accurate and safe over time.',
+        q: 'What problem does Kestrel solve?',
+        a: 'Support teams spend much of their week on cases that follow a known procedure but still need someone to open three tools. Kestrel handles those cases with an AI agent, so your people can spend their time on the conversations where judgement and empathy matter most.',
       },
       {
         q: 'Which industries does Kestrel work best for?',
@@ -207,7 +207,7 @@ export const productHome = {
       },
       {
         q: 'How is Kestrel priced?',
-        a: `A platform fee plus a rate per resolved case, so you pay for outcomes rather than seats. Plans are listed on the ${a('/pricing', 'pricing page')}, and a free trial is available.`,
+        a: `Each plan is a monthly subscription with a pool of resolved conversations and a flat rate past it, so costs track outcomes rather than seats. Plans are on the ${a('/pricing', 'pricing page')}, each with a free 14-day pilot.`,
       },
     ],
   },
@@ -220,28 +220,34 @@ export const copilotPage = {
   hero: {
     title: 'Kestrel Copilot',
     paragraphs: [
-      'Copilot is the assistant for the people who run support. It finds what is going wrong, suggests what to change and makes the change when you say so, from rewriting a playbook to cleaning up an outdated help article.',
-      'Ask Copilot in plain language and it does the operational work for you: drafting playbooks from a description, connecting the tools they need, writing test scenarios, explaining why a score moved and proposing the fix. It works inside Kestrel and from your team chat, and every change it makes waits for your approval. During a free trial it also walks new teams through building their very first playbook.',
+      'Running a support operation means a hundred small chores a week: a policy changes, an article goes stale, a new product launches with no playbook. Copilot is the colleague who picks those chores up, so your leads spend Monday morning deciding rather than digging.',
+      'Think of it as a very fast, very patient operations analyst. Give it a messy policy document and it returns a draft playbook with the open questions marked. Point it at last week’s lowest-scoring conversations and it tells you which three causes explain most of them. Ask it to rehearse a change against a hundred awkward customers and it reports back before lunch. It never ships anything on its own: your team reviews, edits and approves every proposal, and every approved change can be rolled back.',
     ],
     art: { scene: 'queue', tint: 'brand' },
     tickerLine: 'Relied on by support leaders everywhere',
   },
   tools: {
-    title: 'Which support platforms include an assistant that improves the AI agent for you?',
+    title: 'Who maintains an AI agent once it is live?',
     items: [
       {
         blocks: [
-          p(`<strong>Kestrel Copilot</strong> works across the whole platform, from first draft to weekly review. Stackhouse uses it to turn review findings into playbook changes the same day (${a(cs('stackhouse-onboarding-workflows'), 'read the Stackhouse story')}), and Patchwork built its first three playbooks with it in a week (${a(cs('patchwork-admin-requests'), 'Patchwork story')}).`),
+          p(`<strong>Kestrel Copilot</strong> is how operations teams keep up with their agent week after week. Stackhouse uses it to turn review findings into playbook changes the same day (${a(cs('stackhouse-onboarding-workflows'), 'read the Stackhouse story')}), and Patchwork built its first three playbooks with it in a week (${a(cs('patchwork-admin-requests'), 'Patchwork story')}).`),
+          ul(
+            `<strong>Stackhouse</strong>: review findings turned into tested playbook changes within the same working day. ${a(cs('stackhouse-onboarding-workflows'), 'Read the story')}`,
+            `<strong>Patchwork</strong>: three admin playbooks drafted, tested and launched in the first week. ${a(cs('patchwork-admin-requests'), 'Read the story')}`,
+            `<strong>Ledgerly</strong>: tax-season trends explained on request, without anyone building a dashboard. ${a(cs('ledgerly-handles-tax-season'), 'Read the story')}`,
+          ),
           p('<strong>Other ways teams maintain an AI agent:</strong>'),
           ul(
             '<strong>Visual flow editors</strong> let ops teams draw and maintain conversation trees by hand, branch by branch.',
             '<strong>Engineering tickets</strong> route every change through a developer backlog, which slows small fixes down.',
           ),
+          p('Whichever route a team takes, the work does not stop at launch: policies change, products ship and customers find new ways to ask old questions. The difference is who does that upkeep, how quickly it reaches customers and how much of the team’s week it takes.'),
           p(`See the ${a('/competitors/kestrel-vs-legacy-chatbots', 'legacy chatbot comparison')} and the ${a('/competitors/kestrel-vs-build-your-own', 'build-your-own comparison')}.`),
         ],
       },
       {
-        title: 'How does Copilot compare with other ways of maintaining an agent?',
+        title: 'Three ways to keep an agent up to date, compared',
         blocks: [
           ul(
             '<strong>Building playbooks:</strong> Copilot: drafts from a plain-language description. Flow editors: drawn by hand. Engineering tickets: coded.',
@@ -259,13 +265,13 @@ export const copilotPage = {
     {
       kind: 'block',
       layout: 'tabs-bottom',
-      title: 'What can Copilot do?',
-      sub: 'Copilot sits across your whole operation, so you can ask it to investigate, explain or change things in plain language and stay informed at every step.',
+      title: 'An analyst that never sleeps',
+      sub: 'Hand Copilot the operational chores that pile up between meetings, from stale articles to new policies, and get back drafts your team can review in minutes.',
       art: { scene: 'chat', tint: 'lavender' },
       items: [
-        { title: 'Can Copilot set up Kestrel by conversation?', body: 'Playbooks, connectors, test runs and reports can all be created by simply asking.' },
-        { title: 'Where can I talk to Copilot?', body: 'Inside Kestrel, in your team chat, or from the assistant tools you already use.' },
-        { title: 'Does Copilot ever act without approval?', body: 'No. It proposes the change, shows a preview and waits for a person to approve.' },
+        { title: 'Turns policy documents into playbooks', body: 'Upload the PDF your compliance team wrote and get a structured draft back.' },
+        { title: 'Keeps the help centre honest', body: 'Finds articles that contradict each other or a live playbook, and proposes merges.' },
+        { title: 'Prepares the weekly review', body: 'Summarises what changed, what slipped and what to look at first on Monday.' },
       ],
     },
     {
@@ -283,57 +289,57 @@ export const copilotPage = {
       layout: 'split',
       mediaSide: 'left',
       mediaHeight: 671,
-      title: 'How does Copilot build and test playbooks?',
-      sub: 'Describe the outcome you want and Copilot drafts the playbook, wires up the tools it needs and sets the rules for how your customers should be served.',
+      title: 'From a rough note to a tested playbook',
+      sub: 'A two-line note from a team lead is enough to start. Copilot asks the questions a new hire would ask, then produces something you can rehearse.',
       art: { scene: 'flow', tint: 'lavender' },
       items: [
-        { title: 'Build by describing', body: 'Explain the process the way you would to a new hire. Copilot drafts each step, asks about the gaps and connects the tools involved. You only step in for credentials and approvals.' },
-        { title: 'Test automatically', body: 'Copilot writes scenarios around the new playbook, runs them and summarises what failed and why, then suggests changes and re-runs the suite until it passes.' },
-        { title: 'Fix live conversations', body: 'Point Copilot at a conversation that went wrong and it traces the cause to a playbook step or article, then proposes a change you can test straight away.' },
+        { title: 'It asks before it assumes', body: 'Where a policy is silent, such as refunds on sale items, Copilot lists the open questions instead of guessing, and records your answers in the playbook for next time.' },
+        { title: 'It writes the awkward customers', body: 'For every new playbook, Copilot drafts test customers who are rushed, confused or angry, and keeps the ones that fail as permanent regression cases.' },
+        { title: 'It shows its working', body: 'Each draft comes with a plain summary of what changed compared with the live version and why, so reviewers can approve in minutes rather than reading line by line.' },
       ],
     },
     {
       kind: 'block',
       layout: 'split',
       mediaSide: 'right',
-      title: 'How does Copilot keep quality high?',
-      sub: 'Copilot works with the review queue to score every conversation handled by your team or the agent, against standards you define.',
+      title: 'A second reader for every conversation',
+      sub: 'Copilot reads alongside your QA team, so reviewers spend their time on the cases where a human opinion actually changes something.',
       art: { scene: 'review', tint: 'green' },
       items: [
-        { title: 'Watch scores as they land', body: 'See review scores for the agent and your team in one place, with emerging problems highlighted as soon as a pattern appears.' },
-        { title: 'Set the standard once', body: 'Describe what good looks like and Copilot turns it into a weighted rubric with pass marks, then calibrates it against your reviewers.' },
-        { title: 'Get reports on request', body: 'Ask for a breakdown by channel, playbook or team and Copilot builds the chart and the summary, with no dashboard configuration required.' },
+        { title: 'Calibration sessions, prepared', body: 'Copilot picks the conversations where it and your reviewers disagreed most, so each calibration meeting starts with the cases that teach the rubric something.' },
+        { title: 'Coaching notes for people', body: 'For human agents, Copilot drafts specific, kind coaching notes with examples from their own week, which a team lead edits before sharing.' },
+        { title: 'Plain-language rubrics', body: 'Rubric criteria are written as sentences anyone can read, such as “the customer never has to repeat their order number”.' },
       ],
     },
-    { kind: 'cta', title: 'Try Copilot', cta: { label: 'Book a demo', href: '/get-a-demo' } },
+    { kind: 'cta', title: 'Put Copilot to work', cta: { label: 'Book a demo', href: '/get-a-demo' } },
     {
       kind: 'block',
       layout: 'tabs-bottom',
-      title: 'Can I ask Copilot about trends in everyday language?',
-      sub: 'Ask about volumes, causes and outcomes the way you would ask a colleague, and Copilot answers with the numbers and the conversations behind them.',
+      title: 'Numbers without the spreadsheet',
+      sub: 'Leadership asks why contacts went up in March. Copilot gives you the answer, the chart and five example conversations, ready to paste into the update.',
       art: { scene: 'chart', tint: 'yellow' },
       items: [
-        { title: 'Questions, not queries', body: 'Ask why repeat contacts rose in March and get the answer, with no report builder.' },
-        { title: 'Grouped by cause', body: 'Conversations are clustered by underlying reason, so volume maps to fixable problems.' },
-        { title: 'Early warnings', body: 'Copilot flags a topic that is growing fast before it turns into a queue problem.' },
+        { title: 'Board-ready summaries', body: 'Monthly numbers come with a short written story of what drove them.' },
+        { title: 'Cost per case, explained', body: 'See which case types cost most to resolve, by channel and by team.' },
+        { title: 'Launch watch', body: 'After a product launch, Copilot reports daily on the questions it caused.' },
       ],
     },
     {
       kind: 'block',
       layout: 'split',
       mediaSide: 'left',
-      title: 'How does Copilot find and fix problems?',
-      sub: 'When Copilot spots a gap, such as a missing article or a playbook step that confuses customers, it proposes a fix and applies it once you approve.',
+      title: 'Small repairs, shipped every week',
+      sub: 'Most quality problems are small: one confusing sentence, one missing step. Copilot keeps a running list and clears it with your approval.',
       art: { scene: 'test', tint: 'pink' },
       items: [
-        { title: 'Trace the cause', body: 'Copilot links each problem to its source, whether that is an article, a policy conflict or a playbook step, so you always know what changed and why.' },
-        { title: 'Get a concrete proposal', body: 'Each finding comes with a specific change, such as a rewritten step or a merged article, ready to test against past conversations.' },
-        { title: 'Keep the final say', body: 'Approve, edit or reject each proposal. Released changes are tracked, and Copilot reports whether they improved scores the following week.' },
+        { title: 'A repair backlog you can see', body: 'Every open issue sits in one list with its size, its examples and the customers affected, ordered by how much difference fixing it would make.' },
+        { title: 'Batch approvals on Fridays', body: 'Many teams review the week’s small repairs in one sitting. Copilot groups them so a lead can approve ten low-risk fixes in a quarter of an hour.' },
+        { title: 'Follow-up you do not have to chase', body: 'A week after each release, Copilot checks whether the repair worked and reopens it with fresh examples if the problem came back.' },
       ],
     },
   ],
   related: {
-    title: 'Where can I learn more about Copilot?',
+    title: 'Further reading on running support operations',
     links: [
       a('/blog/introducing-kestrel-workflows-studio', 'Introducing Workflows Studio for support operations'),
       a('/blog/roost-podcast-ep-12-quality-at-scale', 'The Roost podcast: keeping quality high at scale'),
@@ -342,13 +348,15 @@ export const copilotPage = {
     ],
   },
   faq: {
-    title: 'Kestrel Copilot: frequently asked questions',
+    title: 'Questions team leads ask about Copilot',
     items: [
       { q: 'Who is Copilot designed for?', a: 'Support operations leads, QA reviewers and team managers: the people who decide how support should work and need the agent to keep up with those decisions without filing engineering tickets.' },
       { q: 'Can Copilot change things without asking?', a: 'No. Every change Copilot proposes waits for a person with the right role to approve it, and every approved change is versioned and can be rolled back.' },
       { q: 'What data can Copilot see?', a: 'The same data the person asking can see. Copilot respects role-based permissions, so a team lead cannot use it to reach conversations or settings outside their own access.' },
       { q: 'Can Copilot work from our team chat?', a: 'Yes. Teams can ask questions and approve proposals from their chat tool, and longer work such as a test run sends a summary back to the thread when it finishes.' },
       { q: 'Is Copilot included in every plan?', a: `Copilot is included on all plans, with usage limits by tier. See the ${a('/pricing', 'pricing page')} for details.` },
+      { q: 'Can Copilot help with a product launch?', a: 'Yes. Give it the launch notes and Copilot drafts the help articles and playbook changes the launch will need, writes test customers who ask about the new feature, and reports daily on the questions customers actually raise once it is live.' },
+      { q: 'How does Copilot know our policies and procedures?', a: 'It reads the playbooks, help articles, macros and policy documents you connect, and it asks when something is ambiguous or two sources disagree. Anything it learns becomes part of a playbook your team can see and edit, never a hidden rule.' },
       { q: 'Does Copilot replace the Kestrel engineer?', a: 'No. Copilot handles day-to-day operational changes; your named Kestrel engineer still joins reviews, handles complex integrations and helps plan larger changes.' },
     ],
   },
@@ -358,18 +366,23 @@ export const copilotPage = {
 export const voicePage = {
   docTitle: 'Kestrel Voice | Phone support that gets things done',
   hero: {
-    title: 'Phone support that sounds calm and finishes the task',
-    sub: 'Kestrel Voice answers and places calls in natural speech, looks things up while it talks and takes action before the caller hangs up.',
-    intro: 'A voice agent is only useful if it can do more than read out an answer. Kestrel Voice works from the same playbooks as your chat and email support, so it can verify a caller, check an account, rebook an appointment or take a payment mid-call, then confirm the outcome by text. When a call needs a person, it transfers with a summary your agent sees before saying hello. Safeguards and review scores apply to every call, exactly as they do in chat. Voltway Energy moved its outage line onto Kestrel Voice ahead of winter and kept answer times under ten seconds through every storm.',
+    title: 'A phone line that never puts anyone on hold',
+    sub: 'Kestrel Voice picks up on the first ring, day or night, and sorts out the everyday calls that used to wait twenty minutes for a free agent.',
+    intro: 'Hold queues are where goodwill goes to die. Most callers are ringing about something routine: a missed delivery, a meter reading, an appointment that no longer works. Kestrel Voice handles those calls in a calm, natural voice, in five languages, and sends a text afterwards so the caller has a record. Peaks no longer mean longer waits, because the agent answers every call at once, and your team stops spending its day on calls it could do in its sleep. Callers who want a person can ask for one at any point and are put through with a written summary.',
     art: { scene: 'phone', tint: 'brand' },
     tickerLine: 'Proud to support',
   },
   tools: {
-    title: 'Which AI voice agents can handle complex support calls?',
+    title: 'What should a voice agent be able to do on a real call?',
     items: [
       {
         blocks: [
           p(`<strong>Kestrel Voice</strong> is built for calls where something has to change: a booking, a payment, a claim. Voltway Energy handled its winter outage peak on it (${a(cs('voltway-outage-updates'), 'read the Voltway story')}), and Brindle Health answers its after-hours line with clinical calls passed straight to a nurse (${a(cs('brindle-health-after-hours'), 'Brindle story')}). Voice pricing follows the same per-resolution model as other channels (${a('/pricing', 'pricing')}).`),
+          ul(
+            `<strong>Voltway Energy</strong>: restoration estimates read from the live outage feed, with text updates offered on every call. ${a(cs('voltway-outage-updates'), 'Read the story')}`,
+            `<strong>Brindle Health</strong>: bookings moved by phone overnight, with symptom calls transferred to the nurse line. ${a(cs('brindle-health-after-hours'), 'Read the story')}`,
+            `<strong>Halden Power</strong>: move-out meter readings taken by phone and checked against the account before the call ends. ${a(cs('halden-power-moving-home'), 'Read the story')}`,
+          ),
           p('<strong>Other approaches to automating calls:</strong>'),
           ul(
             '<strong>Menu-based IVR</strong> routes callers by keypad choices and rarely completes a task on the call itself.',
@@ -379,7 +392,7 @@ export const voicePage = {
         ],
       },
       {
-        title: 'How do the main voice options compare on real calls?',
+        title: 'Voice options compared, from menus to agents',
         blocks: [
           ul(
             '<strong>Understanding:</strong> Kestrel Voice: free speech, interruptions and changes of mind. IVR: keypad and short phrases. Scripted voicebots: a fixed set of intents.',
@@ -394,64 +407,64 @@ export const voicePage = {
     ],
   },
   carousel: {
-    title: 'Five habits of a good voice agent, and how Kestrel builds them in',
-    sub: 'What callers notice, even when they cannot name it',
+    title: 'Five calls Kestrel Voice takes every day',
+    sub: 'The routine calls that fill a queue, handled start to finish',
     items: [
       {
-        title: 'Listening',
-        subtitle: 'Hearing the whole problem first',
+        title: 'Rebooking',
+        subtitle: 'Appointments that no longer fit',
         bullets: [
-          { lead: 'Lets', text: 'callers finish before replying, without awkward overlaps.' },
-          { lead: 'Restates', text: 'the request briefly so the caller knows it was understood.' },
-          { lead: 'Asks', text: 'one clarifying question at a time, never a list.' },
+          { lead: 'Offers', text: 'the three nearest slots instead of reading out a whole diary.' },
+          { lead: 'Moves', text: 'the booking and releases the old slot for someone else.' },
+          { lead: 'Texts', text: 'the new time and any preparation steps straight away.' },
         ],
-        art: { scene: 'phone', tint: 'lavender' },
+        art: { scene: 'outreach', tint: 'lavender' },
       },
       {
-        title: 'Pace',
-        subtitle: 'Fast replies without rushing',
+        title: 'Payments',
+        subtitle: 'Balances, plans and missed payments',
         bullets: [
-          { lead: 'Responds', text: 'quickly enough that silence never feels like a dropped call.' },
-          { lead: 'Fills', text: 'longer lookups with a short, natural update.' },
-          { lead: 'Slows', text: 'down for numbers, dates and anything the caller must note.' },
+          { lead: 'Explains', text: 'the balance and what makes it up, line by line.' },
+          { lead: 'Takes', text: 'card details through a secure keypad step, never by voice.' },
+          { lead: 'Sets up', text: 'a plan when the caller is eligible under your rules.' },
         ],
-        art: { scene: 'chart', tint: 'yellow' },
+        art: { scene: 'queue', tint: 'yellow' },
       },
       {
-        title: 'Memory',
-        subtitle: 'Context across calls and channels',
+        title: 'Outages',
+        subtitle: 'Status on the busiest nights',
         bullets: [
-          { lead: 'Recognises', text: 'returning callers and the case they called about before.' },
-          { lead: 'Continues', text: 'a chat or email conversation by phone without repetition.' },
-          { lead: 'Notes', text: 'every call on the ticket for the next person.' },
+          { lead: 'Checks', text: 'the caller’s address against the live incident feed.' },
+          { lead: 'Gives', text: 'the latest estimate and offers a text when it changes.' },
+          { lead: 'Flags', text: 'priority customers for an immediate transfer.' },
         ],
-        art: { scene: 'queue', tint: 'pink' },
+        art: { scene: 'chart', tint: 'pink' },
       },
       {
-        title: 'Action',
-        subtitle: 'Doing the work while talking',
+        title: 'Claims',
+        subtitle: 'First reports after something goes wrong',
         bullets: [
-          { lead: 'Rebooks', text: 'appointments and deliveries while the caller listens.' },
-          { lead: 'Takes', text: 'payments through a secure keypad step, never by voice.' },
-          { lead: 'Confirms', text: 'the outcome by text the moment the call ends.' },
+          { lead: 'Asks', text: 'the questions your claim form needs, in a natural order.' },
+          { lead: 'Opens', text: 'the claim and reads back the reference number.' },
+          { lead: 'Sends', text: 'a secure upload link for photos and receipts.' },
         ],
         art: { scene: 'flow', tint: 'green' },
       },
       {
-        title: 'Judgement',
-        subtitle: 'Knowing when a person should take over',
+        title: 'Account changes',
+        subtitle: 'Addresses, names and contact details',
         bullets: [
-          { lead: 'Hears', text: 'distress, urgency or complaints and responds with care.' },
-          { lead: 'Transfers', text: 'warm, with a summary read before the agent says hello.' },
-          { lead: 'Stays', text: 'within your safeguards on every single turn.' },
+          { lead: 'Verifies', text: 'the caller with your existing identity steps first.' },
+          { lead: 'Updates', text: 'the record and confirms the change out loud.' },
+          { lead: 'Notes', text: 'the call on the ticket for anyone who looks later.' },
         ],
-        art: { scene: 'shield', tint: 'peach' },
+        art: { scene: 'lock', tint: 'peach' },
       },
     ],
   },
   explainer: {
-    title: 'Can Kestrel Voice handle calls in regulated industries?',
-    sub: 'Built for lenders, insurers and clinics',
+    title: 'What the caller never hears: the checks behind every call',
+    sub: 'Rules that travel with the conversation',
     cta: { label: 'Learn more', href: '/product/guardrails' },
     art: { scene: 'phone', tint: 'yellow' },
     paragraphs: [
@@ -461,15 +474,15 @@ export const voicePage = {
     ],
   },
   caseStudy: {
-    title: 'Where is Kestrel Voice already answering calls?',
-    sub: 'Teams that trust it on the phone',
-    cardTitle: 'How did Voltway Energy keep its outage line calm through a winter of storms?',
+    title: 'A winter on the outage line',
+    sub: 'Customer story: Voltway Energy',
+    cardTitle: 'Voltway Energy’s outage line stayed calm through a winter of storms',
     body: `Voltway moved its outage line to Kestrel Voice before the winter peak. The agent checks each caller’s address against the live outage feed, gives the latest restoration estimate, offers text updates and recognises priority customers for an immediate transfer. Answer times stayed under ten seconds on the busiest nights. ${a(cs('voltway-outage-updates'), 'Read the Voltway story')}`,
     cta: { label: 'Learn more', href: cs('voltway-outage-updates') },
     art: { scene: 'phone', tint: 'peach' },
   },
   related: {
-    title: 'Where can I learn more about voice AI?',
+    title: 'What else should I read about AI phone support?',
     links: [
       a('/blog/roost-podcast-ep-10-voice-support', 'The Roost podcast: what voice support is good for'),
       a('/articles/first-response-time-explained', 'First response time explained, channel by channel'),
@@ -479,13 +492,15 @@ export const voicePage = {
     ],
   },
   faq: {
-    title: 'Kestrel Voice: frequently asked questions',
+    title: 'Questions teams ask before moving a phone line',
     items: [
       { q: 'Can Kestrel Voice use our existing phone numbers?', a: 'Yes. Calls can be forwarded from your current telephony provider or contact centre platform, or Kestrel can provide local numbers in supported countries.' },
       { q: 'How natural does the voice sound?', a: 'Callers hear a natural voice with sensible pacing, and you choose the voice and accent per brand. The agent handles interruptions and pauses the way a person would on the line.' },
       { q: 'What happens if the caller wants a person?', a: 'The agent transfers the call to your team with a short summary, following your routing rules and opening hours. Outside hours, it offers a callback or a text follow-up.' },
       { q: 'How are payments taken on a call?', a: 'Through a secure keypad step connected to your payment provider. Card numbers are never spoken aloud, transcribed or stored in the conversation record.' },
       { q: 'Are voice calls reviewed like chat conversations?', a: 'Yes. Every call is transcribed and scored by the review queue with the same rubric, so quality is comparable across voice and written channels.' },
+      { q: 'How quickly can we put Kestrel Voice on a live line?', a: 'If your playbooks already run in chat or email, a voice line can usually go live within a week: most of the work is call forwarding, choosing a voice and running test calls. Teams new to Kestrel typically launch voice two to four weeks after kickoff.' },
+      { q: 'Can Kestrel Voice make outbound calls too?', a: `Yes. With ${a('/product/outbound', 'Outreach')}, the same agent can call customers about an appointment, a missed payment or an outage, handle whatever they say in reply and fall back to a text if nobody answers.` },
       { q: 'Which languages does Kestrel Voice support?', a: 'English, Spanish, French, German and Portuguese are available today, with more in testing. The agent can switch language when the caller does.' },
     ],
   },
